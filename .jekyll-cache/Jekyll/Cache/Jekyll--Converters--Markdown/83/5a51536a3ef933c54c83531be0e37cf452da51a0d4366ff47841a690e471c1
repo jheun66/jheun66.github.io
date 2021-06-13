@@ -1,0 +1,62 @@
+I"�
+<p>github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.</p>
+
+<h3 id="이전에-설치한-루비-버전-삭제">이전에 설치한 루비 버전 삭제</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew uninstall ruby
+</code></pre></div></div>
+
+<h3 id="rbenv-설치">rbenv 설치</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>rbenv ruby-build
+</code></pre></div></div>
+
+<h3 id="bash_profile-수정">bash_profile 수정</h3>
+
+<p><code class="language-plaintext highlighter-rouge">~/.bash_profile</code>에 <code class="language-plaintext highlighter-rouge">eval "$(rbenv init -)"</code> 추가한 후</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+
+<h3 id="루비-버전-설치">루비 버전 설치</h3>
+
+<p>설치할 수 있는 루비 버전 확인 후</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nb">install</span> <span class="nt">-l</span>
+</code></pre></div></div>
+
+<p>설치할 수 있는 버전 설치</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nb">install </span>3.0.1
+</code></pre></div></div>
+
+<h3 id="버전-적용">버전 적용</h3>
+
+<p>설치 되어있는 버전 확인</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv versions
+</code></pre></div></div>
+
+<p>글로벌 버전 세팅</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv global 3.0.1
+</code></pre></div></div>
+
+<p>로컬 버전 세팅</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nb">local </span>3.0.1
+</code></pre></div></div>
+
+<p>적용된 버전 확인</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv version
+</code></pre></div></div>
+
+<p>적용된 루비 버전 확인</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
+</code></pre></div></div>
+
+<h2 id="reference">Reference</h2>
+<p><a href="https://stackoverflow.com/questions/61196279/how-to-remove-all-old-ruby-versions-and-version-managers-and-reinstall-a-singl">stackoverflow</a></p>
+:ET
