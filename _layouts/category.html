@@ -13,9 +13,9 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
+            <h1>{{ page.title }}</h1>
+            {% if page.description %}
+            <span class="subheading">{{ page.description }}</span>
             {% endif %}
           </div>
         </div>
@@ -29,11 +29,12 @@ layout: default
 
         {{ content }}
 
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
+        <!-- Category Post List -->
+        {% assign category = page.category | default: page.title %}
+        {% for post in site.categories[category] %}
 
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+        <article class="posts-list">
+          <a href="{{ site.baseurl }}{{ post.url }}">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
             <h3 class="post-subtitle">{{ post.subtitle }}</h3>

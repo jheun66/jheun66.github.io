@@ -2,7 +2,8 @@
 layout: post
 title:  "Ruby Version Management"
 date:   2021-06-13 21:01:11 +0900
-categories: ruby, rbenv, github pages
+categories: [Blog]
+tags: [ruby, rbenv, github pages]
 ---
 github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.
 

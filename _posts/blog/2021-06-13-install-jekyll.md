@@ -2,7 +2,8 @@
 layout: post
 title:  "Jekyll 설치 및 테스트"
 date:   2021-06-13 21:46:00 +0900
-categories: jekyll, bundler, github pages
+categories: [Blog]
+tags: [jekyll, bundler, github pages]
 ---
 ### jekyll, bundler gems 설치
 
