@@ -9,13 +9,7 @@ background: '/img/bg-category.jpg'
 <article class="category-view">
   <a href="{{ category | first  | prepend: relative_url | replace: '//', '/' }}">
     <h2 class="category-title">{{ category | first }}</h2>
-    {% if category.subtitle %}
-    <h3 class="category-subtitle"> {{ category.subtitle | first }}</h3>
-    {% endif %}
   </a>
-  <p class="category-meta">
-    count  :  {{ category | last | size }}
-  </p>
 </article>
 
 <hr>
