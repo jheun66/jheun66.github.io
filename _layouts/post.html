@@ -6,8 +6,7 @@ layout: default
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else if page.categories%}
-    {% assign var = page.categories | first %}
-      <header class="masthead" style="background-image: url('/img/bg-{{ page.categories }}.jpg')">
+      <header class="masthead" style="background-image: url('/img/bg-{{ page.categories | downcase}}.jpg')">
   {% else %}
   <header class="masthead">
     {% endif %}

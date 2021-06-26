@@ -1,5 +1,7 @@
 ---
 layout: default
+pagination: 
+  enabled: true
 ---
 
 <!-- Page Header -->
@@ -31,7 +33,7 @@ layout: default
 
         <!-- Category Post List -->
         {% assign category = page.category | default: page.title %}
-        {% for post in site.categories[category] %}
+        {% for post in site.categories[category] limit : 5 %}
 
         <article class="posts-list">
           <a href="{{ site.baseurl }}{{ post.url }}">
@@ -55,6 +57,24 @@ layout: default
 
         {% endfor %}
 
+        <!-- Pager -->
+        {% if paginator.total_pages > 1 %}
+        
+        <div class="clearfix">
+        
+          {% if paginator.previous_page %}
+          <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+            Newer<span class="d-none d-md-inline"> Posts</span></a>
+          {% endif %}
+        
+          {% if paginator.next_page %}
+          <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
+          {% endif %}
+        
+        </div>
+        
+        {% endif %}
+        
         <!-- Pager -->
         <div class="clearfix">
           <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
