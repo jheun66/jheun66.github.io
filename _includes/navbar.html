@@ -17,8 +17,14 @@
         <li class="nav-item">
           <a class="nav-link" href="{{"/posts" | relative_url }}">Posts</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/categories" | relative_url }}">Category</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
+          <div class="dropdown-menu">
+            <a class="nav-link" href="{{"/categories" | relative_url }}">Catalogue</a>
+            {% for category in site.categories %}
+              <a class="nav-link" href="{{category | first | prepend: 'categories/' | relative_url }}">{{ category | first }}</a>
+            {% endfor %}
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
