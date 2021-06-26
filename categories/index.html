@@ -8,7 +8,7 @@ permalink: '/categories'
 
 {% for category in site.categories %}
 <article class="category-view">
-  <a href="{{ category | first  | prepend: relative_url | replace: '//', '/' }}">
+  <a href="{{ category | first  | prepend: 'categories/' | relative_url | replace: '//', '/' }}">
     <h2 class="category-title">{{ category | first }}</h2>
   </a>
 </article>
