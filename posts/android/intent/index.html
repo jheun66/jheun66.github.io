@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Intent(Explict Intent) - 생각중
+    
+  </title>
+
+  <meta name="description" content="먼저 Explict Intent 위주로 정리합니다.">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://jheun66.github.io/posts/android/intent/">
+  <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Intent(Explict Intent) | 생각중</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Intent(Explict Intent)" />
+<meta name="author" content="Eun JongHyeok" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="먼저 Explict Intent 위주로 정리합니다." />
+<meta property="og:description" content="먼저 Explict Intent 위주로 정리합니다." />
+<link rel="canonical" href="https://jheun66.github.io/posts/android/intent/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/android/intent/" />
+<meta property="og:site_name" content="생각중" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-30T03:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Intent(Explict Intent)" />
+<meta name="google-site-verification" content="NFjrooIb0zLycxDgti6xtOkaLhYWvCAhYLDCsDf8sQI" />
+<script type="application/ld+json">
+{"url":"https://jheun66.github.io/posts/android/intent/","@type":"BlogPosting","description":"먼저 Explict Intent 위주로 정리합니다.","headline":"Intent(Explict Intent)","dateModified":"2020-12-30T03:00:00+00:00","datePublished":"2020-12-30T03:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/intent/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">생각중</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
+          <div class="dropdown-menu">
+            <a class="nav-link" href="/categories">Catalogue</a>
+            
+              <a class="nav-link" href="/categories/Blog">Blog</a>
+            
+              <a class="nav-link" href="/categories/Security">Security</a>
+            
+              <a class="nav-link" href="/categories/Android">Android</a>
+            
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+    
+      <header class="masthead" style="background-image: url('/img/bg-android.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Intent(Explict Intent)</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Eun JongHyeok</a>
+              on December 30, 2020
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>먼저 Explict Intent 위주로 정리합니다.</p>
+
+<h2 id="intent">Intent</h2>
+<p>App Component 사이에서 통신하는데 사용되는 메시지 객체입니다. ART에 요청하여 액티비티를 시작하거나 다른 app component(서비스, 브로드캐스트)등을 자기 앱에서 또는 다른 앱에서 실행 시킬 수 있습니다.</p>
+
+<p>앱을 처음 실행시킬때 ART에서 앱으로 Intent를 보내 메인 액티비티를 실행시킵니다. 다른 액티비티를 실행시킬때는 startActivity() 또는 startActivityResult()를 호출합니다. 실행 뿐만 아니라 액티비티간 데이터를 전송하는데 사용할 수도 있습니다.</p>
+
+<h2 id="intent-types">Intent types</h2>
+<ul>
+  <li>Explict Intent</li>
+</ul>
+
+<p>주로 자신의 앱에서는 패키지 이름과 클래스 이름을 알고 있으므로 자격을 갖춘 액티비티 클래스 이름을 사용하여 명시적으로 인텐트를 호출 할 수 있습니다.</p>
+
+<ul>
+  <li>Implict Intent</li>
+</ul>
+
+<p>명시적으로 지정하지 않고 수행할 액션을 통해 시스템이 부합하는 액티비티 또는 컴포넌트를 실행시킬 수 있습니다.
+<a href="/posts/android/implict-intent"><strong>Implict Intent</strong></a>에 따로 정리합니다.</p>
+
+<h3 id="intent-filter">Intent Filter</h3>
+<p><em>AndroidMainfest.xml</em> 에서 인텐트 필터를 확인한 적이 있습니다. 해당 구성 요소가 수신하고자 하는 인텐트 유형을 작성하면 됩니다.</p>
+
+<p>보안상 Service를 시작할 때는 명시적 인텐트를 사용하고 서비스에 대한 인텐트 필터는 선언하지 말라고 합니다.</p>
+
+<blockquote>
+  <p>Caution: To ensure that your app is secure, always use an explicit intent when starting a Service and do not declare intent filters for your services. Using an implicit intent to start a service is a security hazard because you can’t be certain what service will respond to the intent, and the user can’t see which service starts. Beginning with Android 5.0 (API level 21), the system throws an exception if you call bindService() with an implicit intent.</p>
+</blockquote>
+
+<h2 id="intent-information">Intent Information</h2>
+
+<p>Intent 내부에는 어떤 컴포넌트를 실행할지 등 정보들이 담겨있습니다.</p>
+
+<ul>
+  <li>Component name</li>
+</ul>
+
+<p>Explict Intent에서는 필수로 작성해야합니다. 컴포넌트 이름이 없으면 시스템은 Implict Intent로 판단하고 다른 정보들을 통해 매칭해줍니다.</p>
+
+<ul>
+  <li>Data</li>
+</ul>
+
+<p>작업을 수행할 데이터의 URI와 MIME 유형을 전달할 수 있습니다. URI를 설정하기 위해서는 setData()를 MIME 유형을 설정하기 위해서는 setType()을 호출하면 됩니다.</p>
+
+<p>단, 주의 사항으로 URI와 MIME 유형을 둘다 설정할 경우 setData()와 setType()를 호출하는게 아니라 setDataAndType()을 호출합니다. 그렇지 않을 경우 서로 무효화한다고 합니다.</p>
+
+<ul>
+  <li>Extras</li>
+</ul>
+
+<p>작업에 필요한 데이터를 키-값 쌍으로 보낼 수 있습니다.</p>
+
+<ul>
+  <li>Flags</li>
+</ul>
+
+<p>Intent 클래스에 정의되어 있는 메타데이터입니다. 액티비티를 어떻게 실행할지 실행되고 어떻게 처리될지 등을 지시히라 수 있습니다.</p>
+
+<p><a href="https://developer.android.com/reference/android/content/Intent#setFlags(int)">참고</a></p>
+
+<p>Implict Intent는 다음 정보가 추가할 수 있습니다.</p>
+<ul>
+  <li>Action</li>
+  <li>Category</li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+<p><a href="https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutintents">https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutintents</a><br />
+<a href="https://developer.android.com/guide/components/intents-filters">https://developer.android.com/guide/components/intents-filters</a></p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/posts/android/activity-lifecycle/" data-toggle="tooltip" data-placement="top" title="Activity Lifecycle">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/posts/android/activities-and-intents-practice/" data-toggle="tooltip" data-placement="top" title="Activitiew And Intents Test">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:jheun5@naver.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/amos55606241">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/amos.eun.73">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1H0RYSGS7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T1H0RYSGS7');
+</script>
+
+
+
+</body>
+
+</html>

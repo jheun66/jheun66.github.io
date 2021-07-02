@@ -1,3 +1,5 @@
 User-agent: *
- Allow: /
- Sitemap: https://jheun66.github.io/sitemap.xml
+
+Disallow: /norobots/
+
+Sitemap: https://jheun66.github.io/sitemap.xml

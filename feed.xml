@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-07-02T06:45:30+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Jekyll 설치 및 테스트</title><link href="https://jheun66.github.io/blog/2021/06/13/install-jekyll.html" rel="alternate" type="text/html" title="Jekyll 설치 및 테스트" /><published>2021-06-13T12:46:00+00:00</published><updated>2021-06-13T12:46:00+00:00</updated><id>https://jheun66.github.io/blog/2021/06/13/install-jekyll</id><content type="html" xml:base="https://jheun66.github.io/blog/2021/06/13/install-jekyll.html">&lt;h3 id=&quot;jekyll-bundler-gems-설치&quot;&gt;jekyll, bundler gems 설치&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-07-02T08:09:18+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Jekyll 설치 및 테스트</title><link href="https://jheun66.github.io/posts/blog/install-jekyll/" rel="alternate" type="text/html" title="Jekyll 설치 및 테스트" /><published>2021-06-13T12:46:00+00:00</published><updated>2021-06-13T12:46:00+00:00</updated><id>https://jheun66.github.io/posts/blog/install-jekyll</id><content type="html" xml:base="https://jheun66.github.io/posts/blog/install-jekyll/">&lt;h3 id=&quot;jekyll-bundler-gems-설치&quot;&gt;jekyll, bundler gems 설치&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -48,7 +48,7 @@ jekyll new ./
 
 &lt;p&gt;&lt;a href=&quot;https://junho85.pe.kr/1850&quot;&gt;webrick 오류&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/31039998/rails-address-already-in-use-bind2-errnoeaddrinuse&quot;&gt;로컬 호스트를 이미 사용하고 있는 경우&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Blog" /><category term="jekyll" /><category term="bundler" /><category term="github pages" /><summary type="html">jekyll, bundler gems 설치</summary></entry><entry><title type="html">Ruby Version Management</title><link href="https://jheun66.github.io/blog/2021/06/13/ruby-version-management.html" rel="alternate" type="text/html" title="Ruby Version Management" /><published>2021-06-13T12:01:11+00:00</published><updated>2021-06-13T12:01:11+00:00</updated><id>https://jheun66.github.io/blog/2021/06/13/ruby-version-management</id><content type="html" xml:base="https://jheun66.github.io/blog/2021/06/13/ruby-version-management.html">&lt;p&gt;github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/31039998/rails-address-already-in-use-bind2-errnoeaddrinuse&quot;&gt;로컬 호스트를 이미 사용하고 있는 경우&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Blog" /><category term="jekyll" /><category term="bundler" /><category term="github pages" /><summary type="html">jekyll, bundler gems 설치</summary></entry><entry><title type="html">Ruby Version Management</title><link href="https://jheun66.github.io/posts/blog/ruby-version-management/" rel="alternate" type="text/html" title="Ruby Version Management" /><published>2021-06-13T12:01:11+00:00</published><updated>2021-06-13T12:01:11+00:00</updated><id>https://jheun66.github.io/posts/blog/ruby-version-management</id><content type="html" xml:base="https://jheun66.github.io/posts/blog/ruby-version-management/">&lt;p&gt;github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;이전에-설치한-루비-버전-삭제&quot;&gt;이전에 설치한 루비 버전 삭제&lt;/h3&gt;
 
@@ -107,7 +107,7 @@ jekyll new ./
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/61196279/how-to-remove-all-old-ruby-versions-and-version-managers-and-reinstall-a-singl&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Blog" /><category term="ruby" /><category term="rbenv" /><category term="github pages" /><summary type="html">github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.</summary></entry><entry><title type="html">Screen Compatibility</title><link href="https://jheun66.github.io/android/2021/02/13/screen-compatibility.html" rel="alternate" type="text/html" title="Screen Compatibility" /><published>2021-02-13T18:00:00+00:00</published><updated>2021-02-13T18:00:00+00:00</updated><id>https://jheun66.github.io/android/2021/02/13/screen-compatibility</id><content type="html" xml:base="https://jheun66.github.io/android/2021/02/13/screen-compatibility.html">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/61196279/how-to-remove-all-old-ruby-versions-and-version-managers-and-reinstall-a-singl&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Blog" /><category term="ruby" /><category term="rbenv" /><category term="github pages" /><summary type="html">github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.</summary></entry><entry><title type="html">Screen Compatibility</title><link href="https://jheun66.github.io/posts/android/screen-compatibility/" rel="alternate" type="text/html" title="Screen Compatibility" /><published>2021-02-13T18:00:00+00:00</published><updated>2021-02-13T18:00:00+00:00</updated><id>https://jheun66.github.io/posts/android/screen-compatibility</id><content type="html" xml:base="https://jheun66.github.io/posts/android/screen-compatibility/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 &lt;p&gt;안드로이드 기기는 매우 다양한 화면 크기와 다양한 픽셀 밀도를 가지고 있습니다. 또한 일부 기기는 다른 일반적인 기기와 모양이 조금 다르기도 합니다. 그렇기 때문에 화면을 디자인 할 때 모든 기기에서 만족스러운 모양이 나오게 하는 것은 힘듭니다.&lt;/p&gt;
 
 &lt;p&gt;따라서 이와 관련된 개발자 문서를 정리해봅니다. 자세한 내용은 참조에서 개발자 문서를 확인하면 좋을 것입니다.&lt;/p&gt;
@@ -123,11 +123,11 @@ jekyll new ./
 
 &lt;ol&gt;
   &lt;li&gt;기본 레이아웃을 열고 툴바에서 Orientation for Preview 를 클릭합니다.&lt;br /&gt;
-&lt;img src=&quot;/assets/img/android_example/스크린샷 2021-02-14 오전 2.23.24.png&quot; alt=&quot;Capture1&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.23.24.png&quot; alt=&quot;Capture1&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;드롭다운 목록에서 Create Landscape Variant와 같은 추천 변형을 클릭하여 만들거나 Create Other를 클릭합니다.&lt;br /&gt;
-&lt;img src=&quot;/assets/img/android_example/스크린샷 2021-02-14 오전 2.24.04.png&quot; alt=&quot;Capture2&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.24.04.png&quot; alt=&quot;Capture2&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Create Other를 선택한 경우 Select Resource Directory가 나타납니다. 여기에서 왼쪽의 화면 한정자를 선택하여 Chosen qualifiers 목록에 추가합니다. 한정자를 추가했으면 OK를 클릭합니다.&lt;br /&gt;
-&lt;img src=&quot;/assets/img/android_example/스크린샷 2021-02-14 오전 2.25.09.png&quot; alt=&quot;Capture3&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.25.09.png&quot; alt=&quot;Capture3&quot; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;qualifiers, 다양한 한정자들로 레이아웃을 나누어 작성할 수 있습니다.
@@ -145,7 +145,7 @@ jekyll new ./
 
 &lt;p&gt;다른 dpi에서의 계산은 다음과 같이 할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/스크린샷 2021-02-14 오전 2.45.41.png&quot; alt=&quot;Capture3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.45.41.png&quot; alt=&quot;Capture3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;역으로 Pixel2라는 기기에서 가로 dp를 계산은 다음과 같이 작성할 수 있습니다.&lt;/p&gt;
 
@@ -209,7 +209,7 @@ jekyll new ./
 &lt;a href=&quot;https://firebase.google.com/docs/test-lab/&quot;&gt;Firebase Test Lab&lt;/a&gt;를 이용하도록 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/practices/screens_support&quot;&gt;https://developer.android.com/guide/practices/screens_support&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Screen" /><category term="dp" /><summary type="html">개요 안드로이드 기기는 매우 다양한 화면 크기와 다양한 픽셀 밀도를 가지고 있습니다. 또한 일부 기기는 다른 일반적인 기기와 모양이 조금 다르기도 합니다. 그렇기 때문에 화면을 디자인 할 때 모든 기기에서 만족스러운 모양이 나오게 하는 것은 힘듭니다.</summary></entry><entry><title type="html">Context</title><link href="https://jheun66.github.io/android/2021/02/12/context.html" rel="alternate" type="text/html" title="Context" /><published>2021-02-12T18:30:00+00:00</published><updated>2021-02-12T18:30:00+00:00</updated><id>https://jheun66.github.io/android/2021/02/12/context</id><content type="html" xml:base="https://jheun66.github.io/android/2021/02/12/context.html">&lt;p&gt;아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/practices/screens_support&quot;&gt;https://developer.android.com/guide/practices/screens_support&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Screen" /><category term="dp" /><summary type="html">개요 안드로이드 기기는 매우 다양한 화면 크기와 다양한 픽셀 밀도를 가지고 있습니다. 또한 일부 기기는 다른 일반적인 기기와 모양이 조금 다르기도 합니다. 그렇기 때문에 화면을 디자인 할 때 모든 기기에서 만족스러운 모양이 나오게 하는 것은 힘듭니다.</summary></entry><entry><title type="html">Context</title><link href="https://jheun66.github.io/posts/android/context/" rel="alternate" type="text/html" title="Context" /><published>2021-02-12T18:30:00+00:00</published><updated>2021-02-12T18:30:00+00:00</updated><id>https://jheun66.github.io/posts/android/context</id><content type="html" xml:base="https://jheun66.github.io/posts/android/context/">&lt;p&gt;아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.&lt;/p&gt;
 
 &lt;p&gt;이번에는 이 컨텍스트에 대한 내용들을 정리하고자 합니다.&lt;/p&gt;
 
@@ -288,7 +288,7 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
     &lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;applicationCtxTV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activityCtxTV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/device-2021-02-13-023931.png&quot; alt=&quot;a capture&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/device-2021-02-13-023931.png&quot; alt=&quot;a capture&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;각 리소스의 색으로 그려지는 것을 확인 할 수 있습니다.&lt;/p&gt;
 
@@ -335,10 +335,10 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
 &lt;a href=&quot;https://yonoo88.tistory.com/1057&quot;&gt;https://yonoo88.tistory.com/1057&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://aroundck.tistory.com/263&quot;&gt;https://aroundck.tistory.com/263&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://stackoverflow.com/questions/7043240/get-a-layout-inflater-from-the-applicationcontext/7045031&quot;&gt;https://stackoverflow.com/questions/7043240/get-a-layout-inflater-from-the-applicationcontext/7045031&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002&quot;&gt;https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Context" /><category term="Application" /><category term="Activity" /><summary type="html">아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.</summary></entry><entry><title type="html">Buttons(+background issue) And Gestures</title><link href="https://jheun66.github.io/android/2021/01/15/buttons.html" rel="alternate" type="text/html" title="Buttons(+background issue) And Gestures" /><published>2021-01-15T13:30:00+00:00</published><updated>2021-01-15T13:30:00+00:00</updated><id>https://jheun66.github.io/android/2021/01/15/buttons</id><content type="html" xml:base="https://jheun66.github.io/android/2021/01/15/buttons.html">&lt;p&gt;UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다.
+&lt;a href=&quot;https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002&quot;&gt;https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Context" /><category term="Application" /><category term="Activity" /><summary type="html">아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.</summary></entry><entry><title type="html">Buttons(+background issue) And Gestures</title><link href="https://jheun66.github.io/posts/android/buttons/" rel="alternate" type="text/html" title="Buttons(+background issue) And Gestures" /><published>2021-01-15T13:30:00+00:00</published><updated>2021-01-15T13:30:00+00:00</updated><id>https://jheun66.github.io/posts/android/buttons</id><content type="html" xml:base="https://jheun66.github.io/posts/android/buttons/">&lt;p&gt;UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다.
 뷰는 사용자와 상호작용을 제공해주는 기본적인 클래스입니다. 이번에는 그 중에서 Button과 관련된 포스팅을 하고자 합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/Button.png&quot; alt=&quot;a diagram&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/Button.png&quot; alt=&quot;a diagram&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;들어가기에-앞서&quot;&gt;들어가기에 앞서&lt;/h2&gt;
 &lt;p&gt;사용자와 상호작용하는 앱을 만들 때는 직관적으로 만들어야 합니다. 사용자가 어떤 화면을 보고 탭을 하거나 드래그하거나 할 때 사용자가 기대한대로 동작하도록 하는 것이 중요합니다.&lt;/p&gt;
@@ -347,7 +347,7 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
 
 &lt;h2 id=&quot;다양한-버튼&quot;&gt;다양한 버튼&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/button_test_capture.png&quot; alt=&quot;a capture&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/button_test_capture.png&quot; alt=&quot;a capture&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.constraintlayout.widget.ConstraintLayout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;
@@ -467,7 +467,7 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
 &lt;p&gt;&lt;em&gt;setEnabled(boolean)&lt;/em&gt; 메소드를 이용하거나 xml에서 &lt;em&gt;android.enabled=”false”&lt;/em&gt; 를 사용하여 비활성화 시킬 수 있습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;floating-action-button&quot;&gt;Floating Action Button&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/Screenshot_1610795110.png&quot; alt=&quot;a screenshot&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/Screenshot_1610795110.png&quot; alt=&quot;a screenshot&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;주로 좌측 하단에 남다른 버튼을 보신적이 있을 것입니다. 이 버튼은 &lt;em&gt;Floating Action Button&lt;/em&gt; 이라 합니다. 줄여서 fab라고도 합니다.&lt;/p&gt;
 
@@ -613,7 +613,7 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
 &lt;a href=&quot;https://developer.android.com/guide/topics/resources/drawable-resource?hl=ko#Shape&quot;&gt;shape drawable&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://developer.android.com/guide/topics/ui/floating-action-button&quot;&gt;Floating Action Button&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://developer.android.com/training/gestures/detector?hl=ko&quot;&gt;Detect Common Gestures&lt;/a&gt;
-&lt;a href=&quot;https://developer.android.com/reference/android/view/MotionEvent.html&quot;&gt;MotionEvent&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="UX" /><category term="UI" /><category term="Button" /><category term="Gesture" /><summary type="html">UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다. 뷰는 사용자와 상호작용을 제공해주는 기본적인 클래스입니다. 이번에는 그 중에서 Button과 관련된 포스팅을 하고자 합니다.</summary></entry><entry><title type="html">ACTION_SEND &amp;amp; ACTION_SENDTO(이메일 인텐트)</title><link href="https://jheun66.github.io/android/2021/01/14/send-and-sendto.html" rel="alternate" type="text/html" title="ACTION_SEND &amp;amp; ACTION_SENDTO(이메일 인텐트)" /><published>2021-01-14T02:30:00+00:00</published><updated>2021-01-14T02:30:00+00:00</updated><id>https://jheun66.github.io/android/2021/01/14/send-and-sendto</id><content type="html" xml:base="https://jheun66.github.io/android/2021/01/14/send-and-sendto.html">&lt;p&gt;이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.&lt;/p&gt;
+&lt;a href=&quot;https://developer.android.com/reference/android/view/MotionEvent.html&quot;&gt;MotionEvent&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="UX" /><category term="UI" /><category term="Button" /><category term="Gesture" /><summary type="html">UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다. 뷰는 사용자와 상호작용을 제공해주는 기본적인 클래스입니다. 이번에는 그 중에서 Button과 관련된 포스팅을 하고자 합니다.</summary></entry><entry><title type="html">ACTION_SEND &amp;amp; ACTION_SENDTO(이메일 인텐트)</title><link href="https://jheun66.github.io/posts/android/send-and-sendto/" rel="alternate" type="text/html" title="ACTION_SEND &amp;amp; ACTION_SENDTO(이메일 인텐트)" /><published>2021-01-14T02:30:00+00:00</published><updated>2021-01-14T02:30:00+00:00</updated><id>https://jheun66.github.io/posts/android/send-and-sendto</id><content type="html" xml:base="https://jheun66.github.io/posts/android/send-and-sendto/">&lt;p&gt;이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;action_send&quot;&gt;ACTION_SEND&lt;/h2&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendEmailwithSend&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -631,7 +631,7 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
 EXTRA_STREAM을 사용할 때는 타입을 &lt;em&gt;/&lt;/em&gt; 로 합니다.
 좀더 자세한 사용법은 참고의 개발자 문서를 확인하면 되겠습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/selectSend.jpg&quot; alt=&quot;select send&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/selectSend.jpg&quot; alt=&quot;select send&quot; /&gt;
 대신 선택창에 SEND를 받는 앱이 많습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;action_sendto&quot;&gt;ACTION_SENDTO&lt;/h2&gt;
@@ -656,7 +656,7 @@ EXTRA_STREAM을 사용할 때는 타입을 &lt;em&gt;/&lt;/em&gt; 로 합니다.
 그래서 이 인텐트는 EXTRA_STREAM을 받지 못합니다. 
 &lt;a href=&quot;https://css-tricks.com/snippets/html/mailto-links/&quot;&gt;mailto 관련&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/selectSendTo.jpg&quot; alt=&quot;select sendto&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/selectSendTo.jpg&quot; alt=&quot;select sendto&quot; /&gt;
 이 경우 메일 앱만 받습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;좀-더-좋은-방법&quot;&gt;좀 더 좋은 방법&lt;/h2&gt;
@@ -689,7 +689,7 @@ EXTRA_STREAM을 사용할 때는 타입을 &lt;em&gt;/&lt;/em&gt; 로 합니다.
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/content/Intent?hl=ko#ACTION_SEND&quot;&gt;https://developer.android.com/reference/android/content/Intent?hl=ko#ACTION_SEND&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://github.com/codepath/android_guides/wiki/Common-Implicit-Intents&quot;&gt;https://github.com/codepath/android_guides/wiki/Common-Implicit-Intents&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email&quot;&gt;https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Activity" /><category term="Intent" /><summary type="html">이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.</summary></entry><entry><title type="html">resolveActivity VS queryIntentActivities</title><link href="https://jheun66.github.io/android/2021/01/13/resolveActivity-vs-queryIntentActivities.html" rel="alternate" type="text/html" title="resolveActivity VS queryIntentActivities" /><published>2021-01-13T05:30:00+00:00</published><updated>2021-01-13T05:30:00+00:00</updated><id>https://jheun66.github.io/android/2021/01/13/resolveActivity-vs-queryIntentActivities</id><content type="html" xml:base="https://jheun66.github.io/android/2021/01/13/resolveActivity-vs-queryIntentActivities.html">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;a href=&quot;https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email&quot;&gt;https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Activity" /><category term="Intent" /><summary type="html">이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.</summary></entry><entry><title type="html">resolveActivity VS queryIntentActivities</title><link href="https://jheun66.github.io/posts/android/resolveActivity-vs-queryIntentActivities/" rel="alternate" type="text/html" title="resolveActivity VS queryIntentActivities" /><published>2021-01-13T05:30:00+00:00</published><updated>2021-01-13T05:30:00+00:00</updated><id>https://jheun66.github.io/posts/android/resolveActivity-vs-queryIntentActivities</id><content type="html" xml:base="https://jheun66.github.io/posts/android/resolveActivity-vs-queryIntentActivities/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;startActivity(intent)&lt;/em&gt; 를 실행하기 전 해당 intent를 실행시킬 수 있는지 체크할 필요가 있습니다. 만일 기기에 인텐트를 처리할 수 있는 앱이 존재하지 않으면 비정상 종료되기 때문입니다.&lt;/p&gt;
 
 &lt;p&gt;이 때 사용하는 방법에 &lt;em&gt;resolveActivity&lt;/em&gt; , &lt;em&gt;queryIntentActivities&lt;/em&gt; 가 있습니다.&lt;/p&gt;
@@ -767,7 +767,7 @@ EXTRA_STREAM을 사용할 때는 타입을 &lt;em&gt;/&lt;/em&gt; 로 합니다.
 
 &lt;p&gt;만일 여러 액티비티가 인텐트 조건을 만족하면 가장 우선순위가 높은 액티비티가 반환됩니다. 만일 우선순위가 같다면 시스템은 사용자가 선호하는 액티비티를 선택할 수 있도록 하고 그 후에 사용자의 선호를 따를 수 있도록 합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/selectActivity.jpg&quot; alt=&quot;select activity&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/selectActivity.jpg&quot; alt=&quot;select activity&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;이는 저희가 흔히 본 앱 선택창을 말합니다.&lt;/p&gt;
 
@@ -812,7 +812,7 @@ EXTRA_STREAM을 사용할 때는 타입을 &lt;em&gt;/&lt;/em&gt; 로 합니다.
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/content/Intent?hl=ko#resolveActivity(android.content.pm.PackageManager)&quot;&gt;https://developer.android.com/reference/android/content/Intent?hl=ko#resolveActivity(android.content.pm.PackageManager)&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://developer.android.com/reference/android/content/pm/PackageManager#resolveActivity(android.content.Intent,%20int)&quot;&gt;https://developer.android.com/reference/android/content/pm/PackageManager#resolveActivity(android.content.Intent,%20int)&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://developer.android.com/reference/android/content/pm/PackageManager#queryIntentActivities(android.content.Intent,%20int)&quot;&gt;https://developer.android.com/reference/android/content/pm/PackageManager#queryIntentActivities(android.content.Intent,%20int)&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Activity" /><category term="Intent" /><summary type="html">개요 startActivity(intent) 를 실행하기 전 해당 intent를 실행시킬 수 있는지 체크할 필요가 있습니다. 만일 기기에 인텐트를 처리할 수 있는 앱이 존재하지 않으면 비정상 종료되기 때문입니다.</summary></entry><entry><title type="html">Implict Intent</title><link href="https://jheun66.github.io/android/2021/01/09/implict-intent.html" rel="alternate" type="text/html" title="Implict Intent" /><published>2021-01-09T18:00:00+00:00</published><updated>2021-01-09T18:00:00+00:00</updated><id>https://jheun66.github.io/android/2021/01/09/implict-intent</id><content type="html" xml:base="https://jheun66.github.io/android/2021/01/09/implict-intent.html">&lt;p&gt;&lt;a href=&quot;/posts/intent&quot;&gt;&lt;strong&gt;Intent&lt;/strong&gt;&lt;/a&gt;에 이어서 작성하겠습니다.&lt;/p&gt;
+&lt;a href=&quot;https://developer.android.com/reference/android/content/pm/PackageManager#queryIntentActivities(android.content.Intent,%20int)&quot;&gt;https://developer.android.com/reference/android/content/pm/PackageManager#queryIntentActivities(android.content.Intent,%20int)&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Activity" /><category term="Intent" /><summary type="html">개요 startActivity(intent) 를 실행하기 전 해당 intent를 실행시킬 수 있는지 체크할 필요가 있습니다. 만일 기기에 인텐트를 처리할 수 있는 앱이 존재하지 않으면 비정상 종료되기 때문입니다.</summary></entry><entry><title type="html">Implict Intent</title><link href="https://jheun66.github.io/posts/android/implict-intent/" rel="alternate" type="text/html" title="Implict Intent" /><published>2021-01-09T18:00:00+00:00</published><updated>2021-01-09T18:00:00+00:00</updated><id>https://jheun66.github.io/posts/android/implict-intent</id><content type="html" xml:base="https://jheun66.github.io/posts/android/implict-intent/">&lt;p&gt;&lt;a href=&quot;/posts/android/intent&quot;&gt;&lt;strong&gt;Intent&lt;/strong&gt;&lt;/a&gt;에 이어서 작성하겠습니다.&lt;/p&gt;
 
 &lt;p&gt;Explict Intent에서는 클래스명으로 호출하여 다른 액티비티를 호출했습니다. 하지만 Implict Intent를 이용한 호출 방법은 조금 다릅니다.
 특정 클래스 명을 지정하지 않더라도 원하는 액션과 특정 데이터들을 이용하여 실행할 수 있는 액티비티, 다른 컴포넌트들을 호출할 수 있습니다. 매칭된 액티비티가 여러 개일 경우 사용자가 선택할 수 있습니다.&lt;/p&gt;
@@ -861,283 +861,84 @@ host를 설정하지 않으면 모든 http 스킴에 대해서 처리해줄 수 
 &lt;p&gt;&lt;a href=&quot;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-3-c-implicit-intents/2-3-c-implicit-intents.html&quot;&gt;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-3-c-implicit-intents/2-3-c-implicit-intents.html&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://developer.android.com/codelabs/android-training-activity-with-implicit-intent#0&quot;&gt;https://developer.android.com/codelabs/android-training-activity-with-implicit-intent#0&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://developer.android.com/reference/android/content/Intent.html&quot;&gt;https://developer.android.com/reference/android/content/Intent.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://developer.android.com/reference/androidx/core/app/ShareCompat.IntentBuilder&quot;&gt;https://developer.android.com/reference/androidx/core/app/ShareCompat.IntentBuilder&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Intent" /><category term="Implict Intent" /><summary type="html">Intent에 이어서 작성하겠습니다.</summary></entry><entry><title type="html">Enable Google Page Views</title><link href="https://jheun66.github.io/blogging/tutorial/2021/01/03/enable-google-pv.html" rel="alternate" type="text/html" title="Enable Google Page Views" /><published>2021-01-03T23:32:00+00:00</published><updated>2021-01-03T23:32:00+00:00</updated><id>https://jheun66.github.io/blogging/tutorial/2021/01/03/enable-google-pv</id><content type="html" xml:base="https://jheun66.github.io/blogging/tutorial/2021/01/03/enable-google-pv.html">&lt;p&gt;This post is to enable Page Views on the &lt;a href=&quot;https://github.com/cotes2020/jekyll-theme-chirpy/&quot;&gt;&lt;strong&gt;Chirpy&lt;/strong&gt;&lt;/a&gt; theme based blog that you just built. This requires technical knowledge and it’s recommended to keep the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;google_analytics.pv&lt;/code&gt; disabled unless you have a good reason. If your website has low traffic, the page views count would discourage you to write more blogs. With that said, let’s start with the setup.&lt;/p&gt;
+&lt;a href=&quot;https://developer.android.com/reference/androidx/core/app/ShareCompat.IntentBuilder&quot;&gt;https://developer.android.com/reference/androidx/core/app/ShareCompat.IntentBuilder&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Intent" /><category term="Implict Intent" /><summary type="html">Intent에 이어서 작성하겠습니다.</summary></entry><entry><title type="html">Activitiew And Intents Test</title><link href="https://jheun66.github.io/posts/android/activities-and-intents-practice/" rel="alternate" type="text/html" title="Activitiew And Intents Test" /><published>2020-12-30T15:00:00+00:00</published><updated>2020-12-30T15:00:00+00:00</updated><id>https://jheun66.github.io/posts/android/activities-and-intents-practice</id><content type="html" xml:base="https://jheun66.github.io/posts/android/activities-and-intents-practice/">&lt;p&gt;gif 테스트 겸 실습 테스트를 해보았습니다.&lt;/p&gt;
 
-&lt;h2 id=&quot;set-up-google-analytics&quot;&gt;Set up Google Analytics&lt;/h2&gt;
-
-&lt;h3 id=&quot;create-ga-account-and-property&quot;&gt;Create GA account and property&lt;/h3&gt;
-
-&lt;p&gt;First, you need to setup your account on Google analytics. While your create your account, you must create your first &lt;strong&gt;Property&lt;/strong&gt; as well.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Head to &lt;a href=&quot;https://analytics.google.com/&quot;&gt;https://analytics.google.com/&lt;/a&gt; and click on &lt;strong&gt;Start Measuring&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Enter your desired &lt;em&gt;Account Name&lt;/em&gt; and choose the desired checkboxes&lt;/li&gt;
-  &lt;li&gt;Enter your desired &lt;em&gt;Property Name&lt;/em&gt;. This is the name of the tracker project that appears on your Google Analytics dashboard&lt;/li&gt;
-  &lt;li&gt;Enter the required information &lt;em&gt;About your business&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Hit &lt;em&gt;Create&lt;/em&gt; and accept any license popup to setup your Google Analytics account and create your property&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;create-data-stream&quot;&gt;Create Data Stream&lt;/h3&gt;
-
-&lt;p&gt;With your property created, you now need to set up Data Stream to track your blog traffic. After you signup, the prompt should automatically take you to creating your first &lt;strong&gt;Data Stream&lt;/strong&gt;. If not, follow these steps:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Go to &lt;strong&gt;Admin&lt;/strong&gt; on the left column&lt;/li&gt;
-  &lt;li&gt;Select the desired property from the drop down on the second column&lt;/li&gt;
-  &lt;li&gt;Click on &lt;strong&gt;Data Streams&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Add a stream and click on &lt;strong&gt;Web&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Enter your blog’s URL&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;It should look like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20210103/01-google-analytics-data-stream.png&quot; alt=&quot;google-analytics-data-stream&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, click on the new data stream and grab the &lt;strong&gt;Measurement ID&lt;/strong&gt;. It should look something like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;G-V6XXXXXXXX&lt;/code&gt;. Copy this to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file&lt;/p&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;google_analytics&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;G-V6XXXXXXX&apos;&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;# Fill with your Google Analytics ID&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;pv&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# The Google Analytics pageviews switch.&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# the next options only valid when `google_analytics.pv` is enabled.&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;proxy_url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;proxy_endpoint&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# pv data local cache, good for the users from GFW area.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;When you push these changes to your blog, you should start seeing the traffic on your Google Analytics. Play around with Google Analytics dashboard to get familiar with the options available as it takes like 5 mins to pickup your changes. You should now be able to monitor your traffic in realtime.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20210103/02-google-analytics-realtime.png&quot; alt=&quot;google-analytics-realtime&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;setup-page-views&quot;&gt;Setup Page Views&lt;/h2&gt;
-
-&lt;p&gt;There is a detailed &lt;a href=&quot;https://developers.google.com/analytics/solutions/google-analytics-super-proxy&quot;&gt;tutorial&lt;/a&gt; available to set up Google Analytics superProxy. But, if you are interested to just quickly get your Chirpy-based blog display page views, follow along. These steps were tested on a Linux machine. If you are running Windows, you can use Git bash terminal to run Unix-like commands.&lt;/p&gt;
-
-&lt;h3 id=&quot;setup-google-app-engine&quot;&gt;Setup Google App Engine&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Visit &lt;a href=&quot;https://console.cloud.google.com/appengine&quot;&gt;https://console.cloud.google.com/appengine&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click on &lt;strong&gt;Create Application&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click on &lt;strong&gt;Create Project&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enter the name and choose the data center close to you&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Select &lt;strong&gt;Python&lt;/strong&gt; language and &lt;strong&gt;Standard&lt;/strong&gt; environment&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enable billing account. Yeah, you have to link your credit card. But, you won’t be billed unless you exceed your free quota. For a simple blog, free quota is more than sufficient.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Go to your App Engine dashboard on your browser and select &lt;strong&gt;API &amp;amp; Services&lt;/strong&gt; from the left navigation menu&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click on &lt;strong&gt;Enable APIs and Services&lt;/strong&gt; button on the top&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enable the following APIs: &lt;em&gt;Google Analytics API&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;On the left, Click on &lt;em&gt;OAuth Consent Screen&lt;/em&gt; and accept &lt;strong&gt;Configure Consent Screen&lt;/strong&gt;. Select &lt;strong&gt;External&lt;/strong&gt; since your blog is probably hosted for the public. Click on &lt;strong&gt;Publish&lt;/strong&gt; under &lt;em&gt;Publishing Status&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click on &lt;strong&gt;Credentials&lt;/strong&gt; on the left and create a new &lt;strong&gt;OAuth Client IDs&lt;/strong&gt; credential. Make sure to add a entry under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Authorized redirect URIs&lt;/code&gt; that matches: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://&amp;lt;project-id&amp;gt;.&amp;lt;region&amp;gt;.r.appspot.com/admin/auth&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Note down the &lt;strong&gt;Your Client ID&lt;/strong&gt; and &lt;strong&gt;Your Client Secret&lt;/strong&gt;. You’ll need this in the next section.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Download and install the cloud SDK for your platform: &lt;a href=&quot;https://cloud.google.com/sdk/docs/quickstart&quot;&gt;https://cloud.google.com/sdk/docs/quickstart&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Run the following commands:&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;[root@bc96abf71ef8 /]#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;gcloud init
-&lt;span class=&quot;go&quot;&gt;
-~snip~
-
-Go to the following link in your browser:
-
-    https://accounts.google.com/o/oauth2/auth?response_type=code&amp;amp;client_id=XYZ.apps.googleusercontent.com&amp;amp;redirect_uri=ABCDEFG
-
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;Enter verification code: &amp;lt;VERIFICATION CODE THAT YOU GET AFTER YOU VISIT AND AUTHENTICATE FROM THE ABOVE LINK&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;
-You are logged in as: [blah_blah@gmail.com].
-
-Pick cloud project to use:
-[1] chirpy-test-300716
-[2] Create a new project
-Please enter numeric choice or text value (must exactly match list
-item): 1
-
-
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;[root@bc96abf71ef8 /]#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;gcloud info
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Your selected project info should be displayed here
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;setup-google-analytics-superproxy&quot;&gt;Setup Google Analytics superProxy&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Clone the &lt;strong&gt;Google Analytics superProxy&lt;/strong&gt; project on Github: &lt;a href=&quot;https://github.com/googleanalytics/google-analytics-super-proxy&quot;&gt;https://github.com/googleanalytics/google-analytics-super-proxy&lt;/a&gt; to your local.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Remove the first 2 lines in the &lt;a href=&quot;https://github.com/googleanalytics/google-analytics-super-proxy/blob/master/src/app.yaml#L1-L2&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/app.yaml&lt;/code&gt;&lt;/a&gt; file:&lt;/p&gt;
-
-    &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;s&quot;&gt;-application&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-project-id&lt;/span&gt;
- &lt;span class=&quot;s&quot;&gt;-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/config.py&lt;/code&gt;, add the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OAUTH_CLIENT_ID&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OAUTH_CLIENT_SECRET&lt;/code&gt; that you gathered from you App Engine Dashboard.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enter any random key for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XSRF_KEY&lt;/code&gt;, your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.py&lt;/code&gt; should look similar to this&lt;/p&gt;
-
-    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;#!/usr/bin/python2.7
-&lt;/span&gt;
- &lt;span class=&quot;n&quot;&gt;__author__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;pete.frisella@gmail.com (Pete Frisella)&apos;&lt;/span&gt;
-
- &lt;span class=&quot;c1&quot;&gt;# OAuth 2.0 Client Settings
-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AUTH_CONFIG&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;s&quot;&gt;&apos;OAUTH_CLIENT_ID&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;YOUR_CLIENT_ID&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-   &lt;span class=&quot;s&quot;&gt;&apos;OAUTH_CLIENT_SECRET&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;YOUR_CLIENT_SECRET&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-   &lt;span class=&quot;s&quot;&gt;&apos;OAUTH_REDIRECT_URI&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;%s%s&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-     &lt;span class=&quot;s&quot;&gt;&apos;https://chirpy-test-XXXXXX.ue.r.appspot.com&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-     &lt;span class=&quot;s&quot;&gt;&apos;/admin/auth&apos;&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
- &lt;span class=&quot;c1&quot;&gt;# XSRF Settings
-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XSRF_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;OnceUponATimeThereLivedALegend&apos;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; You can configure a custom domain instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://PROJECT_ID.REGION_ID.r.appspot.com&lt;/code&gt;. But, for the sake of keeping it simple, we will be using the Google provided default URL.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;From inside the src/ directory, deploy the app&lt;/p&gt;
-
-    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt; [root@bc96abf71ef8 src]#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;gcloud app deploy
-&lt;span class=&quot;go&quot;&gt; Services to deploy:
-
- descriptor:      [/tmp/google-analytics-super-proxy/src/app.yaml]
- source:          [/tmp/google-analytics-super-proxy/src]
- target project:  [chirpy-test-XXXX]
- target service:  [default]
- target version:  [VESRION_NUM]
- target url:      [https://chirpy-test-XXXX.ue.r.appspot.com]
-
-
- Do you want to continue (Y/n)? Y
-
- Beginning deployment of service [default]...
- ╔════════════════════════════════════════════════════════════╗
- ╠═ Uploading 1 file to Google Cloud Storage                 ═╣
- ╚════════════════════════════════════════════════════════════╝
- File upload done.
- Updating service [default]...done.
- Setting traffic split for service [default]...done.
- Deployed service [default] to [https://chirpy-test-XXXX.ue.r.appspot.com]
-
- You can stream logs from the command line by running:
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt; $&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;gcloud app logs &lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; default
-&lt;span class=&quot;go&quot;&gt;
- To view your application in the web browser run:
-&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt; $&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;gcloud app browse
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Visit the deployed service. Add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/admin&lt;/code&gt; to the end of the URL.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click on &lt;strong&gt;Authorize Users&lt;/strong&gt; and make sure to add yourself as a managed user.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;If you get any errors, please Google it. The errors are self-explanatory and should be easy to fix.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If everything went good, you’ll get this screen:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20210103/03-superProxy-deployed.png&quot; alt=&quot;superProxy-deployed&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;create-google-analytics-query&quot;&gt;Create Google Analytics Query&lt;/h3&gt;
-
-&lt;p&gt;Head to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://PROJECT_ID.REGION_ID.r.appspot.com/admin&lt;/code&gt; and create a query after verifying the account. &lt;strong&gt;GA Core Reporting API&lt;/strong&gt; query request can be created in &lt;a href=&quot;https://ga-dev-tools.appspot.com/query-explorer/&quot;&gt;Query Explorer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The query parameters are as follows:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;start-date&lt;/strong&gt;: fill in the first day of blog posting&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;end-date&lt;/strong&gt;: fill in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;today&lt;/code&gt; (this is a parameter supported by GA Report, which means that it will always end according to the current query date)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;metrics&lt;/strong&gt;: select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ga:pageviews&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;dimensions&lt;/strong&gt;: select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ga:pagePath&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In order to reduce the returned results and reduce the network bandwidth, we add custom filtering rules &lt;sup id=&quot;fnref:ga-filters&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ga-filters&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;filters&lt;/strong&gt;: fill in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ga:pagePath=~^/posts/.*/$;ga:pagePath!@=&lt;/code&gt;.&lt;/p&gt;
-
-    &lt;p&gt;Among them, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;;&lt;/code&gt; means using &lt;em&gt;logical AND&lt;/em&gt; to concatenate two rules.&lt;/p&gt;
-
-    &lt;p&gt;If the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; is specified, change the first filtering rule to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ga:pagePath=~^/BASE_URL/posts/.*/$&lt;/code&gt;, where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BASE_URL&lt;/code&gt; is the value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;After &lt;kbd&gt;Run Query&lt;/kbd&gt;, copy the generated contents of &lt;strong&gt;API Query URI&lt;/strong&gt; at the bottom of the page, and fill in the &lt;strong&gt;Encoded URI for the query&lt;/strong&gt; of SuperProxy on GAE.&lt;/p&gt;
-
-&lt;p&gt;After the query is saved on GAE, a &lt;strong&gt;Public Endpoint&lt;/strong&gt; (public access address) will be generated, and we will get the query result in JSON format when accessing it. Finally, click &lt;kbd&gt;Enable Endpoint&lt;/kbd&gt; in &lt;strong&gt;Public Request Endpoint&lt;/strong&gt; to make the query effective, and click &lt;kbd&gt;Start Scheduling&lt;/kbd&gt; in &lt;strong&gt;Scheduling&lt;/strong&gt; to start the scheduled task.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20210103/04-superproxy-query.png&quot; alt=&quot;superproxy-query&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;configure-chirpy-to-display-page-view&quot;&gt;Configure Chirpy to Display Page View&lt;/h2&gt;
-
-&lt;p&gt;Once all the hard part is done, it is very easy to enable the Page View on Chirpy theme. Your superProxy dashboard should look something like below and you can grab the required values.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20210103/05-superproxy-dashboard.png&quot; alt=&quot;superproxy-dashboard&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Update the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file of &lt;a href=&quot;https://github.com/cotes2020/jekyll-theme-chirpy/&quot;&gt;&lt;strong&gt;Chirpy&lt;/strong&gt;&lt;/a&gt; project with the values from your dashboard, to look similar to the following:&lt;/p&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;google_analytics&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;G-XXXXXXXXXX&apos;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# Fill with your Google Analytics ID&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;pv&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# The Google Analytics pageviews switch.&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# the next options only valid when `google_analytics.pv` is enabled.&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;proxy_url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://PROJECT_ID.REGION_ID.r.appspot.com&apos;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;proxy_endpoint&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://PROJECT_ID.REGION_ID.r.appspot.com/query?id=&amp;lt;ID&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;SUPER&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;PROXY&amp;gt;&apos;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;# pv data local cache, good for the users from GFW area.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, you should see the Page View enabled on your blog.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:ga-filters&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://developers.google.com/analytics/devguides/reporting/core/v3/reference#filters&quot;&gt;Google Analytics Core Reporting API: Filters&lt;/a&gt; &lt;a href=&quot;#fnref:ga-filters&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Dinesh Prasanth Moluguwan Krishnamoorthy</name></author><category term="Blogging" /><category term="Tutorial" /><category term="google analytics" /><category term="pageviews" /><summary type="html">This post is to enable Page Views on the Chirpy theme based blog that you just built. This requires technical knowledge and it’s recommended to keep the google_analytics.pv disabled unless you have a good reason. If your website has low traffic, the page views count would discourage you to write more blogs. With that said, let’s start with the setup.</summary></entry><entry><title type="html">Activitiew And Intents Test</title><link href="https://jheun66.github.io/android/2020/12/30/activities-and-intents-practice.html" rel="alternate" type="text/html" title="Activitiew And Intents Test" /><published>2020-12-30T15:00:00+00:00</published><updated>2020-12-30T15:00:00+00:00</updated><id>https://jheun66.github.io/android/2020/12/30/activities-and-intents-practice</id><content type="html" xml:base="https://jheun66.github.io/android/2020/12/30/activities-and-intents-practice.html">&lt;p&gt;gif 테스트 겸 실습 테스트를 해보았습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/twoactivities.gif&quot; alt=&quot;two activity gif&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/twoactivities.gif&quot; alt=&quot;two activity gif&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;intent-내부-정보&quot;&gt;intent 내부 정보&lt;/h2&gt;
 &lt;p&gt;컴포넌트 이름, 클래스 이름 등을 확인할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/android_example/intent_componet.png&quot; alt=&quot;intent info&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/intent_componet.png&quot; alt=&quot;intent info&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/codelabs/android-training-create-an-activity#12&quot;&gt;https://developer.android.com/codelabs/android-training-create-an-activity#12&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Intent" /><category term="Explict Intent" /><summary type="html">gif 테스트 겸 실습 테스트를 해보았습니다.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/codelabs/android-training-create-an-activity#12&quot;&gt;https://developer.android.com/codelabs/android-training-create-an-activity#12&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Intent" /><category term="Explict Intent" /><summary type="html">gif 테스트 겸 실습 테스트를 해보았습니다.</summary></entry><entry><title type="html">Intent(Explict Intent)</title><link href="https://jheun66.github.io/posts/android/intent/" rel="alternate" type="text/html" title="Intent(Explict Intent)" /><published>2020-12-30T03:00:00+00:00</published><updated>2020-12-30T03:00:00+00:00</updated><id>https://jheun66.github.io/posts/android/intent</id><content type="html" xml:base="https://jheun66.github.io/posts/android/intent/">&lt;p&gt;먼저 Explict Intent 위주로 정리합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;intent&quot;&gt;Intent&lt;/h2&gt;
+&lt;p&gt;App Component 사이에서 통신하는데 사용되는 메시지 객체입니다. ART에 요청하여 액티비티를 시작하거나 다른 app component(서비스, 브로드캐스트)등을 자기 앱에서 또는 다른 앱에서 실행 시킬 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;앱을 처음 실행시킬때 ART에서 앱으로 Intent를 보내 메인 액티비티를 실행시킵니다. 다른 액티비티를 실행시킬때는 startActivity() 또는 startActivityResult()를 호출합니다. 실행 뿐만 아니라 액티비티간 데이터를 전송하는데 사용할 수도 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;intent-types&quot;&gt;Intent types&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Explict Intent&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;주로 자신의 앱에서는 패키지 이름과 클래스 이름을 알고 있으므로 자격을 갖춘 액티비티 클래스 이름을 사용하여 명시적으로 인텐트를 호출 할 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Implict Intent&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;명시적으로 지정하지 않고 수행할 액션을 통해 시스템이 부합하는 액티비티 또는 컴포넌트를 실행시킬 수 있습니다.
+&lt;a href=&quot;/posts/android/implict-intent&quot;&gt;&lt;strong&gt;Implict Intent&lt;/strong&gt;&lt;/a&gt;에 따로 정리합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;intent-filter&quot;&gt;Intent Filter&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;AndroidMainfest.xml&lt;/em&gt; 에서 인텐트 필터를 확인한 적이 있습니다. 해당 구성 요소가 수신하고자 하는 인텐트 유형을 작성하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;보안상 Service를 시작할 때는 명시적 인텐트를 사용하고 서비스에 대한 인텐트 필터는 선언하지 말라고 합니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Caution: To ensure that your app is secure, always use an explicit intent when starting a Service and do not declare intent filters for your services. Using an implicit intent to start a service is a security hazard because you can’t be certain what service will respond to the intent, and the user can’t see which service starts. Beginning with Android 5.0 (API level 21), the system throws an exception if you call bindService() with an implicit intent.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;intent-information&quot;&gt;Intent Information&lt;/h2&gt;
+
+&lt;p&gt;Intent 내부에는 어떤 컴포넌트를 실행할지 등 정보들이 담겨있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Component name&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Explict Intent에서는 필수로 작성해야합니다. 컴포넌트 이름이 없으면 시스템은 Implict Intent로 판단하고 다른 정보들을 통해 매칭해줍니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;작업을 수행할 데이터의 URI와 MIME 유형을 전달할 수 있습니다. URI를 설정하기 위해서는 setData()를 MIME 유형을 설정하기 위해서는 setType()을 호출하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;단, 주의 사항으로 URI와 MIME 유형을 둘다 설정할 경우 setData()와 setType()를 호출하는게 아니라 setDataAndType()을 호출합니다. 그렇지 않을 경우 서로 무효화한다고 합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Extras&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;작업에 필요한 데이터를 키-값 쌍으로 보낼 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Flags&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Intent 클래스에 정의되어 있는 메타데이터입니다. 액티비티를 어떻게 실행할지 실행되고 어떻게 처리될지 등을 지시히라 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/content/Intent#setFlags(int)&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Implict Intent는 다음 정보가 추가할 수 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Action&lt;/li&gt;
+  &lt;li&gt;Category&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutintents&quot;&gt;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutintents&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://developer.android.com/guide/components/intents-filters&quot;&gt;https://developer.android.com/guide/components/intents-filters&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Intent" /><category term="Explict Intent" /><summary type="html">먼저 Explict Intent 위주로 정리합니다.</summary></entry></feed>
