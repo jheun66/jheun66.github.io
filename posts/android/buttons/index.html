@@ -23,6 +23,13 @@
   <link rel="canonical" href="https://jheun66.github.io/posts/android/buttons/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+
+  <style type="text/css">
+    a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:hover {text-decoration: underline;}
+   </style>
+    
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Buttons(+background issue) And Gestures | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
@@ -40,7 +47,7 @@
 <meta property="twitter:title" content="Buttons(+background issue) And Gestures" />
 <meta name="google-site-verification" content="NFjrooIb0zLycxDgti6xtOkaLhYWvCAhYLDCsDf8sQI" />
 <script type="application/ld+json">
-{"url":"https://jheun66.github.io/posts/android/buttons/","@type":"BlogPosting","description":"UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다. 뷰는 사용자와 상호작용을 제공해주는 기본적인 클래스입니다. 이번에는 그 중에서 Button과 관련된 포스팅을 하고자 합니다.","headline":"Buttons(+background issue) And Gestures","dateModified":"2021-01-15T13:30:00+00:00","datePublished":"2021-01-15T13:30:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/buttons/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"dateModified":"2021-01-15T13:30:00+00:00","url":"https://jheun66.github.io/posts/android/buttons/","datePublished":"2021-01-15T13:30:00+00:00","@type":"BlogPosting","description":"UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다. 뷰는 사용자와 상호작용을 제공해주는 기본적인 클래스입니다. 이번에는 그 중에서 Button과 관련된 포스팅을 하고자 합니다.","headline":"Buttons(+background issue) And Gestures","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/buttons/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -115,19 +122,33 @@
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <p>UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다.
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#들어가기에-앞서">들어가기에 앞서</a></li>
+<li class="toc-entry toc-h2"><a href="#다양한-버튼">다양한 버튼</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#image-asset-vector-asset">image asset, vector asset</a></li>
+<li class="toc-entry toc-h3"><a href="#button-state">Button State</a></li>
+<li class="toc-entry toc-h3"><a href="#비활성화">비활성화</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#floating-action-button">Floating Action Button</a></li>
+<li class="toc-entry toc-h2"><a href="#detect-common-gestures">Detect Common Gestures</a></li>
+<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
+</ul><p>UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다.
 뷰는 사용자와 상호작용을 제공해주는 기본적인 클래스입니다. 이번에는 그 중에서 Button과 관련된 포스팅을 하고자 합니다.</p>
 
-<p><img src="/img/posts/android/Button.png" alt="a diagram" width="400" /></p>
+<p><img src="/img/posts/android/Button.png" alt="a diagram" width="400"></p>
 
-<h2 id="들어가기에-앞서">들어가기에 앞서</h2>
+<h2 id="들어가기에-앞서">
+<a class="anchor" href="#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0%EC%97%90-%EC%95%9E%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>들어가기에 앞서</h2>
 <p>사용자와 상호작용하는 앱을 만들 때는 직관적으로 만들어야 합니다. 사용자가 어떤 화면을 보고 탭을 하거나 드래그하거나 할 때 사용자가 기대한대로 동작하도록 하는 것이 중요합니다.</p>
 
 <p>이러한 디자인 원칙들에 대한 내용은 <a href="https://material.io/">머테리얼 사이트</a>에서 찾아볼 수 있습니다. 원칙뿐만 아니라 가이드, 디자인에 대한 리소스들도 들어있으니 참고하면 좋을 것 같습니다.</p>
 
-<h2 id="다양한-버튼">다양한 버튼</h2>
+<h2 id="다양한-버튼">
+<a class="anchor" href="#%EB%8B%A4%EC%96%91%ED%95%9C-%EB%B2%84%ED%8A%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>다양한 버튼</h2>
 
-<p><img src="/img/posts/android/button_test_capture.png" alt="a capture" width="400" /></p>
+<p><img src="/img/posts/android/button_test_capture.png" alt="a capture" width="400"></p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
@@ -217,14 +238,16 @@
 
 <p>현재 Button을 사용할 경우 shape xml을 적용이 안되는 것을 확인하였습니다. 이에 대한 해결방안은 &lt;Button&gt; 대신 &lt;androidx.appcompat.widget.AppCompatButton&gt;를 사용하는 것이 였습니다. 해당 이슈에 대한 stackoverflow 글을 참고하면 좋겠습니다.</p>
 
-<h3 id="image-asset-vector-asset">image asset, vector asset</h3>
+<h3 id="image-asset-vector-asset">
+<a class="anchor" href="#image-asset-vector-asset" aria-hidden="true"><span class="octicon octicon-link"></span></a>image asset, vector asset</h3>
 <p>이미지들은 해상도에 맞게 적용해야 깨지거나 이상하게 보이지 않을 것입니다. 이때 크기마다 미리 이미지 집합을 만들어 놓아 바로바로 사용하는 방법도 있을 것이 image asset을 이용한 방법입니다. 그리고 하나의 이미지를 사용하여 그때그때 화면 밀도에 맞게 변경하여 사용하는게 vector asset을 이용하는 방법입니다.
 물론 각 방법마다 장단점이 있어 상황에 맞게 사용하면 될꺼 같습니다.</p>
 
-<p>재미있는 글이 있어 링크를 걸어둡니다.<br />
+<p>재미있는 글이 있어 링크를 걸어둡니다.<br>
 <a href="https://lewismcgeary.github.io/posts/animated-vector-drawable-pathMorphing/">https://lewismcgeary.github.io/posts/animated-vector-drawable-pathMorphing/</a></p>
 
-<h3 id="button-state">Button State</h3>
+<h3 id="button-state">
+<a class="anchor" href="#button-state" aria-hidden="true"><span class="octicon octicon-link"></span></a>Button State</h3>
 <p>버튼의 상태에는 눌렀을 때, 포커스되어 있을 때, 기본 상태가 있습니다.
 <code class="language-plaintext highlighter-rouge">res/drawable/</code> 디렉토리에 다음과 같은 리소스를 만들어 커스텀할 수 있습니다.</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
@@ -243,11 +266,13 @@
 
 <p>순서가 중요합니다.</p>
 
-<h3 id="비활성화">비활성화</h3>
+<h3 id="비활성화">
+<a class="anchor" href="#%EB%B9%84%ED%99%9C%EC%84%B1%ED%99%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>비활성화</h3>
 <p><em>setEnabled(boolean)</em> 메소드를 이용하거나 xml에서 <em>android.enabled=”false”</em> 를 사용하여 비활성화 시킬 수 있습니다.</p>
 
-<h2 id="floating-action-button">Floating Action Button</h2>
-<p><img src="/img/posts/android/Screenshot_1610795110.png" alt="a screenshot" width="400" /></p>
+<h2 id="floating-action-button">
+<a class="anchor" href="#floating-action-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floating Action Button</h2>
+<p><img src="/img/posts/android/Screenshot_1610795110.png" alt="a screenshot" width="400"></p>
 
 <p>주로 좌측 하단에 남다른 버튼을 보신적이 있을 것입니다. 이 버튼은 <em>Floating Action Button</em> 이라 합니다. 줄여서 fab라고도 합니다.</p>
 
@@ -265,7 +290,8 @@
 
 <p>자세한 내용은 Reference에 있는 링크를 참고해 주세요.</p>
 
-<h2 id="detect-common-gestures">Detect Common Gestures</h2>
+<h2 id="detect-common-gestures">
+<a class="anchor" href="#detect-common-gestures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Detect Common Gestures</h2>
 <p>안드로이드에서는 사용자의 제스쳐를 인식하는 <code class="language-plaintext highlighter-rouge">GestureDetector</code> 클래스도 제공하고 있습니다. 하지만 이전 버젼과의 호환을 위해 <code class="language-plaintext highlighter-rouge">GestureDetector</code>를 사용하는 것보다 지원라이브러리인 <code class="language-plaintext highlighter-rouge">GestureDetectorCompat</code>를 사용하는 것을 권장하고 있습니다. 
 사용법은 동일합니다.</p>
 
@@ -385,17 +411,40 @@
 
 <p>더 다양한 액션은 <a href="https://developer.android.com/reference/android/view/MotionEvent#constants_1">액션 상수</a>에서 찾을 수 있습니다.</p>
 
-<h2 id="reference">Reference</h2>
-<p><a href="https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-2-user-experience/lesson-4-user-interaction/4-1-c-buttons-and-clickable-images/4-1-c-buttons-and-clickable-images.html">https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-2-user-experience/lesson-4-user-interaction/4-1-c-buttons-and-clickable-images/4-1-c-buttons-and-clickable-images.html</a><br />
-<a href="https://developer.android.com/guide/topics/ui/controls/button">https://developer.android.com/guide/topics/ui/controls/button</a><br />
-<a href="https://material.io/">머테리얼 사이트</a><br />
-<a href="https://stackoverflow.com/questions/31858374/android-button-background-color-not-changing">background issue</a><br />
-<a href="https://developer.android.com/guide/topics/resources/drawable-resource?hl=ko#Shape">shape drawable</a><br />
-<a href="https://developer.android.com/guide/topics/ui/floating-action-button">Floating Action Button</a><br />
+<h2 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
+<p><a href="https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-2-user-experience/lesson-4-user-interaction/4-1-c-buttons-and-clickable-images/4-1-c-buttons-and-clickable-images.html">https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-2-user-experience/lesson-4-user-interaction/4-1-c-buttons-and-clickable-images/4-1-c-buttons-and-clickable-images.html</a><br>
+<a href="https://developer.android.com/guide/topics/ui/controls/button">https://developer.android.com/guide/topics/ui/controls/button</a><br>
+<a href="https://material.io/">머테리얼 사이트</a><br>
+<a href="https://stackoverflow.com/questions/31858374/android-button-background-color-not-changing">background issue</a><br>
+<a href="https://developer.android.com/guide/topics/resources/drawable-resource?hl=ko#Shape">shape drawable</a><br>
+<a href="https://developer.android.com/guide/topics/ui/floating-action-button">Floating Action Button</a><br>
 <a href="https://developer.android.com/training/gestures/detector?hl=ko">Detect Common Gestures</a>
 <a href="https://developer.android.com/reference/android/view/MotionEvent.html">MotionEvent</a></p>
 
       
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/android/buttons/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/android/buttons/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+
     </div>
   </div>
 </div>
@@ -585,6 +634,8 @@ function mp3_embed() {
 }
 mp3_embed();
 </script>
+  
+  <script id="dsq-count-scr" src="//jheun66.disqus.com/count.js" async></script>
   
 </body>
 

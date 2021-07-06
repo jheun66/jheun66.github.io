@@ -23,6 +23,13 @@
   <link rel="canonical" href="https://jheun66.github.io/posts/android/actiivties/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+
+  <style type="text/css">
+    a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:hover {text-decoration: underline;}
+   </style>
+    
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Activities | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
@@ -40,7 +47,7 @@
 <meta property="twitter:title" content="Activities" />
 <meta name="google-site-verification" content="NFjrooIb0zLycxDgti6xtOkaLhYWvCAhYLDCsDf8sQI" />
 <script type="application/ld+json">
-{"url":"https://jheun66.github.io/posts/android/actiivties/","@type":"BlogPosting","description":"액티비티 액티비티는 안드로이드 앱에서 정말 중요한 구성요소 중 하나 입니다. 액티비티는 UI를 포함한 화면이며 이를 통해 사용자와 상호작용을 할 수 있습니다. 하나의 앱에는 여러 액티비티가 있을 수 있으며 서로 독립되어 있습니다. 따라서 액티비티가 실행되고 다른 액티비티와 함께 동작하는 방식을 이해하는 것이 중요합니다.","headline":"Activities","dateModified":"2020-12-25T09:00:00+00:00","datePublished":"2020-12-25T09:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/actiivties/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"dateModified":"2020-12-25T09:00:00+00:00","url":"https://jheun66.github.io/posts/android/actiivties/","datePublished":"2020-12-25T09:00:00+00:00","@type":"BlogPosting","description":"액티비티 액티비티는 안드로이드 앱에서 정말 중요한 구성요소 중 하나 입니다. 액티비티는 UI를 포함한 화면이며 이를 통해 사용자와 상호작용을 할 수 있습니다. 하나의 앱에는 여러 액티비티가 있을 수 있으며 서로 독립되어 있습니다. 따라서 액티비티가 실행되고 다른 액티비티와 함께 동작하는 방식을 이해하는 것이 중요합니다.","headline":"Activities","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/actiivties/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -115,20 +122,38 @@
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <h1 id="액티비티">액티비티</h1>
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#액티비티">액티비티</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#액티비티의-컨셉">액티비티의 컨셉</a></li>
+<li class="toc-entry toc-h2"><a href="#메니페스트-구성하기">메니페스트 구성하기</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#activity">&lt;activity&gt;</a></li>
+<li class="toc-entry toc-h3"><a href="#intent-filter">&lt;intent-filter&gt;</a></li>
+<li class="toc-entry toc-h3"><a href="#permission">permission</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#activity-lifecycle">Activity LifeCycle</a></li>
+<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
+</ul>
+</li>
+</ul><h1 id="액티비티">
+<a class="anchor" href="#%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>액티비티</h1>
 <p>액티비티는 안드로이드 앱에서 정말 중요한 <strong>구성요소</strong> 중 하나 입니다. 액티비티는 UI를 포함한 화면이며 이를 통해 사용자와 상호작용을 할 수 있습니다. 하나의 앱에는 여러 액티비티가 있을 수 있으며 서로 독립되어 있습니다. 따라서 액티비티가 실행되고 다른 액티비티와 함께 동작하는 방식을 이해하는 것이 중요합니다.</p>
 
-<h2 id="액티비티의-컨셉">액티비티의 컨셉</h2>
-<p>C/C++에서 처음 프로그래밍을 접한 사람이라면 <strong>main 함수</strong>를 호출하여 코드를 실행하는 패러다임에 익숙할 것입니다. 하지만 안드로이드 시스템에서는 액티비티 생명 주기의 특정 상태에 해당하는 특정 콜백 메소드를 호출하여 액티비티 인스턴스를 통해 코드를 실행합니다. <br />
+<h2 id="액티비티의-컨셉">
+<a class="anchor" href="#%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%EC%9D%98-%EC%BB%A8%EC%85%89" aria-hidden="true"><span class="octicon octicon-link"></span></a>액티비티의 컨셉</h2>
+<p>C/C++에서 처음 프로그래밍을 접한 사람이라면 <strong>main 함수</strong>를 호출하여 코드를 실행하는 패러다임에 익숙할 것입니다. 하지만 안드로이드 시스템에서는 액티비티 생명 주기의 특정 상태에 해당하는 특정 콜백 메소드를 호출하여 액티비티 인스턴스를 통해 코드를 실행합니다. <br>
 한 앱에서 어떤 액티비티를 진행하다가 다른 액티비티를 실행시키거나 다른 앱을 호출할 때 그 앱을 통째로 호출하는게 아니라 필요한 액티비티를 호출하여 실행시킵니다. 개발자 문서의 예시에서는 이메일 작성 액티비티로 예를 들었습니다. 이메일 앱에서 이메일 작성 액티비티를 호출할 수 있고 카메라 앱에서도 무슨 이메일 버튼을 클리가면 이메일 작성 액티비티에 진입할 수 있을 것 입니다.</p>
 
-<p><img src="/img/posts/android/KakaoTalk_Photo_2020-12-25-20-47-06.jpeg" alt="카메라 앱" width="240" /></p>
+<p><img src="/img/posts/android/KakaoTalk_Photo_2020-12-25-20-47-06.jpeg" alt="카메라 앱" width="240"></p>
 
 <p>이미지의 빨간 동그라미를 보면 카메라 앱에서는 사진을 찍으면 카카오톡, 인스트그램, 메시지 등의 액티비티와 연결할 수 있고 파란색 동그라미를 보면 이미지 관리 앱의 액티비티와도 연결될 수 있는 것을 확인 할 수 있습니다.</p>
 
 <p>이러한 점에서 액티비티들은 함께 결함하여 앱을 구성하지만 일반적으로 서로에게 최소한의 의존성을 가지고 느슨하게 결합되어 있다고 할 수 있습니다.</p>
 
-<h2 id="메니페스트-구성하기">메니페스트 구성하기</h2>
+<h2 id="메니페스트-구성하기">
+<a class="anchor" href="#%EB%A9%94%EB%8B%88%ED%8E%98%EC%8A%A4%ED%8A%B8-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>메니페스트 구성하기</h2>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
     <span class="na">package=</span><span class="s">"com.example.myapplication"</span><span class="nt">&gt;</span>
@@ -153,11 +178,13 @@
 </code></pre></div></div>
 <p>기본 샘플 <em>AndroidManifest.xml</em> 입니다.</p>
 
-<h3 id="activity">&lt;activity&gt;</h3>
+<h3 id="activity">
+<a class="anchor" href="#activity" aria-hidden="true"><span class="octicon octicon-link"></span></a>&lt;activity&gt;</h3>
 <p>앱에서 액티비티를 사용하기 위해서는 _AndroidManifest.xml_에 선언을 해주어야 합니다.
 &lt;application&gt; 태그의 하위 태그로 &lt;activity&gt;를 추가 할 수 있는데 <em>android:name</em>은 액티비티 이름으로 반드시 필요한 요소입니다. 그 이외의 요소도 매우 많은데 <a href="https://developer.android.com/guide/topics/manifest/activity-element">&lt;activity&gt;</a>를 참고하고 추후 직접 예제로 사용할때 마다 정리하도록 하겠습니다.</p>
 
-<h3 id="intent-filter">&lt;intent-filter&gt;</h3>
+<h3 id="intent-filter">
+<a class="anchor" href="#intent-filter" aria-hidden="true"><span class="octicon octicon-link"></span></a>&lt;intent-filter&gt;</h3>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;intent-filter&gt;</span>
         <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.intent.action.MAIN"</span> <span class="nt">/&gt;</span>
 
@@ -168,7 +195,8 @@
 <em>category.LAUNCHER</em> 는 앱을 실행할 아이콘의 모습이 &lt;activity&gt;에 정의된 것으로 하겠다는 의미입니다. 정의되어 있지 않으면 &lt;application&gt;의 아이콘을 사용합니다.
 인텐트와 인텐트 필터에 관한 내용은 중요하다고 판단되어 따로 정리하겠습니다.</p>
 
-<h3 id="permission">permission</h3>
+<h3 id="permission">
+<a class="anchor" href="#permission" aria-hidden="true"><span class="octicon octicon-link"></span></a>permission</h3>
 <p>액티비티를 다른 앱에서 실행하거나 못하게 컨트롤 할 수 있습니다. 개발자 예제를 살펴보면</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;manifest&gt;</span>
 <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">"...."</span>
@@ -183,16 +211,40 @@
 </code></pre></div></div>
 <p>이때는 &lt;manifest&gt;에 &lt;uses-permission&gt;으로 같은 권한을 정의합니다.</p>
 
-<p>이와 마찬가지로 안드로이드 기기의 다양한 기능들을 활용하기 위해서는 안드로이드 API에 정의된 권한들을 선언해야합니다.<br />
+<p>이와 마찬가지로 안드로이드 기기의 다양한 기능들을 활용하기 위해서는 안드로이드 API에 정의된 권한들을 선언해야합니다.<br>
 <a href="https://developer.android.com/reference/android/Manifest.permission"><em>Manifest.permission</em></a></p>
 
-<h2 id="activity-lifecycle">Activity LifeCycle</h2>
+<h2 id="activity-lifecycle">
+<a class="anchor" href="#activity-lifecycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activity LifeCycle</h2>
 <p><a href="/posts/android/activity-lifecycle"><strong>이어서</strong></a></p>
 
-<h2 id="reference">Reference</h2>
+<h2 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
 <p><a href="https://developer.android.com/guide/components/activities/intro-activities"><strong>안드로이드 개발자 사이트</strong></a></p>
 
       
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/android/actiivties/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/android/actiivties/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+
     </div>
   </div>
 </div>
@@ -382,6 +434,8 @@ function mp3_embed() {
 }
 mp3_embed();
 </script>
+  
+  <script id="dsq-count-scr" src="//jheun66.disqus.com/count.js" async></script>
   
 </body>
 

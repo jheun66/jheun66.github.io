@@ -23,6 +23,13 @@
   <link rel="canonical" href="https://jheun66.github.io/posts/android/application-fundamentals/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+
+  <style type="text/css">
+    a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:hover {text-decoration: underline;}
+   </style>
+    
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Application Fundamentals | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
@@ -40,7 +47,7 @@
 <meta property="twitter:title" content="Application Fundamentals" />
 <meta name="google-site-verification" content="NFjrooIb0zLycxDgti6xtOkaLhYWvCAhYLDCsDf8sQI" />
 <script type="application/ld+json">
-{"url":"https://jheun66.github.io/posts/android/application-fundamentals/","@type":"BlogPosting","description":"Security Feature 앱과 안드로이드 어플리케이션, 각 영어 표현을 혼용하여 부르도록 하겠습니다. 안드로이드 앱은 자바, 코틀린, C++ 등 프로그래밍 언어를 통해 작성할 수 있습니다. 그리고 Android SDK tools로 데이터, 리소스 파일과 함께 컴파일 되어 APK가 됩니다. 외부에서 파일을 받을 때 .apk 파일을 받으신적이 있으실 것 입니다. 이 파일에는 해당 안드로이드 앱의 모든 구성요소를 포함하고 있고 안드로이드 기기에서 설치 가능합니다.","headline":"Application Fundamentals","dateModified":"2020-12-23T22:18:00+00:00","datePublished":"2020-12-23T22:18:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/application-fundamentals/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"dateModified":"2020-12-23T22:18:00+00:00","url":"https://jheun66.github.io/posts/android/application-fundamentals/","datePublished":"2020-12-23T22:18:00+00:00","@type":"BlogPosting","description":"Security Feature 앱과 안드로이드 어플리케이션, 각 영어 표현을 혼용하여 부르도록 하겠습니다. 안드로이드 앱은 자바, 코틀린, C++ 등 프로그래밍 언어를 통해 작성할 수 있습니다. 그리고 Android SDK tools로 데이터, 리소스 파일과 함께 컴파일 되어 APK가 됩니다. 외부에서 파일을 받을 때 .apk 파일을 받으신적이 있으실 것 입니다. 이 파일에는 해당 안드로이드 앱의 모든 구성요소를 포함하고 있고 안드로이드 기기에서 설치 가능합니다.","headline":"Application Fundamentals","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/application-fundamentals/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -115,8 +122,14 @@
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <h2 id="security-feature">Security Feature</h2>
-<p>앱과 안드로이드 어플리케이션, 각 영어 표현을 혼용하여 부르도록 하겠습니다.<br />
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#security-feature">Security Feature</a></li>
+<li class="toc-entry toc-h2"><a href="#app-component">App Component</a></li>
+<li class="toc-entry toc-h2"><a href="#etc">etc</a></li>
+<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
+</ul><h2 id="security-feature">
+<a class="anchor" href="#security-feature" aria-hidden="true"><span class="octicon octicon-link"></span></a>Security Feature</h2>
+<p>앱과 안드로이드 어플리케이션, 각 영어 표현을 혼용하여 부르도록 하겠습니다.<br>
 안드로이드 앱은 자바, 코틀린, C++ 등 프로그래밍 언어를 통해 작성할 수 있습니다. 그리고 Android SDK tools로 데이터, 리소스 파일과 함께 컴파일 되어 APK가 됩니다.
 외부에서 파일을 받을 때 <code class="language-plaintext highlighter-rouge">.apk</code> 파일을 받으신적이 있으실 것 입니다. 이 파일에는 해당 안드로이드 앱의 모든 구성요소를 포함하고 있고 안드로이드 기기에서 설치 가능합니다.</p>
 
@@ -132,7 +145,8 @@
 
 <p>이후 어떤 기능을 사용할 때 어떤 권한을 주어야 할 일이 있을 것입니다.</p>
 
-<h2 id="app-component">App Component</h2>
+<h2 id="app-component">
+<a class="anchor" href="#app-component" aria-hidden="true"><span class="octicon octicon-link"></span></a>App Component</h2>
 <ul>
   <li><a href="/posts/android/actiivties"><strong>Activity</strong></a></li>
   <li><a href=""><strong>Services</strong></a></li>
@@ -140,17 +154,41 @@
   <li><a href=""><strong>Content providers</strong></a></li>
 </ul>
 
-<h2 id="etc">etc</h2>
+<h2 id="etc">
+<a class="anchor" href="#etc" aria-hidden="true"><span class="octicon octicon-link"></span></a>etc</h2>
 <ul>
   <li><a href="/posts/android/intent"><strong>Intent</strong></a></li>
   <li><a href=""><strong>Notification</strong></a></li>
   <li><a href=""><strong>Manifest file</strong></a></li>
 </ul>
 
-<h2 id="reference">Reference</h2>
+<h2 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
 <p><a href="https://developer.android.com/guide/components/fundamentals"><strong>안드로이드 개발자 사이트</strong></a></p>
 
       
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/android/application-fundamentals/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/android/application-fundamentals/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+
     </div>
   </div>
 </div>
@@ -340,6 +378,8 @@ function mp3_embed() {
 }
 mp3_embed();
 </script>
+  
+  <script id="dsq-count-scr" src="//jheun66.disqus.com/count.js" async></script>
   
 </body>
 
