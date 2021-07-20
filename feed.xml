@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-07-06T17:20:24+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Jekyll 설치 및 테스트</title><link href="https://jheun66.github.io/posts/blog/install-jekyll/" rel="alternate" type="text/html" title="Jekyll 설치 및 테스트" /><published>2021-06-13T12:46:00+00:00</published><updated>2021-06-13T12:46:00+00:00</updated><id>https://jheun66.github.io/posts/blog/install-jekyll</id><content type="html" xml:base="https://jheun66.github.io/posts/blog/install-jekyll/">&lt;h3 id=&quot;jekyll-bundler-gems-설치&quot;&gt;jekyll, bundler gems 설치&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-07-20T01:01:47+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Introduction to Kotlin</title><link href="https://jheun66.github.io/posts/android/introduction-to-kotlin/" rel="alternate" type="text/html" title="Introduction to Kotlin" /><published>2021-07-20T00:57:00+00:00</published><updated>2021-07-20T00:57:00+00:00</updated><id>https://jheun66.github.io/posts/android/introduction-to-kotlin</id><content type="html" xml:base="https://jheun66.github.io/posts/android/introduction-to-kotlin/">&lt;h1 id=&quot;introduction-to-kotlin&quot;&gt;Introduction to Kotlin&lt;/h1&gt;
+
+&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+
+&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-one?hl=ko&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;kotlin-플레이그라운드&quot;&gt;Kotlin 플레이그라운드&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/training/kotlinplayground&quot;&gt;https://developer.android.com/training/kotlinplayground&lt;/a&gt;를 통해 웹에서도 Kotlin 프로그램 작성을 연습할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Happy Birthday!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Amos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;You are 28!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;test string \n test string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;fun&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;함수임을 나타내는 키워드&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;main()&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;메인 함수&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;println()&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;텍스트를 출력하는 함수, 줄바꿈 포함&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;print()&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;텍스트를 출력하는 함수&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;“\n”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;줄바꿈 문자열&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;layers&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+		&lt;span class=&quot;nf&quot;&gt;printCake&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printCake&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;printCakeCandles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;printCakeTop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;printCakeBottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printCakeCandles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Print an empty line&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Print the inset of the candles on the cake&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;|&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printCakeTop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;=&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printCakeBottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;repeat(){}&lt;/p&gt;
+
+&lt;p&gt;반복문, 루프&lt;/p&gt;
+
+&lt;p&gt;printCake(age: Int, layers: Int)&lt;/p&gt;
+
+&lt;p&gt;함수 인수와 유형을 넣어줌&lt;/p&gt;
+
+&lt;p&gt;val&lt;/p&gt;
+
+&lt;p&gt;변수 키워드, 한 번 설정되면 변경할 수 없음&lt;/p&gt;
+
+&lt;p&gt;${}&lt;/p&gt;
+
+&lt;p&gt;print, println 에서 변수값을 넣어줄 때 사용&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/courses/android-basics-kotlin/android-basics-kotlin-vocab&quot;&gt;Kotlin에서 사용되는 Android 기본 용어&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kotlin에서만이 아니라 안드로이드 개발에 필요한 용어들이 포함되어 있습니다.&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">Introduction to Kotlin</summary></entry><entry><title type="html">Jekyll 설치 및 테스트</title><link href="https://jheun66.github.io/posts/blog/install-jekyll/" rel="alternate" type="text/html" title="Jekyll 설치 및 테스트" /><published>2021-06-13T12:46:00+00:00</published><updated>2021-06-13T12:46:00+00:00</updated><id>https://jheun66.github.io/posts/blog/install-jekyll</id><content type="html" xml:base="https://jheun66.github.io/posts/blog/install-jekyll/">&lt;h3 id=&quot;jekyll-bundler-gems-설치&quot;&gt;jekyll, bundler gems 설치&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -871,74 +970,4 @@ host를 설정하지 않으면 모든 http 스킴에 대해서 처리해줄 수 
 &lt;p&gt;&lt;img src=&quot;/img/posts/android/intent_componet.png&quot; alt=&quot;intent info&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/codelabs/android-training-create-an-activity#12&quot;&gt;https://developer.android.com/codelabs/android-training-create-an-activity#12&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Intent" /><category term="Explict Intent" /><summary type="html">gif 테스트 겸 실습 테스트를 해보았습니다.</summary></entry><entry><title type="html">Intent(Explict Intent)</title><link href="https://jheun66.github.io/posts/android/intent/" rel="alternate" type="text/html" title="Intent(Explict Intent)" /><published>2020-12-30T03:00:00+00:00</published><updated>2020-12-30T03:00:00+00:00</updated><id>https://jheun66.github.io/posts/android/intent</id><content type="html" xml:base="https://jheun66.github.io/posts/android/intent/">&lt;p&gt;먼저 Explict Intent 위주로 정리합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;intent&quot;&gt;Intent&lt;/h2&gt;
-&lt;p&gt;App Component 사이에서 통신하는데 사용되는 메시지 객체입니다. ART에 요청하여 액티비티를 시작하거나 다른 app component(서비스, 브로드캐스트)등을 자기 앱에서 또는 다른 앱에서 실행 시킬 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;앱을 처음 실행시킬때 ART에서 앱으로 Intent를 보내 메인 액티비티를 실행시킵니다. 다른 액티비티를 실행시킬때는 startActivity() 또는 startActivityResult()를 호출합니다. 실행 뿐만 아니라 액티비티간 데이터를 전송하는데 사용할 수도 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;intent-types&quot;&gt;Intent types&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Explict Intent&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;주로 자신의 앱에서는 패키지 이름과 클래스 이름을 알고 있으므로 자격을 갖춘 액티비티 클래스 이름을 사용하여 명시적으로 인텐트를 호출 할 수 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Implict Intent&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;명시적으로 지정하지 않고 수행할 액션을 통해 시스템이 부합하는 액티비티 또는 컴포넌트를 실행시킬 수 있습니다.
-&lt;a href=&quot;/posts/android/implict-intent&quot;&gt;&lt;strong&gt;Implict Intent&lt;/strong&gt;&lt;/a&gt;에 따로 정리합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;intent-filter&quot;&gt;Intent Filter&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;AndroidMainfest.xml&lt;/em&gt; 에서 인텐트 필터를 확인한 적이 있습니다. 해당 구성 요소가 수신하고자 하는 인텐트 유형을 작성하면 됩니다.&lt;/p&gt;
-
-&lt;p&gt;보안상 Service를 시작할 때는 명시적 인텐트를 사용하고 서비스에 대한 인텐트 필터는 선언하지 말라고 합니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Caution: To ensure that your app is secure, always use an explicit intent when starting a Service and do not declare intent filters for your services. Using an implicit intent to start a service is a security hazard because you can’t be certain what service will respond to the intent, and the user can’t see which service starts. Beginning with Android 5.0 (API level 21), the system throws an exception if you call bindService() with an implicit intent.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;intent-information&quot;&gt;Intent Information&lt;/h2&gt;
-
-&lt;p&gt;Intent 내부에는 어떤 컴포넌트를 실행할지 등 정보들이 담겨있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Component name&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Explict Intent에서는 필수로 작성해야합니다. 컴포넌트 이름이 없으면 시스템은 Implict Intent로 판단하고 다른 정보들을 통해 매칭해줍니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;작업을 수행할 데이터의 URI와 MIME 유형을 전달할 수 있습니다. URI를 설정하기 위해서는 setData()를 MIME 유형을 설정하기 위해서는 setType()을 호출하면 됩니다.&lt;/p&gt;
-
-&lt;p&gt;단, 주의 사항으로 URI와 MIME 유형을 둘다 설정할 경우 setData()와 setType()를 호출하는게 아니라 setDataAndType()을 호출합니다. 그렇지 않을 경우 서로 무효화한다고 합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Extras&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;작업에 필요한 데이터를 키-값 쌍으로 보낼 수 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Flags&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Intent 클래스에 정의되어 있는 메타데이터입니다. 액티비티를 어떻게 실행할지 실행되고 어떻게 처리될지 등을 지시히라 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/content/Intent#setFlags(int)&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Implict Intent는 다음 정보가 추가할 수 있습니다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Action&lt;/li&gt;
-  &lt;li&gt;Category&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutintents&quot;&gt;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutintents&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://developer.android.com/guide/components/intents-filters&quot;&gt;https://developer.android.com/guide/components/intents-filters&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Intent" /><category term="Explict Intent" /><summary type="html">먼저 Explict Intent 위주로 정리합니다.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/codelabs/android-training-create-an-activity#12&quot;&gt;https://developer.android.com/codelabs/android-training-create-an-activity#12&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Intent" /><category term="Explict Intent" /><summary type="html">gif 테스트 겸 실습 테스트를 해보았습니다.</summary></entry></feed>

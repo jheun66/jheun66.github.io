@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Posts - 생각중
+    Introduction to Kotlin - 생각중
     
   </title>
 
-  <meta name="description" content="개발 블로그">
+  <meta name="description" content="Introduction to Kotlin">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -20,7 +20,7 @@
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://jheun66.github.io/posts/">
+  <link rel="canonical" href="https://jheun66.github.io/posts/android/introduction-to-kotlin/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
 
@@ -31,22 +31,23 @@
    </style>
     
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Posts | 생각중</title>
+<title>Introduction to Kotlin | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Posts" />
+<meta property="og:title" content="Introduction to Kotlin" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="개발 블로그" />
-<meta property="og:description" content="개발 블로그" />
-<link rel="canonical" href="https://jheun66.github.io/posts/" />
-<meta property="og:url" content="https://jheun66.github.io/posts/" />
+<meta name="description" content="Introduction to Kotlin" />
+<meta property="og:description" content="Introduction to Kotlin" />
+<link rel="canonical" href="https://jheun66.github.io/posts/android/introduction-to-kotlin/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/android/introduction-to-kotlin/" />
 <meta property="og:site_name" content="생각중" />
-<link rel="next" href="https://jheun66.github.io/posts/page/2/index.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-20T00:57:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Posts" />
+<meta property="twitter:title" content="Introduction to Kotlin" />
 <meta name="google-site-verification" content="NFjrooIb0zLycxDgti6xtOkaLhYWvCAhYLDCsDf8sQI" />
 <script type="application/ld+json">
-{"url":"https://jheun66.github.io/posts/","@type":"WebPage","description":"개발 블로그","headline":"Posts","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"dateModified":"2021-07-20T00:57:00+00:00","url":"https://jheun66.github.io/posts/android/introduction-to-kotlin/","datePublished":"2021-07-20T00:57:00+00:00","@type":"BlogPosting","description":"Introduction to Kotlin","headline":"Introduction to Kotlin","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/introduction-to-kotlin/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -97,15 +98,20 @@
 
   <!-- Page Header -->
 
-<header class="masthead" style="background-image: url('/img/bg-post.jpg')">
+  
+    <header class="masthead" style="background-image: url('/img/bg-android.jpg')">
 
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="page-heading">
-          <h1>Posts</h1>
+        <div class="post-heading">
+          <h1>Introduction to Kotlin</h1>
           
+          <span class="meta">Posted by
+            <a href="#">Eun JongHyeok</a>
+            on July 20, 2021
+          </span>
         </div>
       </div>
     </div>
@@ -116,170 +122,136 @@
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <!-- Category Post List -->
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#introduction-to-kotlin">Introduction to Kotlin</a></li>
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#kotlin-플레이그라운드">Kotlin 플레이그라운드</a></li>
+</ul><h1 id="introduction-to-kotlin">
+<a class="anchor" href="#introduction-to-kotlin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Kotlin</h1>
 
+<h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
-<article class="posts-list">
-    <a href="/posts/android/introduction-to-kotlin/">
-    <h2 class="post-title">Introduction to Kotlin</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        July 20, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/introduction-to-kotlin/#disqus_thread" data-disqus-identifier="/posts/android/introduction-to-kotlin/">Join the discussion...</a>   
-    </p>
-</article>
+<p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-one?hl=ko">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<hr>
+<h1 id="kotlin-플레이그라운드">
+<a class="anchor" href="#kotlin-%ED%94%8C%EB%A0%88%EC%9D%B4%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kotlin 플레이그라운드</h1>
 
+<p><a href="https://developer.android.com/training/kotlinplayground">https://developer.android.com/training/kotlinplayground</a>를 통해 웹에서도 Kotlin 프로그램 작성을 연습할 수 있습니다.</p>
 
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"Happy Birthday!"</span><span class="p">)</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"Amos"</span><span class="p">)</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"You are 28!"</span><span class="p">)</span>
+		<span class="nf">print</span><span class="p">(</span><span class="s">"test string \n test string"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<article class="posts-list">
-    <a href="/posts/blog/install-jekyll/">
-    <h2 class="post-title">Jekyll 설치 및 테스트</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        June 13, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/blog/install-jekyll/#disqus_thread" data-disqus-identifier="/posts/blog/install-jekyll/">Join the discussion...</a>   
-    </p>
-</article>
+<p><strong>fun</strong></p>
 
-<hr>
+<p>함수임을 나타내는 키워드</p>
 
+<p><strong>main()</strong></p>
 
+<p>메인 함수</p>
 
-<article class="posts-list">
-    <a href="/posts/blog/ruby-version-management/">
-    <h2 class="post-title">Ruby Version Management</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        June 13, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/blog/ruby-version-management/#disqus_thread" data-disqus-identifier="/posts/blog/ruby-version-management/">Join the discussion...</a>   
-    </p>
-</article>
+<p><strong>println()</strong></p>
 
-<hr>
+<p>텍스트를 출력하는 함수, 줄바꿈 포함</p>
 
+<p><strong>print()</strong></p>
 
+<p>텍스트를 출력하는 함수</p>
 
-<article class="posts-list">
-    <a href="/posts/android/screen-compatibility/">
-    <h2 class="post-title">Screen Compatibility</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        February 13, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/screen-compatibility/#disqus_thread" data-disqus-identifier="/posts/android/screen-compatibility/">Join the discussion...</a>   
-    </p>
-</article>
+<p><strong>“\n”</strong></p>
 
-<hr>
+<p>줄바꿈 문자열</p>
 
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">age</span> <span class="p">=</span> <span class="mi">24</span>
+    <span class="kd">val</span> <span class="py">layers</span> <span class="p">=</span> <span class="mi">5</span>
+		<span class="nf">printCake</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">layers</span><span class="p">)</span>
+<span class="p">}</span>
 
+<span class="k">fun</span> <span class="nf">printCake</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">layers</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">printCakeCandles</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+    <span class="nf">printCakeTop</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+    <span class="nf">printCakeBottom</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">layers</span><span class="p">)</span>
+<span class="p">}</span>
 
-<article class="posts-list">
-    <a href="/posts/android/context/">
-    <h2 class="post-title">Context</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        February 12, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/context/#disqus_thread" data-disqus-identifier="/posts/android/context/">Join the discussion...</a>   
-    </p>
-</article>
+<span class="k">fun</span> <span class="nf">printCakeCandles</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">print</span> <span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+    <span class="nf">repeat</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nf">print</span><span class="p">(</span><span class="s">","</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nf">println</span><span class="p">()</span> <span class="c1">// Print an empty line</span>
 
-<hr>
+    <span class="nf">print</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span> <span class="c1">// Print the inset of the candles on the cake</span>
+    <span class="nf">repeat</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"|"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nf">println</span><span class="p">()</span>
+<span class="p">}</span>
 
+<span class="k">fun</span> <span class="nf">printCakeTop</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">repeat</span><span class="p">(</span><span class="n">age</span> <span class="p">+</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"="</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nf">println</span><span class="p">()</span>
+<span class="p">}</span>
 
+<span class="k">fun</span> <span class="nf">printCakeBottom</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">layers</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">repeat</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">repeat</span><span class="p">(</span><span class="n">age</span> <span class="p">+</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"@"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nf">println</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<article class="posts-list">
-    <a href="/posts/android/buttons/">
-    <h2 class="post-title">Buttons(+background issue) And Gestures</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        January 15, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/buttons/#disqus_thread" data-disqus-identifier="/posts/android/buttons/">Join the discussion...</a>   
-    </p>
-</article>
+<p>repeat(){}</p>
 
-<hr>
+<p>반복문, 루프</p>
 
+<p>printCake(age: Int, layers: Int)</p>
 
+<p>함수 인수와 유형을 넣어줌</p>
 
-<article class="posts-list">
-    <a href="/posts/android/send-and-sendto/">
-    <h2 class="post-title">ACTION_SEND & ACTION_SENDTO(이메일 인텐트)</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        January 14, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/send-and-sendto/#disqus_thread" data-disqus-identifier="/posts/android/send-and-sendto/">Join the discussion...</a>   
-    </p>
-</article>
+<p>val</p>
 
-<hr>
+<p>변수 키워드, 한 번 설정되면 변경할 수 없음</p>
 
+<p>${}</p>
 
+<p>print, println 에서 변수값을 넣어줄 때 사용</p>
 
-<!-- Pager -->
+<p><a href="https://developer.android.com/courses/android-basics-kotlin/android-basics-kotlin-vocab">Kotlin에서 사용되는 Android 기본 용어</a></p>
 
+<p>Kotlin에서만이 아니라 안드로이드 개발에 필요한 용어들이 포함되어 있습니다.</p>
 
-<div class="clearfix">
-
-    
-
-    
-    <a class="btn btn-primary float-right" href="/posts/page/2/index.html">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-    
-
-</div>
-
-
+      
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/android/introduction-to-kotlin/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/android/introduction-to-kotlin/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
 
     </div>
   </div>
