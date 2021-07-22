@@ -1,11 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-07-22T02:28:23+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html"></title><link href="https://jheun66.github.io/posts/2021-07-22-net-err-cleartext-not-permitted/" rel="alternate" type="text/html" title="" /><published>2021-07-22T02:28:23+00:00</published><updated>2021-07-22T02:28:23+00:00</updated><id>https://jheun66.github.io/posts/2021-07-22-net-err-cleartext-not-permitted</id><content type="html" xml:base="https://jheun66.github.io/posts/2021-07-22-net-err-cleartext-not-permitted/">&lt;p&gt;webView로 http 띄웠을 때 해당 오류가 나면&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-07-22T02:53:36+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html"></title><link href="https://jheun66.github.io/posts/2021-07-22-net-err-cleartext-not-permitted/" rel="alternate" type="text/html" title="" /><published>2021-07-22T02:53:36+00:00</published><updated>2021-07-22T02:53:36+00:00</updated><id>https://jheun66.github.io/posts/2021-07-22-net-err-cleartext-not-permitted</id><content type="html" xml:base="https://jheun66.github.io/posts/2021-07-22-net-err-cleartext-not-permitted/">&lt;p&gt;webView로 http 띄웠을 때 해당 오류가 나면&lt;/p&gt;
 
 &lt;p&gt;AndroidManifext.xml application 태그에&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;android:usesCleartextTraffic=&quot;true&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;옵션 추가하기&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author></entry><entry><title type="html">Add a button to an app</title><link href="https://jheun66.github.io/posts/android/add-a-button-to-an-app/" rel="alternate" type="text/html" title="Add a button to an app" /><published>2021-07-21T08:38:00+00:00</published><updated>2021-07-21T08:38:00+00:00</updated><id>https://jheun66.github.io/posts/android/add-a-button-to-an-app</id><content type="html" xml:base="https://jheun66.github.io/posts/android/add-a-button-to-an-app/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;p&gt;옵션 추가하기&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author></entry><entry><title type="html">코드 블럭 syntax_highlight 적용</title><link href="https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/" rel="alternate" type="text/html" title="코드 블럭 syntax_highlight 적용" /><published>2021-07-22T02:49:00+00:00</published><updated>2021-07-22T02:49:00+00:00</updated><id>https://jheun66.github.io/posts/blog/codeblock-syntax-highlight</id><content type="html" xml:base="https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/">&lt;h1 id=&quot;rougify-help-style&quot;&gt;rougify help style&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% rougify &lt;span class=&quot;nb&quot;&gt;help &lt;/span&gt;style
+usage: rougify style &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;theme-name&amp;gt;] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;options&amp;gt;]
+
+Print CSS styles &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;the given theme.  Extra options are
+passed to the theme. To &lt;span class=&quot;k&quot;&gt;select &lt;/span&gt;a mode &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;light/dark&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;the
+theme, append &lt;span class=&quot;s1&quot;&gt;&apos;.light&apos;&lt;/span&gt; or &lt;span class=&quot;s1&quot;&gt;&apos;.dark&apos;&lt;/span&gt; to the &amp;lt;theme-name&amp;gt;
+respectively. Theme defaults to thankful_eyes.
+
+options:
+  &lt;span class=&quot;nt&quot;&gt;--scope&lt;/span&gt;     	&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default: .highlight&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; a css selector to scope by
+  &lt;span class=&quot;nt&quot;&gt;--tex&lt;/span&gt;       	&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; render as TeX
+  &lt;span class=&quot;nt&quot;&gt;--tex-prefix&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default: RG&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; a &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;prefix &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;TeX
+              	implies &lt;span class=&quot;nt&quot;&gt;--tex&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;specified
+
+available themes:
+  base16, base16.dark, base16.light, base16.monokai, base16.monokai.dark, base16.monokai.light, base16.solarized, base16.solarized.dark, base16.solarized.light, bw, colorful, github, gruvbox, gruvbox.dark, gruvbox.light, igorpro, magritte, molokai, monokai, monokai.sublime, pastie, thankful_eyes, tulip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;원하는-테마-적용&quot;&gt;&lt;strong&gt;원하는 테마 적용&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% rougify style &amp;lt;themes&amp;gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ~/&amp;lt;블로그&amp;gt;/assets/highlight.css
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;headhtml에-추가&quot;&gt;head.html에 추가&lt;/h1&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/highlight.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;_configyml-수정&quot;&gt;_config.yml 수정&lt;/h1&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;markdown:  kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+  css_class: highlight
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Eun JongHyeok</name></author><category term="Blog" /><category term="github pages" /><category term="rougify" /><summary type="html">rougify help style</summary></entry><entry><title type="html">Add a button to an app</title><link href="https://jheun66.github.io/posts/android/add-a-button-to-an-app/" rel="alternate" type="text/html" title="Add a button to an app" /><published>2021-07-21T08:38:00+00:00</published><updated>2021-07-21T08:38:00+00:00</updated><id>https://jheun66.github.io/posts/android/add-a-button-to-an-app</id><content type="html" xml:base="https://jheun66.github.io/posts/android/add-a-button-to-an-app/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-four&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
 
@@ -998,80 +1035,4 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
 &lt;a href=&quot;https://developer.android.com/guide/topics/resources/drawable-resource?hl=ko#Shape&quot;&gt;shape drawable&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://developer.android.com/guide/topics/ui/floating-action-button&quot;&gt;Floating Action Button&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://developer.android.com/training/gestures/detector?hl=ko&quot;&gt;Detect Common Gestures&lt;/a&gt;
-&lt;a href=&quot;https://developer.android.com/reference/android/view/MotionEvent.html&quot;&gt;MotionEvent&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="UX" /><category term="UI" /><category term="Button" /><category term="Gesture" /><summary type="html">UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다. 뷰는 사용자와 상호작용을 제공해주는 기본적인 클래스입니다. 이번에는 그 중에서 Button과 관련된 포스팅을 하고자 합니다.</summary></entry><entry><title type="html">ACTION_SEND &amp;amp; ACTION_SENDTO(이메일 인텐트)</title><link href="https://jheun66.github.io/posts/android/send-and-sendto/" rel="alternate" type="text/html" title="ACTION_SEND &amp;amp; ACTION_SENDTO(이메일 인텐트)" /><published>2021-01-14T02:30:00+00:00</published><updated>2021-01-14T02:30:00+00:00</updated><id>https://jheun66.github.io/posts/android/send-and-sendto</id><content type="html" xml:base="https://jheun66.github.io/posts/android/send-and-sendto/">&lt;p&gt;이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;action_send&quot;&gt;ACTION_SEND&lt;/h2&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendEmailwithSend&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_SEND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;plain/text&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;EXTRA_EMAIL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;jheun5@naver.com&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;someone.example.com&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;EXTRA_SUBJECT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;이메일 테스트 제목&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;EXTRA_TEXT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;이메일 테스트 내용1:\n이메일 테스트 내용2:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;resolveActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getPackageManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;EXTRA를 통해 내요을 추가할 수 있습니다. EXTRA_CC, EXTRA_BCC 도 물론 추가할 수 있습니다.
-EXTRA_STREAM을 사용할 때는 타입을 &lt;em&gt;/&lt;/em&gt; 로 합니다.
-좀더 자세한 사용법은 참고의 개발자 문서를 확인하면 되겠습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/android/selectSend.jpg&quot; alt=&quot;select send&quot; /&gt;
-대신 선택창에 SEND를 받는 앱이 많습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;action_sendto&quot;&gt;ACTION_SENDTO&lt;/h2&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendEmailwithSendTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_SENDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emailTitle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;이메일 테스트 제목&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emailContent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;이메일 테스트 내용1:\n이메일 테스트 내용2:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uriText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;mailto:&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;jheun5@naver.com&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-                    &lt;span class=&quot;s&quot;&gt;&quot;?subject=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;emailTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-                    &lt;span class=&quot;s&quot;&gt;&quot;&amp;amp;body=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;emailContent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;nc&quot;&gt;Uri&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uriText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;resolveActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getPackageManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;ACTION_SENDTO의 경우에는 DATA URI만 받습니다. 이때 mailto Scheme을 사용하여 내용을 채워서 보낼 수 있습니다.
-그래서 이 인텐트는 EXTRA_STREAM을 받지 못합니다. 
-&lt;a href=&quot;https://css-tricks.com/snippets/html/mailto-links/&quot;&gt;mailto 관련&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/android/selectSendTo.jpg&quot; alt=&quot;select sendto&quot; /&gt;
-이 경우 메일 앱만 받습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;좀-더-좋은-방법&quot;&gt;좀 더 좋은 방법&lt;/h2&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendEmail&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emailSelectorIntent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_SENDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;emailSelectorIntent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mailto:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-
-    &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ACTION_SEND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;EXTRA_EMAIL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]{&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;jheun5@naver.com&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;EXTRA_SUBJECT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;이메일 테스트 제목&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;EXTRA_TEXT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;이메일 테스트 내용1:\n이메일 테스트 내용2:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSelector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emailSelectorIntent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// 첨부파일 관련&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//Uri attachment = FileProvider.getUriForFile(this, &quot;my_fileprovider&quot;, myFile);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//intent.putExtra(Intent.EXTRA_STREAM, attachment);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;resolveActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getPackageManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;따라서 첨부 파일을 포함할 수 있게하고 이메일 앱만 실행시키고 싶을 때는 다음과 같이 셀렉터는 ACTION_SENDTO를 사용하고 ACTION_SEND로 보내면 됩니다.&lt;/p&gt;
-
-&lt;p&gt;첨부파일 관련해서는 다른 예제를 통해 정리하겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/content/Intent?hl=ko#ACTION_SEND&quot;&gt;https://developer.android.com/reference/android/content/Intent?hl=ko#ACTION_SEND&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/codepath/android_guides/wiki/Common-Implicit-Intents&quot;&gt;https://github.com/codepath/android_guides/wiki/Common-Implicit-Intents&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email&quot;&gt;https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Activity" /><category term="Intent" /><summary type="html">이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.</summary></entry></feed>
+&lt;a href=&quot;https://developer.android.com/reference/android/view/MotionEvent.html&quot;&gt;MotionEvent&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="UX" /><category term="UI" /><category term="Button" /><category term="Gesture" /><summary type="html">UX와 UI와 관련된 내용입니다. 안드로이드의 UI는 View 객체로 구성되어있습니다. 뷰는 사용자와 상호작용을 제공해주는 기본적인 클래스입니다. 이번에는 그 중에서 Button과 관련된 포스팅을 하고자 합니다.</summary></entry></feed>

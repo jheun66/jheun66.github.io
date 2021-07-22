@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Posts - 생각중
+    코드 블럭 syntax_highlight 적용 - 생각중
     
   </title>
 
-  <meta name="description" content="개발 블로그">
+  <meta name="description" content="rougify help style">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -21,7 +21,7 @@
   
   <link rel="stylesheet" href="/assets/highlight.css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://jheun66.github.io/posts/page/3/">
+  <link rel="canonical" href="https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
 
@@ -32,23 +32,23 @@
    </style>
     
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Page 3 of 4 for Posts | 생각중</title>
+<title>코드 블럭 syntax_highlight 적용 | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Posts" />
+<meta property="og:title" content="코드 블럭 syntax_highlight 적용" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="개발 블로그" />
-<meta property="og:description" content="개발 블로그" />
-<link rel="canonical" href="https://jheun66.github.io/posts/page/3/" />
-<meta property="og:url" content="https://jheun66.github.io/posts/page/3/" />
+<meta name="description" content="rougify help style" />
+<meta property="og:description" content="rougify help style" />
+<link rel="canonical" href="https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/" />
 <meta property="og:site_name" content="생각중" />
-<link rel="prev" href="https://jheun66.github.io/posts/page/2/index.html" />
-<link rel="next" href="https://jheun66.github.io/posts/page/4/index.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-22T02:49:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Posts" />
+<meta property="twitter:title" content="코드 블럭 syntax_highlight 적용" />
 <meta name="google-site-verification" content="NFjrooIb0zLycxDgti6xtOkaLhYWvCAhYLDCsDf8sQI" />
 <script type="application/ld+json">
-{"headline":"Posts","url":"https://jheun66.github.io/posts/page/3/","description":"개발 블로그","@type":"WebPage","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"headline":"코드 블럭 syntax_highlight 적용","url":"https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/","dateModified":"2021-07-22T02:49:00+00:00","datePublished":"2021-07-22T02:49:00+00:00","description":"rougify help style","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -99,15 +99,20 @@
 
   <!-- Page Header -->
 
-<header class="masthead" style="background-image: url('/img/bg-post.jpg')">
+  
+    <header class="masthead" style="background-image: url('/img/bg-blog.jpg')">
 
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="page-heading">
-          <h1>Posts</h1>
+        <div class="post-heading">
+          <h1>코드 블럭 syntax_highlight 적용</h1>
           
+          <span class="meta">Posted by
+            <a href="#">Eun JongHyeok</a>
+            on July 22, 2021
+          </span>
         </div>
       </div>
     </div>
@@ -118,173 +123,77 @@
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <!-- Category Post List -->
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#rougify-help-style">rougify help style</a></li>
+<li class="toc-entry toc-h1"><a href="#원하는-테마-적용">원하는 테마 적용</a></li>
+<li class="toc-entry toc-h1"><a href="#headhtml에-추가">head.html에 추가</a></li>
+<li class="toc-entry toc-h1"><a href="#_configyml-수정">_config.yml 수정</a></li>
+</ul><h1 id="rougify-help-style">
+<a class="anchor" href="#rougify-help-style" aria-hidden="true"><span class="octicon octicon-link"></span></a>rougify help style</h1>
 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rougify <span class="nb">help </span>style
+usage: rougify style <span class="o">[</span>&lt;theme-name&gt;] <span class="o">[</span>&lt;options&gt;]
 
-<article class="posts-list">
-    <a href="/posts/android/intent/">
-    <h2 class="post-title">Intent(Explict Intent)</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 30, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/intent/#disqus_thread" data-disqus-identifier="/posts/android/intent/">Join the discussion...</a>   
-    </p>
-</article>
+Print CSS styles <span class="k">for </span>the given theme.  Extra options are
+passed to the theme. To <span class="k">select </span>a mode <span class="o">(</span>light/dark<span class="o">)</span> <span class="k">for </span>the
+theme, append <span class="s1">'.light'</span> or <span class="s1">'.dark'</span> to the &lt;theme-name&gt;
+respectively. Theme defaults to thankful_eyes.
 
-<hr>
+options:
+  <span class="nt">--scope</span>     	<span class="o">(</span>default: .highlight<span class="o">)</span> a css selector to scope by
+  <span class="nt">--tex</span>       	<span class="o">(</span>default: <span class="nb">false</span><span class="o">)</span> render as TeX
+  <span class="nt">--tex-prefix</span>	<span class="o">(</span>default: RG<span class="o">)</span> a <span class="nb">command </span>prefix <span class="k">for </span>TeX
+              	implies <span class="nt">--tex</span> <span class="k">if </span>specified
 
+available themes:
+  base16, base16.dark, base16.light, base16.monokai, base16.monokai.dark, base16.monokai.light, base16.solarized, base16.solarized.dark, base16.solarized.light, bw, colorful, github, gruvbox, gruvbox.dark, gruvbox.light, igorpro, magritte, molokai, monokai, monokai.sublime, pastie, thankful_eyes, tulip
+</code></pre></div></div>
 
+<h1 id="원하는-테마-적용">
+<a class="anchor" href="#%EC%9B%90%ED%95%98%EB%8A%94-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>원하는 테마 적용</strong>
+</h1>
 
-<article class="posts-list">
-    <a href="/posts/android/activity-lifecycle/">
-    <h2 class="post-title">Activity Lifecycle</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 28, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/activity-lifecycle/#disqus_thread" data-disqus-identifier="/posts/android/activity-lifecycle/">Join the discussion...</a>   
-    </p>
-</article>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rougify style &lt;themes&gt; <span class="o">&gt;</span> ~/&lt;블로그&gt;/assets/highlight.css
+</code></pre></div></div>
 
-<hr>
+<h1 id="headhtml에-추가">
+<a class="anchor" href="#headhtml%EC%97%90-%EC%B6%94%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>head.html에 추가</h1>
 
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/highlight.css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
 
+<h1 id="_configyml-수정">
+<a class="anchor" href="#_configyml-%EC%88%98%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>_config.yml 수정</h1>
 
-<article class="posts-list">
-    <a href="/posts/android/actiivties/">
-    <h2 class="post-title">Activities</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 25, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/actiivties/#disqus_thread" data-disqus-identifier="/posts/android/actiivties/">Join the discussion...</a>   
-    </p>
-</article>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>markdown:  kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+  css_class: highlight
+</code></pre></div></div>
 
-<hr>
-
-
-
-<article class="posts-list">
-    <a href="/posts/android/application-fundamentals/">
-    <h2 class="post-title">Application Fundamentals</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 23, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/application-fundamentals/#disqus_thread" data-disqus-identifier="/posts/android/application-fundamentals/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr>
-
-
-
-<article class="posts-list">
-    <a href="/posts/android/android-support-library/">
-    <h2 class="post-title">ASL과 AndroidX Library</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 23, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/android-support-library/#disqus_thread" data-disqus-identifier="/posts/android/android-support-library/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr>
-
-
-
-<article class="posts-list">
-    <a href="/posts/android/art/">
-    <h2 class="post-title">ART 이해하기</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 14, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/art/#disqus_thread" data-disqus-identifier="/posts/android/art/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr>
-
-
-
-<article class="posts-list">
-    <a href="/posts/security/ouath/">
-    <h2 class="post-title">OAuth 2.0</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 13, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/security/ouath/#disqus_thread" data-disqus-identifier="/posts/security/ouath/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr>
-
-
-
-<!-- Pager -->
-
-
-<div class="clearfix">
-
-    
-    <a class="btn btn-primary float-left" href="/posts/page/2/index.html">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-    
-
-    
-    <a class="btn btn-primary float-right" href="/posts/page/4/index.html">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-    
-
-</div>
-
-
+      
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/blog/codeblock-syntax-highlight/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
 
     </div>
   </div>
