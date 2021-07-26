@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-07-25T10:21:55+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Classes and inheritance in Kotlin</title><link href="https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin/" rel="alternate" type="text/html" title="Classes and inheritance in Kotlin" /><published>2021-07-25T10:18:00+00:00</published><updated>2021-07-25T10:18:00+00:00</updated><id>https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin</id><content type="html" xml:base="https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-07-26T06:54:59+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Use SwitchCompat from AppCompat or SwitchMaterial from Material library</title><link href="https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/" rel="alternate" type="text/html" title="Use SwitchCompat from AppCompat or SwitchMaterial from Material library" /><published>2021-07-26T06:43:00+00:00</published><updated>2021-07-26T06:43:00+00:00</updated><id>https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial</id><content type="html" xml:base="https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/">&lt;p&gt;Switch를 사용할 경우 다음과 같은 경고메시지가 뜨는 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/screenshot_switch.png&quot; alt=&quot;screenshot_switch.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이는 안드로이드에서 제공하는 스위치가 버전에 따라 디자인이 다르기 때문에 이를 알려주는 경고창이 뜨는 것이며&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.stack.imgur.com/hr6nk.png&quot; alt=&quot;https://i.stack.imgur.com/hr6nk.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/41239028/switch-vs-switchcompat&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.appcompat.widget.SwitchCompat&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/round_up_switch&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0dp&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:checked=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@string/round_up_tip&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintEnd_toEndOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintStart_toStartOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintTop_toBottomOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@id/tip_options&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;SwitchCompat을 사용하면 모든 안드로이드 버전에서 같은 디자인을 사용할 수 있다.&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="XML" /><category term="Warning" /><summary type="html">Switch를 사용할 경우 다음과 같은 경고메시지가 뜨는 것을 확인할 수 있다.</summary></entry><entry><title type="html">Create XML layouts for Android</title><link href="https://jheun66.github.io/posts/android/create-xml-layouts-for-android/" rel="alternate" type="text/html" title="Create XML layouts for Android" /><published>2021-07-26T06:41:00+00:00</published><updated>2021-07-26T06:41:00+00:00</updated><id>https://jheun66.github.io/posts/android/create-xml-layouts-for-android</id><content type="html" xml:base="https://jheun66.github.io/posts/android/create-xml-layouts-for-android/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+
+&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-classes-and-inheritance&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;read-and-understand-xml&quot;&gt;Read and underStand XML&lt;/h1&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.constraintlayout.widget.ConstraintLayout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xmlns:app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res-auto&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xmlns:tools=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/tools&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;tools:context=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.MainActivity&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--    TextView Comment 추가   --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;TextView&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintBottom_toBottomOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintLeft_toLeftOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintRight_toRightOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintTop_toTopOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;XML&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;eXtensible Markup Language의 약자&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&amp;lt;?xml version=”1.0” encoding=”utf-8”?&amp;gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 파일일 xml 파일이라는 것을 나타냄, 모든 xml이 가지고 있는 것은 아님&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;xmlns&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;XML namespace의 약자&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;xmlns:android, xmlns:app, xmlns:tools&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;XML namespace인 android, app, tools에 대한 스킴, 용어가 정의된 경로, 이게 있어야 해당 네임스페이스를 사용할 수 있음&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;주석 사용&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--    주석 내용   --&gt;
+
+&lt;h1 id=&quot;build-the-layout-in-xml&quot;&gt;Build the layout in XML&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;**layout_constraint&lt;source /&gt;_to&lt;Target&gt;Of**&lt;/Target&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;ConstraintLayout&lt;/em&gt;에서 Constraint를 걸어주는 방식, Source나 Target에 Left, Right 대신 Start, End 사용할 수 있음, 왼쪽에서 오른쪽으로 쓰는 언어와 오른쪽에서 왼쪽으로 쓰는 언어 모두에게 적절한 layout을 적용하고자 하면 사용&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;A resource ID&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Layout Editor에서 View를 생성하면 안드로이드 스튜디오에서 자동으로 생성, 직접 명시적으로 선언할 경우 &lt;em&gt;@+id/&lt;/em&gt; 를 붙이고 이름을 넣어주면 됨, 코드에서 참조 할때는 *R.&lt;type&gt;.&lt;name&gt;* 형태로 사용&lt;/name&gt;&lt;/type&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;0dp&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;ConstraintLayout&lt;/em&gt;에서는 match_parent를 사용할 수 없고 대신 0dp를 사용&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Classes and inheritance in Kotlin</title><link href="https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin/" rel="alternate" type="text/html" title="Classes and inheritance in Kotlin" /><published>2021-07-25T10:18:00+00:00</published><updated>2021-07-25T10:18:00+00:00</updated><id>https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin</id><content type="html" xml:base="https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다. 코틀린 관련 자세한 내용은 &lt;a href=&quot;https://kotlinlang.org/docs/classes.html&quot;&gt;코틀린 사이트&lt;/a&gt;를 참고하면 좋을 것 같습니다.&lt;/p&gt;
 
@@ -698,232 +794,4 @@ jekyll new ./
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/61196279/how-to-remove-all-old-ruby-versions-and-version-managers-and-reinstall-a-singl&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Blog" /><category term="ruby" /><category term="rbenv" /><category term="github pages" /><summary type="html">github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.</summary></entry><entry><title type="html">Screen Compatibility</title><link href="https://jheun66.github.io/posts/android/screen-compatibility/" rel="alternate" type="text/html" title="Screen Compatibility" /><published>2021-02-13T18:00:00+00:00</published><updated>2021-02-13T18:00:00+00:00</updated><id>https://jheun66.github.io/posts/android/screen-compatibility</id><content type="html" xml:base="https://jheun66.github.io/posts/android/screen-compatibility/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
-&lt;p&gt;안드로이드 기기는 매우 다양한 화면 크기와 다양한 픽셀 밀도를 가지고 있습니다. 또한 일부 기기는 다른 일반적인 기기와 모양이 조금 다르기도 합니다. 그렇기 때문에 화면을 디자인 할 때 모든 기기에서 만족스러운 모양이 나오게 하는 것은 힘듭니다.&lt;/p&gt;
-
-&lt;p&gt;따라서 이와 관련된 개발자 문서를 정리해봅니다. 자세한 내용은 참조에서 개발자 문서를 확인하면 좋을 것입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;다른-화면-크기&quot;&gt;다른 화면 크기&lt;/h2&gt;
-&lt;p&gt;디자인을 다양한 화면 크기에 적용하는 방법으로 레이아웃을 유연하게 구성하는 방법이 있습니다.&lt;/p&gt;
-
-&lt;p&gt;ConstraintLayout은 유연한 레이아웃을 구성하기 좋은 레이아웃입니다. 다른 뷰들과의 공간적 제약, 관계 등을 이용하여 구성하므로 화면의 크기가 달라지더라도 관계에 의해 배치되게됩니다. 개인적으로 ConstraintLayout은 다른 레이아웃에 비해 어렵게 느껴지지만 익숙해지면 보다 깔끔한 레이아웃을 구현하는데 도움을 줄 것이라 생각합니다. ConstraintLayout에 대한 정리는 따로 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;또한 하드 코딩 레이아웃 크기를 사용하지 않는 것이 있습니다. 만일 뷰의 크기를 300dpx300dp 이런 식으로 지정한다면 크기가 다른 화면에서는 짤리거나 어색하게 배치될 수 있기 때문입니다.&lt;/p&gt;
-
-&lt;p&gt;다른 방법으로는 대체 레이아웃을 만드는 방법이 있습니다. 화면 크기에 따라 레이아웃을 다르게 배치하는 방법입니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;기본 레이아웃을 열고 툴바에서 Orientation for Preview 를 클릭합니다.&lt;br /&gt;
-&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.23.24.png&quot; alt=&quot;Capture1&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;드롭다운 목록에서 Create Landscape Variant와 같은 추천 변형을 클릭하여 만들거나 Create Other를 클릭합니다.&lt;br /&gt;
-&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.24.04.png&quot; alt=&quot;Capture2&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Create Other를 선택한 경우 Select Resource Directory가 나타납니다. 여기에서 왼쪽의 화면 한정자를 선택하여 Chosen qualifiers 목록에 추가합니다. 한정자를 추가했으면 OK를 클릭합니다.&lt;br /&gt;
-&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.25.09.png&quot; alt=&quot;Capture3&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;qualifiers, 다양한 한정자들로 레이아웃을 나누어 작성할 수 있습니다.
-그리고 동일한 구성요소는 프래그먼트로 UI Component를 모듈화하여 중복되지 않도록 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;다른-픽셀-밀도&quot;&gt;다른 픽셀 밀도&lt;/h2&gt;
-&lt;p&gt;레이아웃을 구성할 때 주로 px보다는 dp를 많이 보셨을 것입니다. dp는 밀도 돌립형 필셀이라는 의미로 다양한 밀도에서 동일한 크기의 뷰를 그려주기 위해 필요합니다. 당연히 같은 화면 크기라도 어떤 기기에서는 고화질로 더 많은 픽셀로 이루어져 있기 때문에 px을 기준으로 디자인할 경우 픽셀 밀도에 띠라 다른 결과가 나오기 마련입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;dp-계산법&quot;&gt;dp 계산법&lt;/h3&gt;
-&lt;p&gt;1dp는 160dpi라는 기준 밀도에서 1픽셀과 동일한 가상의 픽셀 단위입니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;px = dp * (dpi / 160)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;다른 dpi에서의 계산은 다음과 같이 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.45.41.png&quot; alt=&quot;Capture3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;역으로 Pixel2라는 기기에서 가로 dp를 계산은 다음과 같이 작성할 수 있습니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;dp = px * (160 / dpi)
-411.428… = 1080 * (160 / 420)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;밀도한정자를 통해서 밀도가 다른 레이아웃에 다른 dp 값을 적용시킬 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;개발자 문서에 나와있는 밀도 한정자에 대한 표입니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;밀도 한정자&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ldpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;저밀도(ldpi)의 화면(~120dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;mdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;중밀도(mdpi)의 화면(~160dpi)에 대한 리소스입니다. (이것이 기준 밀도입니다.)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;hdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;고밀도(hdpi)의 화면(~240dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;xhdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;초고밀도(xhdpi)의 화면(~320dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;xxhdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;초초고밀도(xxhdpi)의 화면(~480dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;xxxhdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;초초초고밀도(xxxhdpi) 사용(~640dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;nodpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;모든 밀도에 대한 리소스입니다. 이들은 밀도 독립적 리소스입니다. 이 한정자 태그가 지정된 리소스의 경우 현재 화면의 밀도에 관계없이 시스템에서 리소스 크기를 조정하지 않습니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;tvdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;mdpi와 hdpi 사이의 화면(약 213dpi)에 대한 리소스입니다. 이 값은 ‘기본’ 밀도 그룹으로 간주되지 않습니다. 대개의 경우 텔레비전용이며 앱에서는 대부분 필요하지 않습니다. 앱은 대부분 mdpi 및 hdpi 리소스를 제공하는 것으로 충분하며 시스템에서 필요에 따라 확장합니다. tvdpi 리소스를 제공해야 한다고 생각되는 경우 1.33*mdpi로 크기를 지정합니다. 예를 들어 mdpi 화면의 100px x 100px 이미지가 tvdpi에서는 133px x 133px입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;display-cutout&quot;&gt;display cutout&lt;/h2&gt;
-&lt;p&gt;컷아웃은 흔히 알고있는 애플의 노치 디스플레이처럼 액정이 직사각형이 아니라 일부가 홈이 파여있는 기기에서 해당 영역을 어떻게 처리하는지에 대한 것입니다. 이에 대해서는 따로 설명하도록 하겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;test&quot;&gt;Test&lt;/h2&gt;
-&lt;p&gt;가상 에뮬레이터를 이용하거나 
-&lt;a href=&quot;https://firebase.google.com/docs/test-lab/&quot;&gt;Firebase Test Lab&lt;/a&gt;를 이용하도록 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/practices/screens_support&quot;&gt;https://developer.android.com/guide/practices/screens_support&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Screen" /><category term="dp" /><summary type="html">개요 안드로이드 기기는 매우 다양한 화면 크기와 다양한 픽셀 밀도를 가지고 있습니다. 또한 일부 기기는 다른 일반적인 기기와 모양이 조금 다르기도 합니다. 그렇기 때문에 화면을 디자인 할 때 모든 기기에서 만족스러운 모양이 나오게 하는 것은 힘듭니다.</summary></entry><entry><title type="html">Context</title><link href="https://jheun66.github.io/posts/android/context/" rel="alternate" type="text/html" title="Context" /><published>2021-02-12T18:30:00+00:00</published><updated>2021-02-12T18:30:00+00:00</updated><id>https://jheun66.github.io/posts/android/context</id><content type="html" xml:base="https://jheun66.github.io/posts/android/context/">&lt;p&gt;아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.&lt;/p&gt;
-
-&lt;p&gt;이번에는 이 컨텍스트에 대한 내용들을 정리하고자 합니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;context란&quot;&gt;Context란&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Interface to global information about an application environment. This is an abstract class whose implementation is provided by the Android system. It allows access to application-specific resources and classes, as well as up-calls for application-level operations such as launching activities, broadcasting and receiving intents, etc.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;컨텍스트는 안드로이드 시스템이 제공하는 어플리케이션 환경에 대한 전역 정보 인터페이스이고 어플리케이션별 리소스, 클래스에 대한 접근뿐만 아니라 액티비티 런칭, 브로드 캐스팅 인텐트 리시브와 같은 어플리케이션 레벨의 동작 호출을 허용해줍니다.&lt;/p&gt;
-
-&lt;p&gt;솔직히 정의만 들어보면 감이 잘 잡히지 않습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;application-context와-activity-context&quot;&gt;Application Context와 Activity Context&lt;/h2&gt;
-&lt;p&gt;Application과 Acitivty는 둘 다 Context를 부모 클래스로 두고 있습니다. 추가로 Service도 Context를 부모 클래스로 두고 있지만 Application과 Activity 위주로 설명하겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;리소스-정보&quot;&gt;리소스 정보&lt;/h2&gt;
-&lt;p&gt;이름에서도 알 수 있듯이 각각 Application에 대한 내용과 Activity에 대한 내용을 담고 있습니다. 
-예시로 간단하게 각 컨텍스트가 가지고 있는 리소스들을 비교해보겠습니다.
-Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간색으로 설정합니다.&lt;/p&gt;
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- AndroidMenifest.xml에서 --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;application&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:allowBackup=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:icon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@mipmap/ic_launcher&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@string/app_name&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:roundIcon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@mipmap/ic_launcher_round&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:supportsRtl=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:theme=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@style/Theme.ApplicationContext&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;activity&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.MainActivity&quot;&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;android:theme=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@style/Theme.ActivityContext&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
-                &lt;span class=&quot;nt&quot;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.intent.action.MAIN&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-                &lt;span class=&quot;nt&quot;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.intent.category.LAUNCHER&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
-        
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.TestActivity&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/application&amp;gt;&lt;/span&gt;
-
-    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- themes.xml에서 --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Base application theme. --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Theme.KotlinTest&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;parent=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Theme.MaterialComponents.DayNight.DarkActionBar&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Primary brand color. --&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;colorPrimary&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;@color/purple_500&lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;colorPrimaryVariant&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;@color/purple_700&lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;colorOnPrimary&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;@color/white&lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Secondary brand color. --&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;colorSecondary&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;@color/teal_200&lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;colorSecondaryVariant&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;@color/teal_700&lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;colorOnSecondary&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;@color/black&lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Status bar color. --&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android:statusBarColor&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;tools:targetApi=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;l&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;?attr/colorPrimaryVariant&lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Customize your theme here. --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Theme.ApplicationContext&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;parent=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Theme.KotlinTest&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android:textColor&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;#0000FF&lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Theme.ActivityContext&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;parent=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Theme.KotlinTest&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android:textColor&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;#FF0000&lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이를 액티비티에서 호출해주면&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applicationCtxTV&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TextView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;applicationContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;applicationCtxTV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;textSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;F&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;applicationCtxTV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Application Context&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activityCtxTV&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TextView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;activityCtxTV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;textSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;activityCtxTV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Activity Context&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LinearLayout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;applicationCtxTV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activityCtxTV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/img/posts/android/device-2021-02-13-023931.png&quot; alt=&quot;a capture&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;각 리소스의 색으로 그려지는 것을 확인 할 수 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;acitivity-context를-사용해야-하는-경우&quot;&gt;Acitivity Context를 사용해야 하는 경우&lt;/h2&gt;
-&lt;p&gt;Dialog를 띄우거나 액티비티를 실행시키는 경우, Layout을 inflate하는 경우 Application Context를 사용할 수 없습니다.&lt;/p&gt;
-
-&lt;p&gt;주로 Dialog를 띄울 때 Application Context를 사용할 경우&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;Caused by: android.view.WindowManager$BadTokenException: Unable to add window – token null is not valid; is your activity running?&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;다음과 같은 에러가 뜨게 되는데 이는 Application Context에는 WindowManager에 대한 정보가 없기 때문입니다.&lt;/p&gt;
-
-&lt;p&gt;추가로 참고하면 좋아보이는 글입니다.&lt;br /&gt;
-&lt;a href=&quot;https://nhancv.medium.com/android-show-dialog-without-activity-context-94661d48400f&quot;&gt;https://nhancv.medium.com/android-show-dialog-without-activity-context-94661d48400f&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;액티비티를 실행하거나 Layout을 inflate 시에는 해결책이 존재합니다.&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;applicationContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;TestActivity:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;applicationContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;어플리케이션 컨텍스트를 이용하여 액티비티를 실행하는 경우에도 다음과 같은 에러 메시지가 출력됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;Caused by: android.util.AndroidRuntimeException: Calling startActivity() from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag. Is this really what you want?&lt;/span&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;applicationContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;TestActivity:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;applicationContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;startActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addFlags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;FLAG_ACTIVITY_NEW_TASK&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;액티비티 컨텍스트 밖에서 startActivity를 호출할 때는 해당 플래그가 필요하다는 의미이며 이는 서비스에서 액티비티를 실행시킬 때도 동일하게 필요합니다.&lt;/p&gt;
-
-&lt;p&gt;Layout을 inflate하는 경우에도 문제가 발생하므로 추가 작업이 필요합니다.&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;applicationContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSystemService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LAYOUT_INFLATER_SERVICE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;메모리-누수와-생명-주기&quot;&gt;메모리 누수와 생명 주기&lt;/h2&gt;
-&lt;p&gt;이렇게 보면 항상 Activity Context를 사용하는 것이 좋아보이지만 개발자 사이트에서는 Application Context 사용을 권장하고 있습니다. 이는 생명주기와 관련이 있습니다. Activity는 결국 Context의 자식 클래스이며 자신도 Context이므로 Activity가 종료되면 Context도 사라지게 됩니다. 하지만 Application Context는 앱이 종료될 때까지 사라지지 않으므로 메모리 누수 등을 방지할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;싱글턴 패턴이나 static 변수를 사용하는 경우가 대표적입니다. 만일 액티비티가 종료되고도 Activity Context가 참조되고 있을 경우 메모리 누수가 일어나게 됩니다. 이 경우에는 반드시 onDestory()에서 해제를 해주어야 합니다.&lt;/p&gt;
-
-&lt;p&gt;static 뿐만 아니라 백그라운드 작업, 쓰레드 작업, Event Handling에서도 도중에 종료될시 Activity Context를 참조하고 있을 경우 메모리 누수가 발생할 수 있으므로 액티비티 종료시 해제를 직접 해주어야 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/content/Context&quot;&gt;https://developer.android.com/reference/android/content/Context&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.youtube.com/watch?v=-e6lyXIkIl0&quot;&gt;https://www.youtube.com/watch?v=-e6lyXIkIl0&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.charlezz.com/?p=1080&quot;&gt;https://www.charlezz.com/?p=1080&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://yonoo88.tistory.com/1057&quot;&gt;https://yonoo88.tistory.com/1057&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://aroundck.tistory.com/263&quot;&gt;https://aroundck.tistory.com/263&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://stackoverflow.com/questions/7043240/get-a-layout-inflater-from-the-applicationcontext/7045031&quot;&gt;https://stackoverflow.com/questions/7043240/get-a-layout-inflater-from-the-applicationcontext/7045031&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002&quot;&gt;https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Context" /><category term="Application" /><category term="Activity" /><summary type="html">아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/61196279/how-to-remove-all-old-ruby-versions-and-version-managers-and-reinstall-a-singl&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Blog" /><category term="ruby" /><category term="rbenv" /><category term="github pages" /><summary type="html">github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.</summary></entry></feed>
