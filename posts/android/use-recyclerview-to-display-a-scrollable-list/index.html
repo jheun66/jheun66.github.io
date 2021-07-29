@@ -130,20 +130,8 @@
 <li class="toc-entry toc-h1"><a href="#data-class">Data Class</a></li>
 <li class="toc-entry toc-h1"><a href="#recyclerview">RecyclerView</a>
 <ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#implement-an-adapter-for-the-recyclerview">Implement an Adapter for the RecyclerView</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h3"><a href="#adapter">Adapter</a></li>
-<li class="toc-entry toc-h3"><a href="#create-a-layout-for-items">Create a layout for items</a></li>
-<li class="toc-entry toc-h3"><a href="#create-an-itemadapter-class">Create an ItemAdapter class</a></li>
-<li class="toc-entry toc-h3"><a href="#create-a-viewholder">Create a ViewHolder</a></li>
-<li class="toc-entry toc-h3"><a href="#override-adapter-methods">Override adapter methods</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h2"><a href="#modify-the-mainactivity-to-use-a-recyclerview">Modify the MainActivity to use a RecyclerView</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h3"><a href="#결과">결과</a></li>
-</ol>
-</li>
+<li class="toc-entry toc-h2"><a href="#implement-an-adapter-for-the-recyclerview">Implement an Adapter for the RecyclerView</a></li>
+<li class="toc-entry toc-h2"><a href="#modify-the-mainactivity-to-use-a-recyclerview">Modify the MainActivity to use a RecyclerView</a></li>
 </ol>
 </li>
 </ol>
@@ -197,13 +185,11 @@
 <h2 id="implement-an-adapter-for-the-recyclerview">
 <a class="anchor" href="#implement-an-adapter-for-the-recyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implement an Adapter for the RecyclerView</h2>
 
-<h3 id="adapter">
-<a class="anchor" href="#adapter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adapter</h3>
+<h3 id="adapter">Adapter</h3>
 
 <p><em>RecyclerView</em>에서 사용할 수 있는 데이터로 변환, 예를 들어 화면에 3개의 아이템만 띄워줄 경우 <em>RecyclerView</em>는 <em>Adapter</em>에 3개의 아이템 뷰만 준비하도록함</p>
 
-<h3 id="create-a-layout-for-items">
-<a class="anchor" href="#create-a-layout-for-items" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a layout for items</h3>
+<h3 id="create-a-layout-for-items">Create a layout for items</h3>
 
 <p>RecylerView에 띄워줄 ItemView 생성</p>
 
@@ -214,8 +200,7 @@
     <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<h3 id="create-an-itemadapter-class">
-<a class="anchor" href="#create-an-itemadapter-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create an ItemAdapter class</h3>
+<h3 id="create-an-itemadapter-class">Create an ItemAdapter class</h3>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">me.amos.affirmations.adapter</span>
 
@@ -226,8 +211,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h3 id="create-a-viewholder">
-<a class="anchor" href="#create-a-viewholder" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a ViewHolder</h3>
+<h3 id="create-a-viewholder">Create a ViewHolder</h3>
 
 <p><em>RecyclerView</em>를 대신해 <em>itemView</em>와 직접 상호작용하는 <em>ViewHolder</em> 생성, 말그대로 뷰가 담겨있는 통?</p>
 
@@ -241,8 +225,7 @@
 
 <p>클래스 안의 클래스를 <strong>nested class</strong>라 함, ItemAdapter에서만 ItemViewHolder를 사용하기에 이런 식으로 작성</p>
 
-<h3 id="override-adapter-methods">
-<a class="anchor" href="#override-adapter-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Override adapter methods</h3>
+<h3 id="override-adapter-methods">Override adapter methods</h3>
 
 <p>RecyclerView.Adapter 상속</p>
 
@@ -340,8 +323,7 @@
 
 <p>RecyclerView의 레이아웃 크기가 변하지 않는 것을 알면 성능향상을 위해서 사용</p>
 
-<h3 id="결과">
-<a class="anchor" href="#%EA%B2%B0%EA%B3%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>결과</h3>
+<h3 id="결과">결과</h3>
 
 <p><img src="/img/posts/android/screenshot_1627578939.png" alt="screenshot_1627578939.png" width="75%"></p>
 

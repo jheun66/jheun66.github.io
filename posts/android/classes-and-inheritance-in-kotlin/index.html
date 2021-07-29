@@ -131,12 +131,7 @@
 <ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#keyword">keyword</a></li>
 <li class="toc-entry toc-h2"><a href="#declaration">Declaration</a></li>
-<li class="toc-entry toc-h2"><a href="#constructor">Constructor</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h3"><a href="#primary-constructor">primary constructor</a></li>
-<li class="toc-entry toc-h3"><a href="#secondary-constructor">secondary constructor</a></li>
-</ol>
-</li>
+<li class="toc-entry toc-h2"><a href="#constructor">Constructor</a></li>
 </ol>
 </li>
 <li class="toc-entry toc-h1"><a href="#inheritance">Inheritance</a>
@@ -146,11 +141,7 @@
 <li class="toc-entry toc-h2"><a href="#overriding-properties">Overriding properties</a></li>
 <li class="toc-entry toc-h2"><a href="#초기화-순서">초기화 순서</a></li>
 <li class="toc-entry toc-h2"><a href="#calling-the-superclass-implementation">Calling the superclass implementation</a></li>
-<li class="toc-entry toc-h2"><a href="#overriding-rules">Overriding rules</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h3"><a href="#super">super</a></li>
-</ol>
-</li>
+<li class="toc-entry toc-h2"><a href="#overriding-rules">Overriding rules</a></li>
 </ol>
 </li>
 <li class="toc-entry toc-h1"><a href="#adopt-good-coding-practices">Adopt good coding practices</a>
@@ -189,8 +180,7 @@
 
 <p>keyword는 constructor로, 하나의 <em>primary constructor</em>와 하나 이상의 <em>secondary constructor</em>를 가질 수 있음</p>
 
-<h3 id="primary-constructor">
-<a class="anchor" href="#primary-constructor" aria-hidden="true"><span class="octicon octicon-link"></span></a>primary constructor</h3>
+<h3 id="primary-constructor">primary constructor</h3>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MyClass</span> <span class="k">constructor</span><span class="p">(</span><span class="n">className</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span>
 <span class="kd">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">className</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span>
@@ -221,8 +211,7 @@
 
 <p>간결하게 선언에서 바로 기본값을 넣을 수 있음</p>
 
-<h3 id="secondary-constructor">
-<a class="anchor" href="#secondary-constructor" aria-hidden="true"><span class="octicon octicon-link"></span></a>secondary constructor</h3>
+<h3 id="secondary-constructor">secondary constructor</h3>
 
 <p>클래스 바디에 constructor를 붙여서 선언, primary constructor가 있다면 this를 이용한 Delegation(위임) 필요</p>
 
@@ -283,8 +272,7 @@
 <h2 id="overriding-rules">
 <a class="anchor" href="#overriding-rules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding rules</h2>
 
-<h3 id="super">
-<a class="anchor" href="#super" aria-hidden="true"><span class="octicon octicon-link"></span></a>super<base>
+<h3 id="super">super<base>
 </h3>
 
 <p>동일한 메소드명을 상속 받을 경우 다음과 같이 모호함을 없애줌</p>

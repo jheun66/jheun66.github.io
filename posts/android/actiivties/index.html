@@ -129,13 +129,7 @@
 <li class="toc-entry toc-h1"><a href="#액티비티">액티비티</a>
 <ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#액티비티의-컨셉">액티비티의 컨셉</a></li>
-<li class="toc-entry toc-h2"><a href="#메니페스트-구성하기">메니페스트 구성하기</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h3"><a href="#activity">&lt;activity&gt;</a></li>
-<li class="toc-entry toc-h3"><a href="#intent-filter">&lt;intent-filter&gt;</a></li>
-<li class="toc-entry toc-h3"><a href="#permission">permission</a></li>
-</ol>
-</li>
+<li class="toc-entry toc-h2"><a href="#메니페스트-구성하기">메니페스트 구성하기</a></li>
 <li class="toc-entry toc-h2"><a href="#activity-lifecycle">Activity LifeCycle</a></li>
 <li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
 </ol>
@@ -188,13 +182,11 @@
 </code></pre></div></div>
 <p>기본 샘플 <em>AndroidManifest.xml</em> 입니다.</p>
 
-<h3 id="activity">
-<a class="anchor" href="#activity" aria-hidden="true"><span class="octicon octicon-link"></span></a>&lt;activity&gt;</h3>
+<h3 id="activity">&lt;activity&gt;</h3>
 <p>앱에서 액티비티를 사용하기 위해서는 _AndroidManifest.xml_에 선언을 해주어야 합니다.
 &lt;application&gt; 태그의 하위 태그로 &lt;activity&gt;를 추가 할 수 있는데 <em>android:name</em>은 액티비티 이름으로 반드시 필요한 요소입니다. 그 이외의 요소도 매우 많은데 <a href="https://developer.android.com/guide/topics/manifest/activity-element">&lt;activity&gt;</a>를 참고하고 추후 직접 예제로 사용할때 마다 정리하도록 하겠습니다.</p>
 
-<h3 id="intent-filter">
-<a class="anchor" href="#intent-filter" aria-hidden="true"><span class="octicon octicon-link"></span></a>&lt;intent-filter&gt;</h3>
+<h3 id="intent-filter">&lt;intent-filter&gt;</h3>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;intent-filter&gt;</span>
         <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.intent.action.MAIN"</span> <span class="nt">/&gt;</span>
 
@@ -205,8 +197,7 @@
 <em>category.LAUNCHER</em> 는 앱을 실행할 아이콘의 모습이 &lt;activity&gt;에 정의된 것으로 하겠다는 의미입니다. 정의되어 있지 않으면 &lt;application&gt;의 아이콘을 사용합니다.
 인텐트와 인텐트 필터에 관한 내용은 중요하다고 판단되어 따로 정리하겠습니다.</p>
 
-<h3 id="permission">
-<a class="anchor" href="#permission" aria-hidden="true"><span class="octicon octicon-link"></span></a>permission</h3>
+<h3 id="permission">permission</h3>
 <p>액티비티를 다른 앱에서 실행하거나 못하게 컨트롤 할 수 있습니다. 개발자 예제를 살펴보면</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;manifest&gt;</span>
 <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">"...."</span>
