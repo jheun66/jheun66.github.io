@@ -2516,4 +2516,12 @@ header.masthead .post-heading .meta a { color: #fff; }
 
 @media only screen and (min-width: 768px) { .post-preview > a > .post-title { font-size: 36px; } }
 
+html { scroll-behavior: smooth; }
+
+.amos-list-class { background-color: #fcfcfc; border: 2px solid; border-radius: 6px; border-color: black; margin: 5px 0; padding: 10px 30px; }
+
+.amos-sublist-class { list-style-type: lower-alpha; }
+
+.sticky { position: sticky; top: 0; }
+
 /*# sourceMappingURL=main.css.map */

@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Implict Intent" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"dateModified":"2021-01-09T18:00:00+00:00","url":"https://jheun66.github.io/posts/android/implict-intent/","datePublished":"2021-01-09T18:00:00+00:00","@type":"BlogPosting","description":"Intent에 이어서 작성하겠습니다.","headline":"Implict Intent","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/implict-intent/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"url":"https://jheun66.github.io/posts/android/implict-intent/","@type":"BlogPosting","description":"Intent에 이어서 작성하겠습니다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/implict-intent/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"Implict Intent","dateModified":"2021-01-09T18:00:00+00:00","datePublished":"2021-01-09T18:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,26 +120,35 @@
 </header>
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-
-      <ul id="toc" class="section-nav">
+  <div class="row min-vh-150 flex-column flex-lg-row">
+    <aside class="col-lg-2 p-0 flex-shrink-1">
+      <nav class="navbar flex-lg-column sticky">
+          <div class="navbar-collapse flex-lg-column">
+            <div id="table-of-contents">
+              <ol id="toc" class="amos-list-class">
 <li class="toc-entry toc-h1"><a href="#intent-infomation">Intent Infomation</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#action">Action</a></li>
 <li class="toc-entry toc-h2"><a href="#data">Data</a></li>
 <li class="toc-entry toc-h2"><a href="#category">Category</a></li>
-</ul>
+</ol>
 </li>
 <li class="toc-entry toc-h1"><a href="#send--receive">Send &amp; Receive</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#startactivity-or-startactivityforresult">startActivity or startActivityforResult</a></li>
 <li class="toc-entry toc-h2"><a href="#sharecompatintentbuilder">ShareCompat.IntentBuilder</a></li>
 <li class="toc-entry toc-h2"><a href="#receive-implict-intent">Receive Implict Intent</a></li>
 <li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
-</ul>
+</ol>
 </li>
-</ul><p><a href="/posts/android/intent"><strong>Intent</strong></a>에 이어서 작성하겠습니다.</p>
+</ol>
+            </div>
+          </div>
+      </nav>
+    </aside>
+    <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <p><a href="/posts/android/intent"><strong>Intent</strong></a>에 이어서 작성하겠습니다.</p>
 
 <p>Explict Intent에서는 클래스명으로 호출하여 다른 액티비티를 호출했습니다. 하지만 Implict Intent를 이용한 호출 방법은 조금 다릅니다.
 특정 클래스 명을 지정하지 않더라도 원하는 액션과 특정 데이터들을 이용하여 실행할 수 있는 액티비티, 다른 컴포넌트들을 호출할 수 있습니다. 매칭된 액티비티가 여러 개일 경우 사용자가 선택할 수 있습니다.</p>

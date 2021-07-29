@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Context" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"dateModified":"2021-02-12T18:30:00+00:00","url":"https://jheun66.github.io/posts/android/context/","datePublished":"2021-02-12T18:30:00+00:00","@type":"BlogPosting","description":"아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.","headline":"Context","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/context/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"url":"https://jheun66.github.io/posts/android/context/","@type":"BlogPosting","description":"아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/context/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"Context","dateModified":"2021-02-12T18:30:00+00:00","datePublished":"2021-02-12T18:30:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,20 +120,29 @@
 </header>
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-
-      <ul id="toc" class="section-nav">
+  <div class="row min-vh-150 flex-column flex-lg-row">
+    <aside class="col-lg-2 p-0 flex-shrink-1">
+      <nav class="navbar flex-lg-column sticky">
+          <div class="navbar-collapse flex-lg-column">
+            <div id="table-of-contents">
+              <ol id="toc" class="amos-list-class">
 <li class="toc-entry toc-h1"><a href="#context란">Context란</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#application-context와-activity-context">Application Context와 Activity Context</a></li>
 <li class="toc-entry toc-h2"><a href="#리소스-정보">리소스 정보</a></li>
 <li class="toc-entry toc-h2"><a href="#acitivity-context를-사용해야-하는-경우">Acitivity Context를 사용해야 하는 경우</a></li>
 <li class="toc-entry toc-h2"><a href="#메모리-누수와-생명-주기">메모리 누수와 생명 주기</a></li>
 <li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
-</ul>
+</ol>
 </li>
-</ul><p>아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.</p>
+</ol>
+            </div>
+          </div>
+      </nav>
+    </aside>
+    <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <p>아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.</p>
 
 <p>이번에는 이 컨텍스트에 대한 내용들을 정리하고자 합니다.</p>
 

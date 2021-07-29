@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Classes and inheritance in Kotlin" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"dateModified":"2021-07-25T10:18:00+00:00","url":"https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin/","datePublished":"2021-07-25T10:18:00+00:00","@type":"BlogPosting","description":"개요","headline":"Classes and inheritance in Kotlin","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"url":"https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin/","@type":"BlogPosting","description":"개요","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/classes-and-inheritance-in-kotlin/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"Classes and inheritance in Kotlin","dateModified":"2021-07-25T10:18:00+00:00","datePublished":"2021-07-25T10:18:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,44 +120,53 @@
 </header>
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-
-      <ul id="toc" class="section-nav">
+  <div class="row min-vh-150 flex-column flex-lg-row">
+    <aside class="col-lg-2 p-0 flex-shrink-1">
+      <nav class="navbar flex-lg-column sticky">
+          <div class="navbar-collapse flex-lg-column">
+            <div id="table-of-contents">
+              <ol id="toc" class="amos-list-class">
 <li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
 <li class="toc-entry toc-h1"><a href="#classes">Classes</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#keyword">keyword</a></li>
 <li class="toc-entry toc-h2"><a href="#declaration">Declaration</a></li>
 <li class="toc-entry toc-h2"><a href="#constructor">Constructor</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h3"><a href="#primary-constructor">primary constructor</a></li>
 <li class="toc-entry toc-h3"><a href="#secondary-constructor">secondary constructor</a></li>
-</ul>
+</ol>
 </li>
-</ul>
+</ol>
 </li>
 <li class="toc-entry toc-h1"><a href="#inheritance">Inheritance</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#open">open</a></li>
 <li class="toc-entry toc-h2"><a href="#override">override</a></li>
 <li class="toc-entry toc-h2"><a href="#overriding-properties">Overriding properties</a></li>
 <li class="toc-entry toc-h2"><a href="#초기화-순서">초기화 순서</a></li>
 <li class="toc-entry toc-h2"><a href="#calling-the-superclass-implementation">Calling the superclass implementation</a></li>
 <li class="toc-entry toc-h2"><a href="#overriding-rules">Overriding rules</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h3"><a href="#super">super</a></li>
-</ul>
+</ol>
 </li>
-</ul>
+</ol>
 </li>
 <li class="toc-entry toc-h1"><a href="#adopt-good-coding-practices">Adopt good coding practices</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#with">with</a></li>
-</ul>
+</ol>
 </li>
 <li class="toc-entry toc-h1"><a href="#reference">Reference</a></li>
-</ul><h1 id="개요">
+</ol>
+            </div>
+          </div>
+      </nav>
+    </aside>
+    <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <h1 id="개요">
 <a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다. 코틀린 관련 자세한 내용은 <a href="https://kotlinlang.org/docs/classes.html">코틀린 사이트</a>를 참고하면 좋을 것 같습니다.</p>

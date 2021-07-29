@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="ART 이해하기" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"dateModified":"2020-12-14T08:08:00+00:00","url":"https://jheun66.github.io/posts/android/art/","datePublished":"2020-12-14T08:08:00+00:00","@type":"BlogPosting","description":"안드로이드 서적을 읽던 중 ART에 대한 이해가 필요하다 느껴 정리합니다. 의식의 흐름대로 풀이하였습니다.","headline":"ART 이해하기","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/art/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"url":"https://jheun66.github.io/posts/android/art/","@type":"BlogPosting","description":"안드로이드 서적을 읽던 중 ART에 대한 이해가 필요하다 느껴 정리합니다. 의식의 흐름대로 풀이하였습니다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/art/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"ART 이해하기","dateModified":"2020-12-14T08:08:00+00:00","datePublished":"2020-12-14T08:08:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,24 +120,33 @@
 </header>
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-
-      <ul id="toc" class="section-nav">
+  <div class="row min-vh-150 flex-column flex-lg-row">
+    <aside class="col-lg-2 p-0 flex-shrink-1">
+      <nav class="navbar flex-lg-column sticky">
+          <div class="navbar-collapse flex-lg-column">
+            <div id="table-of-contents">
+              <ol id="toc" class="amos-list-class">
 <li class="toc-entry toc-h1"><a href="#art">ART</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#런타임">런타임</a></li>
 <li class="toc-entry toc-h2"><a href="#간단-설명">간단 설명</a></li>
 <li class="toc-entry toc-h2"><a href="#dalvik">Dalvik</a>
-<ul>
+<ol class="amos-sublist-class">
 <li class="toc-entry toc-h3"><a href="#aot-컴파일-도입">AOT 컴파일 도입</a></li>
-</ul>
+</ol>
 </li>
 <li class="toc-entry toc-h2"><a href="#추가사항">추가사항</a></li>
 <li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
-</ul>
+</ol>
 </li>
-</ul><p>안드로이드 서적을 읽던 중 ART에 대한 이해가 필요하다 느껴 정리합니다. 의식의 흐름대로 풀이하였습니다.</p>
+</ol>
+            </div>
+          </div>
+      </nav>
+    </aside>
+    <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <p>안드로이드 서적을 읽던 중 ART에 대한 이해가 필요하다 느껴 정리합니다. 의식의 흐름대로 풀이하였습니다.</p>
 
 <h1 id="art">
 <a class="anchor" href="#art" aria-hidden="true"><span class="octicon octicon-link"></span></a>ART</h1>
