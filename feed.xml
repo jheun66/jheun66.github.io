@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-07-29T17:30:16+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Use RecyclerView to display a scrollable list</title><link href="https://jheun66.github.io/posts/android/use-recyclerview-to-display-a-scrollable-list/" rel="alternate" type="text/html" title="Use RecyclerView to display a scrollable list" /><published>2021-07-29T17:17:00+00:00</published><updated>2021-07-29T17:17:00+00:00</updated><id>https://jheun66.github.io/posts/android/use-recyclerview-to-display-a-scrollable-list</id><content type="html" xml:base="https://jheun66.github.io/posts/android/use-recyclerview-to-display-a-scrollable-list/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-08-03T07:06:25+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Display a list of images using cards</title><link href="https://jheun66.github.io/posts/android/display-a-list-of-images-using-cards/" rel="alternate" type="text/html" title="Display a list of images using cards" /><published>2021-08-03T06:36:00+00:00</published><updated>2021-08-03T06:36:00+00:00</updated><id>https://jheun66.github.io/posts/android/display-a-list-of-images-using-cards</id><content type="html" xml:base="https://jheun66.github.io/posts/android/display-a-list-of-images-using-cards/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+
+&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-3&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다&lt;/p&gt;
+
+&lt;h1 id=&quot;adding-images-to-the-list-items&quot;&gt;Adding images to the list items&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Using resource annotations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;annotation을 사용하면 클래스나 메스드에 추가 정보를 줄 수 있음&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;me.amos.affirmations.model&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;androidx.annotation.DrawableRes&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;androidx.annotation.StringRes&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;data class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Affirmation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@StringRes&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;stringResourceId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@DrawableRes&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;imageResourceId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add an ImageView to the list item layout&lt;/li&gt;
+  &lt;li&gt;Update the ItemAdapter to set the image&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;polishing-the-ui&quot;&gt;Polishing the UI&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;textApperance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/androiddevelopers/android-styling-common-theme-attributes-8f7c50c9eaba&quot;&gt;안드로이드 공통 테마&lt;/a&gt; 옵션 중 텍스트 테마&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;materialCardView&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://material.io/components/cards/android&quot;&gt;materialCardView&lt;/a&gt;를 사용하면 일관되고 깔끔한 디자인으로 뷰들을 다룰 수 있음&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/androiddevelopers/android-styling-common-theme-attributes-8f7c50c9eaba&quot;&gt;https://medium.com/androiddevelopers/android-styling-common-theme-attributes-8f7c50c9eaba&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://material.io/components/cards/android&quot;&gt;https://material.io/components/cards/android&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive&quot;&gt;https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Use RecyclerView to display a scrollable list</title><link href="https://jheun66.github.io/posts/android/use-recyclerview-to-display-a-scrollable-list/" rel="alternate" type="text/html" title="Use RecyclerView to display a scrollable list" /><published>2021-07-29T17:17:00+00:00</published><updated>2021-07-29T17:17:00+00:00</updated><id>https://jheun66.github.io/posts/android/use-recyclerview-to-display-a-scrollable-list</id><content type="html" xml:base="https://jheun66.github.io/posts/android/use-recyclerview-to-display-a-scrollable-list/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-3&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다&lt;/p&gt;
 
@@ -936,41 +984,4 @@
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/classes.html&quot;&gt;https://kotlinlang.org/docs/classes.html&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><summary type="html">개요</summary></entry><entry><title type="html">코드 블럭 syntax_highlight 적용</title><link href="https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/" rel="alternate" type="text/html" title="코드 블럭 syntax_highlight 적용" /><published>2021-07-22T02:49:00+00:00</published><updated>2021-07-22T02:49:00+00:00</updated><id>https://jheun66.github.io/posts/blog/codeblock-syntax-highlight</id><content type="html" xml:base="https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/">&lt;h1 id=&quot;rougify-help-style&quot;&gt;rougify help style&lt;/h1&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% rougify &lt;span class=&quot;nb&quot;&gt;help &lt;/span&gt;style
-usage: rougify style &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;theme-name&amp;gt;] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;options&amp;gt;]
-
-Print CSS styles &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;the given theme.  Extra options are
-passed to the theme. To &lt;span class=&quot;k&quot;&gt;select &lt;/span&gt;a mode &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;light/dark&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;the
-theme, append &lt;span class=&quot;s1&quot;&gt;&apos;.light&apos;&lt;/span&gt; or &lt;span class=&quot;s1&quot;&gt;&apos;.dark&apos;&lt;/span&gt; to the &amp;lt;theme-name&amp;gt;
-respectively. Theme defaults to thankful_eyes.
-
-options:
-  &lt;span class=&quot;nt&quot;&gt;--scope&lt;/span&gt;     	&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default: .highlight&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; a css selector to scope by
-  &lt;span class=&quot;nt&quot;&gt;--tex&lt;/span&gt;       	&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; render as TeX
-  &lt;span class=&quot;nt&quot;&gt;--tex-prefix&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;default: RG&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; a &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;prefix &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;TeX
-              	implies &lt;span class=&quot;nt&quot;&gt;--tex&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;specified
-
-available themes:
-  base16, base16.dark, base16.light, base16.monokai, base16.monokai.dark, base16.monokai.light, base16.solarized, base16.solarized.dark, base16.solarized.light, bw, colorful, github, gruvbox, gruvbox.dark, gruvbox.light, igorpro, magritte, molokai, monokai, monokai.sublime, pastie, thankful_eyes, tulip
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;원하는-테마-적용&quot;&gt;&lt;strong&gt;원하는 테마 적용&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% rougify style &amp;lt;themes&amp;gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ~/&amp;lt;블로그&amp;gt;/assets/highlight.css
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;headhtml에-추가&quot;&gt;head.html에 추가&lt;/h1&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/highlight.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;_configyml-수정&quot;&gt;_config.yml 수정&lt;/h1&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;markdown:  kramdown
-kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
-  css_class: highlight
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Eun JongHyeok</name></author><category term="Blog" /><category term="github pages" /><category term="rougify" /><summary type="html">rougify help style</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/classes.html&quot;&gt;https://kotlinlang.org/docs/classes.html&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><summary type="html">개요</summary></entry></feed>
