@@ -2518,7 +2518,7 @@ header.masthead .post-heading .meta a { color: #fff; }
 
 html { scroll-behavior: smooth; }
 
-.amos-list-class { background-color: #fcfcfc; border: 2px solid; border-radius: 6px; border-color: black; margin: 5px 0; padding: 10px 30px; }
+.amos-list-class { background-color: #fcfcfc; border: 2px solid; border-radius: 6px; border-color: black; margin: 5px 0; padding: 10px 30px 10px 60px; }
 
 .amos-sublist-class { list-style-type: lower-alpha; }
 

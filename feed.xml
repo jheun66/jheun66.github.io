@@ -1,4 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-08-18T15:09:40+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Escape HTML</title><link href="https://jheun66.github.io/posts/android/escape-html/" rel="alternate" type="text/html" title="Escape HTML" /><published>2021-08-18T15:05:00+00:00</published><updated>2021-08-18T15:05:00+00:00</updated><id>https://jheun66.github.io/posts/android/escape-html</id><content type="html" xml:base="https://jheun66.github.io/posts/android/escape-html/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-08-21T22:12:21+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">next_permutation</title><link href="https://jheun66.github.io/posts/algorithm/next-permutation/" rel="alternate" type="text/html" title="next_permutation" /><published>2021-08-21T21:28:00+00:00</published><updated>2021-08-21T21:28:00+00:00</updated><id>https://jheun66.github.io/posts/algorithm/next-permutation</id><content type="html" xml:base="https://jheun66.github.io/posts/algorithm/next-permutation/">&lt;p&gt;오랜만에 알고리즘에 대해 나름 새롭게 정리해보기 위해 작성하는 글입니다. 내용과 원리보다는 구현에 치중되어 있을 수 있으니 자세한 원리는 따로 찾아보는게 좋을거 같습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+
+&lt;p&gt;C++은 STL에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next_permutation&lt;/code&gt;이라는 함수를 제공해주고 있어 순열 문제에 사용했었는데 다른 언어에는 이런 함수가 없다는걸 알게 되어 구현 방법에 대해 고민해 보게 되었습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;직접-구현&quot;&gt;직접 구현&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.naver.com/jheun5/221895573120&quot;&gt;과거 글&lt;/a&gt;에서도 작성했던 내용입니다.&lt;/p&gt;
+
+&lt;p&gt;next_permutation의 내부 코드(C++)&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BidirIt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;next_permutation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BidirIt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BidirIt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// 벡터에 원소가 없을 경우&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;BidirIt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// 벡터에 원소가 하나일 경우&lt;/span&gt;
+ 
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;BidirIt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ 
+        &lt;span class=&quot;n&quot;&gt;i1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;i2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iter_swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그 때 당시에는 동작에 대해서만 확인해보았는데 다른 언어로 구현을 찾아보게 되면서 의미를 알게 되었습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;가장 긴 감소하는 접미사과 그 pivot(접미사 앞의 위치)를 찾는다.&lt;/li&gt;
+  &lt;li&gt;가장 긴 감소하는 접미사가 전체 배열일 경우 next_permutation은 없다.&lt;/li&gt;
+  &lt;li&gt;pivot 보다 큰 수 중 가장 오른쪽에 있는 위치(후임)를 찾는다.&lt;/li&gt;
+  &lt;li&gt;pivot과 후임을 스왑한다.&lt;/li&gt;
+  &lt;li&gt;접미사를 뒤집는다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;다른 예제를 참고하여 구현한 코드입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[],&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[],&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;next_permutation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 0. 비어있거나 원소가 한개일 경우 next_permutation 없다.&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// 1. 가장 긴 감소하는 접미사과 그 pivot(접미사 앞의 위치)를 찾는다.&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// 2. 가장 긴 감소하는 접미사가 전체 배열일 경우 next_permutation 없다.&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// 3. pivot 보다 큰 수중 가장 오른쪽에 있는 위치를 찾는다.&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;successor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;successor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;successor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// 4. pivot과 successor를 스왑한다.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;successor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// 5. 접미사를 뒤집는다.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pivot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Scanner&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_permutation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Arrays&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;There is no higher&quot;&lt;/span&gt;
+                    &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; order permutation &quot;&lt;/span&gt;
+                    &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;for the given data.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;느낀점&quot;&gt;느낀점&lt;/h1&gt;
+
+&lt;p&gt;다음 순열을 구해서 해결해야할 경우를 제외하고는 굳이 사용할꺼 같지는 않습니다.&lt;/p&gt;
+
+&lt;p&gt;순열을 모두 출력하거나 모든 순열을 탐색할때는 백트래킹을 통해 구현할 것 같습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/implementing-next_permutation-in-java-with-examples/&quot;&gt;https://www.geeksforgeeks.org/implementing-next_permutation-in-java-with-examples/&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Algorithm" /><category term="Permutation" /><summary type="html">오랜만에 알고리즘에 대해 나름 새롭게 정리해보기 위해 작성하는 글입니다. 내용과 원리보다는 구현에 치중되어 있을 수 있으니 자세한 원리는 따로 찾아보는게 좋을거 같습니다.</summary></entry><entry><title type="html">Escape HTML</title><link href="https://jheun66.github.io/posts/android/escape-html/" rel="alternate" type="text/html" title="Escape HTML" /><published>2021-08-18T15:05:00+00:00</published><updated>2021-08-18T15:05:00+00:00</updated><id>https://jheun66.github.io/posts/android/escape-html</id><content type="html" xml:base="https://jheun66.github.io/posts/android/escape-html/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;HTML에서 특수 처리되는 문자가 포함된 문자열을 웹뷰등에 그대로 사용할 경우 html 문자라 판단되어 잘못된 처리를 하거나 오류가 날 수 있음&lt;/p&gt;
 
@@ -37,7 +168,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/text/Html#escapeHtml(java.lang.CharSequence)&quot;&gt;https://developer.android.com/reference/android/text/Html#escapeHtml(java.lang.CharSequence)&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://daplus.net/java-java%EC%97%90%EC%84%9C-html%EC%9D%84-%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84-%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94-%EB%8D%B0-%EA%B6%8C%EC%9E%A5%EB%90%98%EB%8A%94-%EB%B0%A9%EB%B2%95/&quot;&gt;http://daplus.net/java-java에서-html을-이스케이프-처리하는-데-권장되는-방법/&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="String" /><category term="HTML" /><summary type="html">개요</summary></entry><entry><title type="html">Collections in Kotlin</title><link href="https://jheun66.github.io/posts/android/collections-in-kotlin/" rel="alternate" type="text/html" title="Collections in Kotlin" /><published>2021-08-04T07:17:00+00:00</published><updated>2021-08-04T07:17:00+00:00</updated><id>https://jheun66.github.io/posts/android/collections-in-kotlin</id><content type="html" xml:base="https://jheun66.github.io/posts/android/collections-in-kotlin/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;http://daplus.net/java-java%EC%97%90%EC%84%9C-html%EC%9D%84-%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84-%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94-%EB%8D%B0-%EA%B6%8C%EC%9E%A5%EB%90%98%EB%8A%94-%EB%B0%A9%EB%B2%95/&quot;&gt;http://daplus.net/java-java에서-html을-이스케이프-처리하는-데-권장되는-방법/&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="String" /><category term="HTML" /><summary type="html">개요</summary></entry><entry><title type="html">Collections in Kotlin</title><link href="https://jheun66.github.io/posts/practice/collections-in-kotlin/" rel="alternate" type="text/html" title="Collections in Kotlin" /><published>2021-08-04T07:17:00+00:00</published><updated>2021-08-04T07:17:00+00:00</updated><id>https://jheun66.github.io/posts/practice/collections-in-kotlin</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/collections-in-kotlin/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-1&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
 
@@ -132,7 +263,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/collections-overview.html&quot;&gt;https://kotlinlang.org/docs/collections-overview.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&quot;&gt;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Display a list of images using cards</title><link href="https://jheun66.github.io/posts/android/display-a-list-of-images-using-cards/" rel="alternate" type="text/html" title="Display a list of images using cards" /><published>2021-08-03T06:36:00+00:00</published><updated>2021-08-03T06:36:00+00:00</updated><id>https://jheun66.github.io/posts/android/display-a-list-of-images-using-cards</id><content type="html" xml:base="https://jheun66.github.io/posts/android/display-a-list-of-images-using-cards/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&quot;&gt;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Display a list of images using cards</title><link href="https://jheun66.github.io/posts/practice/display-a-list-of-images-using-cards/" rel="alternate" type="text/html" title="Display a list of images using cards" /><published>2021-08-03T06:36:00+00:00</published><updated>2021-08-03T06:36:00+00:00</updated><id>https://jheun66.github.io/posts/practice/display-a-list-of-images-using-cards</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/display-a-list-of-images-using-cards/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-3&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다&lt;/p&gt;
 
@@ -180,7 +311,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://material.io/components/cards/android&quot;&gt;https://material.io/components/cards/android&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive&quot;&gt;https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Use RecyclerView to display a scrollable list</title><link href="https://jheun66.github.io/posts/android/use-recyclerview-to-display-a-scrollable-list/" rel="alternate" type="text/html" title="Use RecyclerView to display a scrollable list" /><published>2021-07-29T17:17:00+00:00</published><updated>2021-07-29T17:17:00+00:00</updated><id>https://jheun66.github.io/posts/android/use-recyclerview-to-display-a-scrollable-list</id><content type="html" xml:base="https://jheun66.github.io/posts/android/use-recyclerview-to-display-a-scrollable-list/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive&quot;&gt;https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Use RecyclerView to display a scrollable list</title><link href="https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list/" rel="alternate" type="text/html" title="Use RecyclerView to display a scrollable list" /><published>2021-07-29T17:17:00+00:00</published><updated>2021-07-29T17:17:00+00:00</updated><id>https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-3&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다&lt;/p&gt;
 
@@ -359,7 +490,7 @@
 
 &lt;h3 id=&quot;결과&quot;&gt;결과&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/android/screenshot_1627578939.png&quot; alt=&quot;screenshot_1627578939.png&quot; width=&quot;75%&quot; /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Use Lists in Kotlin</title><link href="https://jheun66.github.io/posts/android/use-lists-in-kotlin/" rel="alternate" type="text/html" title="Use Lists in Kotlin" /><published>2021-07-29T09:30:00+00:00</published><updated>2021-07-29T09:30:00+00:00</updated><id>https://jheun66.github.io/posts/android/use-lists-in-kotlin</id><content type="html" xml:base="https://jheun66.github.io/posts/android/use-lists-in-kotlin/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/screenshot_1627578939.png&quot; alt=&quot;screenshot_1627578939.png&quot; width=&quot;75%&quot; /&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Use Lists in Kotlin</title><link href="https://jheun66.github.io/posts/practice/use-lists-in-kotlin/" rel="alternate" type="text/html" title="Use Lists in Kotlin" /><published>2021-07-29T09:30:00+00:00</published><updated>2021-07-29T09:30:00+00:00</updated><id>https://jheun66.github.io/posts/practice/use-lists-in-kotlin</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/use-lists-in-kotlin/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-3&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
 
@@ -580,7 +711,7 @@
         &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Create a more polished user experience</title><link href="https://jheun66.github.io/posts/android/create-a-more-polished-user-experience/" rel="alternate" type="text/html" title="Create a more polished user experience" /><published>2021-07-28T08:05:00+00:00</published><updated>2021-07-28T08:05:00+00:00</updated><id>https://jheun66.github.io/posts/android/create-a-more-polished-user-experience</id><content type="html" xml:base="https://jheun66.github.io/posts/android/create-a-more-polished-user-experience/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Create a more polished user experience</title><link href="https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience/" rel="alternate" type="text/html" title="Create a more polished user experience" /><published>2021-07-28T08:05:00+00:00</published><updated>2021-07-28T08:05:00+00:00</updated><id>https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-2&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
 
@@ -701,7 +832,7 @@
    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Change the app icon</title><link href="https://jheun66.github.io/posts/android/change-the-app-icon/" rel="alternate" type="text/html" title="Change the app icon" /><published>2021-07-28T08:02:00+00:00</published><updated>2021-07-28T08:02:00+00:00</updated><id>https://jheun66.github.io/posts/android/change-the-app-icon</id><content type="html" xml:base="https://jheun66.github.io/posts/android/change-the-app-icon/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Change the app icon</title><link href="https://jheun66.github.io/posts/practice/change-the-app-icon/" rel="alternate" type="text/html" title="Change the app icon" /><published>2021-07-28T08:02:00+00:00</published><updated>2021-07-28T08:02:00+00:00</updated><id>https://jheun66.github.io/posts/practice/change-the-app-icon</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/change-the-app-icon/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-2&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
 
@@ -735,7 +866,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://material.io/design/platform-guidance/android-icons.html&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;구글 플레이 스토어에 등록하기 위한 조건도 있음&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Change the app theme</title><link href="https://jheun66.github.io/posts/android/change-the-app-theme/" rel="alternate" type="text/html" title="Change the app theme" /><published>2021-07-28T08:00:00+00:00</published><updated>2021-07-28T08:00:00+00:00</updated><id>https://jheun66.github.io/posts/android/change-the-app-theme</id><content type="html" xml:base="https://jheun66.github.io/posts/android/change-the-app-theme/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;p&gt;구글 플레이 스토어에 등록하기 위한 조건도 있음&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Change the app theme</title><link href="https://jheun66.github.io/posts/practice/change-the-app-theme/" rel="alternate" type="text/html" title="Change the app theme" /><published>2021-07-28T08:00:00+00:00</published><updated>2021-07-28T08:00:00+00:00</updated><id>https://jheun66.github.io/posts/practice/change-the-app-theme</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/change-the-app-theme/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-2&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
 
@@ -751,7 +882,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/img/posts/android/screenshot_darkmode.jpeg&quot; alt=&quot;screenshot_darkmode.jpeg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;설정 → 디스플레이에서 변경 가능&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Calculate the tip</title><link href="https://jheun66.github.io/posts/android/calculate-the-tip/" rel="alternate" type="text/html" title="Calculate the tip" /><published>2021-07-28T07:58:00+00:00</published><updated>2021-07-28T07:58:00+00:00</updated><id>https://jheun66.github.io/posts/android/calculate-the-tip</id><content type="html" xml:base="https://jheun66.github.io/posts/android/calculate-the-tip/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+&lt;p&gt;설정 → 디스플레이에서 변경 가능&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Calculate the tip</title><link href="https://jheun66.github.io/posts/practice/calculate-the-tip/" rel="alternate" type="text/html" title="Calculate the tip" /><published>2021-07-28T07:58:00+00:00</published><updated>2021-07-28T07:58:00+00:00</updated><id>https://jheun66.github.io/posts/practice/calculate-the-tip</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/calculate-the-tip/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-xml-layouts&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
 
@@ -853,25 +984,4 @@
   &lt;li&gt;Analyze &amp;gt; Inspect Code&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;불필요한 변수는 줄이고 안정성등에 도움을 줌&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Use SwitchCompat from AppCompat or SwitchMaterial from Material library</title><link href="https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/" rel="alternate" type="text/html" title="Use SwitchCompat from AppCompat or SwitchMaterial from Material library" /><published>2021-07-26T06:43:00+00:00</published><updated>2021-07-26T06:43:00+00:00</updated><id>https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial</id><content type="html" xml:base="https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/">&lt;p&gt;Switch를 사용할 경우 다음과 같은 경고메시지가 뜨는 것을 확인할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/android/screenshot_switch.png&quot; alt=&quot;screenshot_switch.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이는 안드로이드에서 제공하는 스위치가 버전에 따라 디자인이 다르기 때문에 이를 알려주는 경고창이 뜨는 것이며&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.stack.imgur.com/hr6nk.png&quot; alt=&quot;https://i.stack.imgur.com/hr6nk.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/41239028/switch-vs-switchcompat&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.appcompat.widget.SwitchCompat&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/round_up_switch&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0dp&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:checked=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@string/round_up_tip&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;app:layout_constraintEnd_toEndOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;app:layout_constraintStart_toStartOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;app:layout_constraintTop_toBottomOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@id/tip_options&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;SwitchCompat을 사용하면 모든 안드로이드 버전에서 같은 디자인을 사용할 수 있다.&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Android" /><category term="XML" /><category term="Warning" /><summary type="html">Switch를 사용할 경우 다음과 같은 경고메시지가 뜨는 것을 확인할 수 있다.</summary></entry></feed>
+&lt;p&gt;불필요한 변수는 줄이고 안정성등에 도움을 줌&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry></feed>
