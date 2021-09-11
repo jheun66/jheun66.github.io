@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Posts - 생각중
+    Use LiveData with ViewModel - 생각중
     
   </title>
 
-  <meta name="description" content="개발 블로그">
+  <meta name="description" content="Use LiveData with ViewModel">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -21,7 +21,7 @@
   
   <link rel="stylesheet" href="/assets/highlight.css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://jheun66.github.io/posts/page/6/">
+  <link rel="canonical" href="https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
 
@@ -32,22 +32,23 @@
    </style>
     
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Page 6 of 6 for Posts | 생각중</title>
+<title>Use LiveData with ViewModel | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Posts" />
+<meta property="og:title" content="Use LiveData with ViewModel" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="개발 블로그" />
-<meta property="og:description" content="개발 블로그" />
-<link rel="canonical" href="https://jheun66.github.io/posts/page/6/" />
-<meta property="og:url" content="https://jheun66.github.io/posts/page/6/" />
+<meta name="description" content="Use LiveData with ViewModel" />
+<meta property="og:description" content="Use LiveData with ViewModel" />
+<link rel="canonical" href="https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/" />
 <meta property="og:site_name" content="생각중" />
-<link rel="prev" href="https://jheun66.github.io/posts/page/5/index.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-11T10:57:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Posts" />
+<meta property="twitter:title" content="Use LiveData with ViewModel" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"url":"https://jheun66.github.io/posts/page/6/","@type":"WebPage","description":"개발 블로그","author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"Posts","@context":"https://schema.org"}</script>
+{"url":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/","@type":"BlogPosting","description":"Use LiveData with ViewModel","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"Use LiveData with ViewModel","dateModified":"2021-09-11T10:57:00+00:00","datePublished":"2021-09-11T10:57:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -102,15 +103,20 @@
 
   <!-- Page Header -->
 
-<header class="masthead" style="background-image: url('/img/bg-post.jpg')">
+  
+    <header class="masthead" style="background-image: url('/img/bg-practice.jpg')">
 
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="page-heading">
-          <h1>Posts</h1>
+        <div class="post-heading">
+          <h1>Use LiveData with ViewModel</h1>
           
+          <span class="meta">Posted by
+            <a href="#">Eun JongHyeok</a>
+            on September 11, 2021
+          </span>
         </div>
       </div>
     </div>
@@ -118,111 +124,223 @@
 </header>
 
 <div class="container">
-  <div class="row">
+  <div class="row min-vh-150 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <ol id="toc" class="amos-list-class">
+<li class="toc-entry toc-h1"><a href="#use-livedata-with-viewmodel">Use LiveData with ViewModel</a></li>
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#what-is-livedata">What is LiveData</a>
+<ol class="amos-sublist-class">
+<li class="toc-entry toc-h2"><a href="#mutablelivedata">MutableLiveData</a></li>
+</ol>
+</li>
+</ol><h1 id="use-livedata-with-viewmodel">
+<a class="anchor" href="#use-livedata-with-viewmodel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use LiveData with ViewModel</h1>
 
-      <!-- Category Post List -->
+<h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
+<p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-3#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-viewmodel">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<article class="posts-list">
-    <a href="/posts/android/art/">
-    <h2 class="post-title">ART 이해하기</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 14, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/art/#disqus_thread" data-disqus-identifier="/posts/android/art/">Join the discussion...</a>   
-    </p>
-</article>
+<h1 id="what-is-livedata">
+<a class="anchor" href="#what-is-livedata" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is LiveData</h1>
 
-<hr>
+<p><code class="language-plaintext highlighter-rouge">LiveData</code>는 lifecycle을 인지하는 관찰가능한 데이터홀더 클래스</p>
 
+<p><code class="language-plaintext highlighter-rouge">LiveData</code>의 특징</p>
 
+<ul>
+  <li>data를 담고있음 : 어떤 타입의 데이터도 사용할 수 있는 wrapper</li>
+  <li>관찰가능함 : 이것이 의미하는 것은 <code class="language-plaintext highlighter-rouge">LiveData</code> 객체가 담고있는 데이터가 변할 때 관찰자가 알 수 있음</li>
+  <li>lifecycle-aware : active lifecycle 상태(<code class="language-plaintext highlighter-rouge">STARTED</code>, <code class="language-plaintext highlighter-rouge">RESUMED</code>)인 옵저버들을 업데이트</li>
+</ul>
 
-<article class="posts-list">
-    <a href="/posts/security/ouath/">
-    <h2 class="post-title">OAuth 2.0</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 13, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/security/ouath/#disqus_thread" data-disqus-identifier="/posts/security/ouath/">Join the discussion...</a>   
-    </p>
-</article>
+<h2 id="mutablelivedata">
+<a class="anchor" href="#mutablelivedata" aria-hidden="true"><span class="octicon octicon-link"></span></a>MutableLiveData</h2>
 
-<hr>
+<p><code class="language-plaintext highlighter-rouge">LiveData</code>에도 Mutable 버전이 있음</p>
 
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kd">val</span> <span class="py">_currentScrambledWord</span> <span class="p">=</span> <span class="nc">MutableLiveData</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;()</span>
+<span class="kd">val</span> <span class="py">currentScrambledWord</span><span class="p">:</span> <span class="nc">LiveData</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;</span>
+   <span class="k">get</span><span class="p">()</span> <span class="p">=</span> <span class="n">_currentScrambledWord</span>
+</code></pre></div></div>
 
+<type>에는 `_currentScrambledWord.value = String(tempWord)`와 같이 `.value`로 접근
 
-<article class="posts-list">
-    <a href="/posts/security/authentication-vs-authorization/">
-    <h2 class="post-title">Authentication VS Authorization</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 13, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/security/authentication-vs-authorization/#disqus_thread" data-disqus-identifier="/posts/security/authentication-vs-authorization/">Join the discussion...</a>   
-    </p>
-</article>
+Activity나 Fragement에서는 onCreate, onCreateView에서 observer를 붙여줌
 
-<hr>
+```kotlin
+// Observe the currentScrambledWord LiveData.
+viewModel.currentScrambledWord.observe(viewLifecycleOwner, {
+    newWord -&gt;
+        binding.textViewUnscrambledWord.text = newWord
+})
+```
 
+# Use LiveData with data binding
 
+## Refresher for View binding
 
-<article class="posts-list">
-    <a href="/posts/blog/my-first-post/">
-    <h2 class="post-title">Serenity Prayer</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        November 19, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/blog/my-first-post/#disqus_thread" data-disqus-identifier="/posts/blog/my-first-post/">Join the discussion...</a>   
-    </p>
-</article>
+View Binding은 코드에서 쉽게 뷰에 접근할 수 있는게 특징, 각 XML layout file 마다 바인딩 클래스가 생성. 
 
-<hr>
+단방향 바인딩이라 layout file에서는 앱 데이터에 접근을 못함.
 
+## Data Binding
 
+layout file에서 UI요소와 data를 결합하도록 할 수 있음. 간단하게 양방향 바인딩
 
-<!-- Pager -->
+```xml
+android:text="@{gameViewModel.currentScrambledWord}"
+```
 
+`@{}` 문법을 사용하여 앱 데이터를 바인딩
 
-<div class="clearfix">
+Data Binding의 장점은 액티비티에서 UI framework를 호출들을 제거할 수 있다는 점. 이를 통해 앱 성능 향상, 메모리 누수 null pointer execption등을 방지
 
-    
-    <a class="btn btn-primary float-left" href="/posts/page/5/index.html">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-    
+### Change view binding to data binding
 
-    
+app 수준의 `build.gradle`에서 dataBinding을 위한 작업 
 
-</div>
+```kotlin
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt' // 추가
+}
 
+android {
+	//...
+	buildFeatures {
+	   dataBinding = true // 추가
+	}
+}
+```
 
+### Convert layout file to data binding layout
+
+```xml
+&lt;layout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"&gt;
+
+   <data>
+
+   </data>
+
+   &lt;ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"&gt;
+
+       &lt;androidx.constraintlayout.widget.ConstraintLayout
+         ...
+       &lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;
+   &lt;/ScrollView&gt;
+&lt;/layout&gt;
+```
+
+기존 Layout file을 `<layout>` 태그로 한번 감싸기
+
+`<data></data>` 추가
+
+Fragment에서는 `DataBindingUtil`을 이용해 inflate
+
+```kotlin
+binding = DataBindingUtil.inflate(inflater, R.layout.game_fragment, container, false)
+```
+
+## Add data binding variables
+
+layout에 변수 선언
+
+```xml
+<data>
+      <variable name="gameViewModel" type="com.example.android.unscramble.ui.game.GameViewModel"></variable>
+      <variable name="maxNoOfWords" type="int"></variable>
+  </data>
+```
+
+onCraeteView에서 layout 변수 초기화
+
+```kotlin
+override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+   super.onViewCreated(view, savedInstanceState)
+
+   binding.gameViewModel = viewModel
+
+   binding.maxNoOfWords = MAX_NO_OF_WORDS
+	 // Specify the fragment view as the lifecycle owner of the binding.
+   // This is used so that the binding can observe LiveData updates
+   binding.lifecycleOwner = viewLifecycleOwner
+...
+}
+```
+
+## Use binding expressions
+
+view에 바로 값을 할당할 수 있음
+
+```xml
+&lt;TextView
+   android:id="@+id/textView_unscrambled_word"
+   ...
+   android:text="@{gameViewModel.currentScrambledWord}"
+   .../&gt;
+```
+
+밑의 코드는 불필요해짐
+
+```kotlin
+viewModel.currentScrambledWord.observe(viewLifecycleOwner,
+   { newWord -&gt;
+       binding.textViewUnscrambledWord.text = newWord
+   })
+```
+
+app의 변수뿐만 아니라 resource 매개변수에 값을 넣어서 넘겨줄수있음
+
+```xml
+&lt;TextView
+   android:id="@+id/score"
+   ...
+   android:text="@{@string/score(gameViewModel.score)}"
+   ... /&gt;
+```
+
+# **Learn more**
+
+추가 공부해야할 링크들
+
+- [LiveData Overview](https://developer.android.com/topic/libraries/architecture/livedata)
+- [LiveData observer](https://developer.android.com/reference/androidx/lifecycle/LiveData#observe(androidx.lifecycle.LifecycleOwner,%20androidx.lifecycle.Observer%3C?%20super%20T%3E)) API reference
+- [Data binding](https://developer.android.com/topic/libraries/data-binding)
+- [Two-way data binding](https://developer.android.com/topic/libraries/data-binding/two-way)
+- [Using the Data Binding Library](https://developer.android.com/topic/libraries/data-binding)
+- [Data Binding — lessons learnt. The Data Binding Library (referred to... | by Chris Banes | Android Developers](https://medium.com/androiddevelopers/data-binding-lessons-learnt-4fd16576b719)
+</layout></type>
+
+      
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/practice/use-livedata-with-viewmodel/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
 
     </div>
   </div>

@@ -1,4 +1,315 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-08-26T14:05:34+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Fragments and the Navigation Component</title><link href="https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/" rel="alternate" type="text/html" title="Fragments and the Navigation Component" /><published>2021-08-26T14:00:00+00:00</published><updated>2021-08-26T14:00:00+00:00</updated><id>https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-09-11T11:02:36+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>개발 블로그</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Use LiveData with ViewModel</title><link href="https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/" rel="alternate" type="text/html" title="Use LiveData with ViewModel" /><published>2021-09-11T10:57:00+00:00</published><updated>2021-09-11T10:57:00+00:00</updated><id>https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/">&lt;h1 id=&quot;use-livedata-with-viewmodel&quot;&gt;Use LiveData with ViewModel&lt;/h1&gt;
+
+&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+
+&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-3#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-viewmodel&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-livedata&quot;&gt;What is LiveData&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LiveData&lt;/code&gt;는 lifecycle을 인지하는 관찰가능한 데이터홀더 클래스&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LiveData&lt;/code&gt;의 특징&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;data를 담고있음 : 어떤 타입의 데이터도 사용할 수 있는 wrapper&lt;/li&gt;
+  &lt;li&gt;관찰가능함 : 이것이 의미하는 것은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LiveData&lt;/code&gt; 객체가 담고있는 데이터가 변할 때 관찰자가 알 수 있음&lt;/li&gt;
+  &lt;li&gt;lifecycle-aware : active lifecycle 상태(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;STARTED&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RESUMED&lt;/code&gt;)인 옵저버들을 업데이트&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mutablelivedata&quot;&gt;MutableLiveData&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LiveData&lt;/code&gt;에도 Mutable 버전이 있음&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;_currentScrambledWord&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MutableLiveData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;()&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;currentScrambledWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LiveData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_currentScrambledWord&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;Type&gt;에는 `_currentScrambledWord.value = String(tempWord)`와 같이 `.value`로 접근
+
+Activity나 Fragement에서는 onCreate, onCreateView에서 observer를 붙여줌
+
+```kotlin
+// Observe the currentScrambledWord LiveData.
+viewModel.currentScrambledWord.observe(viewLifecycleOwner, {
+    newWord -&amp;gt;
+        binding.textViewUnscrambledWord.text = newWord
+})
+```
+
+# Use LiveData with data binding
+
+## Refresher for View binding
+
+View Binding은 코드에서 쉽게 뷰에 접근할 수 있는게 특징, 각 XML layout file 마다 바인딩 클래스가 생성. 
+
+단방향 바인딩이라 layout file에서는 앱 데이터에 접근을 못함.
+
+## Data Binding
+
+layout file에서 UI요소와 data를 결합하도록 할 수 있음. 간단하게 양방향 바인딩
+
+```xml
+android:text=&quot;@{gameViewModel.currentScrambledWord}&quot;
+```
+
+`@{}` 문법을 사용하여 앱 데이터를 바인딩
+
+Data Binding의 장점은 액티비티에서 UI framework를 호출들을 제거할 수 있다는 점. 이를 통해 앱 성능 향상, 메모리 누수 null pointer execption등을 방지
+
+### Change view binding to data binding
+
+app 수준의 `build.gradle`에서 dataBinding을 위한 작업 
+
+```kotlin
+plugins {
+    id &apos;com.android.application&apos;
+    id &apos;kotlin-android&apos;
+    id &apos;kotlin-kapt&apos; // 추가
+}
+
+android {
+	//...
+	buildFeatures {
+	   dataBinding = true // 추가
+	}
+}
+```
+
+### Convert layout file to data binding layout
+
+```xml
+&amp;lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+   xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+   xmlns:tools=&quot;http://schemas.android.com/tools&quot;&amp;gt;
+
+   &lt;data&gt;
+
+   &lt;/data&gt;
+
+   &amp;lt;ScrollView
+       android:layout_width=&quot;match_parent&quot;
+       android:layout_height=&quot;match_parent&quot;&amp;gt;
+
+       &amp;lt;androidx.constraintlayout.widget.ConstraintLayout
+         ...
+       &amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt;
+   &amp;lt;/ScrollView&amp;gt;
+&amp;lt;/layout&amp;gt;
+```
+
+기존 Layout file을 `&lt;layout&gt;` 태그로 한번 감싸기
+
+`&lt;data&gt;&lt;/data&gt;` 추가
+
+Fragment에서는 `DataBindingUtil`을 이용해 inflate
+
+```kotlin
+binding = DataBindingUtil.inflate(inflater, R.layout.game_fragment, container, false)
+```
+
+## Add data binding variables
+
+layout에 변수 선언
+
+```xml
+&lt;data&gt;
+      &lt;variable name=&quot;gameViewModel&quot; type=&quot;com.example.android.unscramble.ui.game.GameViewModel&quot; /&gt;
+      &lt;variable name=&quot;maxNoOfWords&quot; type=&quot;int&quot; /&gt;
+  &lt;/data&gt;
+```
+
+onCraeteView에서 layout 변수 초기화
+
+```kotlin
+override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+   super.onViewCreated(view, savedInstanceState)
+
+   binding.gameViewModel = viewModel
+
+   binding.maxNoOfWords = MAX_NO_OF_WORDS
+	 // Specify the fragment view as the lifecycle owner of the binding.
+   // This is used so that the binding can observe LiveData updates
+   binding.lifecycleOwner = viewLifecycleOwner
+...
+}
+```
+
+## Use binding expressions
+
+view에 바로 값을 할당할 수 있음
+
+```xml
+&amp;lt;TextView
+   android:id=&quot;@+id/textView_unscrambled_word&quot;
+   ...
+   android:text=&quot;@{gameViewModel.currentScrambledWord}&quot;
+   .../&amp;gt;
+```
+
+밑의 코드는 불필요해짐
+
+```kotlin
+viewModel.currentScrambledWord.observe(viewLifecycleOwner,
+   { newWord -&amp;gt;
+       binding.textViewUnscrambledWord.text = newWord
+   })
+```
+
+app의 변수뿐만 아니라 resource 매개변수에 값을 넣어서 넘겨줄수있음
+
+```xml
+&amp;lt;TextView
+   android:id=&quot;@+id/score&quot;
+   ...
+   android:text=&quot;@{@string/score(gameViewModel.score)}&quot;
+   ... /&amp;gt;
+```
+
+# **Learn more**
+
+추가 공부해야할 링크들
+
+- [LiveData Overview](https://developer.android.com/topic/libraries/architecture/livedata)
+- [LiveData observer](https://developer.android.com/reference/androidx/lifecycle/LiveData#observe(androidx.lifecycle.LifecycleOwner,%20androidx.lifecycle.Observer%3C?%20super%20T%3E)) API reference
+- [Data binding](https://developer.android.com/topic/libraries/data-binding)
+- [Two-way data binding](https://developer.android.com/topic/libraries/data-binding/two-way)
+- [Using the Data Binding Library](https://developer.android.com/topic/libraries/data-binding)
+- [Data Binding — lessons learnt. The Data Binding Library (referred to... | by Chris Banes | Android Developers](https://medium.com/androiddevelopers/data-binding-lessons-learnt-4fd16576b719)
+&lt;/layout&gt;&lt;/Type&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Tutorial" /><category term="LiveData" /><category term="DataBinding" /><summary type="html">Use LiveData with ViewModel</summary></entry><entry><title type="html">Store data in ViewModel</title><link href="https://jheun66.github.io/posts/practice/store-data-in-viewmodel/" rel="alternate" type="text/html" title="Store data in ViewModel" /><published>2021-09-11T06:00:00+00:00</published><updated>2021-09-11T06:00:00+00:00</updated><id>https://jheun66.github.io/posts/practice/store-data-in-viewmodel</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/store-data-in-viewmodel/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+
+&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-3#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-viewmodel&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;learn-about-app-architecture&quot;&gt;Learn about App Architecture&lt;/h1&gt;
+
+&lt;p&gt;가장 일반적인 &lt;a href=&quot;https://developer.android.com/jetpack/guide#common-principles&quot;&gt;아키텍쳐 원칙&lt;/a&gt;은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;seperation of concerns&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;모델로과 UI의 분리&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;seperation-of-concerns&quot;&gt;seperation of concerns&lt;/h2&gt;
+
+&lt;p&gt;클래스마다 별개의 concern을 나누어 가져야함, 단일 책임의 원칙&lt;/p&gt;
+
+&lt;h2 id=&quot;drive-ui-from-a-model&quot;&gt;Drive UI from a model&lt;/h2&gt;
+
+&lt;p&gt;쉽게 말하면 model은 데이타로 뷰와는 독립적으로 존재햐아함을 의미&lt;/p&gt;
+
+&lt;p&gt;이 챕터에서는 안드로이드 아키텍쳐 중  UI controller(Activity/Fragment)와 ViewModel에 대해 살펴봄&lt;/p&gt;
+
+&lt;h3 id=&quot;ui-controller&quot;&gt;UI controller&lt;/h3&gt;
+
+&lt;p&gt;화면에 그리는 뷰들을 컨트롤, 유저의 이벤트를 받고 상호작용하는 역활을 함&lt;/p&gt;
+
+&lt;p&gt;앱의 데이터나 데이터를 결정하는 로직은 UI controller 클래스 내에 있으면 안됌, ViewModel에 포함해야함&lt;/p&gt;
+
+&lt;p&gt;유저의 상호작용이나 low memory 같은 시스템 상태에 따라 파괴될 수 있음&lt;/p&gt;
+
+&lt;h3 id=&quot;viewmodel&quot;&gt;ViewModel&lt;/h3&gt;
+
+&lt;p&gt;view에 보여줄 앱의 데이터 모델&lt;/p&gt;
+
+&lt;p&gt;액티비티나 프레그먼트가 파괴되거나 재생성될때 파괴되지 않음&lt;/p&gt;
+
+&lt;h1 id=&quot;add-a-viewmodel&quot;&gt;Add a ViewModel&lt;/h1&gt;
+
+&lt;p&gt;build.gradle에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dependencies&lt;/code&gt; 추가&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// ViewModel&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;androidx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lifecycle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lifecycle-viewmodel-ktx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.3.1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;최신 버전으로 맞춰주기&lt;/p&gt;
+
+&lt;p&gt;ViewModel을 상속받는 ViewModel 클래스 생성하기&lt;/p&gt;
+
+&lt;h2 id=&quot;fragment에-viewmodel-추가&quot;&gt;Fragment에 ViewModel 추가&lt;/h2&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;viewModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GameViewModel&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewModels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;초기화 할때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;by viewModels()&lt;/code&gt;을 사용하여 초기화를 하는데 이는 코틀린의 프로퍼티 대리자라는 기능&lt;/p&gt;
+
+&lt;h3 id=&quot;kotlin-property-delegate&quot;&gt;Kotlin property delegate&lt;/h3&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Syntax for property delegation&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;property-name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;property-type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate-class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;코틀린에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt; 프로퍼티는 기본적으로 getter와 setter 함수가 자동으로 생성되고 값을 할당하거나 값을 읽을 때 자동으로 호출&lt;/p&gt;
+
+&lt;p&gt;그러나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;val&lt;/code&gt; 프로퍼티는 getter 함수만 자동으로 생성이 되고 값을 읽을때만 호출&lt;/p&gt;
+
+&lt;p&gt;property delegation은 이러한 getter와 setter에 대한 책임을 다른 클래스에 이양하는 것&lt;/p&gt;
+
+&lt;p&gt;delegate class가 대신 getter와 setter 함수와 기능을 제공하도록 함&lt;/p&gt;
+
+&lt;p&gt;예를들어 프로퍼티를 가지고 있는 액티비티나 프래그먼트 클래스가 configuration 변화에 의해 삭제되고 재생성되더라도 해당값에 대한 책임은 delegate class가 가지고 있으므로 그대로 가져올 수 있음&lt;/p&gt;
+
+&lt;h1 id=&quot;move-data-to-the-viewmodel&quot;&gt;Move data to the ViewModel&lt;/h1&gt;
+
+&lt;h2 id=&quot;backing-property&quot;&gt;Backing property&lt;/h2&gt;
+
+&lt;p&gt;코틀린에서 따로 정리 필요&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://proandroiddev.com/backing-properties-in-kotlin-cb78dfebfd90&quot;&gt;https://proandroiddev.com/backing-properties-in-kotlin-cb78dfebfd90&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;the-lifecycle-of-a-viewmodel&quot;&gt;The lifecycle of a ViewModel&lt;/h1&gt;
+
+&lt;p&gt;finish가 호출되어 종료되기 전까지 ViewModel은 살아있음. 화면이 회전되거나 configuration이 변하거나 해서 액티비티가 파괴되더라도 ViewModel 객체에 다시 연결됨&lt;/p&gt;
+
+&lt;h1 id=&quot;populate-viewmodel&quot;&gt;Populate ViewModel&lt;/h1&gt;
+
+&lt;h2 id=&quot;late-initialization&quot;&gt;Late initialization&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lateinit&lt;/code&gt; 키워드를 사용하여 초기화를 늦출 수 있음. 해당 프로퍼티를 사용하기전에 초기화가 되어야하고 초기화가 되어있지 않은면 app은 크래쉬&lt;/p&gt;
+
+&lt;h2 id=&quot;shuffle&quot;&gt;shuffle()&lt;/h2&gt;
+
+&lt;p&gt;MutableList나 Array를 랜덤으로 섞는 메소드&lt;/p&gt;
+
+&lt;h1 id=&quot;dialog&quot;&gt;Dialog&lt;/h1&gt;
+
+&lt;h2 id=&quot;anatomy-of-alert-dialog&quot;&gt;Anatomy of alert dialog&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/android/Screenshot_1631339697.png&quot; alt=&quot;Screenshot_1631339697.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Alert Dialog&lt;/li&gt;
+  &lt;li&gt;Title (optional)&lt;/li&gt;
+  &lt;li&gt;Message&lt;/li&gt;
+  &lt;li&gt;Text buttons&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;materialalertdialog&quot;&gt;MaterialAlertDialog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://material.io/components/dialogs/android#using-dialogs&quot;&gt;마테리얼다이럴로그&lt;/a&gt;를 사용하면 깔끔하고 쉽게 적용가능&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;MaterialAlertDialogBuilder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;requireContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;congratulations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;you_scored&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;viewModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setCancelable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setNegativeButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;exitGame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setPositiveButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;play_again&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;restartGame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;learn-more&quot;&gt;&lt;strong&gt;Learn more&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;추가 공부해야할 링크들&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/topic/libraries/architecture/viewmodel?authuser=1&quot;&gt;ViewModel Overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/jetpack/docs/guide?authuser=1&quot;&gt;Guide to app architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/over-engineering/hands-on-with-material-components-for-android-dialogs-75c6d726f83a&quot;&gt;Hands-on with Material Components for Android: Dialogs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://material.io/components/dialogs#anatomy&quot;&gt;Alert dialog anatomy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/reference/com/google/android/material/dialog/MaterialAlertDialogBuilder&quot;&gt;MaterialAlertDialogBuilder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kotlinlang.org/docs/reference/properties.html#backing-properties&quot;&gt;Backing Properties&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/topic/libraries/architecture&quot;&gt;Android Architecture Components&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Android Material &lt;a href=&quot;https://material.io/develop/android/components/dialogs&quot;&gt;Dialogs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kotlinlang.org/docs/reference/properties.html&quot;&gt;Properties and Fields: Getters, Setters, const, lateinit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Tutorial" /><category term="ViewModel" /><category term="ViewBinding" /><summary type="html">개요</summary></entry><entry><title type="html">Fragments and the Navigation Component</title><link href="https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/" rel="alternate" type="text/html" title="Fragments and the Navigation Component" /><published>2021-08-26T14:00:00+00:00</published><updated>2021-08-26T14:00:00+00:00</updated><id>https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-2&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
 
@@ -1203,54 +1514,4 @@
    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Change the app icon</title><link href="https://jheun66.github.io/posts/practice/change-the-app-icon/" rel="alternate" type="text/html" title="Change the app icon" /><published>2021-07-28T08:02:00+00:00</published><updated>2021-07-28T08:02:00+00:00</updated><id>https://jheun66.github.io/posts/practice/change-the-app-icon</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/change-the-app-icon/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
-
-&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-2&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;explore-launcher-icon-files&quot;&gt;Explore launcher icon files&lt;/h1&gt;
-
-&lt;p&gt;Project Window에서 app - src - main - res 밑에 있는 디렉토리에서 확인가능&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;앱실행 아이콘이 mipmap 디렉토리에 있는 이유&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;device에서 제공하는 기본 density보다 큰 사이즈의 앱 아이콘을 사용하고 싶을 경우 사용할 수 있도록&lt;/p&gt;
-
-&lt;h1 id=&quot;adaptive-icons&quot;&gt;Adaptive Icons&lt;/h1&gt;
-
-&lt;p&gt;API level 26 이후로 adaptive launcher Icons 지원&lt;/p&gt;
-
-&lt;p&gt;Adaptive Icon을 위한 리소스가 들어있는 디렉퇼에는 &lt;em&gt;-v26&lt;/em&gt;이 붙음&lt;/p&gt;
-
-&lt;h2 id=&quot;a-bitmap-image&quot;&gt;a bitmap image&lt;/h2&gt;
-
-&lt;p&gt;픽셀당 색상을 가지고 있는 단순한 이미지&lt;/p&gt;
-
-&lt;h2 id=&quot;a-vector-drawable&quot;&gt;a vector drawable&lt;/h2&gt;
-
-&lt;p&gt;이미지를 어떻게 그리는지 점, 선, 곡선등의 조합, 화면 밀도나 크기가 커지더라도 퀄리티가 떨어지지 않음&lt;/p&gt;
-
-&lt;p&gt;단순한 아이콘 같은 경우 벡터를 사용하는게 좋을 수 있음&lt;/p&gt;
-
-&lt;h1 id=&quot;design-guidance-on-android-icons&quot;&gt;Design guidance on Android icons&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://material.io/design/platform-guidance/android-icons.html&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;구글 플레이 스토어에 등록하기 위한 조건도 있음&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Change the app theme</title><link href="https://jheun66.github.io/posts/practice/change-the-app-theme/" rel="alternate" type="text/html" title="Change the app theme" /><published>2021-07-28T08:00:00+00:00</published><updated>2021-07-28T08:00:00+00:00</updated><id>https://jheun66.github.io/posts/practice/change-the-app-theme</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/change-the-app-theme/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
-
-&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-2&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;pick-app-theme-colors&quot;&gt;Pick app theme colors&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://material.io/resources/color/&quot;&gt;Color Tool&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://material.io/design/color/the-color-system.html#tools-for-picking-colors&quot;&gt;Material palette generator&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/androiddevelopers/android-styling-common-theme-attributes-8f7c50c9eaba&quot;&gt;참고 블로그&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;dark-theme&quot;&gt;Dark theme&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/android/screenshot_darkmode.jpeg&quot; alt=&quot;screenshot_darkmode.jpeg&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;설정 → 디스플레이에서 변경 가능&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Layouts" /><category term="Tutorial" /><summary type="html">개요</summary></entry></feed>
