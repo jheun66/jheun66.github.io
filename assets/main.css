@@ -191,7 +191,7 @@ pre code { font-size: inherit; color: inherit; word-break: normal; }
 
 @media (min-width: 992px) { .container-lg, .container-md, .container-sm, .container { max-width: 960px; } }
 
-@media (min-width: 1200px) { .container-xl, .container-lg, .container-md, .container-sm, .container { max-width: 1140px; } }
+@media (min-width: 1200px) { .container-xl, .container-lg, .container-md, .container-sm, .container { max-width: 100%; } }
 
 .row { display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; }
 
@@ -2523,5 +2523,9 @@ html { scroll-behavior: smooth; }
 .amos-sublist-class { list-style-type: lower-alpha; }
 
 .sticky { position: sticky; top: 0; }
+
+.category-title { color: black; }
+
+.category-count { float: right; color: #cacdd0; }
 
 /*# sourceMappingURL=main.css.map */
