@@ -12,7 +12,7 @@
     
   </title>
 
-  <meta name="description" content="Use LiveData with ViewModel">
+  <meta name="description" content="개요">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -37,8 +37,8 @@
 <meta property="og:title" content="Use LiveData with ViewModel" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Use LiveData with ViewModel" />
-<meta property="og:description" content="Use LiveData with ViewModel" />
+<meta name="description" content="개요" />
+<meta property="og:description" content="개요" />
 <link rel="canonical" href="https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/" />
 <meta property="og:url" content="https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/" />
 <meta property="og:site_name" content="생각중" />
@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Use LiveData with ViewModel" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"url":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/","@type":"BlogPosting","description":"Use LiveData with ViewModel","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"Use LiveData with ViewModel","dateModified":"2021-09-11T10:57:00+00:00","datePublished":"2021-09-11T10:57:00+00:00","@context":"https://schema.org"}</script>
+{"url":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/","@type":"BlogPosting","description":"개요","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"Use LiveData with ViewModel","dateModified":"2021-09-11T10:57:00+00:00","datePublished":"2021-09-11T10:57:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -124,17 +124,22 @@
     <div class="col-lg-8 col-md-10 mx-auto">
   
       <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#use-livedata-with-viewmodel">Use LiveData with ViewModel</a></li>
 <li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
 <li class="toc-entry toc-h1"><a href="#what-is-livedata">What is LiveData</a>
 <ol class="amos-sublist-class">
 <li class="toc-entry toc-h2"><a href="#mutablelivedata">MutableLiveData</a></li>
 </ol>
 </li>
-</ol><h1 id="use-livedata-with-viewmodel">
-<a class="anchor" href="#use-livedata-with-viewmodel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use LiveData with ViewModel</h1>
-
-<h1 id="개요">
+<li class="toc-entry toc-h1"><a href="#use-livedata-with-data-binding">Use LiveData with data binding</a>
+<ol class="amos-sublist-class">
+<li class="toc-entry toc-h2"><a href="#refresher-for-view-binding">Refresher for View binding</a></li>
+<li class="toc-entry toc-h2"><a href="#data-binding">Data Binding</a></li>
+<li class="toc-entry toc-h2"><a href="#add-data-binding-variables">Add data binding variables</a></li>
+<li class="toc-entry toc-h2"><a href="#use-binding-expressions">Use binding expressions</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
+</ol><h1 id="개요">
 <a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-3#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-viewmodel">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
@@ -162,158 +167,171 @@
    <span class="k">get</span><span class="p">()</span> <span class="p">=</span> <span class="n">_currentScrambledWord</span>
 </code></pre></div></div>
 
-<type>에는 `_currentScrambledWord.value = String(tempWord)`와 같이 `.value`로 접근
+<p>Type에는 <code class="language-plaintext highlighter-rouge">_currentScrambledWord.value = String(tempWord)</code>와 같이 <code class="language-plaintext highlighter-rouge">.value</code>로 접근</p>
 
-Activity나 Fragement에서는 onCreate, onCreateView에서 observer를 붙여줌
+<p>Activity나 Fragement에서는 onCreate, onCreateView에서 observer를 붙여줌</p>
 
-```kotlin
-// Observe the currentScrambledWord LiveData.
-viewModel.currentScrambledWord.observe(viewLifecycleOwner, {
-    newWord -&gt;
-        binding.textViewUnscrambledWord.text = newWord
-})
-```
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Observe the currentScrambledWord LiveData.</span>
+<span class="n">viewModel</span><span class="p">.</span><span class="n">currentScrambledWord</span><span class="p">.</span><span class="nf">observe</span><span class="p">(</span><span class="n">viewLifecycleOwner</span><span class="p">,</span> <span class="p">{</span>
+    <span class="n">newWord</span> <span class="p">-&gt;</span>
+        <span class="n">binding</span><span class="p">.</span><span class="n">textViewUnscrambledWord</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">newWord</span>
+<span class="p">})</span>
+</code></pre></div></div>
 
-# Use LiveData with data binding
+<h1 id="use-livedata-with-data-binding">
+<a class="anchor" href="#use-livedata-with-data-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use LiveData with data binding</h1>
 
-## Refresher for View binding
+<h2 id="refresher-for-view-binding">
+<a class="anchor" href="#refresher-for-view-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Refresher for View binding</h2>
 
-View Binding은 코드에서 쉽게 뷰에 접근할 수 있는게 특징, 각 XML layout file 마다 바인딩 클래스가 생성. 
+<p>View Binding은 코드에서 쉽게 뷰에 접근할 수 있는게 특징, 각 XML layout file 마다 바인딩 클래스가 생성.</p>
 
-단방향 바인딩이라 layout file에서는 앱 데이터에 접근을 못함.
+<p>단방향 바인딩이라 layout file에서는 앱 데이터에 접근을 못함.</p>
 
-## Data Binding
+<h2 id="data-binding">
+<a class="anchor" href="#data-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Binding</h2>
 
-layout file에서 UI요소와 data를 결합하도록 할 수 있음. 간단하게 양방향 바인딩
+<p>layout file에서 UI요소와 data를 결합하도록 할 수 있음. 간단하게 양방향 바인딩</p>
 
-```xml
-android:text="@{gameViewModel.currentScrambledWord}"
-```
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android:text="@{gameViewModel.currentScrambledWord}"
+</code></pre></div></div>
 
-`@{}` 문법을 사용하여 앱 데이터를 바인딩
+<p><code class="language-plaintext highlighter-rouge">@{}</code> 문법을 사용하여 앱 데이터를 바인딩</p>
 
-Data Binding의 장점은 액티비티에서 UI framework를 호출들을 제거할 수 있다는 점. 이를 통해 앱 성능 향상, 메모리 누수 null pointer execption등을 방지
+<p>Data Binding의 장점은 액티비티에서 UI framework를 호출들을 제거할 수 있다는 점. 이를 통해 앱 성능 향상, 메모리 누수 null pointer execption등을 방지</p>
 
-### Change view binding to data binding
+<h3 id="change-view-binding-to-data-binding">Change view binding to data binding</h3>
 
-app 수준의 `build.gradle`에서 dataBinding을 위한 작업 
+<p>app 수준의 <code class="language-plaintext highlighter-rouge">build.gradle</code>에서 dataBinding을 위한 작업</p>
 
-```kotlin
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-kapt' // 추가
-}
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">plugins</span> <span class="p">{</span>
+    <span class="n">id</span> <span class="err">'</span><span class="n">com</span><span class="p">.</span><span class="n">android</span><span class="p">.</span><span class="n">application</span><span class="err">'</span>
+    <span class="n">id</span> <span class="err">'</span><span class="n">kotlin-android</span><span class="err">'</span>
+    <span class="n">id</span> <span class="err">'</span><span class="n">kotlin-kapt</span><span class="err">'</span> <span class="c1">// 추가</span>
+<span class="p">}</span>
 
-android {
-	//...
-	buildFeatures {
-	   dataBinding = true // 추가
-	}
-}
-```
+<span class="nf">android</span> <span class="p">{</span>
+	<span class="c1">//...</span>
+	<span class="nf">buildFeatures</span> <span class="p">{</span>
+	   <span class="n">dataBinding</span> <span class="p">=</span> <span class="k">true</span> <span class="c1">// 추가</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-### Convert layout file to data binding layout
+<h3 id="convert-layout-file-to-data-binding-layout">Convert layout file to data binding layout</h3>
 
-```xml
-&lt;layout xmlns:android="http://schemas.android.com/apk/res/android"
-   xmlns:app="http://schemas.android.com/apk/res-auto"
-   xmlns:tools="http://schemas.android.com/tools"&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;layout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+<span class="err"> </span> <span class="err"> </span><span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
+<span class="err"> </span> <span class="err"> </span><span class="na">xmlns:tools=</span><span class="s">"http://schemas.android.com/tools"</span><span class="nt">&gt;</span>
 
-   <data>
+   <span class="nt">&lt;data&gt;</span>
 
-   </data>
+   <span class="nt">&lt;/data&gt;</span>
 
-   &lt;ScrollView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"&gt;
+   <span class="nt">&lt;ScrollView</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
 
-       &lt;androidx.constraintlayout.widget.ConstraintLayout
-         ...
-       &lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;
-   &lt;/ScrollView&gt;
-&lt;/layout&gt;
-```
+       <span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> ...</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> &lt;/androidx.constraintlayout.widget.ConstraintLayout</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;/ScrollView&gt;</span>
+<span class="nt">&lt;/layout&gt;</span>
+</code></pre></div></div>
 
-기존 Layout file을 `<layout>` 태그로 한번 감싸기
+<p>기존 Layout file을 <code class="language-plaintext highlighter-rouge">&lt;layout&gt;</code> 태그로 한번 감싸기</p>
 
-`<data></data>` 추가
+<p><code class="language-plaintext highlighter-rouge">&lt;data&gt;&lt;/data&gt;</code> 추가</p>
 
-Fragment에서는 `DataBindingUtil`을 이용해 inflate
+<p>Fragment에서는 <code class="language-plaintext highlighter-rouge">DataBindingUtil</code>을 이용해 inflate</p>
 
-```kotlin
-binding = DataBindingUtil.inflate(inflater, R.layout.game_fragment, container, false)
-```
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">binding</span> <span class="p">=</span> <span class="nc">DataBindingUtil</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="n">inflater</span><span class="p">,</span> <span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">game_fragment</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
+</code></pre></div></div>
 
-## Add data binding variables
+<h2 id="add-data-binding-variables">
+<a class="anchor" href="#add-data-binding-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add data binding variables</h2>
 
-layout에 변수 선언
+<p>layout에 변수 선언</p>
 
-```xml
-<data>
-      <variable name="gameViewModel" type="com.example.android.unscramble.ui.game.GameViewModel"></variable>
-      <variable name="maxNoOfWords" type="int"></variable>
-  </data>
-```
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;data&gt;</span>
+      <span class="nt">&lt;variable</span>
+          <span class="na">name=</span><span class="s">"gameViewModel"</span>
+          <span class="na">type=</span><span class="s">"com.example.android.unscramble.ui.game.GameViewModel"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;variable</span>
+          <span class="na">name=</span><span class="s">"maxNoOfWords"</span>
+          <span class="na">type=</span><span class="s">"int"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/data&gt;</span>
+</code></pre></div></div>
 
-onCraeteView에서 layout 변수 초기화
+<p>onCraeteView에서 layout 변수 초기화</p>
 
-```kotlin
-override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-   super.onViewCreated(view, savedInstanceState)
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="nc">View</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+   <span class="k">super</span><span class="p">.</span><span class="nf">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">)</span>
 
-   binding.gameViewModel = viewModel
+   <span class="n">binding</span><span class="p">.</span><span class="n">gameViewModel</span> <span class="p">=</span> <span class="n">viewModel</span>
 
-   binding.maxNoOfWords = MAX_NO_OF_WORDS
-	 // Specify the fragment view as the lifecycle owner of the binding.
-   // This is used so that the binding can observe LiveData updates
-   binding.lifecycleOwner = viewLifecycleOwner
-...
-}
-```
+   <span class="n">binding</span><span class="p">.</span><span class="n">maxNoOfWords</span> <span class="p">=</span> <span class="nc">MAX_NO_OF_WORDS</span>
+	 <span class="c1">// Specify the fragment view as the lifecycle owner of the binding.</span>
+   <span class="c1">// This is used so that the binding can observe LiveData updates</span>
+   <span class="n">binding</span><span class="p">.</span><span class="n">lifecycleOwner</span> <span class="p">=</span> <span class="n">viewLifecycleOwner</span>
+<span class="o">..</span><span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-## Use binding expressions
+<h2 id="use-binding-expressions">
+<a class="anchor" href="#use-binding-expressions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use binding expressions</h2>
 
-view에 바로 값을 할당할 수 있음
+<p>view에 바로 값을 할당할 수 있음</p>
 
-```xml
-&lt;TextView
-   android:id="@+id/textView_unscrambled_word"
-   ...
-   android:text="@{gameViewModel.currentScrambledWord}"
-   .../&gt;
-```
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;TextView</span>
+   <span class="na">android:id=</span><span class="s">"@+id/textView_unscrambled_word"</span>
+   <span class="err">...</span>
+   <span class="na">android:text=</span><span class="s">"@{gameViewModel.currentScrambledWord}"</span>
+   <span class="err">...</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
 
-밑의 코드는 불필요해짐
+<p>밑의 코드는 불필요해짐</p>
 
-```kotlin
-viewModel.currentScrambledWord.observe(viewLifecycleOwner,
-   { newWord -&gt;
-       binding.textViewUnscrambledWord.text = newWord
-   })
-```
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">viewModel</span><span class="p">.</span><span class="n">currentScrambledWord</span><span class="p">.</span><span class="nf">observe</span><span class="p">(</span><span class="n">viewLifecycleOwner</span><span class="p">,</span>
+   <span class="p">{</span> <span class="n">newWord</span> <span class="p">-&gt;</span>
+       <span class="n">binding</span><span class="p">.</span><span class="n">textViewUnscrambledWord</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">newWord</span>
+   <span class="p">})</span>
+</code></pre></div></div>
 
-app의 변수뿐만 아니라 resource 매개변수에 값을 넣어서 넘겨줄수있음
+<p>app의 변수뿐만 아니라 resource 매개변수에 값을 넣어서 넘겨줄수있음</p>
 
-```xml
-&lt;TextView
-   android:id="@+id/score"
-   ...
-   android:text="@{@string/score(gameViewModel.score)}"
-   ... /&gt;
-```
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;TextView</span>
+   <span class="na">android:id=</span><span class="s">"@+id/score"</span>
+   <span class="err">...</span>
+   <span class="na">android:text=</span><span class="s">"@{@string/score(gameViewModel.score)}"</span>
+   <span class="err">...</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
 
-# **Learn more**
+<h1 id="learn-more">
+<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
+</h1>
 
-추가 공부해야할 링크들
+<p>추가 공부해야할 링크들</p>
 
-- [LiveData Overview](https://developer.android.com/topic/libraries/architecture/livedata)
-- [LiveData observer](https://developer.android.com/reference/androidx/lifecycle/LiveData#observe(androidx.lifecycle.LifecycleOwner,%20androidx.lifecycle.Observer%3C?%20super%20T%3E)) API reference
-- [Data binding](https://developer.android.com/topic/libraries/data-binding)
-- [Two-way data binding](https://developer.android.com/topic/libraries/data-binding/two-way)
-- [Using the Data Binding Library](https://developer.android.com/topic/libraries/data-binding)
-- [Data Binding — lessons learnt. The Data Binding Library (referred to... | by Chris Banes | Android Developers](https://medium.com/androiddevelopers/data-binding-lessons-learnt-4fd16576b719)
-</layout></type>
+<ul>
+  <li><a href="https://developer.android.com/topic/libraries/architecture/livedata">LiveData Overview</a></li>
+  <li>
+<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData#observe(androidx.lifecycle.LifecycleOwner,%20androidx.lifecycle.Observer%3C?%20super%20T%3E)">LiveData observer</a> API reference</li>
+  <li><a href="https://developer.android.com/topic/libraries/data-binding">Data binding</a></li>
+  <li><a href="https://developer.android.com/topic/libraries/data-binding/two-way">Two-way data binding</a></li>
+  <li><a href="https://developer.android.com/topic/libraries/data-binding">Using the Data Binding Library</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[Data Binding — lessons learnt. The Data Binding Library (referred to…</td>
+          <td>by Chris Banes</td>
+          <td>Android Developers](https://medium.com/androiddevelopers/data-binding-lessons-learnt-4fd16576b719)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
 
       
       
