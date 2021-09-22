@@ -8,10 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    생각중
+    Navigation and the back stack - 생각중
+    
   </title>
 
-  <meta name="description" content="What interests do i have.">
+  <meta name="description" content="개요">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -20,7 +21,7 @@
   
   <link rel="stylesheet" href="/assets/highlight.css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://jheun66.github.io/">
+  <link rel="canonical" href="https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
 
@@ -31,21 +32,23 @@
    </style>
     
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>생각중 | What interests do i have.</title>
+<title>Navigation and the back stack | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="생각중" />
+<meta property="og:title" content="Navigation and the back stack" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="What interests do i have." />
-<meta property="og:description" content="What interests do i have." />
-<link rel="canonical" href="https://jheun66.github.io/" />
-<meta property="og:url" content="https://jheun66.github.io/" />
+<meta name="description" content="개요" />
+<meta property="og:description" content="개요" />
+<link rel="canonical" href="https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/" />
 <meta property="og:site_name" content="생각중" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-22T04:47:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="생각중" />
+<meta property="twitter:title" content="Navigation and the back stack" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"url":"https://jheun66.github.io/","@type":"WebSite","description":"What interests do i have.","name":"생각중","author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"생각중","@context":"https://schema.org"}</script>
+{"url":"https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/","@type":"BlogPosting","description":"개요","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"headline":"Navigation and the back stack","dateModified":"2021-09-22T04:47:00+00:00","datePublished":"2021-09-22T04:47:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -96,17 +99,20 @@
 
   <!-- Page Header -->
 
-<header class="masthead" style="background-image: url('/img/bg-index.jpg')">
+  
+    <header class="masthead" style="background-image: url('/img/bg-practice.jpg')">
 
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="page-heading">
-          <h1>생각중</h1>
+        <div class="post-heading">
+          <h1>Navigation and the back stack</h1>
           
-          <span class="subheading">What interests do i have.</span>
-          
+          <span class="meta">Posted by
+            <a href="#">Eun JongHyeok</a>
+            on September 22, 2021
+          </span>
         </div>
       </div>
     </div>
@@ -114,76 +120,117 @@
 </header>
 
 <div class="container">
-  <div class="row">
+  <div class="row min-vh-150 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <ol id="toc" class="amos-list-class">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#implement-up-button-behavior">Implement Up button behavior</a></li>
+<li class="toc-entry toc-h1"><a href="#learn-about-tasks-and-back-stack">Learn about tasks and back stack</a>
+<ol class="amos-sublist-class">
+<li class="toc-entry toc-h2"><a href="#tasks">Tasks</a></li>
+<li class="toc-entry toc-h2"><a href="#pop-additional-destinations-off-the-back-stack">Pop additional destinations off the back stack</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+
+<p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-4">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
+
+<h1 id="implement-up-button-behavior">
+<a class="anchor" href="#implement-up-button-behavior" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implement Up button behavior</h1>
+
+<p>각 프래그먼트 별로 액션바를 만들기위해 <code class="language-plaintext highlighter-rouge">setupActionBarWithNavController()</code>를 사용했었음.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">activity_main</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">navController</span><span class="p">:</span> <span class="nc">NavController</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+
+        <span class="kd">val</span> <span class="py">navHostFragment</span> <span class="p">=</span> <span class="n">supportFragmentManager</span>
+                <span class="p">.</span><span class="nf">findFragmentById</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">nav_host_fragment</span><span class="p">)</span> <span class="k">as</span> <span class="nc">NavHostFragment</span>
+        <span class="n">navController</span> <span class="p">=</span> <span class="n">navHostFragment</span><span class="p">.</span><span class="n">navController</span>
+
+        <span class="nf">setupActionBarWithNavController</span><span class="p">(</span><span class="n">navController</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이때 액션바에 up 버튼이 생기는데 이 동작을 처리하기 위해선 onSupportNavigateUp() 함수를 사용함</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onSupportNavigateUp</span><span class="p">():</span> <span class="nc">Boolean</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">navController</span><span class="p">.</span><span class="nf">navigateUp</span><span class="p">()</span> <span class="p">||</span> <span class="k">super</span><span class="p">.</span><span class="nf">onSupportNavigateUp</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="learn-about-tasks-and-back-stack">
+<a class="anchor" href="#learn-about-tasks-and-back-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn about tasks and back stack</h1>
+
+<h2 id="tasks">
+<a class="anchor" href="#tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tasks</h2>
+
+<p>안드로이드에서 액티비티들은 task안에 존재.</p>
+
+<p>액티비티들은 Back stack이라는 스택에 쌓임. 백스택은 사용자가 뒤로가기를 할 때 유용하게 사용할 수 있음</p>
+
+<p>같은 방식으로 프레그먼트 역시 백스택 내의 액티비티안에 쌓이게됨.</p>
+
+<h2 id="pop-additional-destinations-off-the-back-stack">
+<a class="anchor" href="#pop-additional-destinations-off-the-back-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pop additional destinations off the back stack</h2>
+
+<p>nav_graph 파일에서 추가해줌</p>
+
+<p><img src="/img/posts/android/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-09-22_%EC%98%A4%ED%9B%84_12.22.02.png" alt="스크린샷 2021-09-22 오후 12.22.02.png" width="50%"></p>
+
+<h3 id="navigation-action-popupto-attribute">Navigation action: popUpTo attribute</h3>
+
+<p>목적지까지 백스택에서 계속 popUp 시키고 그 후에 action 수행(backstack에 추가)</p>
+
+<h3 id="navigation-action-popuptoinclusive-attribute">Navigation action: popUpToInclusive attribute</h3>
+
+<p>true일 경우 이미 존재하면 backstack에 추가하지 않음</p>
+
+<h1 id="learn-more">
+<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
+</h1>
+
+<p>추가 공부해야할 링크들</p>
+
+<ul>
+  <li><a href="https://developer.android.com/guide/navigation/navigation-principles">Principles of navigation</a></li>
+  <li><a href="https://developer.android.com/guide/components/activities/tasks-and-back-stack">Understand tasks and back stack</a></li>
+  <li><a href="https://developer.android.com/guide/navigation/navigation-navigate#back-stack">Navigation and the back stack</a></li>
+  <li><a href="https://developer.android.com/guide/navigation/navigation-navigate#pop">popUpTo and popUpToInclusive</a></li>
+  <li><a href="https://developer.android.com/guide/components/intents-common#Email">Email intent</a></li>
+  <li><a href="https://developer.android.com/guide/topics/resources/string-resource#formatting-strings">Formatting strings</a></li>
+  <li><a href="https://developer.android.com/guide/topics/resources/string-resource#Plurals">Quantity strings (plurals)</a></li>
+  <li><a href="https://kotlinlang.org/docs/reference/null-safety.html#elvis-operator">Elvis operator in Kotlin</a></li>
+</ul>
 
       
-
       
-      
-      <article>
-      <h2>
-      <a href="/categories/Blog" style="text-decoration:none">
-   
-        <strong class="category-title">Blog</strong> <span class="category-count">4</span>
-
-      </a>
-      </h2>
-      </article>
-
-      <hr>
-      
-      
-      <article>
-      <h2>
-      <a href="/categories/Security" style="text-decoration:none">
-   
-        <strong class="category-title">Security</strong> <span class="category-count">2</span>
-
-      </a>
-      </h2>
-      </article>
-
-      <hr>
-      
-      
-      <article>
-      <h2>
-      <a href="/categories/Android" style="text-decoration:none">
-   
-        <strong class="category-title">Android</strong> <span class="category-count">16</span>
-
-      </a>
-      </h2>
-      </article>
-
-      <hr>
-      
-      
-      <article>
-      <h2>
-      <a href="/categories/Practice" style="text-decoration:none">
-   
-        <strong class="category-title">Practice</strong> <span class="category-count">18</span>
-
-      </a>
-      </h2>
-      </article>
-
-      <hr>
-      
-      
-      <article>
-      <h2>
-      <a href="/categories/Algorithm" style="text-decoration:none">
-   
-        <strong class="category-title">Algorithm</strong> <span class="category-count">1</span>
-
-      </a>
-      </h2>
-      </article>
-
-      <hr>
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/practice/navigation-and-the-back-stack/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       
 
     </div>
