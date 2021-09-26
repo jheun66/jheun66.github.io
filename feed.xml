@@ -1,4 +1,229 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-09-25T07:53:49+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>What interests do i have.</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Introduction to coroutines</title><link href="https://jheun66.github.io/posts/practice/introduction-to-coroutines/" rel="alternate" type="text/html" title="Introduction to coroutines" /><published>2021-09-25T07:14:00+00:00</published><updated>2021-09-25T07:14:00+00:00</updated><id>https://jheun66.github.io/posts/practice/introduction-to-coroutines</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/introduction-to-coroutines/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://jheun66.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jheun66.github.io/" rel="alternate" type="text/html" /><updated>2021-09-26T13:52:30+00:00</updated><id>https://jheun66.github.io/feed.xml</id><title type="html">생각중</title><subtitle>What interests do i have.</subtitle><author><name>Eun JongHyeok</name></author><entry><title type="html">Get data from the internet</title><link href="https://jheun66.github.io/posts/practice/get-data-from-the-internet/" rel="alternate" type="text/html" title="Get data from the internet" /><published>2021-09-26T13:45:00+00:00</published><updated>2021-09-26T13:45:00+00:00</updated><id>https://jheun66.github.io/posts/practice/get-data-from-the-internet</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/get-data-from-the-internet/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
+
+&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-4-pathway-2#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;web-services-and-retrofit&quot;&gt;Web services and Retrofit&lt;/h1&gt;
+
+&lt;p&gt;오늘날 대부분의 웹 서버는 stateless한 REST(&lt;strong&gt;RE&lt;/strong&gt;presentational &lt;strong&gt;S&lt;/strong&gt;tate &lt;strong&gt;T&lt;/strong&gt;ransfer)라는 웹 아키텍처를 사용하여 서비스됨. 이런 아키텍처를 사용하는 웹 서비스를 RESTful한 서비스라 함.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stateless&lt;/code&gt;는 말그대로 상태가 없다란 의미로 서버에서 세션과 같은 상태를 저장하고 있지않는다는 의미.&lt;/p&gt;
+
+&lt;p&gt;RESTful한 웹 서비스의 요청은 URI를 통한 정형화된 방법으로 만들어짐. URI(&lt;strong&gt;U&lt;/strong&gt;niform &lt;strong&gt;R&lt;/strong&gt;esource &lt;strong&gt;I&lt;/strong&gt;dentifier)는 서버의 리소스를 위치나 접근하는 법을 함축하지 않고 이름으로 구분함.&lt;/p&gt;
+
+&lt;p&gt;URL(&lt;strong&gt;U&lt;/strong&gt;niform &lt;strong&gt;R&lt;/strong&gt;esource &lt;strong&gt;L&lt;/strong&gt;ocator)은 리소스 표현을 획득하거나 이 표현을 통해 무엇을 할지 지정하는 URI. 즉, 기본 액세스 메커니즘과 네트워크 위치를 모두 지정.&lt;/p&gt;
+
+&lt;p&gt;따라하는 CodeLab의 예시에서는&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://android-kotlin-fun-mars-server.appspot.com/realestate&quot;&gt;https://android-kotlin-fun-mars-server.appspot.com/realestate&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://android-kotlin-fun-mars-server.appspot.com/photos&quot;&gt;https://android-kotlin-fun-mars-server.appspot.com/photos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;두 URL이 realestate와 photos를 통해 무슨 리소스인지 구분되고 HTTPS를 통해 획득되는 것을 알 수 있음.&lt;/p&gt;
+
+&lt;h2 id=&quot;web-service-request&quot;&gt;Web service request&lt;/h2&gt;
+
+&lt;p&gt;HTTP 동작에는 일반적으로 GET, POST, PUT, Delete가 있고 응답을 받을 때는 XML이나 JSON 형태로 받음.&lt;/p&gt;
+
+&lt;h3 id=&quot;retrofit-library&quot;&gt;Retrofit Library&lt;/h3&gt;
+
+&lt;p&gt;예제는 Retrofit이라는 외부 라이브러리를 사용하여 웹 서버와 통신. 외부라이브러리 사용에는 주의를 해야함. 실제 동작은 외부라이브러리를 통해서 실행되므로 의도치 않은 오류가 나올 수 도 있음.&lt;/p&gt;
+
+&lt;h2 id=&quot;add-retrofit-dependencies&quot;&gt;Add Retrofit dependencies&lt;/h2&gt;
+
+&lt;p&gt;프로젝트 레벨의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt;에서는&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;allprojects{
+    repositories{
+        google()
+        jcenter()
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;앱 레벨 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt;에서는&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Retrofit&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.squareup.retrofit2:retrofit:2.9.0&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Retrofit with Moshi Converter&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.squareup.retrofit2:converter-scalars:2.9.0&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;을 추가해주고 Sync Now.&lt;/p&gt;
+
+&lt;h2 id=&quot;add-support-for-java-8-language-features&quot;&gt;Add support for Java 8 language features&lt;/h2&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;android&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;compileOptions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sourceCompatibility&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;VERSION_1_8&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;targetCompatibility&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JavaVersion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;VERSION_1_8&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;kotlinOptions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;jvmTarget&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;많은 외부 라이브러리들이 Java 8을 사용하므로 추가가 필요함.&lt;/p&gt;
+
+&lt;h1 id=&quot;connecting-to-the-internet&quot;&gt;Connecting to the Internet&lt;/h1&gt;
+
+&lt;p&gt;Retrofit은 웹 서비스로 받은 내용을 기반으로 앱의 네트위트 API를 만들어줌. 웹서버를 통해 데이터를 받아오고 별도의 분리된 Converter 라이브러리를 통해 데이터를 String과 같은 객체 형태로 변환해서 반환함. XML과 JSON과 같은 유명한 데이터 형태를 지원함.&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;retrofit&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Retrofit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Builder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addConverterFactory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ScalarsConverterFactory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;baseUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BASE_URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Retrofit 객체 선언.&lt;/p&gt;
+
+&lt;h2 id=&quot;object-declarations&quot;&gt;Object declarations&lt;/h2&gt;
+
+&lt;p&gt;object 키워드 선언은 싱글턴 객체를 선언하기 위해 사용됨. Object 선언의 초기화는 thread-safe하고 처음 접근할 때 수행됨.  &lt;a href=&quot;https://kotlinlang.org/docs/object-declarations.html&quot;&gt;object 표현식과 선언&lt;/a&gt; 참고하기.&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MarsApi&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;retrofitService&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MarsApiService&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lazy&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+       &lt;span class=&quot;n&quot;&gt;retrofit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MarsApiService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;by lazy를 통해 객체 생성을 미룬 것을 확인 할 수 있음.&lt;/p&gt;
+
+&lt;h2 id=&quot;viewmodelscope&quot;&gt;ViewModelScope&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.android.com/topic/libraries/architecture/coroutines#viewmodelscope&quot;&gt;ViewModelScope&lt;/a&gt;는 앱에서 각각의 ViewModel을 위해 정의된 코루틴 스코프. 이 스코프에 있는 Coroutine은 ViewModel이 지워지면 자동으로 취소됨.&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MarsApiService&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;photos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;suspend&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getPhotos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getMarsPhotos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;viewModelScope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;launch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;listResult&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MarsApi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retrofitService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getPhotos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;_status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;listResult&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;getPhotos()는 코루틴 내에서 동작하는 함수이므로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;suspend&lt;/code&gt; 키워드를 붙여줌.&lt;/p&gt;
+
+&lt;h1 id=&quot;add-internet-permission-and-exception-handling&quot;&gt;Add Internet permission and Exception Handling&lt;/h1&gt;
+
+&lt;h2 id=&quot;android-permissions&quot;&gt;Android Permissions&lt;/h2&gt;
+
+&lt;p&gt;Permission의 역활은 안드로이드 유저의 프라이버시를 보호. 안드로이드 앱은 연락처, 전화 기록과 같은 민감한 유저 정보에 접근하거나 카메라, 인터넷 같은 시스템 기능을 획득하기 위해서는 permission을 선언하거나 요청해야함.&lt;/p&gt;
+
+&lt;p&gt;인터넷 사용 permission은 다음과 같이 선언하여 얻을 수 있음&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.permission.INTERNET&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;exception-handling&quot;&gt;Exception Handling&lt;/h2&gt;
+
+&lt;p&gt;Exception은 런타임에 발생하고 유저에게 알려주지 않고 갑자기 종료되는 에러. user experience 관점에서 매우 안좋음. 갑자기 종료되는 것을 막기위해서는 예외처리가 필요함.&lt;/p&gt;
+
+&lt;p&gt;try-catch 블록을 사용하여 예외에 대한 핸들링을 해줄 수 있음.&lt;/p&gt;
+
+&lt;h1 id=&quot;parse-the-json-response-with-moshi&quot;&gt;Parse the JSON response with Moshi&lt;/h1&gt;
+
+&lt;h2 id=&quot;json&quot;&gt;JSON&lt;/h2&gt;
+
+&lt;p&gt;요청된 데이터는 일반적으로 XML이나 JSON 포맷으로 구성.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://android-kotlin-fun-mars-server.appspot.com/photos&quot;&gt;https://android-kotlin-fun-mars-server.appspot.com/photos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;예제의 URL을 크롬과 같은 웹브라우저에서 요청해보면 JSON으로 응답이 오는 것을 확인할 수 있음&lt;/p&gt;
+
+&lt;p&gt;예제에서는 JSON을 코틀린 객체로 변환하기 위해 Moshi 라는 외부라이브러리를 사용.Retrofit은 Moshi와 함께 동작하는 converter를 가지고 있어서 Retrofit과 사용하기 좋은 라이브러리.&lt;/p&gt;
+
+&lt;h2 id=&quot;add-moshi-library-dependencies&quot;&gt;Add Moshi library dependencies&lt;/h2&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Moshi&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squareup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moshi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moshi-kotlin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.9.3&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Retrofit with Moshi Converter&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;squareup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retrofit2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;converter-moshi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.9.0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;추가하기&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Retrofit&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.squareup.retrofit2:retrofit:2.9.0&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;converter-moshi 내부에 포함되어 있으므로 제거&lt;/p&gt;
+
+&lt;h2 id=&quot;implement-the-mars-photos-data-class&quot;&gt;Implement the Mars Photos data class&lt;/h2&gt;
+
+&lt;p&gt;Moshi를 통해 JSON 응답 형태를 코틀린 객체로 만들기 위한 클래스 추가&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;data class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MarsPhoto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;img_src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;data 키워드를 사용하여 클래스를 만들고 JSON 응답에 있는 이름으로 프로퍼티를 선언해줌&lt;/p&gt;
+
+&lt;h3 id=&quot;json-annotation&quot;&gt;@Json Annotation&lt;/h3&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;data class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MarsPhoto&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;img_src&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;imgSrcUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;img_src는 코틀린 프로퍼티에 사용하는 코딩스타일이 아니므로 Json annotation을 사용하여 낙타표기법으로 바꿔줌.&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valmoshi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Moshi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Builder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;KotlinJsonAdapterFactory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valretrofit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Retrofit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Builder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addConverterFactory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MoshiConverterFactory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moshi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;baseUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BASE_URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MarsApiService&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;photos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;suspend&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getPhotos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MarsPhoto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;MoshiConverter를 통해 JSON이 코틀린 객체로 변환되는 것을 확인할 수 있음.&lt;/p&gt;
+
+&lt;h1 id=&quot;learn-more&quot;&gt;&lt;strong&gt;Learn more&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;추가 공부해야할 링크들&lt;/p&gt;
+
+&lt;p&gt;Android developer documentation:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/topic/libraries/architecture/viewmodel&quot;&gt;ViewModel Overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/topic/libraries/architecture/livedata#kotlin&quot;&gt;LiveData Overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/reference/android/arch/lifecycle/MutableLiveData&quot;&gt;MutableLiveData&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/topic/libraries/architecture/coroutines#viewmodelscope&quot;&gt;ViewModelScope&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kotlin documentation:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kotlinlang.org/docs/reference/exceptions.html&quot;&gt;Exceptions: try, catch, finally, throw, Nothing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://codelabs.developers.google.com/codelabs/kotlin-coroutines/&quot;&gt;Coroutines codelab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kotlinlang.org/docs/reference/coroutines-overview.html&quot;&gt;Coroutines, official documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kotlinlang.org/docs/reference/coroutines/coroutine-context-and-dispatchers.html&quot;&gt;Coroutine context and dispatchers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Other:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://square.github.io/retrofit/&quot;&gt;Retrofit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/square/moshi&quot;&gt;Moshi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://proandroiddev.com/moshi-with-retrofit-in-kotlin-%EF%B8%8F-a69c2621708b&quot;&gt;Moshi with Retrofit in Kotlin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Tutorial" /><category term="Retrofit" /><category term="JSON" /><category term="Moshi" /><category term="Internet" /><category term="Permissions" /><summary type="html">개요</summary></entry><entry><title type="html">Introduction to coroutines</title><link href="https://jheun66.github.io/posts/practice/introduction-to-coroutines/" rel="alternate" type="text/html" title="Introduction to coroutines" /><published>2021-09-25T07:14:00+00:00</published><updated>2021-09-25T07:14:00+00:00</updated><id>https://jheun66.github.io/posts/practice/introduction-to-coroutines</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/introduction-to-coroutines/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
 
 &lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-4-pathway-1#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-introduction-coroutines&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
 
@@ -1421,52 +1646,4 @@ result of num1 + num2 is 1.3197235861568224
 
 &lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/collections-overview.html&quot;&gt;https://kotlinlang.org/docs/collections-overview.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&quot;&gt;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry><entry><title type="html">Display a list of images using cards</title><link href="https://jheun66.github.io/posts/practice/display-a-list-of-images-using-cards/" rel="alternate" type="text/html" title="Display a list of images using cards" /><published>2021-08-03T06:36:00+00:00</published><updated>2021-08-03T06:36:00+00:00</updated><id>https://jheun66.github.io/posts/practice/display-a-list-of-images-using-cards</id><content type="html" xml:base="https://jheun66.github.io/posts/practice/display-a-list-of-images-using-cards/">&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
-
-&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-3&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다&lt;/p&gt;
-
-&lt;h1 id=&quot;adding-images-to-the-list-items&quot;&gt;Adding images to the list items&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Using resource annotations&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;annotation을 사용하면 클래스나 메스드에 추가 정보를 줄 수 있음&lt;/p&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;me.amos.affirmations.model&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;androidx.annotation.DrawableRes&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;androidx.annotation.StringRes&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;data class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Affirmation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@StringRes&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;stringResourceId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@DrawableRes&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;imageResourceId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Add an ImageView to the list item layout&lt;/li&gt;
-  &lt;li&gt;Update the ItemAdapter to set the image&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;polishing-the-ui&quot;&gt;Polishing the UI&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;textApperance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/androiddevelopers/android-styling-common-theme-attributes-8f7c50c9eaba&quot;&gt;안드로이드 공통 테마&lt;/a&gt; 옵션 중 텍스트 테마&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;materialCardView&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://material.io/components/cards/android&quot;&gt;materialCardView&lt;/a&gt;를 사용하면 일관되고 깔끔한 디자인으로 뷰들을 다룰 수 있음&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/androiddevelopers/android-styling-common-theme-attributes-8f7c50c9eaba&quot;&gt;https://medium.com/androiddevelopers/android-styling-common-theme-attributes-8f7c50c9eaba&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://material.io/components/cards/android&quot;&gt;https://material.io/components/cards/android&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive&quot;&gt;https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&quot;&gt;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&lt;/a&gt;&lt;/p&gt;</content><author><name>Eun JongHyeok</name></author><category term="Practice" /><category term="Kotlin" /><category term="Tutorial" /><summary type="html">개요</summary></entry></feed>
