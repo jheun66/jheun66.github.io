@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "검색 기능 추가(Add search function to my blog)",
+      "category" : "",
+      "tags"     : "SimpleJekyllSearch, material.io",
+      "url"      : "/posts/blog/add-search-function-to-my-blog/",
+      "date"     : "04/17/2022"
+    } ,
+  
+    {
       "title"    : "Load and display images from the Internet",
       "category" : "",
       "tags"     : "Tutorial, Coil, RecyclerView, Building Adapter",
