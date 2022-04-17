@@ -24,6 +24,19 @@
   <link rel="canonical" href="https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script type="module">
+// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+for (const tf of document.querySelectorAll('.mdc-text-field')) {
+    new mdc.textField.MDCTextField.attachTo(tf);
+}
+for (const list of document.querySelectorAll('.mdc-list')) {
+    new mdc.list.MDCList.attachTo(list);
+}
+</script>
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
@@ -48,7 +61,7 @@
 <meta property="twitter:title" content="Use LiveData with ViewModel" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Use LiveData with ViewModel","dateModified":"2021-09-11T10:57:00+00:00","datePublished":"2021-09-11T10:57:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/"},"url":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"개요","@type":"BlogPosting","headline":"Use LiveData with ViewModel","dateModified":"2021-09-11T10:57:00+00:00","datePublished":"2021-09-11T10:57:00+00:00","url":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,7 +133,7 @@
 </header>
 
 <div class="container">
-  <div class="row min-vh-150 flex-column flex-lg-row">
+  <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
       <ol id="toc" class="amos-list-class">
@@ -211,31 +224,31 @@
 <span class="p">}</span>
 
 <span class="nf">android</span> <span class="p">{</span>
-	<span class="c1">//...</span>
-	<span class="nf">buildFeatures</span> <span class="p">{</span>
-	   <span class="n">dataBinding</span> <span class="p">=</span> <span class="k">true</span> <span class="c1">// 추가</span>
-	<span class="p">}</span>
+    <span class="c1">//...</span>
+    <span class="nf">buildFeatures</span> <span class="p">{</span>
+       <span class="n">dataBinding</span> <span class="p">=</span> <span class="k">true</span> <span class="c1">// 추가</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
 <h3 id="convert-layout-file-to-data-binding-layout">Convert layout file to data binding layout</h3>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;layout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
-<span class="err"> </span> <span class="err"> </span><span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
-<span class="err"> </span> <span class="err"> </span><span class="na">xmlns:tools=</span><span class="s">"http://schemas.android.com/tools"</span><span class="nt">&gt;</span>
+   <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
+   <span class="na">xmlns:tools=</span><span class="s">"http://schemas.android.com/tools"</span><span class="nt">&gt;</span>
 
-   <span class="nt">&lt;data&gt;</span>
+   <span class="nt">&lt;data&gt;</span>
 
-   <span class="nt">&lt;/data&gt;</span>
+   <span class="nt">&lt;/data&gt;</span>
 
-   <span class="nt">&lt;ScrollView</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;ScrollView</span>
+   <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+   <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
 
-       <span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> ...</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> &lt;/androidx.constraintlayout.widget.ConstraintLayout</span><span class="nt">&gt;</span>
-   <span class="nt">&lt;/ScrollView&gt;</span>
+   <span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+         <span class="err">...</span>
+   <span class="err">&lt;/androidx.constraintlayout.widget.ConstraintLayout</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;/ScrollView&gt;</span>
 <span class="nt">&lt;/layout&gt;</span>
 </code></pre></div></div>
 
@@ -271,7 +284,7 @@
    <span class="n">binding</span><span class="p">.</span><span class="n">gameViewModel</span> <span class="p">=</span> <span class="n">viewModel</span>
 
    <span class="n">binding</span><span class="p">.</span><span class="n">maxNoOfWords</span> <span class="p">=</span> <span class="nc">MAX_NO_OF_WORDS</span>
-	 <span class="c1">// Specify the fragment view as the lifecycle owner of the binding.</span>
+     <span class="c1">// Specify the fragment view as the lifecycle owner of the binding.</span>
    <span class="c1">// This is used so that the binding can observe LiveData updates</span>
    <span class="n">binding</span><span class="p">.</span><span class="n">lifecycleOwner</span> <span class="p">=</span> <span class="n">viewLifecycleOwner</span>
 <span class="o">..</span><span class="p">.</span>
@@ -315,22 +328,10 @@
 
 <ul>
   <li><a href="https://developer.android.com/topic/libraries/architecture/livedata">LiveData Overview</a></li>
-  <li>
-<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData#observe(androidx.lifecycle.LifecycleOwner,%20androidx.lifecycle.Observer%3C?%20super%20T%3E)">LiveData observer</a> API reference</li>
+  <li><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData#observe(androidx.lifecycle.LifecycleOwner,%20androidx.lifecycle.Observer%3C?%20super%20T%3E)">LiveData observer</a></li>
   <li><a href="https://developer.android.com/topic/libraries/data-binding">Data binding</a></li>
   <li><a href="https://developer.android.com/topic/libraries/data-binding/two-way">Two-way data binding</a></li>
   <li><a href="https://developer.android.com/topic/libraries/data-binding">Using the Data Binding Library</a></li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>[Data Binding — lessons learnt. The Data Binding Library (referred to…</td>
-          <td>by Chris Banes</td>
-          <td>Android Developers](https://medium.com/androiddevelopers/data-binding-lessons-learnt-4fd16576b719)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
 </ul>
 
       
@@ -422,7 +423,7 @@
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
       </div>
     </div>
   </div>

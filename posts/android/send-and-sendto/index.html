@@ -24,6 +24,19 @@
   <link rel="canonical" href="https://jheun66.github.io/posts/android/send-and-sendto/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script type="module">
+// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+for (const tf of document.querySelectorAll('.mdc-text-field')) {
+    new mdc.textField.MDCTextField.attachTo(tf);
+}
+for (const list of document.querySelectorAll('.mdc-list')) {
+    new mdc.list.MDCList.attachTo(list);
+}
+</script>
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
@@ -48,7 +61,7 @@
 <meta property="twitter:title" content="ACTION_SEND &amp; ACTION_SENDTO(이메일 인텐트)" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.","headline":"ACTION_SEND &amp; ACTION_SENDTO(이메일 인텐트)","dateModified":"2021-01-14T02:30:00+00:00","datePublished":"2021-01-14T02:30:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/send-and-sendto/"},"url":"https://jheun66.github.io/posts/android/send-and-sendto/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.","@type":"BlogPosting","headline":"ACTION_SEND &amp; ACTION_SENDTO(이메일 인텐트)","dateModified":"2021-01-14T02:30:00+00:00","datePublished":"2021-01-14T02:30:00+00:00","url":"https://jheun66.github.io/posts/android/send-and-sendto/","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/send-and-sendto/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,7 +133,7 @@
 </header>
 
 <div class="container">
-  <div class="row min-vh-150 flex-column flex-lg-row">
+  <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
       <ol id="toc" class="amos-list-class">
@@ -147,8 +160,9 @@
 EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
 좀더 자세한 사용법은 참고의 개발자 문서를 확인하면 되겠습니다.</p>
 
-<p><img src="/img/posts/android/selectSend.jpg" alt="select send">
-대신 선택창에 SEND를 받는 앱이 많습니다.</p>
+<p><img src="/img/posts/android/selectSend.jpg" alt="select send" width="100%"></p>
+
+<p>대신 선택창에 SEND를 받는 앱이 많습니다.</p>
 
 <h2 id="action_sendto">
 <a class="anchor" href="#action_sendto" aria-hidden="true"><span class="octicon octicon-link"></span></a>ACTION_SENDTO</h2>
@@ -173,8 +187,9 @@ EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
 그래서 이 인텐트는 EXTRA_STREAM을 받지 못합니다. 
 <a href="https://css-tricks.com/snippets/html/mailto-links/">mailto 관련</a></p>
 
-<p><img src="/img/posts/android/selectSendTo.jpg" alt="select sendto">
-이 경우 메일 앱만 받습니다.</p>
+<p><img src="/img/posts/android/selectSendTo.jpg" alt="select sendto" width="100%"></p>
+
+<p>이 경우 메일 앱만 받습니다.</p>
 
 <h2 id="좀-더-좋은-방법">
 <a class="anchor" href="#%EC%A2%80-%EB%8D%94-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>좀 더 좋은 방법</h2>
@@ -300,7 +315,7 @@ EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
       </div>
     </div>
   </div>

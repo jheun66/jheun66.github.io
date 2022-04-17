@@ -24,6 +24,19 @@
   <link rel="canonical" href="https://jheun66.github.io/posts/android/actiivties/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script type="module">
+// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+for (const tf of document.querySelectorAll('.mdc-text-field')) {
+    new mdc.textField.MDCTextField.attachTo(tf);
+}
+for (const list of document.querySelectorAll('.mdc-list')) {
+    new mdc.list.MDCList.attachTo(list);
+}
+</script>
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
@@ -48,7 +61,7 @@
 <meta property="twitter:title" content="Activities" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"액티비티 액티비티는 안드로이드 앱에서 정말 중요한 구성요소 중 하나 입니다. 액티비티는 UI를 포함한 화면이며 이를 통해 사용자와 상호작용을 할 수 있습니다. 하나의 앱에는 여러 액티비티가 있을 수 있으며 서로 독립되어 있습니다. 따라서 액티비티가 실행되고 다른 액티비티와 함께 동작하는 방식을 이해하는 것이 중요합니다.","headline":"Activities","dateModified":"2020-12-25T09:00:00+00:00","datePublished":"2020-12-25T09:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/actiivties/"},"url":"https://jheun66.github.io/posts/android/actiivties/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"액티비티 액티비티는 안드로이드 앱에서 정말 중요한 구성요소 중 하나 입니다. 액티비티는 UI를 포함한 화면이며 이를 통해 사용자와 상호작용을 할 수 있습니다. 하나의 앱에는 여러 액티비티가 있을 수 있으며 서로 독립되어 있습니다. 따라서 액티비티가 실행되고 다른 액티비티와 함께 동작하는 방식을 이해하는 것이 중요합니다.","@type":"BlogPosting","headline":"Activities","dateModified":"2020-12-25T09:00:00+00:00","datePublished":"2020-12-25T09:00:00+00:00","url":"https://jheun66.github.io/posts/android/actiivties/","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/actiivties/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,7 +133,7 @@
 </header>
 
 <div class="container">
-  <div class="row min-vh-150 flex-column flex-lg-row">
+  <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
       <ol id="toc" class="amos-list-class">
@@ -303,7 +316,7 @@
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
       </div>
     </div>
   </div>

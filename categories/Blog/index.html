@@ -24,6 +24,19 @@
   <link rel="canonical" href="https://jheun66.github.io/categories/Blog/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script type="module">
+// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+for (const tf of document.querySelectorAll('.mdc-text-field')) {
+    new mdc.textField.MDCTextField.attachTo(tf);
+}
+for (const list of document.querySelectorAll('.mdc-list')) {
+    new mdc.list.MDCList.attachTo(list);
+}
+</script>
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
@@ -46,7 +59,7 @@
 <meta property="twitter:title" content="Blog" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"잡다한 블로그","headline":"Blog","@type":"WebPage","url":"https://jheun66.github.io/categories/Blog/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"잡다한 블로그","@type":"WebPage","headline":"Blog","url":"https://jheun66.github.io/categories/Blog/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -119,9 +132,17 @@
     <div class="col-lg-8 col-md-10 mx-auto">
 
       <!-- Category Post List -->
+<ul class="mdc-list mdc-list--two-line"></ul>
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/blog/codeblock-syntax-highlight/"><span class="mdc-list-item__primary-text">코드 블럭 syntax_highlight 적용</span></a>
+      <span class="mdc-list-item__secondary-text">07/22/2021, <i class="fa fa-tag"></i>github pages, rougify</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/blog/codeblock-syntax-highlight/">
     <h2 class="post-title">코드 블럭 syntax_highlight 적용</h2>
     
@@ -138,11 +159,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/blog/install-jekyll/"><span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span></a>
+      <span class="mdc-list-item__secondary-text">06/13/2021, <i class="fa fa-tag"></i>jekyll, bundler, github pages</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/blog/install-jekyll/">
     <h2 class="post-title">Jekyll 설치 및 테스트</h2>
     
@@ -159,11 +187,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/blog/ruby-version-management/"><span class="mdc-list-item__primary-text">Ruby Version Management</span></a>
+      <span class="mdc-list-item__secondary-text">06/13/2021, <i class="fa fa-tag"></i>ruby, rbenv, github pages</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/blog/ruby-version-management/">
     <h2 class="post-title">Ruby Version Management</h2>
     
@@ -180,11 +215,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/blog/my-first-post/"><span class="mdc-list-item__primary-text">Serenity Prayer</span></a>
+      <span class="mdc-list-item__secondary-text">11/19/2020, <i class="fa fa-tag"></i>niebuhr, prayer</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/blog/my-first-post/">
     <h2 class="post-title">Serenity Prayer</h2>
     
@@ -201,7 +243,7 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
 
@@ -271,7 +313,7 @@
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
       </div>
     </div>
   </div>

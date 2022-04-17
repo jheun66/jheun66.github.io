@@ -24,6 +24,19 @@
   <link rel="canonical" href="https://jheun66.github.io/categories/Algorithm/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script type="module">
+// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+for (const tf of document.querySelectorAll('.mdc-text-field')) {
+    new mdc.textField.MDCTextField.attachTo(tf);
+}
+for (const list of document.querySelectorAll('.mdc-list')) {
+    new mdc.list.MDCList.attachTo(list);
+}
+</script>
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
@@ -46,7 +59,7 @@
 <meta property="twitter:title" content="Algorithm" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"알고리즘 관련 정보","headline":"Algorithm","@type":"WebPage","url":"https://jheun66.github.io/categories/Algorithm/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"알고리즘 관련 정보","@type":"WebPage","headline":"Algorithm","url":"https://jheun66.github.io/categories/Algorithm/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -119,9 +132,17 @@
     <div class="col-lg-8 col-md-10 mx-auto">
 
       <!-- Category Post List -->
+<ul class="mdc-list mdc-list--two-line"></ul>
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/algorithm/next-permutation/"><span class="mdc-list-item__primary-text">next_permutation</span></a>
+      <span class="mdc-list-item__secondary-text">08/21/2021, <i class="fa fa-tag"></i>Permutation</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/algorithm/next-permutation/">
     <h2 class="post-title">next_permutation</h2>
     
@@ -138,7 +159,7 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
 
@@ -208,7 +229,7 @@
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
       </div>
     </div>
   </div>

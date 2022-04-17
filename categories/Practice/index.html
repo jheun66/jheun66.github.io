@@ -24,6 +24,19 @@
   <link rel="canonical" href="https://jheun66.github.io/categories/Practice/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script type="module">
+// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+for (const tf of document.querySelectorAll('.mdc-text-field')) {
+    new mdc.textField.MDCTextField.attachTo(tf);
+}
+for (const list of document.querySelectorAll('.mdc-list')) {
+    new mdc.list.MDCList.attachTo(list);
+}
+</script>
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
@@ -46,7 +59,7 @@
 <meta property="twitter:title" content="Practice" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"나의 연습장","headline":"Practice","@type":"WebPage","url":"https://jheun66.github.io/categories/Practice/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"나의 연습장","@type":"WebPage","headline":"Practice","url":"https://jheun66.github.io/categories/Practice/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -119,9 +132,17 @@
     <div class="col-lg-8 col-md-10 mx-auto">
 
       <!-- Category Post List -->
+<ul class="mdc-list mdc-list--two-line"></ul>
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/load-and-display-images-from-the-internet/"><span class="mdc-list-item__primary-text">Load and display images from the Internet</span></a>
+      <span class="mdc-list-item__secondary-text">09/30/2021, <i class="fa fa-tag"></i>Tutorial, Coil, RecyclerView, Building Adapter</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/load-and-display-images-from-the-internet/">
     <h2 class="post-title">Load and display images from the Internet</h2>
     
@@ -138,11 +159,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/get-data-from-the-internet/"><span class="mdc-list-item__primary-text">Get data from the internet</span></a>
+      <span class="mdc-list-item__secondary-text">09/26/2021, <i class="fa fa-tag"></i>Tutorial, Retrofit, JSON, Moshi, Internet, Permissions</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/get-data-from-the-internet/">
     <h2 class="post-title">Get data from the internet</h2>
     
@@ -159,11 +187,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/introduction-to-coroutines/"><span class="mdc-list-item__primary-text">Introduction to coroutines</span></a>
+      <span class="mdc-list-item__secondary-text">09/25/2021, <i class="fa fa-tag"></i>Tutorial, Coroutine</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/introduction-to-coroutines/">
     <h2 class="post-title">Introduction to coroutines</h2>
     
@@ -180,11 +215,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/navigation-and-the-back-stack/"><span class="mdc-list-item__primary-text">Navigation and the back stack</span></a>
+      <span class="mdc-list-item__secondary-text">09/22/2021, <i class="fa fa-tag"></i>Tutorial, Tasks, BackStack</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/navigation-and-the-back-stack/">
     <h2 class="post-title">Navigation and the back stack</h2>
     
@@ -201,11 +243,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/shared-viewmodel-across-fragment/"><span class="mdc-list-item__primary-text">Shared ViewModel Across Fragment</span></a>
+      <span class="mdc-list-item__secondary-text">09/21/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/shared-viewmodel-across-fragment/">
     <h2 class="post-title">Shared ViewModel Across Fragment</h2>
     
@@ -222,11 +271,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/use-livedata-with-viewmodel/"><span class="mdc-list-item__primary-text">Use LiveData with ViewModel</span></a>
+      <span class="mdc-list-item__secondary-text">09/11/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/use-livedata-with-viewmodel/">
     <h2 class="post-title">Use LiveData with ViewModel</h2>
     
@@ -243,11 +299,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/store-data-in-viewmodel/"><span class="mdc-list-item__primary-text">Store data in ViewModel</span></a>
+      <span class="mdc-list-item__secondary-text">09/11/2021, <i class="fa fa-tag"></i>Tutorial, ViewModel, ViewBinding</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/store-data-in-viewmodel/">
     <h2 class="post-title">Store data in ViewModel</h2>
     
@@ -264,11 +327,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/fragments-and-the-navigation-component/"><span class="mdc-list-item__primary-text">Fragments and the Navigation Component</span></a>
+      <span class="mdc-list-item__secondary-text">08/26/2021, <i class="fa fa-tag"></i>Tutorial, Fragment, Navigation Component</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/fragments-and-the-navigation-component/">
     <h2 class="post-title">Fragments and the Navigation Component</h2>
     
@@ -285,11 +355,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/collections-in-kotlin/"><span class="mdc-list-item__primary-text">Collections in Kotlin</span></a>
+      <span class="mdc-list-item__secondary-text">08/04/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/collections-in-kotlin/">
     <h2 class="post-title">Collections in Kotlin</h2>
     
@@ -306,11 +383,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/display-a-list-of-images-using-cards/"><span class="mdc-list-item__primary-text">Display a list of images using cards</span></a>
+      <span class="mdc-list-item__secondary-text">08/03/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/display-a-list-of-images-using-cards/">
     <h2 class="post-title">Display a list of images using cards</h2>
     
@@ -327,11 +411,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/use-recyclerview-to-display-a-scrollable-list/"><span class="mdc-list-item__primary-text">Use RecyclerView to display a scrollable list</span></a>
+      <span class="mdc-list-item__secondary-text">07/29/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/use-recyclerview-to-display-a-scrollable-list/">
     <h2 class="post-title">Use RecyclerView to display a scrollable list</h2>
     
@@ -348,11 +439,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/use-lists-in-kotlin/"><span class="mdc-list-item__primary-text">Use Lists in Kotlin</span></a>
+      <span class="mdc-list-item__secondary-text">07/29/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/use-lists-in-kotlin/">
     <h2 class="post-title">Use Lists in Kotlin</h2>
     
@@ -369,11 +467,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/create-a-more-polished-user-experience/"><span class="mdc-list-item__primary-text">Create a more polished user experience</span></a>
+      <span class="mdc-list-item__secondary-text">07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/create-a-more-polished-user-experience/">
     <h2 class="post-title">Create a more polished user experience</h2>
     
@@ -390,11 +495,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/change-the-app-icon/"><span class="mdc-list-item__primary-text">Change the app icon</span></a>
+      <span class="mdc-list-item__secondary-text">07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/change-the-app-icon/">
     <h2 class="post-title">Change the app icon</h2>
     
@@ -411,11 +523,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/change-the-app-theme/"><span class="mdc-list-item__primary-text">Change the app theme</span></a>
+      <span class="mdc-list-item__secondary-text">07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/change-the-app-theme/">
     <h2 class="post-title">Change the app theme</h2>
     
@@ -432,11 +551,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/calculate-the-tip/"><span class="mdc-list-item__primary-text">Calculate the tip</span></a>
+      <span class="mdc-list-item__secondary-text">07/28/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/calculate-the-tip/">
     <h2 class="post-title">Calculate the tip</h2>
     
@@ -453,11 +579,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/create-xml-layouts-for-android/"><span class="mdc-list-item__primary-text">Create XML layouts for Android</span></a>
+      <span class="mdc-list-item__secondary-text">07/26/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/create-xml-layouts-for-android/">
     <h2 class="post-title">Create XML layouts for Android</h2>
     
@@ -474,11 +607,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/classes-and-inheritance-in-kotlin/"><span class="mdc-list-item__primary-text">Classes and inheritance in Kotlin</span></a>
+      <span class="mdc-list-item__secondary-text">07/25/2021, <i class="fa fa-tag"></i>Kotlin</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/classes-and-inheritance-in-kotlin/">
     <h2 class="post-title">Classes and inheritance in Kotlin</h2>
     
@@ -495,11 +635,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/add-a-button-to-an-app/"><span class="mdc-list-item__primary-text">Add a button to an app</span></a>
+      <span class="mdc-list-item__secondary-text">07/21/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/add-a-button-to-an-app/">
     <h2 class="post-title">Add a button to an app</h2>
     
@@ -516,11 +663,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/create-your-first-app/"><span class="mdc-list-item__primary-text">Create your first app</span></a>
+      <span class="mdc-list-item__secondary-text">07/21/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/create-your-first-app/">
     <h2 class="post-title">Create your first app</h2>
     
@@ -537,11 +691,18 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
+<li class="mdc-list-item">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <a href="/posts/practice/introduction-to-kotlin/"><span class="mdc-list-item__primary-text">Introduction to Kotlin</span></a>
+      <span class="mdc-list-item__secondary-text">07/20/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+    </span>
+  </li><hr>
 
-<article class="posts-list">
+<!-- <article class="posts-list">
     <a href="/posts/practice/introduction-to-kotlin/">
     <h2 class="post-title">Introduction to Kotlin</h2>
     
@@ -558,7 +719,7 @@
     </p>
 </article>
 
-<hr>
+<hr> -->
 
 
 
@@ -628,7 +789,7 @@
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
       </div>
     </div>
   </div>

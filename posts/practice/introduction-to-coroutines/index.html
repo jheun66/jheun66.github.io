@@ -24,6 +24,19 @@
   <link rel="canonical" href="https://jheun66.github.io/posts/practice/introduction-to-coroutines/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script type="module">
+// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+for (const tf of document.querySelectorAll('.mdc-text-field')) {
+    new mdc.textField.MDCTextField.attachTo(tf);
+}
+for (const list of document.querySelectorAll('.mdc-list')) {
+    new mdc.list.MDCList.attachTo(list);
+}
+</script>
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
@@ -48,7 +61,7 @@
 <meta property="twitter:title" content="Introduction to coroutines" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Introduction to coroutines","dateModified":"2021-09-25T07:14:00+00:00","datePublished":"2021-09-25T07:14:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/introduction-to-coroutines/"},"url":"https://jheun66.github.io/posts/practice/introduction-to-coroutines/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"개요","@type":"BlogPosting","headline":"Introduction to coroutines","dateModified":"2021-09-25T07:14:00+00:00","datePublished":"2021-09-25T07:14:00+00:00","url":"https://jheun66.github.io/posts/practice/introduction-to-coroutines/","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/introduction-to-coroutines/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,7 +133,7 @@
 </header>
 
 <div class="container">
-  <div class="row min-vh-150 flex-column flex-lg-row">
+  <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
       <ol id="toc" class="amos-list-class">
@@ -255,9 +268,9 @@
 <p>코루틴의 다음 중요한 개념을 이해하기 위해서 launch의 전체 문법을 확인해보면 다음과 같음</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nc">CoroutineScope</span><span class="p">.</span><span class="nf">launch</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">context</span><span class="p">:</span> <span class="nc">CoroutineContext</span> <span class="p">=</span> <span class="nc">EmptyCoroutineContext</span><span class="p">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">start</span><span class="p">:</span> <span class="nc">CoroutineStart</span> <span class="p">=</span> <span class="nc">CoroutineStart</span><span class="p">.</span><span class="nc">DEFAULT</span><span class="p">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">block</span><span class="p">:</span> <span class="k">suspend</span> <span class="nc">CoroutineScope</span><span class="p">.()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span>
+    <span class="n">context</span><span class="p">:</span> <span class="nc">CoroutineContext</span> <span class="p">=</span> <span class="nc">EmptyCoroutineContext</span><span class="p">,</span>
+    <span class="n">start</span><span class="p">:</span> <span class="nc">CoroutineStart</span> <span class="p">=</span> <span class="nc">CoroutineStart</span><span class="p">.</span><span class="nc">DEFAULT</span><span class="p">,</span>
+    <span class="n">block</span><span class="p">:</span> <span class="k">suspend</span> <span class="nc">CoroutineScope</span><span class="p">.()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -303,20 +316,20 @@ result of num1 + num2 is 0.79934378282777
 <p>num1과 num2에 사용된 getValue는 독립적이고 정지하는데 코루틴이 필요하지 않음. 이때 <code class="language-plaintext highlighter-rouge">async()</code>와 <code class="language-plaintext highlighter-rouge">await()</code>를 사용하여 비동기를 구현할 수 있음</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="nf">runBlocking</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">val</span> <span class="py">num1</span> <span class="p">=</span> <span class="nf">async</span> <span class="p">{</span> <span class="nf">getValue</span><span class="p">()</span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="kd">val</span> <span class="py">num2</span> <span class="p">=</span> <span class="nf">async</span> <span class="p">{</span> <span class="nf">getValue</span><span class="p">()</span> <span class="p">}</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nf">println</span><span class="p">(</span><span class="s">"result of num1 + num2 is ${num1.await() + num2.await()}"</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
+    <span class="nf">runBlocking</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">num1</span> <span class="p">=</span> <span class="nf">async</span> <span class="p">{</span> <span class="nf">getValue</span><span class="p">()</span> <span class="p">}</span>
+        <span class="kd">val</span> <span class="py">num2</span> <span class="p">=</span> <span class="nf">async</span> <span class="p">{</span> <span class="nf">getValue</span><span class="p">()</span> <span class="p">}</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"result of num1 + num2 is ${num1.await() + num2.await()}"</span><span class="p">)</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
 <p>함수 정의는 다음과 같음</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Fun</span> <span class="nc">CoroutineScope</span><span class="p">.</span><span class="nf">async</span><span class="p">()</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">context</span><span class="p">:</span> <span class="nc">CoroutineContext</span> <span class="p">=</span> <span class="nc">EmptyCoroutineContext</span><span class="p">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">start</span><span class="p">:</span> <span class="nc">CoroutineStart</span> <span class="p">=</span> <span class="nc">CoroutineStart</span><span class="p">.</span><span class="nc">DEFAULT</span><span class="p">,</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">block</span><span class="p">:</span> <span class="k">suspend</span> <span class="nc">CoroutineScope</span><span class="p">.()</span> <span class="p">-&gt;</span> <span class="nc">T</span>
+    <span class="n">context</span><span class="p">:</span> <span class="nc">CoroutineContext</span> <span class="p">=</span> <span class="nc">EmptyCoroutineContext</span><span class="p">,</span>
+    <span class="n">start</span><span class="p">:</span> <span class="nc">CoroutineStart</span> <span class="p">=</span> <span class="nc">CoroutineStart</span><span class="p">.</span><span class="nc">DEFAULT</span><span class="p">,</span>
+    <span class="n">block</span><span class="p">:</span> <span class="k">suspend</span> <span class="nc">CoroutineScope</span><span class="p">.()</span> <span class="p">-&gt;</span> <span class="nc">T</span>
 <span class="p">}:</span> <span class="nc">Deferred</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span>
 </code></pre></div></div>
 
@@ -435,7 +448,7 @@ result of num1 + num2 is 1.3197235861568224
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
       </div>
     </div>
   </div>

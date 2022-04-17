@@ -1,207 +1,708 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://jheun66.github.io/posts/blog/my-first-post/</loc>
-<lastmod>2020-11-19T19:20:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/security/authentication-vs-authorization/</loc>
-<lastmod>2020-12-13T06:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/security/ouath/</loc>
-<lastmod>2020-12-13T20:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/art/</loc>
-<lastmod>2020-12-14T08:08:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/android-support-library/</loc>
-<lastmod>2020-12-23T21:08:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/application-fundamentals/</loc>
-<lastmod>2020-12-23T22:18:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/actiivties/</loc>
-<lastmod>2020-12-25T09:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/activity-lifecycle/</loc>
-<lastmod>2020-12-28T03:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/intent/</loc>
-<lastmod>2020-12-30T03:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/activities-and-intents-practice/</loc>
-<lastmod>2020-12-30T15:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/implict-intent/</loc>
-<lastmod>2021-01-09T18:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/resolveActivity-vs-queryIntentActivities/</loc>
-<lastmod>2021-01-13T05:30:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/send-and-sendto/</loc>
-<lastmod>2021-01-14T02:30:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/buttons/</loc>
-<lastmod>2021-01-15T13:30:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/context/</loc>
-<lastmod>2021-02-12T18:30:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/screen-compatibility/</loc>
-<lastmod>2021-02-13T18:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/blog/ruby-version-management/</loc>
-<lastmod>2021-06-13T12:01:11+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/blog/install-jekyll/</loc>
-<lastmod>2021-06-13T12:46:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/introduction-to-kotlin/</loc>
-<lastmod>2021-07-20T00:57:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/create-your-first-app/</loc>
-<lastmod>2021-07-21T03:55:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/add-a-button-to-an-app/</loc>
-<lastmod>2021-07-21T08:38:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/net-err-cleartext-not-permitted/</loc>
-<lastmod>2021-07-22T02:25:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/</loc>
-<lastmod>2021-07-22T02:49:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/classes-and-inheritance-in-kotlin/</loc>
-<lastmod>2021-07-25T10:18:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/create-xml-layouts-for-android/</loc>
-<lastmod>2021-07-26T06:41:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/</loc>
-<lastmod>2021-07-26T06:43:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/calculate-the-tip/</loc>
-<lastmod>2021-07-28T07:58:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/change-the-app-theme/</loc>
-<lastmod>2021-07-28T08:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/change-the-app-icon/</loc>
-<lastmod>2021-07-28T08:02:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience/</loc>
-<lastmod>2021-07-28T08:05:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/use-lists-in-kotlin/</loc>
-<lastmod>2021-07-29T09:30:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list/</loc>
-<lastmod>2021-07-29T17:17:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/display-a-list-of-images-using-cards/</loc>
-<lastmod>2021-08-03T06:36:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/collections-in-kotlin/</loc>
-<lastmod>2021-08-04T07:17:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/android/escape-html/</loc>
-<lastmod>2021-08-18T15:05:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/algorithm/next-permutation/</loc>
-<lastmod>2021-08-21T21:28:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/</loc>
-<lastmod>2021-08-26T14:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/store-data-in-viewmodel/</loc>
-<lastmod>2021-09-11T06:00:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/</loc>
-<lastmod>2021-09-11T10:57:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/</loc>
-<lastmod>2021-09-21T09:49:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/</loc>
-<lastmod>2021-09-22T04:47:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/introduction-to-coroutines/</loc>
-<lastmod>2021-09-25T07:14:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/get-data-from-the-internet/</loc>
-<lastmod>2021-09-26T13:45:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/posts/practice/load-and-display-images-from-the-internet/</loc>
-<lastmod>2021-09-30T11:45:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://jheun66.github.io/about/</loc>
-</url>
-<url>
-<loc>https://jheun66.github.io/contact/</loc>
-</url>
-<url>
-<loc>https://jheun66.github.io/</loc>
-</url>
-<url>
-<loc>https://jheun66.github.io/categories/Algorithm/</loc>
-</url>
-<url>
-<loc>https://jheun66.github.io/categories/Android/</loc>
-</url>
-<url>
-<loc>https://jheun66.github.io/categories/Blog/</loc>
-</url>
-<url>
-<loc>https://jheun66.github.io/categories/Practice/</loc>
-</url>
-<url>
-<loc>https://jheun66.github.io/categories/Security/</loc>
-</url>
-<url>
-<loc>https://jheun66.github.io/google733e540d22d24509.html</loc>
-<lastmod>2021-10-03T03:26:28+00:00</lastmod>
-</url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/load-and-display-images-from-the-internet/</loc>
+      
+        <lastmod>2021-09-30T11:45:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/get-data-from-the-internet/</loc>
+      
+        <lastmod>2021-09-26T13:45:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/introduction-to-coroutines/</loc>
+      
+        <lastmod>2021-09-25T07:14:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/</loc>
+      
+        <lastmod>2021-09-22T04:47:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/</loc>
+      
+        <lastmod>2021-09-21T09:49:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/</loc>
+      
+        <lastmod>2021-09-11T10:57:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/store-data-in-viewmodel/</loc>
+      
+        <lastmod>2021-09-11T06:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/</loc>
+      
+        <lastmod>2021-08-26T14:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/algorithm/next-permutation/</loc>
+      
+        <lastmod>2021-08-21T21:28:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/escape-html/</loc>
+      
+        <lastmod>2021-08-18T15:05:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/collections-in-kotlin/</loc>
+      
+        <lastmod>2021-08-04T07:17:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/display-a-list-of-images-using-cards/</loc>
+      
+        <lastmod>2021-08-03T06:36:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list/</loc>
+      
+        <lastmod>2021-07-29T17:17:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/use-lists-in-kotlin/</loc>
+      
+        <lastmod>2021-07-29T09:30:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience/</loc>
+      
+        <lastmod>2021-07-28T08:05:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/change-the-app-icon/</loc>
+      
+        <lastmod>2021-07-28T08:02:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/change-the-app-theme/</loc>
+      
+        <lastmod>2021-07-28T08:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/calculate-the-tip/</loc>
+      
+        <lastmod>2021-07-28T07:58:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/</loc>
+      
+        <lastmod>2021-07-26T06:43:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/create-xml-layouts-for-android/</loc>
+      
+        <lastmod>2021-07-26T06:41:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/classes-and-inheritance-in-kotlin/</loc>
+      
+        <lastmod>2021-07-25T10:18:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/</loc>
+      
+        <lastmod>2021-07-22T02:49:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/net-err-cleartext-not-permitted/</loc>
+      
+        <lastmod>2021-07-22T02:25:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/add-a-button-to-an-app/</loc>
+      
+        <lastmod>2021-07-21T08:38:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/create-your-first-app/</loc>
+      
+        <lastmod>2021-07-21T03:55:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/practice/introduction-to-kotlin/</loc>
+      
+        <lastmod>2021-07-20T00:57:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/blog/install-jekyll/</loc>
+      
+        <lastmod>2021-06-13T12:46:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/blog/ruby-version-management/</loc>
+      
+        <lastmod>2021-06-13T12:01:11+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/screen-compatibility/</loc>
+      
+        <lastmod>2021-02-13T18:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/context/</loc>
+      
+        <lastmod>2021-02-12T18:30:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/buttons/</loc>
+      
+        <lastmod>2021-01-15T13:30:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/send-and-sendto/</loc>
+      
+        <lastmod>2021-01-14T02:30:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/resolveActivity-vs-queryIntentActivities/</loc>
+      
+        <lastmod>2021-01-13T05:30:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/implict-intent/</loc>
+      
+        <lastmod>2021-01-09T18:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/activities-and-intents-practice/</loc>
+      
+        <lastmod>2020-12-30T15:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/intent/</loc>
+      
+        <lastmod>2020-12-30T03:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/activity-lifecycle/</loc>
+      
+        <lastmod>2020-12-28T03:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/actiivties/</loc>
+      
+        <lastmod>2020-12-25T09:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/application-fundamentals/</loc>
+      
+        <lastmod>2020-12-23T22:18:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/android-support-library/</loc>
+      
+        <lastmod>2020-12-23T21:08:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/android/art/</loc>
+      
+        <lastmod>2020-12-14T08:08:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/security/ouath/</loc>
+      
+        <lastmod>2020-12-13T20:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/security/authentication-vs-authorization/</loc>
+      
+        <lastmod>2020-12-13T06:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/blog/my-first-post/</loc>
+      
+        <lastmod>2020-11-19T19:20:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+  
 </urlset>

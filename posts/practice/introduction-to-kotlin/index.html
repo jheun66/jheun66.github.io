@@ -24,6 +24,19 @@
   <link rel="canonical" href="https://jheun66.github.io/posts/practice/introduction-to-kotlin/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script type="module">
+// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+for (const tf of document.querySelectorAll('.mdc-text-field')) {
+    new mdc.textField.MDCTextField.attachTo(tf);
+}
+for (const list of document.querySelectorAll('.mdc-list')) {
+    new mdc.list.MDCList.attachTo(list);
+}
+</script>
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
@@ -48,7 +61,7 @@
 <meta property="twitter:title" content="Introduction to Kotlin" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Introduction to Kotlin","dateModified":"2021-07-20T00:57:00+00:00","datePublished":"2021-07-20T00:57:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/introduction-to-kotlin/"},"url":"https://jheun66.github.io/posts/practice/introduction-to-kotlin/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"개요","@type":"BlogPosting","headline":"Introduction to Kotlin","dateModified":"2021-07-20T00:57:00+00:00","datePublished":"2021-07-20T00:57:00+00:00","url":"https://jheun66.github.io/posts/practice/introduction-to-kotlin/","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/introduction-to-kotlin/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,7 +133,7 @@
 </header>
 
 <div class="container">
-  <div class="row min-vh-150 flex-column flex-lg-row">
+  <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
       <ol id="toc" class="amos-list-class">
@@ -140,7 +153,7 @@
     <span class="nf">println</span><span class="p">(</span><span class="s">"Happy Birthday!"</span><span class="p">)</span>
     <span class="nf">println</span><span class="p">(</span><span class="s">"Amos"</span><span class="p">)</span>
     <span class="nf">println</span><span class="p">(</span><span class="s">"You are 28!"</span><span class="p">)</span>
-	<span class="nf">print</span><span class="p">(</span><span class="s">"test string \n test string"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"test string \n test string"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -167,7 +180,7 @@
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">age</span> <span class="p">=</span> <span class="mi">24</span>
     <span class="kd">val</span> <span class="py">layers</span> <span class="p">=</span> <span class="mi">5</span>
-	<span class="nf">printCake</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">layers</span><span class="p">)</span>
+    <span class="nf">printCake</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">layers</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="k">fun</span> <span class="nf">printCake</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">layers</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
@@ -316,7 +329,7 @@
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
       </div>
     </div>
   </div>

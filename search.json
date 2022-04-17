@@ -1,0 +1,355 @@
+[
+  
+    {
+      "title"    : "Load and display images from the Internet",
+      "category" : "",
+      "tags"     : "Tutorial, Coil, RecyclerView, Building Adapter",
+      "url"      : "/posts/practice/load-and-display-images-from-the-internet/",
+      "date"     : "09/30/2021"
+    } ,
+  
+    {
+      "title"    : "Get data from the internet",
+      "category" : "",
+      "tags"     : "Tutorial, Retrofit, JSON, Moshi, Internet, Permissions",
+      "url"      : "/posts/practice/get-data-from-the-internet/",
+      "date"     : "09/26/2021"
+    } ,
+  
+    {
+      "title"    : "Introduction to coroutines",
+      "category" : "",
+      "tags"     : "Tutorial, Coroutine",
+      "url"      : "/posts/practice/introduction-to-coroutines/",
+      "date"     : "09/25/2021"
+    } ,
+  
+    {
+      "title"    : "Navigation and the back stack",
+      "category" : "",
+      "tags"     : "Tutorial, Tasks, BackStack",
+      "url"      : "/posts/practice/navigation-and-the-back-stack/",
+      "date"     : "09/22/2021"
+    } ,
+  
+    {
+      "title"    : "Shared ViewModel Across Fragment",
+      "category" : "",
+      "tags"     : "Tutorial, LiveData, DataBinding",
+      "url"      : "/posts/practice/shared-viewmodel-across-fragment/",
+      "date"     : "09/21/2021"
+    } ,
+  
+    {
+      "title"    : "Use LiveData with ViewModel",
+      "category" : "",
+      "tags"     : "Tutorial, LiveData, DataBinding",
+      "url"      : "/posts/practice/use-livedata-with-viewmodel/",
+      "date"     : "09/11/2021"
+    } ,
+  
+    {
+      "title"    : "Store data in ViewModel",
+      "category" : "",
+      "tags"     : "Tutorial, ViewModel, ViewBinding",
+      "url"      : "/posts/practice/store-data-in-viewmodel/",
+      "date"     : "09/11/2021"
+    } ,
+  
+    {
+      "title"    : "Fragments and the Navigation Component",
+      "category" : "",
+      "tags"     : "Tutorial, Fragment, Navigation Component",
+      "url"      : "/posts/practice/fragments-and-the-navigation-component/",
+      "date"     : "08/26/2021"
+    } ,
+  
+    {
+      "title"    : "next_permutation",
+      "category" : "",
+      "tags"     : "Permutation",
+      "url"      : "/posts/algorithm/next-permutation/",
+      "date"     : "08/21/2021"
+    } ,
+  
+    {
+      "title"    : "Escape HTML",
+      "category" : "",
+      "tags"     : "String, HTML",
+      "url"      : "/posts/android/escape-html/",
+      "date"     : "08/18/2021"
+    } ,
+  
+    {
+      "title"    : "Collections in Kotlin",
+      "category" : "",
+      "tags"     : "Kotlin, Tutorial",
+      "url"      : "/posts/practice/collections-in-kotlin/",
+      "date"     : "08/04/2021"
+    } ,
+  
+    {
+      "title"    : "Display a list of images using cards",
+      "category" : "",
+      "tags"     : "Kotlin, Tutorial",
+      "url"      : "/posts/practice/display-a-list-of-images-using-cards/",
+      "date"     : "08/03/2021"
+    } ,
+  
+    {
+      "title"    : "Use RecyclerView to display a scrollable list",
+      "category" : "",
+      "tags"     : "Kotlin, Tutorial",
+      "url"      : "/posts/practice/use-recyclerview-to-display-a-scrollable-list/",
+      "date"     : "07/29/2021"
+    } ,
+  
+    {
+      "title"    : "Use Lists in Kotlin",
+      "category" : "",
+      "tags"     : "Kotlin, Tutorial",
+      "url"      : "/posts/practice/use-lists-in-kotlin/",
+      "date"     : "07/29/2021"
+    } ,
+  
+    {
+      "title"    : "Create a more polished user experience",
+      "category" : "",
+      "tags"     : "Kotlin, Layouts, Tutorial",
+      "url"      : "/posts/practice/create-a-more-polished-user-experience/",
+      "date"     : "07/28/2021"
+    } ,
+  
+    {
+      "title"    : "Change the app icon",
+      "category" : "",
+      "tags"     : "Kotlin, Layouts, Tutorial",
+      "url"      : "/posts/practice/change-the-app-icon/",
+      "date"     : "07/28/2021"
+    } ,
+  
+    {
+      "title"    : "Change the app theme",
+      "category" : "",
+      "tags"     : "Kotlin, Layouts, Tutorial",
+      "url"      : "/posts/practice/change-the-app-theme/",
+      "date"     : "07/28/2021"
+    } ,
+  
+    {
+      "title"    : "Calculate the tip",
+      "category" : "",
+      "tags"     : "Kotlin, Tutorial",
+      "url"      : "/posts/practice/calculate-the-tip/",
+      "date"     : "07/28/2021"
+    } ,
+  
+    {
+      "title"    : "Use SwitchCompat from AppCompat or SwitchMaterial from Material library",
+      "category" : "",
+      "tags"     : "XML, Warning",
+      "url"      : "/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/",
+      "date"     : "07/26/2021"
+    } ,
+  
+    {
+      "title"    : "Create XML layouts for Android",
+      "category" : "",
+      "tags"     : "Kotlin, Tutorial",
+      "url"      : "/posts/practice/create-xml-layouts-for-android/",
+      "date"     : "07/26/2021"
+    } ,
+  
+    {
+      "title"    : "Classes and inheritance in Kotlin",
+      "category" : "",
+      "tags"     : "Kotlin",
+      "url"      : "/posts/practice/classes-and-inheritance-in-kotlin/",
+      "date"     : "07/25/2021"
+    } ,
+  
+    {
+      "title"    : "코드 블럭 syntax_highlight 적용",
+      "category" : "",
+      "tags"     : "github pages, rougify",
+      "url"      : "/posts/blog/codeblock-syntax-highlight/",
+      "date"     : "07/22/2021"
+    } ,
+  
+    {
+      "title"    : "net::ERR_CLEARTEXT_NOT_PERMITTED",
+      "category" : "",
+      "tags"     : "webview, Error",
+      "url"      : "/posts/android/net-err-cleartext-not-permitted/",
+      "date"     : "07/22/2021"
+    } ,
+  
+    {
+      "title"    : "Add a button to an app",
+      "category" : "",
+      "tags"     : "Kotlin, Tutorial",
+      "url"      : "/posts/practice/add-a-button-to-an-app/",
+      "date"     : "07/21/2021"
+    } ,
+  
+    {
+      "title"    : "Create your first app",
+      "category" : "",
+      "tags"     : "Kotlin, Tutorial",
+      "url"      : "/posts/practice/create-your-first-app/",
+      "date"     : "07/21/2021"
+    } ,
+  
+    {
+      "title"    : "Introduction to Kotlin",
+      "category" : "",
+      "tags"     : "Kotlin, Tutorial",
+      "url"      : "/posts/practice/introduction-to-kotlin/",
+      "date"     : "07/20/2021"
+    } ,
+  
+    {
+      "title"    : "Jekyll 설치 및 테스트",
+      "category" : "",
+      "tags"     : "jekyll, bundler, github pages",
+      "url"      : "/posts/blog/install-jekyll/",
+      "date"     : "06/13/2021"
+    } ,
+  
+    {
+      "title"    : "Ruby Version Management",
+      "category" : "",
+      "tags"     : "ruby, rbenv, github pages",
+      "url"      : "/posts/blog/ruby-version-management/",
+      "date"     : "06/13/2021"
+    } ,
+  
+    {
+      "title"    : "Screen Compatibility",
+      "category" : "",
+      "tags"     : "Screen, dp",
+      "url"      : "/posts/android/screen-compatibility/",
+      "date"     : "02/13/2021"
+    } ,
+  
+    {
+      "title"    : "Context",
+      "category" : "",
+      "tags"     : "Context, Application, Activity",
+      "url"      : "/posts/android/context/",
+      "date"     : "02/12/2021"
+    } ,
+  
+    {
+      "title"    : "Buttons(+background issue) And Gestures",
+      "category" : "",
+      "tags"     : "UX, UI, Button, Gesture",
+      "url"      : "/posts/android/buttons/",
+      "date"     : "01/15/2021"
+    } ,
+  
+    {
+      "title"    : "ACTION_SEND &amp; ACTION_SENDTO(이메일 인텐트)",
+      "category" : "",
+      "tags"     : "Activity, Intent",
+      "url"      : "/posts/android/send-and-sendto/",
+      "date"     : "01/14/2021"
+    } ,
+  
+    {
+      "title"    : "resolveActivity VS queryIntentActivities",
+      "category" : "",
+      "tags"     : "Activity, Intent",
+      "url"      : "/posts/android/resolveActivity-vs-queryIntentActivities/",
+      "date"     : "01/13/2021"
+    } ,
+  
+    {
+      "title"    : "Implict Intent",
+      "category" : "",
+      "tags"     : "Intent, Implict Intent",
+      "url"      : "/posts/android/implict-intent/",
+      "date"     : "01/09/2021"
+    } ,
+  
+    {
+      "title"    : "Activities And Intents Test",
+      "category" : "",
+      "tags"     : "Intent, Explict Intent",
+      "url"      : "/posts/android/activities-and-intents-practice/",
+      "date"     : "12/30/2020"
+    } ,
+  
+    {
+      "title"    : "Intent(Explict Intent)",
+      "category" : "",
+      "tags"     : "Intent, Explict Intent",
+      "url"      : "/posts/android/intent/",
+      "date"     : "12/30/2020"
+    } ,
+  
+    {
+      "title"    : "Activity Lifecycle",
+      "category" : "",
+      "tags"     : "Activity",
+      "url"      : "/posts/android/activity-lifecycle/",
+      "date"     : "12/28/2020"
+    } ,
+  
+    {
+      "title"    : "Activities",
+      "category" : "",
+      "tags"     : "Activity",
+      "url"      : "/posts/android/actiivties/",
+      "date"     : "12/25/2020"
+    } ,
+  
+    {
+      "title"    : "Application Fundamentals",
+      "category" : "",
+      "tags"     : "Android",
+      "url"      : "/posts/android/application-fundamentals/",
+      "date"     : "12/23/2020"
+    } ,
+  
+    {
+      "title"    : "ASL과 AndroidX Library",
+      "category" : "",
+      "tags"     : "Android, AndroidX, ASL",
+      "url"      : "/posts/android/android-support-library/",
+      "date"     : "12/23/2020"
+    } ,
+  
+    {
+      "title"    : "ART 이해하기",
+      "category" : "",
+      "tags"     : "Android, ART, Dalvik",
+      "url"      : "/posts/android/art/",
+      "date"     : "12/14/2020"
+    } ,
+  
+    {
+      "title"    : "OAuth 2.0",
+      "category" : "",
+      "tags"     : "Authentication, Authorization, OAuth",
+      "url"      : "/posts/security/ouath/",
+      "date"     : "12/13/2020"
+    } ,
+  
+    {
+      "title"    : "Authentication VS Authorization",
+      "category" : "",
+      "tags"     : "Authentication, Authorization, Word Meaning",
+      "url"      : "/posts/security/authentication-vs-authorization/",
+      "date"     : "12/13/2020"
+    } ,
+  
+    {
+      "title"    : "Serenity Prayer",
+      "category" : "",
+      "tags"     : "niebuhr, prayer",
+      "url"      : "/posts/blog/my-first-post/",
+      "date"     : "11/19/2020"
+    } 
+  
+]

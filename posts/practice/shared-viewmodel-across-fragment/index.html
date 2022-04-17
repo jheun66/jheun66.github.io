@@ -24,6 +24,19 @@
   <link rel="canonical" href="https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script type="module">
+// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+for (const tf of document.querySelectorAll('.mdc-text-field')) {
+    new mdc.textField.MDCTextField.attachTo(tf);
+}
+for (const list of document.querySelectorAll('.mdc-list')) {
+    new mdc.list.MDCList.attachTo(list);
+}
+</script>
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
@@ -48,7 +61,7 @@
 <meta property="twitter:title" content="Shared ViewModel Across Fragment" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Shared ViewModel Across Fragment","dateModified":"2021-09-21T09:49:00+00:00","datePublished":"2021-09-21T09:49:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/"},"url":"https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"개요","@type":"BlogPosting","headline":"Shared ViewModel Across Fragment","dateModified":"2021-09-21T09:49:00+00:00","datePublished":"2021-09-21T09:49:00+00:00","url":"https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -120,7 +133,7 @@
 </header>
 
 <div class="container">
-  <div class="row min-vh-150 flex-column flex-lg-row">
+  <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
       <ol id="toc" class="amos-list-class">
@@ -153,10 +166,10 @@
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
 
-<span class="err"> </span> <span class="err"> </span><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="nf">setContentView</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">main_activity</span><span class="p">)</span>
-<span class="err"> </span> <span class="err"> </span><span class="p">}</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+        <span class="nf">setContentView</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">main_activity</span><span class="p">)</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -291,8 +304,8 @@
 <p>Fragment의 onViewCraeted 메소드 안에 세팅</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">binding</span><span class="o">?.</span><span class="nf">apply</span> <span class="p">{</span>
-<span class="err"> </span> <span class="err"> </span> <span class="n">viewModel</span> <span class="p">=</span> <span class="n">sharedViewModel</span>
-<span class="err"> </span> <span class="err"> </span> <span class="o">..</span><span class="p">.</span>
+    <span class="n">viewModel</span> <span class="p">=</span> <span class="n">sharedViewModel</span>
+    <span class="o">..</span><span class="p">.</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -358,8 +371,7 @@
   <li><a href="https://developer.android.com/topic/libraries/data-binding/expressions">Layout and binding expressions</a></li>
   <li><a href="https://developer.android.com/topic/libraries/architecture/livedata#transform_livedata">Transform LiveData</a></li>
   <li><a href="https://developer.android.com/reference/java/text/SimpleDateFormat">SimpleDateFormat</a></li>
-  <li>
-<code class="language-plaintext highlighter-rouge">[apply</code> scope function in Kotlin](https://kotlinlang.org/docs/reference/scope-functions.html#apply)</li>
+  <li><a href="https://kotlinlang.org/docs/reference/scope-functions.html#apply">‘apply’ scope function in Kotlin</a></li>
   <li><a href="https://kotlinlang.org/docs/reference/properties.html#compile-time-constants">Compile-time Constants</a></li>
 </ul>
 
@@ -452,7 +464,7 @@
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2021</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
       </div>
     </div>
   </div>
