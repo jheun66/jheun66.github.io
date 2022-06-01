@@ -28,7 +28,7 @@
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<script type="module">
+<!-- <script type="module">
 // const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
 for (const tf of document.querySelectorAll('.mdc-text-field')) {
     new mdc.textField.MDCTextField.attachTo(tf);
@@ -36,14 +36,14 @@ for (const tf of document.querySelectorAll('.mdc-text-field')) {
 for (const list of document.querySelectorAll('.mdc-list')) {
     new mdc.list.MDCList.attachTo(list);
 }
-</script>
+</script> -->
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:hover {text-decoration: underline;}
-   </style>
-    
+    a.tag-link:hover {text-decoration: underline; cursor: pointer;}
+  </style>
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Blog | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
@@ -131,16 +131,193 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <!-- Category Post List -->
-<ul class="mdc-list mdc-list--two-line"></ul>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+    function showTag(selector) {
+        $('.default').hide();
+        $('.hidden_tag').hide();
+        $(selector).show();
+    }
+    function showDefault() {
+        $('.default').show();
+        $('.hidden_tag').hide();
+    }
+</script>
 
-<li class="mdc-list-item">
+<!-- Category Post List -->
+
+
+
+<!-- 모든 블로그 태그를 모은 뒤 중복 제거 -->
+
+<h4>
+  전체 보기
+</h4>
+<a class = "tag-link" onclick="showDefault()">
+  <span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>All</span>
+</a>
+<hr>
+<h4>
+  태그별 보기
+</h4>
+
+
+<a class = "tag-link" onclick="showTag('.tag')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>tag</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.jquery')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>jquery</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.sort')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>sort</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.simplejekyllsearch')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>simplejekyllsearch</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.material_io')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>material_io</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.github_pages')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>github_pages</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.rougify')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>rougify</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.jekyll')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>jekyll</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.bundler')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>bundler</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.ruby')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>ruby</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.rbenv')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>rbenv</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.niebuhr')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>niebuhr</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.prayer')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>prayer</span>
+</a>
+
+<hr>
+
+<ul class="mdc-list mdc-list--two-line">
+
+<li class="mdc-list-item default"><a href="/posts/blog/sort-by-tag/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/blog/add-search-function-to-my-blog/"><span class="mdc-list-item__primary-text">검색 기능 추가(Add search function to my blog)</span></a>
-      <span class="mdc-list-item__secondary-text">04/17/2022, <i class="fa fa-tag"></i>SimpleJekyllSearch, material.io</span>
+      <span class="mdc-list-item__primary-text">태그별로 분류하기(Sort by tag)</span>
+      <span class="mdc-list-item__secondary-text" >06/01/2022,
+        
+        
+        <i class="fa fa-tag"></i>tag
+        
+        
+        <i class="fa fa-tag"></i>jquery
+        
+        
+        <i class="fa fa-tag"></i>sort
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
+
+<!-- <article class="posts-list">
+    <a href="/posts/blog/sort-by-tag/">
+    <h2 class="post-title">태그별로 분류하기(Sort by tag)</h2>
+    
+    </a>
+    <p class="post-meta">
+        Posted by
+        
+        Eun JongHyeok
+        
+        on
+        June 01, 2022
+        &bullet; 
+        <a class="comment-link" href="/posts/blog/sort-by-tag/#disqus_thread" data-disqus-identifier="/posts/blog/sort-by-tag/">Join the discussion...</a>   
+    </p>
+</article>
+
+<hr> -->
+
+
+
+<li class="mdc-list-item hidden_tag tag" style="display:none"><a href="/posts/blog/sort-by-tag/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">태그별로 분류하기(Sort by tag)</span>
+    <span class="mdc-list-item__secondary-text" >06/01/2022, <i class="fa fa-tag"></i>tag, jquery, sort</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tag" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag jquery" style="display:none"><a href="/posts/blog/sort-by-tag/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">태그별로 분류하기(Sort by tag)</span>
+    <span class="mdc-list-item__secondary-text" >06/01/2022, <i class="fa fa-tag"></i>tag, jquery, sort</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag jquery" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag sort" style="display:none"><a href="/posts/blog/sort-by-tag/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">태그별로 분류하기(Sort by tag)</span>
+    <span class="mdc-list-item__secondary-text" >06/01/2022, <i class="fa fa-tag"></i>tag, jquery, sort</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag sort" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/blog/add-search-function-to-my-blog/" style="text-decoration:none">
+    <span class="mdc-list-item__ripple"></span>
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text">검색 기능 추가(Add search function to my blog)</span>
+      <span class="mdc-list-item__secondary-text" >04/17/2022,
+        
+        
+        <i class="fa fa-tag"></i>simplejekyllsearch
+        
+        
+        <i class="fa fa-tag"></i>material_io
+        
+      </span>
+    </span>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/blog/add-search-function-to-my-blog/">
@@ -162,13 +339,44 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag simplejekyllsearch" style="display:none"><a href="/posts/blog/add-search-function-to-my-blog/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">검색 기능 추가(Add search function to my blog)</span>
+    <span class="mdc-list-item__secondary-text" >04/17/2022, <i class="fa fa-tag"></i>SimpleJekyllSearch, material.io</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag simplejekyllsearch" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag material_io" style="display:none"><a href="/posts/blog/add-search-function-to-my-blog/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">검색 기능 추가(Add search function to my blog)</span>
+    <span class="mdc-list-item__secondary-text" >04/17/2022, <i class="fa fa-tag"></i>SimpleJekyllSearch, material.io</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag material_io" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/blog/codeblock-syntax-highlight/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/blog/codeblock-syntax-highlight/"><span class="mdc-list-item__primary-text">코드 블럭 syntax_highlight 적용</span></a>
-      <span class="mdc-list-item__secondary-text">07/22/2021, <i class="fa fa-tag"></i>github pages, rougify</span>
+      <span class="mdc-list-item__primary-text">코드 블럭 syntax_highlight 적용</span>
+      <span class="mdc-list-item__secondary-text" >07/22/2021,
+        
+        
+        <i class="fa fa-tag"></i>github_pages
+        
+        
+        <i class="fa fa-tag"></i>rougify
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/blog/codeblock-syntax-highlight/">
@@ -190,13 +398,47 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag github_pages" style="display:none"><a href="/posts/blog/codeblock-syntax-highlight/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">코드 블럭 syntax_highlight 적용</span>
+    <span class="mdc-list-item__secondary-text" >07/22/2021, <i class="fa fa-tag"></i>github pages, rougify</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag github_pages" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag rougify" style="display:none"><a href="/posts/blog/codeblock-syntax-highlight/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">코드 블럭 syntax_highlight 적용</span>
+    <span class="mdc-list-item__secondary-text" >07/22/2021, <i class="fa fa-tag"></i>github pages, rougify</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag rougify" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/blog/install-jekyll/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/blog/install-jekyll/"><span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span></a>
-      <span class="mdc-list-item__secondary-text">06/13/2021, <i class="fa fa-tag"></i>jekyll, bundler, github pages</span>
+      <span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span>
+      <span class="mdc-list-item__secondary-text" >06/13/2021,
+        
+        
+        <i class="fa fa-tag"></i>jekyll
+        
+        
+        <i class="fa fa-tag"></i>bundler
+        
+        
+        <i class="fa fa-tag"></i>github_pages
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/blog/install-jekyll/">
@@ -218,13 +460,57 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag jekyll" style="display:none"><a href="/posts/blog/install-jekyll/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span>
+    <span class="mdc-list-item__secondary-text" >06/13/2021, <i class="fa fa-tag"></i>jekyll, bundler, github pages</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag jekyll" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag bundler" style="display:none"><a href="/posts/blog/install-jekyll/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span>
+    <span class="mdc-list-item__secondary-text" >06/13/2021, <i class="fa fa-tag"></i>jekyll, bundler, github pages</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag bundler" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag github_pages" style="display:none"><a href="/posts/blog/install-jekyll/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span>
+    <span class="mdc-list-item__secondary-text" >06/13/2021, <i class="fa fa-tag"></i>jekyll, bundler, github pages</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag github_pages" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/blog/ruby-version-management/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/blog/ruby-version-management/"><span class="mdc-list-item__primary-text">Ruby Version Management</span></a>
-      <span class="mdc-list-item__secondary-text">06/13/2021, <i class="fa fa-tag"></i>ruby, rbenv, github pages</span>
+      <span class="mdc-list-item__primary-text">Ruby Version Management</span>
+      <span class="mdc-list-item__secondary-text" >06/13/2021,
+        
+        
+        <i class="fa fa-tag"></i>ruby
+        
+        
+        <i class="fa fa-tag"></i>rbenv
+        
+        
+        <i class="fa fa-tag"></i>github_pages
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/blog/ruby-version-management/">
@@ -246,13 +532,54 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag ruby" style="display:none"><a href="/posts/blog/ruby-version-management/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Ruby Version Management</span>
+    <span class="mdc-list-item__secondary-text" >06/13/2021, <i class="fa fa-tag"></i>ruby, rbenv, github pages</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag ruby" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag rbenv" style="display:none"><a href="/posts/blog/ruby-version-management/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Ruby Version Management</span>
+    <span class="mdc-list-item__secondary-text" >06/13/2021, <i class="fa fa-tag"></i>ruby, rbenv, github pages</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag rbenv" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag github_pages" style="display:none"><a href="/posts/blog/ruby-version-management/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Ruby Version Management</span>
+    <span class="mdc-list-item__secondary-text" >06/13/2021, <i class="fa fa-tag"></i>ruby, rbenv, github pages</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag github_pages" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/blog/my-first-post/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/blog/my-first-post/"><span class="mdc-list-item__primary-text">Serenity Prayer</span></a>
-      <span class="mdc-list-item__secondary-text">11/19/2020, <i class="fa fa-tag"></i>niebuhr, prayer</span>
+      <span class="mdc-list-item__primary-text">Serenity Prayer</span>
+      <span class="mdc-list-item__secondary-text" >11/19/2020,
+        
+        
+        <i class="fa fa-tag"></i>niebuhr
+        
+        
+        <i class="fa fa-tag"></i>prayer
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/blog/my-first-post/">
@@ -275,6 +602,28 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 
 
+<li class="mdc-list-item hidden_tag niebuhr" style="display:none"><a href="/posts/blog/my-first-post/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Serenity Prayer</span>
+    <span class="mdc-list-item__secondary-text" >11/19/2020, <i class="fa fa-tag"></i>niebuhr, prayer</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag niebuhr" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag prayer" style="display:none"><a href="/posts/blog/my-first-post/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Serenity Prayer</span>
+    <span class="mdc-list-item__secondary-text" >11/19/2020, <i class="fa fa-tag"></i>niebuhr, prayer</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag prayer" style="display:none">
+
+
+
+</ul>
 
     </div>
   </div>

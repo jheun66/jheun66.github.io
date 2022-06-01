@@ -27,7 +27,7 @@
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<script type="module">
+<!-- <script type="module">
 // const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
 for (const tf of document.querySelectorAll('.mdc-text-field')) {
     new mdc.textField.MDCTextField.attachTo(tf);
@@ -35,14 +35,14 @@ for (const tf of document.querySelectorAll('.mdc-text-field')) {
 for (const list of document.querySelectorAll('.mdc-list')) {
     new mdc.list.MDCList.attachTo(list);
 }
-</script>
+</script> -->
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:hover {text-decoration: underline;}
-   </style>
-    
+    a.tag-link:hover {text-decoration: underline; cursor: pointer;}
+  </style>
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>생각중 | What interests do i have.</title>
 <meta name="generator" content="Jekyll v4.2.0" />
@@ -147,11 +147,13 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           json: '/search.json',
           searchResultTemplate: `
               <li class="mdc-list-item">
+                <a href="{url}" style="text-decoration:none">
                 <span class="mdc-list-item__ripple"></span>
                 <span class="mdc-list-item__text">
-                  <a href="{url}"><span class="mdc-list-item__primary-text">{title}</span></a>
+                 <span class="mdc-list-item__primary-text">{title}</span>
                   <span class="mdc-list-item__secondary-text">{date}, <i class="fa fa-tag"></i>{tags}</span>
                 </span>
+                </a>
               </li><hr>
           `,
           sortMiddleware: function(a, b) {
@@ -172,7 +174,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <h2>
       <a href="/categories/Blog" style="text-decoration:none">
    
-        <strong class="category-title">Blog</strong> <span class="category-count">5</span>
+        <strong class="category-title">Blog</strong> <span class="category-count">6</span>
 
       </a>
       </h2>

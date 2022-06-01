@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Navigation and the back stack - 생각중
+    태그별로 분류하기(Sort by tag) - 생각중
     
   </title>
 
-  <meta name="description" content="개요">
+  <meta name="description" content="저번에는 검색기능을 이용하여 게시물을 찾아보았는데요 이번에는 태그를 이용하여 게시물을 분류하는 작업을 진행해보려 합니다.">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -21,7 +21,7 @@
   
   <link rel="stylesheet" href="/assets/highlight.css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/">
+  <link rel="canonical" href="https://jheun66.github.io/posts/blog/sort-by-tag/">
   <link rel="alternate" type="application/rss+xml" title="생각중" href="/feed.xml">
 
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
@@ -45,23 +45,23 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Navigation and the back stack | 생각중</title>
+<title>태그별로 분류하기(Sort by tag) | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Navigation and the back stack" />
+<meta property="og:title" content="태그별로 분류하기(Sort by tag)" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="개요" />
-<meta property="og:description" content="개요" />
-<link rel="canonical" href="https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/" />
-<meta property="og:url" content="https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/" />
+<meta name="description" content="저번에는 검색기능을 이용하여 게시물을 찾아보았는데요 이번에는 태그를 이용하여 게시물을 분류하는 작업을 진행해보려 합니다." />
+<meta property="og:description" content="저번에는 검색기능을 이용하여 게시물을 찾아보았는데요 이번에는 태그를 이용하여 게시물을 분류하는 작업을 진행해보려 합니다." />
+<link rel="canonical" href="https://jheun66.github.io/posts/blog/sort-by-tag/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/blog/sort-by-tag/" />
 <meta property="og:site_name" content="생각중" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-09-22T04:47:00+00:00" />
+<meta property="article:published_time" content="2022-06-01T16:35:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Navigation and the back stack" />
+<meta property="twitter:title" content="태그별로 분류하기(Sort by tag)" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","@type":"BlogPosting","headline":"Navigation and the back stack","dateModified":"2021-09-22T04:47:00+00:00","datePublished":"2021-09-22T04:47:00+00:00","url":"https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"description":"저번에는 검색기능을 이용하여 게시물을 찾아보았는데요 이번에는 태그를 이용하여 게시물을 분류하는 작업을 진행해보려 합니다.","@type":"BlogPosting","headline":"태그별로 분류하기(Sort by tag)","dateModified":"2022-06-01T16:35:00+00:00","datePublished":"2022-06-01T16:35:00+00:00","url":"https://jheun66.github.io/posts/blog/sort-by-tag/","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/blog/sort-by-tag/"},"author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -113,20 +113,20 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <!-- Page Header -->
 
   
-    <header class="masthead" style="background-image: url('/img/bg-practice.jpg')">
+    <header class="masthead" style="background-image: url('/img/bg-blog.jpg')">
 
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-heading">
-          <h1>Navigation and the back stack</h1>
+          <h1>태그별로 분류하기(Sort by tag)</h1>
           
           <span class="meta">Posted by
             <a href="#">Eun JongHyeok</a>
-            on September 22, 2021
+            on June 01, 2022
           </span>
-          <i class="fa fa-tag"></i>Tutorial, Tasks, BackStack
+          <i class="fa fa-tag"></i>tag, jquery, sort
         </div>
       </div>
     </div>
@@ -138,91 +138,111 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <div class="col-lg-8 col-md-10 mx-auto">
   
       <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
-<li class="toc-entry toc-h1"><a href="#implement-up-button-behavior">Implement Up button behavior</a></li>
-<li class="toc-entry toc-h1"><a href="#learn-about-tasks-and-back-stack">Learn about tasks and back stack</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#tasks">Tasks</a></li>
-<li class="toc-entry toc-h2"><a href="#pop-additional-destinations-off-the-back-stack">Pop additional destinations off the back stack</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
-</ol><h1 id="개요">
-<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+<li class="toc-entry toc-h1"><a href="#스크립트-추가">스크립트 추가</a></li>
+<li class="toc-entry toc-h1"><a href="#동작-확인">동작 확인</a></li>
+</ol><p>저번에는 검색기능을 이용하여 게시물을 찾아보았는데요
+이번에는 태그를 이용하여 게시물을 분류하는 작업을 진행해보려 합니다.</p>
 
-<p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-4">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
+<p>사실 말이 분류작업이지 실상은 리스트들을 미리 생성해놓고 숨겨놨다가 다시 띄워주려합니다. 웹개발을 해본적도 없기도하고 잘 아는 것도 아니라 그냥 이곳 저곳 코드보고 저한테 맞게 조금 수정한거라 그점 이해해 주시면 감사하겠습니다.</p>
 
-<h1 id="implement-up-button-behavior">
-<a class="anchor" href="#implement-up-button-behavior" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implement Up button behavior</h1>
+<p><a href="https://johngrib.github.io/wiki/jekyll-category-tag/">참고한 블로그</a></p>
 
-<p>각 프래그먼트 별로 액션바를 만들기위해 <code class="language-plaintext highlighter-rouge">setupActionBarWithNavController()</code>를 사용했었음.</p>
+<p>제가 원하던 방식이 딱 이런 느낌이었습니다. 태그가 표시되어 있고 태그 클릭하면 태그에 맞는 글만 보이도록 하고 싶었습니다.<br>
+하지면 별도로 tag만을 위한 페이지를 만들고 싶지는 않았고 저의 카테고리 페이지 내에서만 동작시키고 싶었습니다.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">activity_main</span><span class="p">)</span> <span class="p">{</span>
+<h1 id="스크립트-추가">
+<a class="anchor" href="#%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%B6%94%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>스크립트 추가</h1>
 
-    <span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">navController</span><span class="p">:</span> <span class="nc">NavController</span>
+<p>그래서 다음과 같이 함수를 추가해보았습니다.</p>
 
-    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
-        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
-
-        <span class="kd">val</span> <span class="py">navHostFragment</span> <span class="p">=</span> <span class="n">supportFragmentManager</span>
-                <span class="p">.</span><span class="nf">findFragmentById</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">nav_host_fragment</span><span class="p">)</span> <span class="k">as</span> <span class="nc">NavHostFragment</span>
-        <span class="n">navController</span> <span class="p">=</span> <span class="n">navHostFragment</span><span class="p">.</span><span class="n">navController</span>
-
-        <span class="nf">setupActionBarWithNavController</span><span class="p">(</span><span class="n">navController</span><span class="p">)</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.2.0.min.js"</span> <span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    <span class="kd">function</span> <span class="nx">showTag</span><span class="p">(</span><span class="nx">selector</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.default</span><span class="dl">'</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.hidden_tag</span><span class="dl">'</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
     <span class="p">}</span>
-<span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">showDefault</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.default</span><span class="dl">'</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.hidden_tag</span><span class="dl">'</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 
-<p>이때 액션바에 up 버튼이 생기는데 이 동작을 처리하기 위해선 onSupportNavigateUp() 함수를 사용함</p>
+<p>기존 카테고리로 출력해주던건 default로 클래스 분류해주고 새로 각 태그 클래스를 hidden_tag와 해당 태그로 클래스를 분류하여 새로 만들었습니다.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onSupportNavigateUp</span><span class="p">():</span> <span class="nc">Boolean</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">navController</span><span class="p">.</span><span class="nf">navigateUp</span><span class="p">()</span> <span class="p">||</span> <span class="k">super</span><span class="p">.</span><span class="nf">onSupportNavigateUp</span><span class="p">()</span>
-<span class="p">}</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"mdc-list mdc-list--two-line"</span><span class="nt">&gt;</span>
+{% for post in paginator.posts %}
+<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mdc-list-item default"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.baseurl }}{{ post.url }}"</span> <span class="na">style=</span><span class="s">"text-decoration:none"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__ripple"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__text"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__primary-text"</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__secondary-text"</span> <span class="nt">&gt;</span>{{ post.date | date: '%m/%d/%Y' }},
+        {% for tag in post.tags %}
+        {% assign refined_tag = tag | downcase | replace: ".", "_" | replace: " ", "_"%}
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-tag"</span><span class="nt">&gt;&lt;/i&gt;</span>{{ refined_tag }}
+        {% endfor %}
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;hr</span> <span class="na">class =</span><span class="s">"default"</span><span class="nt">&gt;</span>
+{% for tag in post.tags %}
+{% assign refined_tag = tag | downcase | replace: ".", "_" | replace: " ", "_"%}
+<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mdc-list-item hidden_tag {{refined_tag}}"</span> <span class="na">style=</span><span class="s">"display:none"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.baseurl }}{{ post.url }}"</span> <span class="na">style=</span><span class="s">"text-decoration:none"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__ripple"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__primary-text"</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__secondary-text"</span> <span class="nt">&gt;</span>{{ post.date | date: '%m/%d/%Y' }}, <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-tag"</span><span class="nt">&gt;&lt;/i&gt;</span>{{ post.tags | join: ', '}}<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;hr</span> <span class="na">class =</span><span class="s">"hidden_tag {{refined_tag}}"</span> <span class="na">style=</span><span class="s">"display:none"</span><span class="nt">&gt;</span>
+{% endfor %}
+{% endfor %}
+<span class="nt">&lt;/ul&gt;</span>
 </code></pre></div></div>
 
-<h1 id="learn-about-tasks-and-back-stack">
-<a class="anchor" href="#learn-about-tasks-and-back-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn about tasks and back stack</h1>
+<p>이후에는 카테고리내에 있는 모든 태그를 Liquid 문법을 이용하여 다 처리해준 뒤 jquery 함수에 연결하였습니다.</p>
 
-<h2 id="tasks">
-<a class="anchor" href="#tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tasks</h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Category Post List --&gt;</span>
+{% assign all = "" %}
+{% for post in paginator.posts %}
+  {% if all == "" %}
+    {% capture var %}{{ post.tags | join: ", " }}{% endcapture %}
+  {% else %}
+    {% capture var %}{{ all }}, {{ post.tags | join: ", " }}{% endcapture %}
+  {% endif %}
+  {% assign all = var %}
+{% endfor %}
 
-<p>안드로이드에서 액티비티들은 task안에 존재.</p>
+<span class="c">&lt;!-- 모든 블로그 태그를 모은 뒤 중복 제거 --&gt;</span>
+{% assign tagset = all | split: ", " | uniq %}
+<span class="nt">&lt;h4&gt;</span>
+  전체 보기
+<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class = </span><span class="s">"tag-link"</span> <span class="na">onclick=</span><span class="s">"showDefault()"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__primary-text"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-tag"</span><span class="nt">&gt;&lt;/i&gt;</span>All<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;h4&gt;</span>
+  태그별 보기
+<span class="nt">&lt;/h4&gt;</span>
+{% for tag in tagset %}
+{% assign refined_tag = tag | downcase | replace: ".", "_" | replace: " ", "_"%}
+<span class="nt">&lt;a</span> <span class="na">class = </span><span class="s">"tag-link"</span> <span class="na">onclick=</span><span class="s">"showTag('.{{refined_tag}}')"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__primary-text"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-tag"</span><span class="nt">&gt;&lt;/i&gt;</span>{{ refined_tag }}<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+{% endfor %}
+<span class="nt">&lt;hr&gt;</span>
+</code></pre></div></div>
 
-<p>액티비티들은 Back stack이라는 스택에 쌓임. 백스택은 사용자가 뒤로가기를 할 때 유용하게 사용할 수 있음</p>
+<h1 id="동작-확인">
+<a class="anchor" href="#%EB%8F%99%EC%9E%91-%ED%99%95%EC%9D%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>동작 확인</h1>
 
-<p>같은 방식으로 프레그먼트 역시 백스택 내의 액티비티안에 쌓이게됨.</p>
+<p><img src="/img/posts/blog/tags.gif" alt="tags.gif" width="100%"></p>
 
-<h2 id="pop-additional-destinations-off-the-back-stack">
-<a class="anchor" href="#pop-additional-destinations-off-the-back-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pop additional destinations off the back stack</h2>
+<p>잘 동작하는군요.</p>
 
-<p>nav_graph 파일에서 추가해줌</p>
-
-<p><img src="/img/posts/android/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-09-22_%EC%98%A4%ED%9B%84_12.22.02.png" alt="스크린샷 2021-09-22 오후 12.22.02.png" width="50%"></p>
-
-<h3 id="navigation-action-popupto-attribute">Navigation action: popUpTo attribute</h3>
-
-<p>목적지까지 백스택에서 계속 popUp 시키고 그 후에 action 수행(backstack에 추가)</p>
-
-<h3 id="navigation-action-popuptoinclusive-attribute">Navigation action: popUpToInclusive attribute</h3>
-
-<p>true일 경우 이미 존재하면 backstack에 추가하지 않음</p>
-
-<h1 id="learn-more">
-<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
-</h1>
-
-<p>추가 공부해야할 링크들</p>
-
-<ul>
-  <li><a href="https://developer.android.com/guide/navigation/navigation-principles">Principles of navigation</a></li>
-  <li><a href="https://developer.android.com/guide/components/activities/tasks-and-back-stack">Understand tasks and back stack</a></li>
-  <li><a href="https://developer.android.com/guide/navigation/navigation-navigate#back-stack">Navigation and the back stack</a></li>
-  <li><a href="https://developer.android.com/guide/navigation/navigation-navigate#pop">popUpTo and popUpToInclusive</a></li>
-  <li><a href="https://developer.android.com/guide/components/intents-common#Email">Email intent</a></li>
-  <li><a href="https://developer.android.com/guide/topics/resources/string-resource#formatting-strings">Formatting strings</a></li>
-  <li><a href="https://developer.android.com/guide/topics/resources/string-resource#Plurals">Quantity strings (plurals)</a></li>
-  <li><a href="https://kotlinlang.org/docs/reference/null-safety.html#elvis-operator">Elvis operator in Kotlin</a></li>
-</ul>
+<p>개인적으로 원하는 블로그 기능은 다 구현한거 같아 다른 필요를 느낄 때까지는 블로그 개발관련 포스트는 안올릴꺼 같습니다.</p>
 
       
       
@@ -233,8 +253,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
           
           var disqus_config = function () {
-          this.page.url = 'https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/';  // Replace PAGE_URL with your page's canonical URL variable
-          this.page.identifier = '/posts/practice/navigation-and-the-back-stack/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          this.page.url = 'https://jheun66.github.io/posts/blog/sort-by-tag/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/blog/sort-by-tag/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
           };
           
           (function() { // DON'T EDIT BELOW THIS LINE

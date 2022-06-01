@@ -28,7 +28,7 @@
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<script type="module">
+<!-- <script type="module">
 // const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
 for (const tf of document.querySelectorAll('.mdc-text-field')) {
     new mdc.textField.MDCTextField.attachTo(tf);
@@ -36,14 +36,14 @@ for (const tf of document.querySelectorAll('.mdc-text-field')) {
 for (const list of document.querySelectorAll('.mdc-list')) {
     new mdc.list.MDCList.attachTo(list);
 }
-</script>
+</script> -->
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:hover {text-decoration: underline;}
-   </style>
-    
+    a.tag-link:hover {text-decoration: underline; cursor: pointer;}
+  </style>
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Security | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
@@ -131,16 +131,79 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <!-- Category Post List -->
-<ul class="mdc-list mdc-list--two-line"></ul>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+    function showTag(selector) {
+        $('.default').hide();
+        $('.hidden_tag').hide();
+        $(selector).show();
+    }
+    function showDefault() {
+        $('.default').show();
+        $('.hidden_tag').hide();
+    }
+</script>
 
-<li class="mdc-list-item">
+<!-- Category Post List -->
+
+
+
+<!-- 모든 블로그 태그를 모은 뒤 중복 제거 -->
+
+<h4>
+  전체 보기
+</h4>
+<a class = "tag-link" onclick="showDefault()">
+  <span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>All</span>
+</a>
+<hr>
+<h4>
+  태그별 보기
+</h4>
+
+
+<a class = "tag-link" onclick="showTag('.authentication')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>authentication</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.authorization')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>authorization</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.oauth')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>oauth</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.word_meaning')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>word_meaning</span>
+</a>
+
+<hr>
+
+<ul class="mdc-list mdc-list--two-line">
+
+<li class="mdc-list-item default"><a href="/posts/security/ouath/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/security/ouath/"><span class="mdc-list-item__primary-text">OAuth 2.0</span></a>
-      <span class="mdc-list-item__secondary-text">12/13/2020, <i class="fa fa-tag"></i>Authentication, Authorization, OAuth</span>
+      <span class="mdc-list-item__primary-text">OAuth 2.0</span>
+      <span class="mdc-list-item__secondary-text" >12/13/2020,
+        
+        
+        <i class="fa fa-tag"></i>authentication
+        
+        
+        <i class="fa fa-tag"></i>authorization
+        
+        
+        <i class="fa fa-tag"></i>oauth
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/security/ouath/">
@@ -162,13 +225,57 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag authentication" style="display:none"><a href="/posts/security/ouath/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">OAuth 2.0</span>
+    <span class="mdc-list-item__secondary-text" >12/13/2020, <i class="fa fa-tag"></i>Authentication, Authorization, OAuth</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag authentication" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag authorization" style="display:none"><a href="/posts/security/ouath/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">OAuth 2.0</span>
+    <span class="mdc-list-item__secondary-text" >12/13/2020, <i class="fa fa-tag"></i>Authentication, Authorization, OAuth</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag authorization" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag oauth" style="display:none"><a href="/posts/security/ouath/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">OAuth 2.0</span>
+    <span class="mdc-list-item__secondary-text" >12/13/2020, <i class="fa fa-tag"></i>Authentication, Authorization, OAuth</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag oauth" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/security/authentication-vs-authorization/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/security/authentication-vs-authorization/"><span class="mdc-list-item__primary-text">Authentication VS Authorization</span></a>
-      <span class="mdc-list-item__secondary-text">12/13/2020, <i class="fa fa-tag"></i>Authentication, Authorization, Word Meaning</span>
+      <span class="mdc-list-item__primary-text">Authentication VS Authorization</span>
+      <span class="mdc-list-item__secondary-text" >12/13/2020,
+        
+        
+        <i class="fa fa-tag"></i>authentication
+        
+        
+        <i class="fa fa-tag"></i>authorization
+        
+        
+        <i class="fa fa-tag"></i>word_meaning
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/security/authentication-vs-authorization/">
@@ -191,6 +298,38 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 
 
+<li class="mdc-list-item hidden_tag authentication" style="display:none"><a href="/posts/security/authentication-vs-authorization/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Authentication VS Authorization</span>
+    <span class="mdc-list-item__secondary-text" >12/13/2020, <i class="fa fa-tag"></i>Authentication, Authorization, Word Meaning</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag authentication" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag authorization" style="display:none"><a href="/posts/security/authentication-vs-authorization/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Authentication VS Authorization</span>
+    <span class="mdc-list-item__secondary-text" >12/13/2020, <i class="fa fa-tag"></i>Authentication, Authorization, Word Meaning</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag authorization" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag word_meaning" style="display:none"><a href="/posts/security/authentication-vs-authorization/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Authentication VS Authorization</span>
+    <span class="mdc-list-item__secondary-text" >12/13/2020, <i class="fa fa-tag"></i>Authentication, Authorization, Word Meaning</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag word_meaning" style="display:none">
+
+
+
+</ul>
 
     </div>
   </div>

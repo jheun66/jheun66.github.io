@@ -5,9 +5,128 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Apr 2022 18:42:52 +0000</pubDate>
-    <lastBuildDate>Sun, 17 Apr 2022 18:42:52 +0000</lastBuildDate>
+    <pubDate>Wed, 01 Jun 2022 17:50:35 +0000</pubDate>
+    <lastBuildDate>Wed, 01 Jun 2022 17:50:35 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>태그별로 분류하기(Sort by tag)</title>
+        <description>&lt;p&gt;저번에는 검색기능을 이용하여 게시물을 찾아보았는데요
+이번에는 태그를 이용하여 게시물을 분류하는 작업을 진행해보려 합니다.&lt;/p&gt;
+
+&lt;p&gt;사실 말이 분류작업이지 실상은 리스트들을 미리 생성해놓고 숨겨놨다가 다시 띄워주려합니다. 웹개발을 해본적도 없기도하고 잘 아는 것도 아니라 그냥 이곳 저곳 코드보고 저한테 맞게 조금 수정한거라 그점 이해해 주시면 감사하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://johngrib.github.io/wiki/jekyll-category-tag/&quot;&gt;참고한 블로그&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;제가 원하던 방식이 딱 이런 느낌이었습니다. 태그가 표시되어 있고 태그 클릭하면 태그에 맞는 글만 보이도록 하고 싶었습니다.&lt;br /&gt;
+하지면 별도로 tag만을 위한 페이지를 만들고 싶지는 않았고 저의 카테고리 페이지 내에서만 동작시키고 싶었습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;스크립트-추가&quot;&gt;스크립트 추가&lt;/h1&gt;
+
+&lt;p&gt;그래서 다음과 같이 함수를 추가해보았습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://code.jquery.com/jquery-3.2.0.min.js&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;showTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.default&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.hidden_tag&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;showDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.default&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.hidden_tag&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;기존 카테고리로 출력해주던건 default로 클래스 분류해주고 새로 각 태그 클래스를 hidden_tag와 해당 태그로 클래스를 분류하여 새로 만들었습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list mdc-list--two-line&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+{% for post in paginator.posts %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item default&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.baseurl }}{{ post.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-decoration:none&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__ripple&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__primary-text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ post.title }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__secondary-text&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ post.date | date: '%m/%d/%Y' }},
+        {% for tag in post.tags %}
+        {% assign refined_tag = tag | downcase | replace: &quot;.&quot;, &quot;_&quot; | replace: &quot; &quot;, &quot;_&quot;%}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fa fa-tag&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt;{{ refined_tag }}
+        {% endfor %}
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+{% for tag in post.tags %}
+{% assign refined_tag = tag | downcase | replace: &quot;.&quot;, &quot;_&quot; | replace: &quot; &quot;, &quot;_&quot;%}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item hidden_tag {{refined_tag}}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;display:none&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.baseurl }}{{ post.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-decoration:none&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__ripple&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__primary-text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ post.title }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__secondary-text&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ post.date | date: '%m/%d/%Y' }}, &lt;span class=&quot;nt&quot;&gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fa fa-tag&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt;{{ post.tags | join: ', '}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hidden_tag {{refined_tag}}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;display:none&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+{% endfor %}
+{% endfor %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이후에는 카테고리내에 있는 모든 태그를 Liquid 문법을 이용하여 다 처리해준 뒤 jquery 함수에 연결하였습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Category Post List --&amp;gt;&lt;/span&gt;
+{% assign all = &quot;&quot; %}
+{% for post in paginator.posts %}
+  {% if all == &quot;&quot; %}
+    {% capture var %}{{ post.tags | join: &quot;, &quot; }}{% endcapture %}
+  {% else %}
+    {% capture var %}{{ all }}, {{ post.tags | join: &quot;, &quot; }}{% endcapture %}
+  {% endif %}
+  {% assign all = var %}
+{% endfor %}
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 모든 블로그 태그를 모은 뒤 중복 제거 --&amp;gt;&lt;/span&gt;
+{% assign tagset = all | split: &quot;, &quot; | uniq %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h4&amp;gt;&lt;/span&gt;
+  전체 보기
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h4&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class = &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tag-link&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onclick=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;showDefault()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__primary-text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fa fa-tag&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt;All&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h4&amp;gt;&lt;/span&gt;
+  태그별 보기
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h4&amp;gt;&lt;/span&gt;
+{% for tag in tagset %}
+{% assign refined_tag = tag | downcase | replace: &quot;.&quot;, &quot;_&quot; | replace: &quot; &quot;, &quot;_&quot;%}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class = &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tag-link&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onclick=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;showTag('.{{refined_tag}}')&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-list-item__primary-text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fa fa-tag&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt;{{ refined_tag }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+{% endfor %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;동작-확인&quot;&gt;동작 확인&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/blog/tags.gif&quot; alt=&quot;tags.gif&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;잘 동작하는군요.&lt;/p&gt;
+
+&lt;p&gt;개인적으로 원하는 블로그 기능은 다 구현한거 같아 다른 필요를 느낄 때까지는 블로그 개발관련 포스트는 안올릴꺼 같습니다.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 01 Jun 2022 16:35:00 +0000</pubDate>
+        <link>https://jheun66.github.io/posts/blog/sort-by-tag/</link>
+        <guid isPermaLink="true">https://jheun66.github.io/posts/blog/sort-by-tag/</guid>
+        
+        <category>tag</category>
+        
+        <category>jquery</category>
+        
+        <category>sort</category>
+        
+        
+        <category>Blog</category>
+        
+      </item>
     
       <item>
         <title>검색 기능 추가(Add search function to my blog)</title>
@@ -88,22 +207,10 @@
 &lt;h3 id=&quot;검색-인풋-필드에-material-design-적용하기&quot;&gt;검색 인풋 필드에 Material Design 적용하기&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://material.io/components/text-fields&quot;&gt;https://material.io/components/text-fields&lt;/a&gt;를 적용해보려 합니다.&lt;br /&gt;
 cdn을 이용해서 다음과 같이 빠르게 적용해볼 수 있습니다.&lt;br /&gt;
-&lt;strong&gt;instantiation&lt;/strong&gt;을 해주고&lt;/p&gt;
+&lt;strong&gt;link&lt;/strong&gt;를 해주고&lt;/p&gt;
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;module&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 검색창&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tf&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.mdc-text-field&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mdc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MDCTextField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attachTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 결과 리스트&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.mdc-list&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mdc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MDCList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attachTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;자신이 원하는 모양을 적용해줍니다.&lt;/p&gt;
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;label&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mdc-text-field mdc-text-field--filled&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -4042,125 +4149,6 @@ jekyll new ./
         
         
         <category>Blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Screen Compatibility</title>
-        <description>&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
-&lt;p&gt;안드로이드 기기는 매우 다양한 화면 크기와 다양한 픽셀 밀도를 가지고 있습니다. 또한 일부 기기는 다른 일반적인 기기와 모양이 조금 다르기도 합니다. 그렇기 때문에 화면을 디자인 할 때 모든 기기에서 만족스러운 모양이 나오게 하는 것은 힘듭니다.&lt;/p&gt;
-
-&lt;p&gt;따라서 이와 관련된 개발자 문서를 정리해봅니다. 자세한 내용은 참조에서 개발자 문서를 확인하면 좋을 것입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;다른-화면-크기&quot;&gt;다른 화면 크기&lt;/h2&gt;
-&lt;p&gt;디자인을 다양한 화면 크기에 적용하는 방법으로 레이아웃을 유연하게 구성하는 방법이 있습니다.&lt;/p&gt;
-
-&lt;p&gt;ConstraintLayout은 유연한 레이아웃을 구성하기 좋은 레이아웃입니다. 다른 뷰들과의 공간적 제약, 관계 등을 이용하여 구성하므로 화면의 크기가 달라지더라도 관계에 의해 배치되게됩니다. 개인적으로 ConstraintLayout은 다른 레이아웃에 비해 어렵게 느껴지지만 익숙해지면 보다 깔끔한 레이아웃을 구현하는데 도움을 줄 것이라 생각합니다. ConstraintLayout에 대한 정리는 따로 하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;또한 하드 코딩 레이아웃 크기를 사용하지 않는 것이 있습니다. 만일 뷰의 크기를 300dpx300dp 이런 식으로 지정한다면 크기가 다른 화면에서는 짤리거나 어색하게 배치될 수 있기 때문입니다.&lt;/p&gt;
-
-&lt;p&gt;다른 방법으로는 대체 레이아웃을 만드는 방법이 있습니다. 화면 크기에 따라 레이아웃을 다르게 배치하는 방법입니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;기본 레이아웃을 열고 툴바에서 Orientation for Preview 를 클릭합니다.&lt;br /&gt;
-&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.23.24.png&quot; alt=&quot;Capture1&quot; width=&quot;100%&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;드롭다운 목록에서 Create Landscape Variant와 같은 추천 변형을 클릭하여 만들거나 Create Other를 클릭합니다.&lt;br /&gt;
-&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.24.04.png&quot; alt=&quot;Capture2&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Create Other를 선택한 경우 Select Resource Directory가 나타납니다. 여기에서 왼쪽의 화면 한정자를 선택하여 Chosen qualifiers 목록에 추가합니다. 한정자를 추가했으면 OK를 클릭합니다.&lt;br /&gt;
-&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.25.09.png&quot; alt=&quot;Capture3&quot; width=&quot;100%&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;qualifiers, 다양한 한정자들로 레이아웃을 나누어 작성할 수 있습니다.
-그리고 동일한 구성요소는 프래그먼트로 UI Component를 모듈화하여 중복되지 않도록 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;다른-픽셀-밀도&quot;&gt;다른 픽셀 밀도&lt;/h2&gt;
-&lt;p&gt;레이아웃을 구성할 때 주로 px보다는 dp를 많이 보셨을 것입니다. dp는 밀도 돌립형 필셀이라는 의미로 다양한 밀도에서 동일한 크기의 뷰를 그려주기 위해 필요합니다. 당연히 같은 화면 크기라도 어떤 기기에서는 고화질로 더 많은 픽셀로 이루어져 있기 때문에 px을 기준으로 디자인할 경우 픽셀 밀도에 띠라 다른 결과가 나오기 마련입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;dp-계산법&quot;&gt;dp 계산법&lt;/h3&gt;
-&lt;p&gt;1dp는 160dpi라는 기준 밀도에서 1픽셀과 동일한 가상의 픽셀 단위입니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;px = dp * (dpi / 160)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;다른 dpi에서의 계산은 다음과 같이 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/android/스크린샷 2021-02-14 오전 2.45.41.png&quot; alt=&quot;Capture3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;역으로 Pixel2라는 기기에서 가로 dp를 계산은 다음과 같이 작성할 수 있습니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;dp = px * (160 / dpi)
-411.428… = 1080 * (160 / 420)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;밀도한정자를 통해서 밀도가 다른 레이아웃에 다른 dp 값을 적용시킬 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;개발자 문서에 나와있는 밀도 한정자에 대한 표입니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;밀도 한정자&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ldpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;저밀도(ldpi)의 화면(~120dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;mdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;중밀도(mdpi)의 화면(~160dpi)에 대한 리소스입니다. (이것이 기준 밀도입니다.)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;hdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;고밀도(hdpi)의 화면(~240dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;xhdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;초고밀도(xhdpi)의 화면(~320dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;xxhdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;초초고밀도(xxhdpi)의 화면(~480dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;xxxhdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;초초초고밀도(xxxhdpi) 사용(~640dpi)에 대한 리소스입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;nodpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;모든 밀도에 대한 리소스입니다. 이들은 밀도 독립적 리소스입니다. 이 한정자 태그가 지정된 리소스의 경우 현재 화면의 밀도에 관계없이 시스템에서 리소스 크기를 조정하지 않습니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;tvdpi&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;mdpi와 hdpi 사이의 화면(약 213dpi)에 대한 리소스입니다. 이 값은 ‘기본’ 밀도 그룹으로 간주되지 않습니다. 대개의 경우 텔레비전용이며 앱에서는 대부분 필요하지 않습니다. 앱은 대부분 mdpi 및 hdpi 리소스를 제공하는 것으로 충분하며 시스템에서 필요에 따라 확장합니다. tvdpi 리소스를 제공해야 한다고 생각되는 경우 1.33*mdpi로 크기를 지정합니다. 예를 들어 mdpi 화면의 100px x 100px 이미지가 tvdpi에서는 133px x 133px입니다.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;display-cutout&quot;&gt;display cutout&lt;/h2&gt;
-&lt;p&gt;컷아웃은 흔히 알고있는 애플의 노치 디스플레이처럼 액정이 직사각형이 아니라 일부가 홈이 파여있는 기기에서 해당 영역을 어떻게 처리하는지에 대한 것입니다. 이에 대해서는 따로 설명하도록 하겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;test&quot;&gt;Test&lt;/h2&gt;
-&lt;p&gt;가상 에뮬레이터를 이용하거나 
-&lt;a href=&quot;https://firebase.google.com/docs/test-lab/&quot;&gt;Firebase Test Lab&lt;/a&gt;를 이용하도록 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/guide/practices/screens_support&quot;&gt;https://developer.android.com/guide/practices/screens_support&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 13 Feb 2021 18:00:00 +0000</pubDate>
-        <link>https://jheun66.github.io/posts/android/screen-compatibility/</link>
-        <guid isPermaLink="true">https://jheun66.github.io/posts/android/screen-compatibility/</guid>
-        
-        <category>Screen</category>
-        
-        <category>dp</category>
-        
-        
-        <category>Android</category>
         
       </item>
     

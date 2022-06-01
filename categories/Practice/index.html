@@ -28,7 +28,7 @@
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-<script type="module">
+<!-- <script type="module">
 // const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
 for (const tf of document.querySelectorAll('.mdc-text-field')) {
     new mdc.textField.MDCTextField.attachTo(tf);
@@ -36,14 +36,14 @@ for (const tf of document.querySelectorAll('.mdc-text-field')) {
 for (const list of document.querySelectorAll('.mdc-list')) {
     new mdc.list.MDCList.attachTo(list);
 }
-</script>
+</script> -->
 
   <style type="text/css">
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:hover {text-decoration: underline;}
-   </style>
-    
+    a.tag-link:hover {text-decoration: underline; cursor: pointer;}
+  </style>
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Practice | 생각중</title>
 <meta name="generator" content="Jekyll v4.2.0" />
@@ -131,16 +131,162 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <!-- Category Post List -->
-<ul class="mdc-list mdc-list--two-line"></ul>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+    function showTag(selector) {
+        $('.default').hide();
+        $('.hidden_tag').hide();
+        $(selector).show();
+    }
+    function showDefault() {
+        $('.default').show();
+        $('.hidden_tag').hide();
+    }
+</script>
 
-<li class="mdc-list-item">
+<!-- Category Post List -->
+
+
+
+<!-- 모든 블로그 태그를 모은 뒤 중복 제거 -->
+
+<h4>
+  전체 보기
+</h4>
+<a class = "tag-link" onclick="showDefault()">
+  <span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>All</span>
+</a>
+<hr>
+<h4>
+  태그별 보기
+</h4>
+
+
+<a class = "tag-link" onclick="showTag('.tutorial')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>tutorial</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.coil')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>coil</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.recyclerview')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>recyclerview</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.building_adapter')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>building_adapter</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.retrofit')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>retrofit</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.json')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>json</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.moshi')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>moshi</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.internet')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>internet</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.permissions')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>permissions</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.coroutine')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>coroutine</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.tasks')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>tasks</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.backstack')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>backstack</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.livedata')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>livedata</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.databinding')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>databinding</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.viewmodel')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>viewmodel</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.viewbinding')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>viewbinding</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.fragment')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>fragment</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.navigation_component')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>navigation_component</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.kotlin')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>kotlin</span>
+</a>
+
+
+<a class = "tag-link" onclick="showTag('.layouts')">
+<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>layouts</span>
+</a>
+
+<hr>
+
+<ul class="mdc-list mdc-list--two-line">
+
+<li class="mdc-list-item default"><a href="/posts/practice/load-and-display-images-from-the-internet/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/load-and-display-images-from-the-internet/"><span class="mdc-list-item__primary-text">Load and display images from the Internet</span></a>
-      <span class="mdc-list-item__secondary-text">09/30/2021, <i class="fa fa-tag"></i>Tutorial, Coil, RecyclerView, Building Adapter</span>
+      <span class="mdc-list-item__primary-text">Load and display images from the Internet</span>
+      <span class="mdc-list-item__secondary-text" >09/30/2021,
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+        
+        <i class="fa fa-tag"></i>coil
+        
+        
+        <i class="fa fa-tag"></i>recyclerview
+        
+        
+        <i class="fa fa-tag"></i>building_adapter
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/load-and-display-images-from-the-internet/">
@@ -162,13 +308,76 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/load-and-display-images-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Load and display images from the Internet</span>
+    <span class="mdc-list-item__secondary-text" >09/30/2021, <i class="fa fa-tag"></i>Tutorial, Coil, RecyclerView, Building Adapter</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag coil" style="display:none"><a href="/posts/practice/load-and-display-images-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Load and display images from the Internet</span>
+    <span class="mdc-list-item__secondary-text" >09/30/2021, <i class="fa fa-tag"></i>Tutorial, Coil, RecyclerView, Building Adapter</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag coil" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag recyclerview" style="display:none"><a href="/posts/practice/load-and-display-images-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Load and display images from the Internet</span>
+    <span class="mdc-list-item__secondary-text" >09/30/2021, <i class="fa fa-tag"></i>Tutorial, Coil, RecyclerView, Building Adapter</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag recyclerview" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag building_adapter" style="display:none"><a href="/posts/practice/load-and-display-images-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Load and display images from the Internet</span>
+    <span class="mdc-list-item__secondary-text" >09/30/2021, <i class="fa fa-tag"></i>Tutorial, Coil, RecyclerView, Building Adapter</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag building_adapter" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/get-data-from-the-internet/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/get-data-from-the-internet/"><span class="mdc-list-item__primary-text">Get data from the internet</span></a>
-      <span class="mdc-list-item__secondary-text">09/26/2021, <i class="fa fa-tag"></i>Tutorial, Retrofit, JSON, Moshi, Internet, Permissions</span>
+      <span class="mdc-list-item__primary-text">Get data from the internet</span>
+      <span class="mdc-list-item__secondary-text" >09/26/2021,
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+        
+        <i class="fa fa-tag"></i>retrofit
+        
+        
+        <i class="fa fa-tag"></i>json
+        
+        
+        <i class="fa fa-tag"></i>moshi
+        
+        
+        <i class="fa fa-tag"></i>internet
+        
+        
+        <i class="fa fa-tag"></i>permissions
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/get-data-from-the-internet/">
@@ -190,13 +399,84 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/get-data-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Get data from the internet</span>
+    <span class="mdc-list-item__secondary-text" >09/26/2021, <i class="fa fa-tag"></i>Tutorial, Retrofit, JSON, Moshi, Internet, Permissions</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag retrofit" style="display:none"><a href="/posts/practice/get-data-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Get data from the internet</span>
+    <span class="mdc-list-item__secondary-text" >09/26/2021, <i class="fa fa-tag"></i>Tutorial, Retrofit, JSON, Moshi, Internet, Permissions</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag retrofit" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag json" style="display:none"><a href="/posts/practice/get-data-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Get data from the internet</span>
+    <span class="mdc-list-item__secondary-text" >09/26/2021, <i class="fa fa-tag"></i>Tutorial, Retrofit, JSON, Moshi, Internet, Permissions</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag json" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag moshi" style="display:none"><a href="/posts/practice/get-data-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Get data from the internet</span>
+    <span class="mdc-list-item__secondary-text" >09/26/2021, <i class="fa fa-tag"></i>Tutorial, Retrofit, JSON, Moshi, Internet, Permissions</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag moshi" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag internet" style="display:none"><a href="/posts/practice/get-data-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Get data from the internet</span>
+    <span class="mdc-list-item__secondary-text" >09/26/2021, <i class="fa fa-tag"></i>Tutorial, Retrofit, JSON, Moshi, Internet, Permissions</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag internet" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag permissions" style="display:none"><a href="/posts/practice/get-data-from-the-internet/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Get data from the internet</span>
+    <span class="mdc-list-item__secondary-text" >09/26/2021, <i class="fa fa-tag"></i>Tutorial, Retrofit, JSON, Moshi, Internet, Permissions</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag permissions" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/introduction-to-coroutines/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/introduction-to-coroutines/"><span class="mdc-list-item__primary-text">Introduction to coroutines</span></a>
-      <span class="mdc-list-item__secondary-text">09/25/2021, <i class="fa fa-tag"></i>Tutorial, Coroutine</span>
+      <span class="mdc-list-item__primary-text">Introduction to coroutines</span>
+      <span class="mdc-list-item__secondary-text" >09/25/2021,
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+        
+        <i class="fa fa-tag"></i>coroutine
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/introduction-to-coroutines/">
@@ -218,13 +498,47 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/introduction-to-coroutines/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Introduction to coroutines</span>
+    <span class="mdc-list-item__secondary-text" >09/25/2021, <i class="fa fa-tag"></i>Tutorial, Coroutine</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag coroutine" style="display:none"><a href="/posts/practice/introduction-to-coroutines/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Introduction to coroutines</span>
+    <span class="mdc-list-item__secondary-text" >09/25/2021, <i class="fa fa-tag"></i>Tutorial, Coroutine</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag coroutine" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/navigation-and-the-back-stack/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/navigation-and-the-back-stack/"><span class="mdc-list-item__primary-text">Navigation and the back stack</span></a>
-      <span class="mdc-list-item__secondary-text">09/22/2021, <i class="fa fa-tag"></i>Tutorial, Tasks, BackStack</span>
+      <span class="mdc-list-item__primary-text">Navigation and the back stack</span>
+      <span class="mdc-list-item__secondary-text" >09/22/2021,
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+        
+        <i class="fa fa-tag"></i>tasks
+        
+        
+        <i class="fa fa-tag"></i>backstack
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/navigation-and-the-back-stack/">
@@ -246,13 +560,57 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/navigation-and-the-back-stack/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Navigation and the back stack</span>
+    <span class="mdc-list-item__secondary-text" >09/22/2021, <i class="fa fa-tag"></i>Tutorial, Tasks, BackStack</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tasks" style="display:none"><a href="/posts/practice/navigation-and-the-back-stack/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Navigation and the back stack</span>
+    <span class="mdc-list-item__secondary-text" >09/22/2021, <i class="fa fa-tag"></i>Tutorial, Tasks, BackStack</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tasks" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag backstack" style="display:none"><a href="/posts/practice/navigation-and-the-back-stack/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Navigation and the back stack</span>
+    <span class="mdc-list-item__secondary-text" >09/22/2021, <i class="fa fa-tag"></i>Tutorial, Tasks, BackStack</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag backstack" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/shared-viewmodel-across-fragment/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/shared-viewmodel-across-fragment/"><span class="mdc-list-item__primary-text">Shared ViewModel Across Fragment</span></a>
-      <span class="mdc-list-item__secondary-text">09/21/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+      <span class="mdc-list-item__primary-text">Shared ViewModel Across Fragment</span>
+      <span class="mdc-list-item__secondary-text" >09/21/2021,
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+        
+        <i class="fa fa-tag"></i>livedata
+        
+        
+        <i class="fa fa-tag"></i>databinding
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/shared-viewmodel-across-fragment/">
@@ -274,13 +632,57 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/shared-viewmodel-across-fragment/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Shared ViewModel Across Fragment</span>
+    <span class="mdc-list-item__secondary-text" >09/21/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag livedata" style="display:none"><a href="/posts/practice/shared-viewmodel-across-fragment/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Shared ViewModel Across Fragment</span>
+    <span class="mdc-list-item__secondary-text" >09/21/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag livedata" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag databinding" style="display:none"><a href="/posts/practice/shared-viewmodel-across-fragment/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Shared ViewModel Across Fragment</span>
+    <span class="mdc-list-item__secondary-text" >09/21/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag databinding" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/use-livedata-with-viewmodel/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/use-livedata-with-viewmodel/"><span class="mdc-list-item__primary-text">Use LiveData with ViewModel</span></a>
-      <span class="mdc-list-item__secondary-text">09/11/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+      <span class="mdc-list-item__primary-text">Use LiveData with ViewModel</span>
+      <span class="mdc-list-item__secondary-text" >09/11/2021,
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+        
+        <i class="fa fa-tag"></i>livedata
+        
+        
+        <i class="fa fa-tag"></i>databinding
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/use-livedata-with-viewmodel/">
@@ -302,13 +704,57 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/use-livedata-with-viewmodel/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Use LiveData with ViewModel</span>
+    <span class="mdc-list-item__secondary-text" >09/11/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag livedata" style="display:none"><a href="/posts/practice/use-livedata-with-viewmodel/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Use LiveData with ViewModel</span>
+    <span class="mdc-list-item__secondary-text" >09/11/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag livedata" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag databinding" style="display:none"><a href="/posts/practice/use-livedata-with-viewmodel/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Use LiveData with ViewModel</span>
+    <span class="mdc-list-item__secondary-text" >09/11/2021, <i class="fa fa-tag"></i>Tutorial, LiveData, DataBinding</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag databinding" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/store-data-in-viewmodel/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/store-data-in-viewmodel/"><span class="mdc-list-item__primary-text">Store data in ViewModel</span></a>
-      <span class="mdc-list-item__secondary-text">09/11/2021, <i class="fa fa-tag"></i>Tutorial, ViewModel, ViewBinding</span>
+      <span class="mdc-list-item__primary-text">Store data in ViewModel</span>
+      <span class="mdc-list-item__secondary-text" >09/11/2021,
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+        
+        <i class="fa fa-tag"></i>viewmodel
+        
+        
+        <i class="fa fa-tag"></i>viewbinding
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/store-data-in-viewmodel/">
@@ -330,13 +776,57 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/store-data-in-viewmodel/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Store data in ViewModel</span>
+    <span class="mdc-list-item__secondary-text" >09/11/2021, <i class="fa fa-tag"></i>Tutorial, ViewModel, ViewBinding</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag viewmodel" style="display:none"><a href="/posts/practice/store-data-in-viewmodel/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Store data in ViewModel</span>
+    <span class="mdc-list-item__secondary-text" >09/11/2021, <i class="fa fa-tag"></i>Tutorial, ViewModel, ViewBinding</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag viewmodel" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag viewbinding" style="display:none"><a href="/posts/practice/store-data-in-viewmodel/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Store data in ViewModel</span>
+    <span class="mdc-list-item__secondary-text" >09/11/2021, <i class="fa fa-tag"></i>Tutorial, ViewModel, ViewBinding</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag viewbinding" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/fragments-and-the-navigation-component/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/fragments-and-the-navigation-component/"><span class="mdc-list-item__primary-text">Fragments and the Navigation Component</span></a>
-      <span class="mdc-list-item__secondary-text">08/26/2021, <i class="fa fa-tag"></i>Tutorial, Fragment, Navigation Component</span>
+      <span class="mdc-list-item__primary-text">Fragments and the Navigation Component</span>
+      <span class="mdc-list-item__secondary-text" >08/26/2021,
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+        
+        <i class="fa fa-tag"></i>fragment
+        
+        
+        <i class="fa fa-tag"></i>navigation_component
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/fragments-and-the-navigation-component/">
@@ -358,13 +848,54 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/fragments-and-the-navigation-component/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Fragments and the Navigation Component</span>
+    <span class="mdc-list-item__secondary-text" >08/26/2021, <i class="fa fa-tag"></i>Tutorial, Fragment, Navigation Component</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag fragment" style="display:none"><a href="/posts/practice/fragments-and-the-navigation-component/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Fragments and the Navigation Component</span>
+    <span class="mdc-list-item__secondary-text" >08/26/2021, <i class="fa fa-tag"></i>Tutorial, Fragment, Navigation Component</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag fragment" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag navigation_component" style="display:none"><a href="/posts/practice/fragments-and-the-navigation-component/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Fragments and the Navigation Component</span>
+    <span class="mdc-list-item__secondary-text" >08/26/2021, <i class="fa fa-tag"></i>Tutorial, Fragment, Navigation Component</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag navigation_component" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/collections-in-kotlin/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/collections-in-kotlin/"><span class="mdc-list-item__primary-text">Collections in Kotlin</span></a>
-      <span class="mdc-list-item__secondary-text">08/04/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Collections in Kotlin</span>
+      <span class="mdc-list-item__secondary-text" >08/04/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/collections-in-kotlin/">
@@ -386,13 +917,44 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/collections-in-kotlin/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Collections in Kotlin</span>
+    <span class="mdc-list-item__secondary-text" >08/04/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/collections-in-kotlin/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Collections in Kotlin</span>
+    <span class="mdc-list-item__secondary-text" >08/04/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/display-a-list-of-images-using-cards/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/display-a-list-of-images-using-cards/"><span class="mdc-list-item__primary-text">Display a list of images using cards</span></a>
-      <span class="mdc-list-item__secondary-text">08/03/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Display a list of images using cards</span>
+      <span class="mdc-list-item__secondary-text" >08/03/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/display-a-list-of-images-using-cards/">
@@ -414,13 +976,44 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/display-a-list-of-images-using-cards/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Display a list of images using cards</span>
+    <span class="mdc-list-item__secondary-text" >08/03/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/display-a-list-of-images-using-cards/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Display a list of images using cards</span>
+    <span class="mdc-list-item__secondary-text" >08/03/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/use-recyclerview-to-display-a-scrollable-list/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/use-recyclerview-to-display-a-scrollable-list/"><span class="mdc-list-item__primary-text">Use RecyclerView to display a scrollable list</span></a>
-      <span class="mdc-list-item__secondary-text">07/29/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Use RecyclerView to display a scrollable list</span>
+      <span class="mdc-list-item__secondary-text" >07/29/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/use-recyclerview-to-display-a-scrollable-list/">
@@ -442,13 +1035,44 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/use-recyclerview-to-display-a-scrollable-list/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Use RecyclerView to display a scrollable list</span>
+    <span class="mdc-list-item__secondary-text" >07/29/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/use-recyclerview-to-display-a-scrollable-list/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Use RecyclerView to display a scrollable list</span>
+    <span class="mdc-list-item__secondary-text" >07/29/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/use-lists-in-kotlin/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/use-lists-in-kotlin/"><span class="mdc-list-item__primary-text">Use Lists in Kotlin</span></a>
-      <span class="mdc-list-item__secondary-text">07/29/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Use Lists in Kotlin</span>
+      <span class="mdc-list-item__secondary-text" >07/29/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/use-lists-in-kotlin/">
@@ -470,13 +1094,47 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/use-lists-in-kotlin/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Use Lists in Kotlin</span>
+    <span class="mdc-list-item__secondary-text" >07/29/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/use-lists-in-kotlin/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Use Lists in Kotlin</span>
+    <span class="mdc-list-item__secondary-text" >07/29/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/create-a-more-polished-user-experience/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/create-a-more-polished-user-experience/"><span class="mdc-list-item__primary-text">Create a more polished user experience</span></a>
-      <span class="mdc-list-item__secondary-text">07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Create a more polished user experience</span>
+      <span class="mdc-list-item__secondary-text" >07/28/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>layouts
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/create-a-more-polished-user-experience/">
@@ -498,13 +1156,57 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/create-a-more-polished-user-experience/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Create a more polished user experience</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag layouts" style="display:none"><a href="/posts/practice/create-a-more-polished-user-experience/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Create a more polished user experience</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag layouts" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/create-a-more-polished-user-experience/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Create a more polished user experience</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/change-the-app-icon/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/change-the-app-icon/"><span class="mdc-list-item__primary-text">Change the app icon</span></a>
-      <span class="mdc-list-item__secondary-text">07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Change the app icon</span>
+      <span class="mdc-list-item__secondary-text" >07/28/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>layouts
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/change-the-app-icon/">
@@ -526,13 +1228,57 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/change-the-app-icon/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Change the app icon</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag layouts" style="display:none"><a href="/posts/practice/change-the-app-icon/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Change the app icon</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag layouts" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/change-the-app-icon/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Change the app icon</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/change-the-app-theme/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/change-the-app-theme/"><span class="mdc-list-item__primary-text">Change the app theme</span></a>
-      <span class="mdc-list-item__secondary-text">07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Change the app theme</span>
+      <span class="mdc-list-item__secondary-text" >07/28/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>layouts
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/change-the-app-theme/">
@@ -554,13 +1300,54 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/change-the-app-theme/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Change the app theme</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag layouts" style="display:none"><a href="/posts/practice/change-the-app-theme/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Change the app theme</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag layouts" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/change-the-app-theme/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Change the app theme</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Layouts, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/calculate-the-tip/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/calculate-the-tip/"><span class="mdc-list-item__primary-text">Calculate the tip</span></a>
-      <span class="mdc-list-item__secondary-text">07/28/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Calculate the tip</span>
+      <span class="mdc-list-item__secondary-text" >07/28/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/calculate-the-tip/">
@@ -582,13 +1369,44 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/calculate-the-tip/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Calculate the tip</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/calculate-the-tip/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Calculate the tip</span>
+    <span class="mdc-list-item__secondary-text" >07/28/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/create-xml-layouts-for-android/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/create-xml-layouts-for-android/"><span class="mdc-list-item__primary-text">Create XML layouts for Android</span></a>
-      <span class="mdc-list-item__secondary-text">07/26/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Create XML layouts for Android</span>
+      <span class="mdc-list-item__secondary-text" >07/26/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/create-xml-layouts-for-android/">
@@ -610,13 +1428,41 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/create-xml-layouts-for-android/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Create XML layouts for Android</span>
+    <span class="mdc-list-item__secondary-text" >07/26/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/create-xml-layouts-for-android/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Create XML layouts for Android</span>
+    <span class="mdc-list-item__secondary-text" >07/26/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/classes-and-inheritance-in-kotlin/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/classes-and-inheritance-in-kotlin/"><span class="mdc-list-item__primary-text">Classes and inheritance in Kotlin</span></a>
-      <span class="mdc-list-item__secondary-text">07/25/2021, <i class="fa fa-tag"></i>Kotlin</span>
+      <span class="mdc-list-item__primary-text">Classes and inheritance in Kotlin</span>
+      <span class="mdc-list-item__secondary-text" >07/25/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/classes-and-inheritance-in-kotlin/">
@@ -638,13 +1484,34 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/classes-and-inheritance-in-kotlin/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Classes and inheritance in Kotlin</span>
+    <span class="mdc-list-item__secondary-text" >07/25/2021, <i class="fa fa-tag"></i>Kotlin</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/add-a-button-to-an-app/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/add-a-button-to-an-app/"><span class="mdc-list-item__primary-text">Add a button to an app</span></a>
-      <span class="mdc-list-item__secondary-text">07/21/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Add a button to an app</span>
+      <span class="mdc-list-item__secondary-text" >07/21/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/add-a-button-to-an-app/">
@@ -666,13 +1533,44 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/add-a-button-to-an-app/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Add a button to an app</span>
+    <span class="mdc-list-item__secondary-text" >07/21/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/add-a-button-to-an-app/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Add a button to an app</span>
+    <span class="mdc-list-item__secondary-text" >07/21/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/create-your-first-app/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/create-your-first-app/"><span class="mdc-list-item__primary-text">Create your first app</span></a>
-      <span class="mdc-list-item__secondary-text">07/21/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Create your first app</span>
+      <span class="mdc-list-item__secondary-text" >07/21/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/create-your-first-app/">
@@ -694,13 +1592,44 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <hr> -->
 
 
-<li class="mdc-list-item">
+
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/create-your-first-app/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Create your first app</span>
+    <span class="mdc-list-item__secondary-text" >07/21/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/create-your-first-app/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Create your first app</span>
+    <span class="mdc-list-item__secondary-text" >07/21/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+<li class="mdc-list-item default"><a href="/posts/practice/introduction-to-kotlin/" style="text-decoration:none">
     <span class="mdc-list-item__ripple"></span>
     <span class="mdc-list-item__text">
-      <a href="/posts/practice/introduction-to-kotlin/"><span class="mdc-list-item__primary-text">Introduction to Kotlin</span></a>
-      <span class="mdc-list-item__secondary-text">07/20/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+      <span class="mdc-list-item__primary-text">Introduction to Kotlin</span>
+      <span class="mdc-list-item__secondary-text" >07/20/2021,
+        
+        
+        <i class="fa fa-tag"></i>kotlin
+        
+        
+        <i class="fa fa-tag"></i>tutorial
+        
+      </span>
     </span>
-  </li><hr>
+</a></li>
+<hr class ="default">
 
 <!-- <article class="posts-list">
     <a href="/posts/practice/introduction-to-kotlin/">
@@ -723,6 +1652,28 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 
 
+<li class="mdc-list-item hidden_tag kotlin" style="display:none"><a href="/posts/practice/introduction-to-kotlin/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Introduction to Kotlin</span>
+    <span class="mdc-list-item__secondary-text" >07/20/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag kotlin" style="display:none">
+
+
+<li class="mdc-list-item hidden_tag tutorial" style="display:none"><a href="/posts/practice/introduction-to-kotlin/" style="text-decoration:none">
+  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-list-item__text">
+    <span class="mdc-list-item__primary-text">Introduction to Kotlin</span>
+    <span class="mdc-list-item__secondary-text" >07/20/2021, <i class="fa fa-tag"></i>Kotlin, Tutorial</span>
+  </span>
+</a></li>
+<hr class ="hidden_tag tutorial" style="display:none">
+
+
+
+</ul>
 
     </div>
   </div>
