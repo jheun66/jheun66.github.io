@@ -5,9 +5,48 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 Jun 2022 17:50:35 +0000</pubDate>
-    <lastBuildDate>Wed, 01 Jun 2022 17:50:35 +0000</lastBuildDate>
+    <pubDate>Sat, 01 Oct 2022 07:32:39 +0000</pubDate>
+    <lastBuildDate>Sat, 01 Oct 2022 07:32:39 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>TextMeshPro에서 한글 사용하기</title>
+        <description>&lt;p&gt;유니티에서 TextMeshPro를 다운받고 바로 사용하면 한글을 쓸 때 네모로 나오게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_001.png&quot; alt=&quot;img1&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;빠르게 해결해 봅시다.&lt;/p&gt;
+
+&lt;h1 id=&quot;폰트-다운로드&quot;&gt;폰트 다운로드&lt;/h1&gt;
+&lt;p&gt;폰트야 사용하고 싶은 폰트 아무거나 사용해도 상관없지만 저는 많이 사용되는 &lt;a href=&quot;https://fonts.google.com/noto/specimen/Noto+Sans+KR&quot;&gt;NotoSansKR&lt;/a&gt;을 사용하도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;다운 받고 Assets 폴더에 옮겨줍니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;fontassetcreater-세팅&quot;&gt;FontAssetCreater 세팅&lt;/h1&gt;
+&lt;p&gt;Window-TextMeshPro-FontAssetCreator를 열고 다음과 같이 세팅합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_002.png&quot; alt=&quot;img2&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;완료후 세이브를 해주고 TextMeshPro에 세팅을 해줍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_003.png&quot; alt=&quot;img3&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;정상적으로 한글이 출력되었습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_004.png&quot; alt=&quot;img4&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;다음 포스트에는 TextMeshPro를 사용하여 링크 만들기에 대해 작성해보겠습니다.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Sep 2022 18:00:00 +0000</pubDate>
+        <link>https://jheun66.github.io/posts/unity/using-korean-in-textmeshpro/</link>
+        <guid isPermaLink="true">https://jheun66.github.io/posts/unity/using-korean-in-textmeshpro/</guid>
+        
+        <category>TextMeshPro</category>
+        
+        
+        <category>Unity</category>
+        
+      </item>
     
       <item>
         <title>태그별로 분류하기(Sort by tag)</title>
@@ -4066,84 +4105,6 @@ jekyll new ./
         <category>jekyll</category>
         
         <category>bundler</category>
-        
-        <category>github pages</category>
-        
-        
-        <category>Blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Ruby Version Management</title>
-        <description>&lt;p&gt;github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;이전에-설치한-루비-버전-삭제&quot;&gt;이전에 설치한 루비 버전 삭제&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew uninstall ruby
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;rbenv-설치&quot;&gt;rbenv 설치&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;rbenv ruby-build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;bash_profile-수정&quot;&gt;bash_profile 수정&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.bash_profile&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eval &quot;$(rbenv init -)&quot;&lt;/code&gt; 추가한 후&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bash_profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;루비-버전-설치&quot;&gt;루비 버전 설치&lt;/h3&gt;
-
-&lt;p&gt;설치할 수 있는 루비 버전 확인 후&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;설치할 수 있는 버전 설치&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;3.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;버전-적용&quot;&gt;버전 적용&lt;/h3&gt;
-
-&lt;p&gt;설치 되어있는 버전 확인&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv versions
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;글로벌 버전 세팅&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv global 3.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;로컬 버전 세팅&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;3.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;적용된 버전 확인&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;적용된 루비 버전 확인&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/61196279/how-to-remove-all-old-ruby-versions-and-version-managers-and-reinstall-a-singl&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 13 Jun 2021 12:01:11 +0000</pubDate>
-        <link>https://jheun66.github.io/posts/blog/ruby-version-management/</link>
-        <guid isPermaLink="true">https://jheun66.github.io/posts/blog/ruby-version-management/</guid>
-        
-        <category>ruby</category>
-        
-        <category>rbenv</category>
         
         <category>github pages</category>
         
