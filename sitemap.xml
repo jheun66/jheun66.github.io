@@ -2,6 +2,22 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    
     <url>
+      <loc>https://jheun66.github.io/posts/unity/how-to-make-links-in-tmp/</loc>
+      
+        <lastmod>2022-10-01T07:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
       <loc>https://jheun66.github.io/posts/unity/using-korean-in-textmeshpro/</loc>
       
         <lastmod>2022-09-30T18:00:00+00:00</lastmod>
