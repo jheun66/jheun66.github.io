@@ -5,9 +5,55 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 Oct 2022 09:37:01 +0000</pubDate>
-    <lastBuildDate>Sat, 01 Oct 2022 09:37:01 +0000</lastBuildDate>
+    <pubDate>Sun, 09 Oct 2022 07:37:24 +0000</pubDate>
+    <lastBuildDate>Sun, 09 Oct 2022 07:37:24 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>const와 readonly의 차이점</title>
+        <description>&lt;h1 id=&quot;const-vs-readonly&quot;&gt;const vs readonly&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readonly&lt;/code&gt;의 경우 한번 값이 세팅되면 바꿀 수 없다는 공통점이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 어떤 키워드를 사용해야 하는지 헷갈리는 경우가 있어 정리해둡니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;차이점&quot;&gt;차이점&lt;/h1&gt;
+&lt;h2 id=&quot;const&quot;&gt;const&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;컴파일 시점에 값이 세팅됨&lt;/li&gt;
+  &lt;li&gt;지역 변수로도 사용가능&lt;/li&gt;
+  &lt;li&gt;암묵적으로 static&lt;/li&gt;
+  &lt;li&gt;사용할 수 있는 자료형이 기본 내장 자료형으로 한정됨(당연한게 컴파일 시점에 세팅되어야 하므로)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;readonly&quot;&gt;readonly&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;런타임에 초기화, 생성자 시점 이후에는 세팅 불가능&lt;/li&gt;
+  &lt;li&gt;지역 변수로 사용X&lt;/li&gt;
+  &lt;li&gt;static하게 할 수도 있고 안 할 수도 있음&lt;/li&gt;
+  &lt;li&gt;모든 자료형 가능&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;대체로 readonly 사용을 권장합니다. const가 성능면에서는 빠를 수 있지만 큰 차이가 없고 readonly가 편의성이나 유연성 측면에서 훨씬 좋습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+&lt;p&gt;자세한 내용은 Reference 참고&lt;br /&gt;
+&lt;a href=&quot;https://learn.microsoft.com/ko-kr/dotnet/csharp/programming-guide/classes-and-structs/constants&quot;&gt;const&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/readonly&quot;&gt;readonly&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 09 Oct 2022 06:37:00 +0000</pubDate>
+        <link>https://jheun66.github.io/posts/c%23/difference-between-const-and-readonly/</link>
+        <guid isPermaLink="true">https://jheun66.github.io/posts/c%23/difference-between-const-and-readonly/</guid>
+        
+        <category>keyword</category>
+        
+        <category>const</category>
+        
+        <category>readonly</category>
+        
+        
+        <category>C#</category>
+        
+      </item>
     
       <item>
         <title>TextMeshPro에서 링크 만들기</title>
@@ -4023,120 +4069,6 @@ kramdown:
         <pubDate>Wed, 21 Jul 2021 03:55:00 +0000</pubDate>
         <link>https://jheun66.github.io/posts/practice/create-your-first-app/</link>
         <guid isPermaLink="true">https://jheun66.github.io/posts/practice/create-your-first-app/</guid>
-        
-        <category>Kotlin</category>
-        
-        <category>Tutorial</category>
-        
-        
-        <category>Practice</category>
-        
-      </item>
-    
-      <item>
-        <title>Introduction to Kotlin</title>
-        <description>&lt;h1 id=&quot;개요&quot;&gt;개요&lt;/h1&gt;
-
-&lt;p&gt;이 글은 &lt;a href=&quot;https://developer.android.com/courses/pathways/android-basics-kotlin-one?hl=ko&quot;&gt;안드로이드 개발자 사이트의 내용&lt;/a&gt;을 따라해보면서 작성하였습니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;kotlin-플레이그라운드&quot;&gt;Kotlin 플레이그라운드&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/training/kotlinplayground&quot;&gt;https://developer.android.com/training/kotlinplayground&lt;/a&gt;를 통해 웹에서도 Kotlin 프로그램 작성을 연습할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Happy Birthday!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Amos&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;You are 28!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;test string \n test string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;fun&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;함수임을 나타내는 키워드&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;main()&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;메인 함수&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;println()&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;텍스트를 출력하는 함수, 줄바꿈 포함&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;print()&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;텍스트를 출력하는 함수&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;“\n”&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;줄바꿈 문자열&lt;/p&gt;
-
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;layers&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;printCake&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printCake&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;printCakeCandles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;printCakeTop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;printCakeBottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printCakeCandles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Print an empty line&lt;/span&gt;
-
-    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Print the inset of the candles on the cake&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;|&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printCakeTop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;=&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printCakeBottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nf&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;repeat(){}&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;반복문, 루프&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;printCake(age: Int, layers: Int)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;함수 인수와 유형을 넣어줌&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;val&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;변수 키워드, 한 번 설정되면 변경할 수 없음&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;${}&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;print, println 에서 변수값을 넣어줄 때 사용&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/courses/android-basics-kotlin/android-basics-kotlin-vocab&quot;&gt;Kotlin에서 사용되는 Android 기본 용어&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Kotlin에서만이 아니라 안드로이드 개발에 필요한 용어들이 포함되어 있습니다.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 20 Jul 2021 00:57:00 +0000</pubDate>
-        <link>https://jheun66.github.io/posts/practice/introduction-to-kotlin/</link>
-        <guid isPermaLink="true">https://jheun66.github.io/posts/practice/introduction-to-kotlin/</guid>
         
         <category>Kotlin</category>
         
