@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "sealed 한정자",
+      "category" : "",
+      "tags"     : "keyword, modifier, sealed, vtable, performance",
+      "url"      : "/posts/c%23/sealed-modifier/",
+      "date"     : "12/01/2022"
+    } ,
+  
+    {
       "title"    : "const와 readonly의 차이점",
       "category" : "",
       "tags"     : "keyword, const, readonly",
