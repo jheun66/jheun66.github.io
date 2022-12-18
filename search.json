@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "다형성 이해하기",
+      "category" : "",
+      "tags"     : "polymorphism, virtual, override, new, vtable",
+      "url"      : "/posts/c%23/polymorphism/",
+      "date"     : "12/18/2022"
+    } ,
+  
+    {
       "title"    : "Properties",
       "category" : "",
       "tags"     : "property, properties, accessor",
