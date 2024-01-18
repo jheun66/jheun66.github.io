@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Store data in ViewModel | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Store data in ViewModel" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Store data in ViewModel" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-09-11T06:00:00+00:00","datePublished":"2021-09-11T06:00:00+00:00","description":"개요","headline":"Store data in ViewModel","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/store-data-in-viewmodel/"},"url":"https://jheun66.github.io/posts/practice/store-data-in-viewmodel/"}</script>
+{"description":"개요","headline":"Store data in ViewModel","dateModified":"2021-09-11T06:00:00+00:00","datePublished":"2021-09-11T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/store-data-in-viewmodel/"},"url":"https://jheun66.github.io/posts/practice/store-data-in-viewmodel/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,19 +156,55 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#learn-about-app-architecture">Learn about App Architecture</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#seperation-of-concerns">seperation of concerns</a></li>
+<li class="toc-entry toc-h2"><a href="#drive-ui-from-a-model">Drive UI from a model</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#add-a-viewmodel">Add a ViewModel</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#fragment에-viewmodel-추가">Fragment에 ViewModel 추가</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#move-data-to-the-viewmodel">Move data to the ViewModel</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#backing-property">Backing property</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#the-lifecycle-of-a-viewmodel">The lifecycle of a ViewModel</a></li>
+<li class="toc-entry toc-h1"><a href="#populate-viewmodel">Populate ViewModel</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#late-initialization">Late initialization</a></li>
+<li class="toc-entry toc-h2"><a href="#shuffle">shuffle()</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#dialog">Dialog</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#anatomy-of-alert-dialog">Anatomy of alert dialog</a></li>
+<li class="toc-entry toc-h2"><a href="#materialalertdialog">MaterialAlertDialog</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-3#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-viewmodel">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="learn-about-app-architecture">Learn about App Architecture</h1>
+<h1 id="learn-about-app-architecture">
+<a class="anchor" href="#learn-about-app-architecture" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn about App Architecture</h1>
 
 <p>가장 일반적인 <a href="https://developer.android.com/jetpack/guide#common-principles">아키텍쳐 원칙</a>은 <code class="language-plaintext highlighter-rouge">seperation of concerns</code>와 <code class="language-plaintext highlighter-rouge">모델로과 UI의 분리</code></p>
 
-<h2 id="seperation-of-concerns">seperation of concerns</h2>
+<h2 id="seperation-of-concerns">
+<a class="anchor" href="#seperation-of-concerns" aria-hidden="true"><span class="octicon octicon-link"></span></a>seperation of concerns</h2>
 
 <p>클래스마다 별개의 concern을 나누어 가져야함, 단일 책임의 원칙</p>
 
-<h2 id="drive-ui-from-a-model">Drive UI from a model</h2>
+<h2 id="drive-ui-from-a-model">
+<a class="anchor" href="#drive-ui-from-a-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drive UI from a model</h2>
 
 <p>쉽게 말하면 model은 데이타로 뷰와는 독립적으로 존재햐아함을 의미</p>
 
@@ -188,7 +224,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>액티비티나 프레그먼트가 파괴되거나 재생성될때 파괴되지 않음</p>
 
-<h1 id="add-a-viewmodel">Add a ViewModel</h1>
+<h1 id="add-a-viewmodel">
+<a class="anchor" href="#add-a-viewmodel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add a ViewModel</h1>
 
 <p>build.gradle에 <code class="language-plaintext highlighter-rouge">dependencies</code> 추가</p>
 
@@ -200,7 +237,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>ViewModel을 상속받는 ViewModel 클래스 생성하기</p>
 
-<h2 id="fragment에-viewmodel-추가">Fragment에 ViewModel 추가</h2>
+<h2 id="fragment에-viewmodel-추가">
+<a class="anchor" href="#fragment%EC%97%90-viewmodel-%EC%B6%94%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fragment에 ViewModel 추가</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kd">val</span> <span class="py">viewModel</span><span class="p">:</span> <span class="nc">GameViewModel</span> <span class="k">by</span> <span class="nf">viewModels</span><span class="p">()</span>
 </code></pre></div></div>
@@ -210,7 +248,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h3 id="kotlin-property-delegate">Kotlin property delegate</h3>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Syntax for property delegation</span>
-<span class="kd">var</span> <span class="err">&lt;</span><span class="py">property-name</span><span class="p">&gt;</span> <span class="p">:</span> <span class="p">&lt;</span><span class="n">property-type</span><span class="p">&gt;</span> <span class="k">by</span> <span class="p">&lt;</span><span class="n">delegate-class</span><span class="p">&gt;()</span>
+<span class="kd">var</span> <span class="p">&lt;</span><span class="err">property-name</span><span class="p">&gt;</span> <span class="err">:</span> <span class="p">&lt;</span><span class="err">property-type</span><span class="p">&gt;</span> <span class="py">by</span> <span class="p">&lt;</span><span class="n">delegate-class</span><span class="p">&gt;()</span>
 </code></pre></div></div>
 
 <p>코틀린에서 <code class="language-plaintext highlighter-rouge">var</code> 프로퍼티는 기본적으로 getter와 setter 함수가 자동으로 생성되고 값을 할당하거나 값을 읽을 때 자동으로 호출</p>
@@ -223,33 +261,41 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>예를들어 프로퍼티를 가지고 있는 액티비티나 프래그먼트 클래스가 configuration 변화에 의해 삭제되고 재생성되더라도 해당값에 대한 책임은 delegate class가 가지고 있으므로 그대로 가져올 수 있음</p>
 
-<h1 id="move-data-to-the-viewmodel">Move data to the ViewModel</h1>
+<h1 id="move-data-to-the-viewmodel">
+<a class="anchor" href="#move-data-to-the-viewmodel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Move data to the ViewModel</h1>
 
-<h2 id="backing-property">Backing property</h2>
+<h2 id="backing-property">
+<a class="anchor" href="#backing-property" aria-hidden="true"><span class="octicon octicon-link"></span></a>Backing property</h2>
 
 <p>코틀린에서 따로 정리 필요</p>
 
 <p><a href="https://proandroiddev.com/backing-properties-in-kotlin-cb78dfebfd90">https://proandroiddev.com/backing-properties-in-kotlin-cb78dfebfd90</a></p>
 
-<h1 id="the-lifecycle-of-a-viewmodel">The lifecycle of a ViewModel</h1>
+<h1 id="the-lifecycle-of-a-viewmodel">
+<a class="anchor" href="#the-lifecycle-of-a-viewmodel" aria-hidden="true"><span class="octicon octicon-link"></span></a>The lifecycle of a ViewModel</h1>
 
 <p>finish가 호출되어 종료되기 전까지 ViewModel은 살아있음. 화면이 회전되거나 configuration이 변하거나 해서 액티비티가 파괴되더라도 ViewModel 객체에 다시 연결됨</p>
 
-<h1 id="populate-viewmodel">Populate ViewModel</h1>
+<h1 id="populate-viewmodel">
+<a class="anchor" href="#populate-viewmodel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Populate ViewModel</h1>
 
-<h2 id="late-initialization">Late initialization</h2>
+<h2 id="late-initialization">
+<a class="anchor" href="#late-initialization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Late initialization</h2>
 
 <p><code class="language-plaintext highlighter-rouge">lateinit</code> 키워드를 사용하여 초기화를 늦출 수 있음. 해당 프로퍼티를 사용하기전에 초기화가 되어야하고 초기화가 되어있지 않은면 app은 크래쉬</p>
 
-<h2 id="shuffle">shuffle()</h2>
+<h2 id="shuffle">
+<a class="anchor" href="#shuffle" aria-hidden="true"><span class="octicon octicon-link"></span></a>shuffle()</h2>
 
 <p>MutableList나 Array를 랜덤으로 섞는 메소드</p>
 
-<h1 id="dialog">Dialog</h1>
+<h1 id="dialog">
+<a class="anchor" href="#dialog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dialog</h1>
 
-<h2 id="anatomy-of-alert-dialog">Anatomy of alert dialog</h2>
+<h2 id="anatomy-of-alert-dialog">
+<a class="anchor" href="#anatomy-of-alert-dialog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Anatomy of alert dialog</h2>
 
-<p><img src="/img/posts/android/Screenshot_1631339697.png" alt="Screenshot_1631339697.png" width="50%" /></p>
+<p><img src="/img/posts/android/Screenshot_1631339697.png" alt="Screenshot_1631339697.png" width="50%"></p>
 
 <ol>
   <li>Alert Dialog</li>
@@ -258,7 +304,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>Text buttons</li>
 </ol>
 
-<h2 id="materialalertdialog">MaterialAlertDialog</h2>
+<h2 id="materialalertdialog">
+<a class="anchor" href="#materialalertdialog" aria-hidden="true"><span class="octicon octicon-link"></span></a>MaterialAlertDialog</h2>
 
 <p><a href="https://material.io/components/dialogs/android#using-dialogs">마테리얼다이럴로그</a>를 사용하면 깔끔하고 쉽게 적용가능</p>
 
@@ -275,7 +322,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
             <span class="p">.</span><span class="nf">show</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h1 id="learn-more"><strong>Learn more</strong></h1>
+<h1 id="learn-more">
+<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
+</h1>
 
 <p>추가 공부해야할 링크들</p>
 
@@ -287,7 +336,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li><a href="https://developer.android.com/reference/com/google/android/material/dialog/MaterialAlertDialogBuilder">MaterialAlertDialogBuilder</a></li>
   <li><a href="https://kotlinlang.org/docs/reference/properties.html#backing-properties">Backing Properties</a></li>
   <li><a href="https://developer.android.com/topic/libraries/architecture">Android Architecture Components</a></li>
-  <li>Android Material <a href="https://material.io/develop/android/components/dialogs">Dialogs</a></li>
+  <li>Android Material <a href="https://material.io/develop/android/components/dialogs">Dialogs</a>
+</li>
   <li><a href="https://kotlinlang.org/docs/reference/properties.html">Properties and Fields: Getters, Setters, const, lateinit</a></li>
 </ul>
 

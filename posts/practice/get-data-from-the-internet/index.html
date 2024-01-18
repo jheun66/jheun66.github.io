@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Get data from the internet | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Get data from the internet" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Get data from the internet" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-09-26T13:45:00+00:00","datePublished":"2021-09-26T13:45:00+00:00","description":"개요","headline":"Get data from the internet","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/get-data-from-the-internet/"},"url":"https://jheun66.github.io/posts/practice/get-data-from-the-internet/"}</script>
+{"description":"개요","headline":"Get data from the internet","dateModified":"2021-09-26T13:45:00+00:00","datePublished":"2021-09-26T13:45:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/get-data-from-the-internet/"},"url":"https://jheun66.github.io/posts/practice/get-data-from-the-internet/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,11 +156,42 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#web-services-and-retrofit">Web services and Retrofit</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#web-service-request">Web service request</a></li>
+<li class="toc-entry toc-h2"><a href="#add-retrofit-dependencies">Add Retrofit dependencies</a></li>
+<li class="toc-entry toc-h2"><a href="#add-support-for-java-8-language-features">Add support for Java 8 language features</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#connecting-to-the-internet">Connecting to the Internet</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#object-declarations">Object declarations</a></li>
+<li class="toc-entry toc-h2"><a href="#viewmodelscope">ViewModelScope</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#add-internet-permission-and-exception-handling">Add Internet permission and Exception Handling</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#android-permissions">Android Permissions</a></li>
+<li class="toc-entry toc-h2"><a href="#exception-handling">Exception Handling</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#parse-the-json-response-with-moshi">Parse the JSON response with Moshi</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#json">JSON</a></li>
+<li class="toc-entry toc-h2"><a href="#add-moshi-library-dependencies">Add Moshi library dependencies</a></li>
+<li class="toc-entry toc-h2"><a href="#implement-the-mars-photos-data-class">Implement the Mars Photos data class</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-4-pathway-2#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="web-services-and-retrofit">Web services and Retrofit</h1>
+<h1 id="web-services-and-retrofit">
+<a class="anchor" href="#web-services-and-retrofit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Web services and Retrofit</h1>
 
 <p>오늘날 대부분의 웹 서버는 stateless한 REST(<strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer)라는 웹 아키텍처를 사용하여 서비스됨. 이런 아키텍처를 사용하는 웹 서비스를 RESTful한 서비스라 함.</p>
 
@@ -178,7 +209,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>두 URL이 realestate와 photos를 통해 무슨 리소스인지 구분되고 HTTPS를 통해 획득되는 것을 알 수 있음.</p>
 
-<h2 id="web-service-request">Web service request</h2>
+<h2 id="web-service-request">
+<a class="anchor" href="#web-service-request" aria-hidden="true"><span class="octicon octicon-link"></span></a>Web service request</h2>
 
 <p>HTTP 동작에는 일반적으로 GET, POST, PUT, Delete가 있고 응답을 받을 때는 XML이나 JSON 형태로 받음.</p>
 
@@ -186,7 +218,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>예제는 Retrofit이라는 외부 라이브러리를 사용하여 웹 서버와 통신. 외부라이브러리 사용에는 주의를 해야함. 실제 동작은 외부라이브러리를 통해서 실행되므로 의도치 않은 오류가 나올 수 도 있음.</p>
 
-<h2 id="add-retrofit-dependencies">Add Retrofit dependencies</h2>
+<h2 id="add-retrofit-dependencies">
+<a class="anchor" href="#add-retrofit-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Retrofit dependencies</h2>
 
 <p>프로젝트 레벨의 <code class="language-plaintext highlighter-rouge">build.gradle</code>에서는</p>
 
@@ -208,7 +241,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>을 추가해주고 Sync Now.</p>
 
-<h2 id="add-support-for-java-8-language-features">Add support for Java 8 language features</h2>
+<h2 id="add-support-for-java-8-language-features">
+<a class="anchor" href="#add-support-for-java-8-language-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add support for Java 8 language features</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">android</span> <span class="p">{</span>
     <span class="o">..</span><span class="p">.</span>
@@ -226,7 +260,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>많은 외부 라이브러리들이 Java 8을 사용하므로 추가가 필요함.</p>
 
-<h1 id="connecting-to-the-internet">Connecting to the Internet</h1>
+<h1 id="connecting-to-the-internet">
+<a class="anchor" href="#connecting-to-the-internet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Connecting to the Internet</h1>
 
 <p>Retrofit은 웹 서비스로 받은 내용을 기반으로 앱의 네트위트 API를 만들어줌. 웹서버를 통해 데이터를 받아오고 별도의 분리된 Converter 라이브러리를 통해 데이터를 String과 같은 객체 형태로 변환해서 반환함. XML과 JSON과 같은 유명한 데이터 형태를 지원함.</p>
 
@@ -238,7 +273,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>Retrofit 객체 선언.</p>
 
-<h2 id="object-declarations">Object declarations</h2>
+<h2 id="object-declarations">
+<a class="anchor" href="#object-declarations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Object declarations</h2>
 
 <p>object 키워드 선언은 싱글턴 객체를 선언하기 위해 사용됨. Object 선언의 초기화는 thread-safe하고 처음 접근할 때 수행됨.  <a href="https://kotlinlang.org/docs/object-declarations.html">object 표현식과 선언</a> 참고하기.</p>
 
@@ -250,7 +286,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>by lazy를 통해 객체 생성을 미룬 것을 확인 할 수 있음.</p>
 
-<h2 id="viewmodelscope">ViewModelScope</h2>
+<h2 id="viewmodelscope">
+<a class="anchor" href="#viewmodelscope" aria-hidden="true"><span class="octicon octicon-link"></span></a>ViewModelScope</h2>
 
 <p><a href="https://developer.android.com/topic/libraries/architecture/coroutines#viewmodelscope">ViewModelScope</a>는 앱에서 각각의 ViewModel을 위해 정의된 코루틴 스코프. 이 스코프에 있는 Coroutine은 ViewModel이 지워지면 자동으로 취소됨.</p>
 
@@ -270,9 +307,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>getPhotos()는 코루틴 내에서 동작하는 함수이므로 <code class="language-plaintext highlighter-rouge">suspend</code> 키워드를 붙여줌.</p>
 
-<h1 id="add-internet-permission-and-exception-handling">Add Internet permission and Exception Handling</h1>
+<h1 id="add-internet-permission-and-exception-handling">
+<a class="anchor" href="#add-internet-permission-and-exception-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Internet permission and Exception Handling</h1>
 
-<h2 id="android-permissions">Android Permissions</h2>
+<h2 id="android-permissions">
+<a class="anchor" href="#android-permissions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android Permissions</h2>
 
 <p>Permission의 역활은 안드로이드 유저의 프라이버시를 보호. 안드로이드 앱은 연락처, 전화 기록과 같은 민감한 유저 정보에 접근하거나 카메라, 인터넷 같은 시스템 기능을 획득하기 위해서는 permission을 선언하거나 요청해야함.</p>
 
@@ -281,15 +320,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<h2 id="exception-handling">Exception Handling</h2>
+<h2 id="exception-handling">
+<a class="anchor" href="#exception-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exception Handling</h2>
 
 <p>Exception은 런타임에 발생하고 유저에게 알려주지 않고 갑자기 종료되는 에러. user experience 관점에서 매우 안좋음. 갑자기 종료되는 것을 막기위해서는 예외처리가 필요함.</p>
 
 <p>try-catch 블록을 사용하여 예외에 대한 핸들링을 해줄 수 있음.</p>
 
-<h1 id="parse-the-json-response-with-moshi">Parse the JSON response with Moshi</h1>
+<h1 id="parse-the-json-response-with-moshi">
+<a class="anchor" href="#parse-the-json-response-with-moshi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parse the JSON response with Moshi</h1>
 
-<h2 id="json">JSON</h2>
+<h2 id="json">
+<a class="anchor" href="#json" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON</h2>
 
 <p>요청된 데이터는 일반적으로 XML이나 JSON 포맷으로 구성.</p>
 
@@ -299,7 +341,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>예제에서는 JSON을 코틀린 객체로 변환하기 위해 Moshi 라는 외부라이브러리를 사용.Retrofit은 Moshi와 함께 동작하는 converter를 가지고 있어서 Retrofit과 사용하기 좋은 라이브러리.</p>
 
-<h2 id="add-moshi-library-dependencies">Add Moshi library dependencies</h2>
+<h2 id="add-moshi-library-dependencies">
+<a class="anchor" href="#add-moshi-library-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Moshi library dependencies</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Moshi</span>
 <span class="n">implementation</span> <span class="err">'</span><span class="n">com</span><span class="p">.</span><span class="n">squareup</span><span class="p">.</span><span class="n">moshi</span><span class="p">:</span><span class="n">moshi-kotlin</span><span class="p">:</span><span class="mf">1.9.3</span><span class="err">'</span>
@@ -315,7 +358,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>converter-moshi 내부에 포함되어 있으므로 제거</p>
 
-<h2 id="implement-the-mars-photos-data-class">Implement the Mars Photos data class</h2>
+<h2 id="implement-the-mars-photos-data-class">
+<a class="anchor" href="#implement-the-mars-photos-data-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implement the Mars Photos data class</h2>
 
 <p>Moshi를 통해 JSON 응답 형태를 코틀린 객체로 만들기 위한 클래스 추가</p>
 
@@ -353,7 +397,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>MoshiConverter를 통해 JSON이 코틀린 객체로 변환되는 것을 확인할 수 있음.</p>
 
-<h1 id="learn-more"><strong>Learn more</strong></h1>
+<h1 id="learn-more">
+<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
+</h1>
 
 <p>추가 공부해야할 링크들</p>
 

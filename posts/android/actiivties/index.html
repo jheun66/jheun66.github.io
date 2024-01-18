@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Activities | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Activities" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Activities" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2020-12-25T09:00:00+00:00","datePublished":"2020-12-25T09:00:00+00:00","description":"액티비티 액티비티는 안드로이드 앱에서 정말 중요한 구성요소 중 하나 입니다. 액티비티는 UI를 포함한 화면이며 이를 통해 사용자와 상호작용을 할 수 있습니다. 하나의 앱에는 여러 액티비티가 있을 수 있으며 서로 독립되어 있습니다. 따라서 액티비티가 실행되고 다른 액티비티와 함께 동작하는 방식을 이해하는 것이 중요합니다.","headline":"Activities","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/actiivties/"},"url":"https://jheun66.github.io/posts/android/actiivties/"}</script>
+{"description":"액티비티 액티비티는 안드로이드 앱에서 정말 중요한 구성요소 중 하나 입니다. 액티비티는 UI를 포함한 화면이며 이를 통해 사용자와 상호작용을 할 수 있습니다. 하나의 앱에는 여러 액티비티가 있을 수 있으며 서로 독립되어 있습니다. 따라서 액티비티가 실행되고 다른 액티비티와 함께 동작하는 방식을 이해하는 것이 중요합니다.","headline":"Activities","dateModified":"2020-12-25T09:00:00+00:00","datePublished":"2020-12-25T09:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/actiivties/"},"url":"https://jheun66.github.io/posts/android/actiivties/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,20 +156,32 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="액티비티">액티비티</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#액티비티">액티비티</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#액티비티의-컨셉">액티비티의 컨셉</a></li>
+<li class="toc-entry toc-h2"><a href="#메니페스트-구성하기">메니페스트 구성하기</a></li>
+<li class="toc-entry toc-h2"><a href="#activity-lifecycle">Activity LifeCycle</a></li>
+<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
+</ol>
+</li>
+</ol><h1 id="액티비티">
+<a class="anchor" href="#%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>액티비티</h1>
 <p>액티비티는 안드로이드 앱에서 정말 중요한 <strong>구성요소</strong> 중 하나 입니다. 액티비티는 UI를 포함한 화면이며 이를 통해 사용자와 상호작용을 할 수 있습니다. 하나의 앱에는 여러 액티비티가 있을 수 있으며 서로 독립되어 있습니다. 따라서 액티비티가 실행되고 다른 액티비티와 함께 동작하는 방식을 이해하는 것이 중요합니다.</p>
 
-<h2 id="액티비티의-컨셉">액티비티의 컨셉</h2>
-<p>C/C++에서 처음 프로그래밍을 접한 사람이라면 <strong>main 함수</strong>를 호출하여 코드를 실행하는 패러다임에 익숙할 것입니다. 하지만 안드로이드 시스템에서는 액티비티 생명 주기의 특정 상태에 해당하는 특정 콜백 메소드를 호출하여 액티비티 인스턴스를 통해 코드를 실행합니다. <br />
+<h2 id="액티비티의-컨셉">
+<a class="anchor" href="#%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%EC%9D%98-%EC%BB%A8%EC%85%89" aria-hidden="true"><span class="octicon octicon-link"></span></a>액티비티의 컨셉</h2>
+<p>C/C++에서 처음 프로그래밍을 접한 사람이라면 <strong>main 함수</strong>를 호출하여 코드를 실행하는 패러다임에 익숙할 것입니다. 하지만 안드로이드 시스템에서는 액티비티 생명 주기의 특정 상태에 해당하는 특정 콜백 메소드를 호출하여 액티비티 인스턴스를 통해 코드를 실행합니다. <br>
 한 앱에서 어떤 액티비티를 진행하다가 다른 액티비티를 실행시키거나 다른 앱을 호출할 때 그 앱을 통째로 호출하는게 아니라 필요한 액티비티를 호출하여 실행시킵니다. 개발자 문서의 예시에서는 이메일 작성 액티비티로 예를 들었습니다. 이메일 앱에서 이메일 작성 액티비티를 호출할 수 있고 카메라 앱에서도 무슨 이메일 버튼을 클리가면 이메일 작성 액티비티에 진입할 수 있을 것 입니다.</p>
 
-<p><img src="/img/posts/android/KakaoTalk_Photo_2020-12-25-20-47-06.jpeg" alt="카메라 앱" width="240" /></p>
+<p><img src="/img/posts/android/KakaoTalk_Photo_2020-12-25-20-47-06.jpeg" alt="카메라 앱" width="240"></p>
 
 <p>이미지의 빨간 동그라미를 보면 카메라 앱에서는 사진을 찍으면 카카오톡, 인스트그램, 메시지 등의 액티비티와 연결할 수 있고 파란색 동그라미를 보면 이미지 관리 앱의 액티비티와도 연결될 수 있는 것을 확인 할 수 있습니다.</p>
 
 <p>이러한 점에서 액티비티들은 함께 결함하여 앱을 구성하지만 일반적으로 서로에게 최소한의 의존성을 가지고 느슨하게 결합되어 있다고 할 수 있습니다.</p>
 
-<h2 id="메니페스트-구성하기">메니페스트 구성하기</h2>
+<h2 id="메니페스트-구성하기">
+<a class="anchor" href="#%EB%A9%94%EB%8B%88%ED%8E%98%EC%8A%A4%ED%8A%B8-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>메니페스트 구성하기</h2>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
     <span class="na">package=</span><span class="s">"com.example.myapplication"</span><span class="nt">&gt;</span>
@@ -224,13 +236,15 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </code></pre></div></div>
 <p>이때는 &lt;manifest&gt;에 &lt;uses-permission&gt;으로 같은 권한을 정의합니다.</p>
 
-<p>이와 마찬가지로 안드로이드 기기의 다양한 기능들을 활용하기 위해서는 안드로이드 API에 정의된 권한들을 선언해야합니다.<br />
+<p>이와 마찬가지로 안드로이드 기기의 다양한 기능들을 활용하기 위해서는 안드로이드 API에 정의된 권한들을 선언해야합니다.<br>
 <a href="https://developer.android.com/reference/android/Manifest.permission"><em>Manifest.permission</em></a></p>
 
-<h2 id="activity-lifecycle">Activity LifeCycle</h2>
+<h2 id="activity-lifecycle">
+<a class="anchor" href="#activity-lifecycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activity LifeCycle</h2>
 <p><a href="/posts/android/activity-lifecycle"><strong>이어서</strong></a></p>
 
-<h2 id="reference">Reference</h2>
+<h2 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
 <p><a href="https://developer.android.com/guide/components/activities/intro-activities"><strong>안드로이드 개발자 사이트</strong></a></p>
 
       

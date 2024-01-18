@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Load and display images from the Internet | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Load and display images from the Internet" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Load and display images from the Internet" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-09-30T11:45:00+00:00","datePublished":"2021-09-30T11:45:00+00:00","description":"개요","headline":"Load and display images from the Internet","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/load-and-display-images-from-the-internet/"},"url":"https://jheun66.github.io/posts/practice/load-and-display-images-from-the-internet/"}</script>
+{"description":"개요","headline":"Load and display images from the Internet","dateModified":"2021-09-30T11:45:00+00:00","datePublished":"2021-09-30T11:45:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/load-and-display-images-from-the-internet/"},"url":"https://jheun66.github.io/posts/practice/load-and-display-images-from-the-internet/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,11 +156,30 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#display-an-internet-image">Display an internet image</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#add-coil-dependency">Add Coil dependency</a></li>
+<li class="toc-entry toc-h2"><a href="#use-binding-adapters">Use Binding Adapters</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#display-a-grid-of-images-with-a-recyclerview">Display a grid of images with a RecyclerView</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#grid-layout">Grid Layout</a></li>
+<li class="toc-entry toc-h2"><a href="#add-recyclerview">Add Recyclerview</a></li>
+<li class="toc-entry toc-h2"><a href="#add-the-photo-grid-adapter">Add the photo grid adapter</a></li>
+<li class="toc-entry toc-h2"><a href="#add-the-binding-adapter-and-connect-the-parts">Add the binding adapter and connect the parts</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-4-pathway-2#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="display-an-internet-image">Display an internet image</h1>
+<h1 id="display-an-internet-image">
+<a class="anchor" href="#display-an-internet-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Display an internet image</h1>
 
 <p>웹 URL으로부터 사진을 띄우는 것은 간단하게 들리지만 꽤 많은 작업이 필요. 이미지를 다운받고 내부에 저장하고 압축된 포맷을 이미지로 디코딩 해야함. 이미지는 메모리내의 캐시나 저장소기반의 캐시, 혹은 둘다에 캐싱되어야하고 모든 동작들이 UI response를 위해 우선순위가 낮은 쓰레드에서 동작되어야함. 또한 네트워크나 CPU 성능을 위해서 여러 이미지를 동시에 가져오고 디코딩해야함.</p>
 
@@ -173,7 +192,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>이미지를 보여줄 ImageView</li>
 </ul>
 
-<h2 id="add-coil-dependency">Add Coil dependency</h2>
+<h2 id="add-coil-dependency">
+<a class="anchor" href="#add-coil-dependency" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Coil dependency</h2>
 
 <p>coil 라이브러리는 mavenCentral repository에서 호스트되고 이용가능하므로 프로젝트 레벨의 <code class="language-plaintext highlighter-rouge">build.gradle</code>에 mavenCentral() 추가</p>
 
@@ -190,7 +210,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="n">implementation</span> <span class="s">"io.coil-kt:coil:1.1.1"</span>
 </code></pre></div></div>
 
-<h2 id="use-binding-adapters">Use Binding Adapters</h2>
+<h2 id="use-binding-adapters">
+<a class="anchor" href="#use-binding-adapters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use Binding Adapters</h2>
 
 <p>Binding Adpaters는 뷰의 커스텀 프로퍼티를 위한 커스텀 setter를 만들기 위해 사용되는 주석화된 메소드</p>
 
@@ -215,13 +236,16 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>호출 체인의 결과에 하나 이상의 함수를 호출할 때 사용. 주로 널이 아닌 객체에 작업을 수행하기 위해 안전 호출 연산자(?.)와 함께 사용</p>
 
-<h1 id="display-a-grid-of-images-with-a-recyclerview">Display a grid of images with a RecyclerView</h1>
+<h1 id="display-a-grid-of-images-with-a-recyclerview">
+<a class="anchor" href="#display-a-grid-of-images-with-a-recyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Display a grid of images with a RecyclerView</h1>
 
-<h2 id="grid-layout">Grid Layout</h2>
+<h2 id="grid-layout">
+<a class="anchor" href="#grid-layout" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grid Layout</h2>
 
 <p><code class="language-plaintext highlighter-rouge">RecyclerView</code>를 위한 <code class="language-plaintext highlighter-rouge">GridLayoutManager</code>는 스크롤 가능한 격자형태로 데이터를 담아줌</p>
 
-<h2 id="add-recyclerview">Add Recyclerview</h2>
+<h2 id="add-recyclerview">
+<a class="anchor" href="#add-recyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Recyclerview</h2>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;androidx.recyclerview.widget.RecyclerView</span>
     <span class="na">android:id=</span><span class="s">"@+id/photos_grid"</span>
@@ -240,7 +264,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><a href="https://material.io/components/image-lists#anatomy">Material 가이드</a>를 참고하면 다음과 같이 밖에는 8dp, 내부는 4dp를 사용하는 것을 권장</p>
 
-<p><img src="/img/posts/android/grid.png" alt="grid" /></p>
+<p><img src="/img/posts/android/grid.png" alt="grid"></p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ImageView</span>
     <span class="na">android:id=</span><span class="s">"@+id/mars_image"</span>
@@ -255,12 +279,13 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>그리드 내부 이미지에 2dp씩 주었기 때문에 밖에만 6dp padding 추가하면 깔끔해짐</p>
 
-<h2 id="add-the-photo-grid-adapter">Add the photo grid adapter</h2>
+<h2 id="add-the-photo-grid-adapter">
+<a class="anchor" href="#add-the-photo-grid-adapter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add the photo grid adapter</h2>
 
 <h3 id="listadapter">ListAdapter</h3>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PhotoGridAdapter</span> <span class="p">:</span> <span class="nc">ListAdapter</span><span class="p">&lt;</span><span class="nc">MarsPhoto</span><span class="p">,</span>
-        <span class="nc">PhotoGridAdapter</span><span class="err">.</span><span class="nc">MarsPhotoViewHolder</span><span class="p">&gt;(</span><span class="nc">DiffCallback</span><span class="p">){</span>
+        <span class="nc">PhotoGridAdapter</span><span class="p">.</span><span class="nc">MarsPhotoViewHolder</span><span class="p">&gt;(</span><span class="nc">DiffCallback</span><span class="p">){</span>
 
     <span class="k">companion</span> <span class="k">object</span> <span class="nc">DiffCallback</span> <span class="p">:</span> <span class="nc">DiffUtil</span><span class="p">.</span><span class="nc">ItemCallback</span><span class="p">&lt;</span><span class="nc">MarsPhoto</span><span class="p">&gt;()</span> <span class="p">{</span>
         <span class="k">override</span> <span class="k">fun</span> <span class="nf">areItemsTheSame</span><span class="p">(</span><span class="n">oldItem</span><span class="p">:</span> <span class="nc">MarsPhoto</span><span class="p">,</span> <span class="n">newItem</span><span class="p">:</span> <span class="nc">MarsPhoto</span><span class="p">):</span> <span class="nc">Boolean</span> <span class="p">{</span>
@@ -300,7 +325,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><code class="language-plaintext highlighter-rouge">executePendingBindings()</code>은 즉시 업데이트하기위해 사용</p>
 
-<h2 id="add-the-binding-adapter-and-connect-the-parts">Add the binding adapter and connect the parts</h2>
+<h2 id="add-the-binding-adapter-and-connect-the-parts">
+<a class="anchor" href="#add-the-binding-adapter-and-connect-the-parts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add the binding adapter and connect the parts</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@BindingAdapter</span><span class="p">(</span><span class="s">"listData"</span><span class="p">)</span>
 <span class="k">fun</span> <span class="nf">bindRecyclerView</span><span class="p">(</span><span class="n">recyclerView</span><span class="p">:</span> <span class="nc">RecyclerView</span><span class="p">,</span>
@@ -314,7 +340,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><code class="language-plaintext highlighter-rouge">android:clipToPadding="false"</code>는 바닥에 패딩 생기는거 없애줌</p>
 
-<h1 id="learn-more"><strong>Learn more</strong></h1>
+<h1 id="learn-more">
+<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
+</h1>
 
 <p>추가 공부해야할 링크들</p>
 

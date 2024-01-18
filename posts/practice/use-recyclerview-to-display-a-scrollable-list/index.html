@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Use RecyclerView to display a scrollable list | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Use RecyclerView to display a scrollable list" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Use RecyclerView to display a scrollable list" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-07-29T17:17:00+00:00","datePublished":"2021-07-29T17:17:00+00:00","description":"개요","headline":"Use RecyclerView to display a scrollable list","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list/"},"url":"https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list/"}</script>
+{"description":"개요","headline":"Use RecyclerView to display a scrollable list","dateModified":"2021-07-29T17:17:00+00:00","datePublished":"2021-07-29T17:17:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list/"},"url":"https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,11 +156,22 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#data-class">Data Class</a></li>
+<li class="toc-entry toc-h1"><a href="#recyclerview">RecyclerView</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#implement-an-adapter-for-the-recyclerview">Implement an Adapter for the RecyclerView</a></li>
+<li class="toc-entry toc-h2"><a href="#modify-the-mainactivity-to-use-a-recyclerview">Modify the MainActivity to use a RecyclerView</a></li>
+</ol>
+</li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-3">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다</p>
 
-<h1 id="data-class">Data Class</h1>
+<h1 id="data-class">
+<a class="anchor" href="#data-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Class</h1>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">me.amos.affirmations.model</span>
 
@@ -178,7 +189,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>즉, 해당 프로퍼티만 같으면 같은 data로 취급</p>
 
-<h1 id="recyclerview">RecyclerView</h1>
+<h1 id="recyclerview">
+<a class="anchor" href="#recyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>RecyclerView</h1>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;androidx.recyclerview.widget.RecyclerView</span>
         <span class="na">android:id=</span><span class="s">"@+id/recycler_view"</span>
@@ -194,7 +206,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><em>RecyclerView</em>는 <em>LayoutManger</em>를 통해 선형 리스트나 그리드처럼 다양한 형태로 아이템을 띄워줌</p>
 
-<h2 id="implement-an-adapter-for-the-recyclerview">Implement an Adapter for the RecyclerView</h2>
+<h2 id="implement-an-adapter-for-the-recyclerview">
+<a class="anchor" href="#implement-an-adapter-for-the-recyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implement an Adapter for the RecyclerView</h2>
 
 <h3 id="adapter">Adapter</h3>
 
@@ -240,7 +253,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>RecyclerView.Adapter 상속</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ItemAdapter</span><span class="p">(</span><span class="k">private</span> <span class="kd">val</span> <span class="py">context</span><span class="p">:</span> <span class="nc">Context</span><span class="p">,</span> <span class="k">private</span> <span class="kd">val</span> <span class="py">dataset</span><span class="p">:</span> <span class="nc">List</span><span class="p">&lt;</span><span class="nc">Affirmation</span><span class="p">&gt;)</span> <span class="p">:</span><span class="nc">RecyclerView</span><span class="p">.</span><span class="nc">Adapter</span><span class="p">&lt;</span><span class="nc">ItemAdapter</span><span class="err">.</span><span class="nc">ItemViewHolder</span><span class="p">&gt;(){</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ItemAdapter</span><span class="p">(</span><span class="k">private</span> <span class="kd">val</span> <span class="py">context</span><span class="p">:</span> <span class="nc">Context</span><span class="p">,</span> <span class="k">private</span> <span class="kd">val</span> <span class="py">dataset</span><span class="p">:</span> <span class="nc">List</span><span class="p">&lt;</span><span class="nc">Affirmation</span><span class="p">&gt;)</span> <span class="p">:</span><span class="nc">RecyclerView</span><span class="p">.</span><span class="nc">Adapter</span><span class="p">&lt;</span><span class="nc">ItemAdapter</span><span class="p">.</span><span class="nc">ItemViewHolder</span><span class="p">&gt;(){</span>
     <span class="kd">class</span> <span class="nc">ItemViewHolder</span><span class="p">(</span><span class="k">private</span> <span class="kd">val</span> <span class="py">view</span><span class="p">:</span> <span class="nc">View</span><span class="p">)</span> <span class="p">:</span> <span class="nc">RecyclerView</span><span class="p">.</span><span class="nc">ViewHolder</span><span class="p">(</span><span class="n">view</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">val</span> <span class="py">textView</span><span class="p">:</span> <span class="nc">TextView</span> <span class="p">=</span> <span class="n">view</span><span class="p">.</span><span class="nf">findViewById</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">item_title</span><span class="p">)</span>
     <span class="p">}</span>
@@ -307,7 +320,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="modify-the-mainactivity-to-use-a-recyclerview">Modify the MainActivity to use a RecyclerView</h2>
+<h2 id="modify-the-mainactivity-to-use-a-recyclerview">
+<a class="anchor" href="#modify-the-mainactivity-to-use-a-recyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modify the MainActivity to use a RecyclerView</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">binding</span><span class="p">:</span> <span class="nc">ActivityMainBinding</span>
@@ -335,7 +349,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <h3 id="결과">결과</h3>
 
-<p><img src="/img/posts/android/screenshot_1627578939.png" alt="screenshot_1627578939.png" width="75%" /></p>
+<p><img src="/img/posts/android/screenshot_1627578939.png" alt="screenshot_1627578939.png" width="75%"></p>
 
       
       

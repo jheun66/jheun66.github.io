@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>ACTION_SEND &amp; ACTION_SENDTO(이메일 인텐트) | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="ACTION_SEND &amp; ACTION_SENDTO(이메일 인텐트)" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="ACTION_SEND &amp; ACTION_SENDTO(이메일 인텐트)" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-01-14T02:30:00+00:00","datePublished":"2021-01-14T02:30:00+00:00","description":"이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.","headline":"ACTION_SEND &amp; ACTION_SENDTO(이메일 인텐트)","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/send-and-sendto/"},"url":"https://jheun66.github.io/posts/android/send-and-sendto/"}</script>
+{"description":"이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.","headline":"ACTION_SEND &amp; ACTION_SENDTO(이메일 인텐트)","dateModified":"2021-01-14T02:30:00+00:00","datePublished":"2021-01-14T02:30:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/send-and-sendto/"},"url":"https://jheun66.github.io/posts/android/send-and-sendto/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,9 +156,15 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <p>이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.</p>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h2"><a href="#action_send">ACTION_SEND</a></li>
+<li class="toc-entry toc-h2"><a href="#action_sendto">ACTION_SENDTO</a></li>
+<li class="toc-entry toc-h2"><a href="#좀-더-좋은-방법">좀 더 좋은 방법</a></li>
+<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
+</ol><p>이메일 보내기 인텐트를 사용할 때 참고할 내용들을 정리합니다.</p>
 
-<h2 id="action_send">ACTION_SEND</h2>
+<h2 id="action_send">
+<a class="anchor" href="#action_send" aria-hidden="true"><span class="octicon octicon-link"></span></a>ACTION_SEND</h2>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sendEmailwithSend</span><span class="o">()</span> <span class="o">{</span>
     <span class="nc">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_SEND</span><span class="o">);</span>
     <span class="n">intent</span><span class="o">.</span><span class="na">setType</span><span class="o">(</span><span class="s">"plain/text"</span><span class="o">);</span>
@@ -174,11 +180,12 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
 좀더 자세한 사용법은 참고의 개발자 문서를 확인하면 되겠습니다.</p>
 
-<p><img src="/img/posts/android/selectSend.jpg" alt="select send" width="100%" /></p>
+<p><img src="/img/posts/android/selectSend.jpg" alt="select send" width="100%"></p>
 
 <p>대신 선택창에 SEND를 받는 앱이 많습니다.</p>
 
-<h2 id="action_sendto">ACTION_SENDTO</h2>
+<h2 id="action_sendto">
+<a class="anchor" href="#action_sendto" aria-hidden="true"><span class="octicon octicon-link"></span></a>ACTION_SENDTO</h2>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sendEmailwithSendTo</span><span class="o">()</span> <span class="o">{</span>
     <span class="nc">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_SENDTO</span><span class="o">);</span>
     <span class="nc">String</span> <span class="n">emailTitle</span> <span class="o">=</span> <span class="s">"이메일 테스트 제목"</span><span class="o">;</span>
@@ -200,11 +207,12 @@ EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
 그래서 이 인텐트는 EXTRA_STREAM을 받지 못합니다. 
 <a href="https://css-tricks.com/snippets/html/mailto-links/">mailto 관련</a></p>
 
-<p><img src="/img/posts/android/selectSendTo.jpg" alt="select sendto" width="100%" /></p>
+<p><img src="/img/posts/android/selectSendTo.jpg" alt="select sendto" width="100%"></p>
 
 <p>이 경우 메일 앱만 받습니다.</p>
 
-<h2 id="좀-더-좋은-방법">좀 더 좋은 방법</h2>
+<h2 id="좀-더-좋은-방법">
+<a class="anchor" href="#%EC%A2%80-%EB%8D%94-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>좀 더 좋은 방법</h2>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sendEmail</span><span class="o">()</span> <span class="o">{</span>
     <span class="nc">Intent</span> <span class="n">emailSelectorIntent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_SENDTO</span><span class="o">);</span>
     <span class="n">emailSelectorIntent</span><span class="o">.</span><span class="na">setData</span><span class="o">(</span><span class="nc">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"mailto:"</span><span class="o">));</span>
@@ -231,10 +239,11 @@ EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
 
 <p>첨부파일 관련해서는 다른 예제를 통해 정리하겠습니다.</p>
 
-<h2 id="reference">Reference</h2>
-<p><a href="https://developer.android.com/reference/android/content/Intent?hl=ko#ACTION_SEND">https://developer.android.com/reference/android/content/Intent?hl=ko#ACTION_SEND</a><br />
-<a href="https://github.com/codepath/android_guides/wiki/Common-Implicit-Intents">https://github.com/codepath/android_guides/wiki/Common-Implicit-Intents</a><br />
-<a href="https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email">https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email</a><br /></p>
+<h2 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
+<p><a href="https://developer.android.com/reference/android/content/Intent?hl=ko#ACTION_SEND">https://developer.android.com/reference/android/content/Intent?hl=ko#ACTION_SEND</a><br>
+<a href="https://github.com/codepath/android_guides/wiki/Common-Implicit-Intents">https://github.com/codepath/android_guides/wiki/Common-Implicit-Intents</a><br>
+<a href="https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email">https://stackoverflow.com/questions/4883199/using-android-intent-action-send-for-sending-email</a><br></p>
 
 
       

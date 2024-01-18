@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Create your first app | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Create your first app" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Create your first app" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-07-21T03:55:00+00:00","datePublished":"2021-07-21T03:55:00+00:00","description":"개요","headline":"Create your first app","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/create-your-first-app/"},"url":"https://jheun66.github.io/posts/practice/create-your-first-app/"}</script>
+{"description":"개요","headline":"Create your first app","dateModified":"2021-07-21T03:55:00+00:00","datePublished":"2021-07-21T03:55:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/create-your-first-app/"},"url":"https://jheun66.github.io/posts/practice/create-your-first-app/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,11 +156,19 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#qualities-of-a-great-app">Qualities of a great app</a></li>
+<li class="toc-entry toc-h1"><a href="#about-user-interfaces">About user interfaces</a></li>
+<li class="toc-entry toc-h1"><a href="#add-an-image-to-your-project">Add an image to your project</a></li>
+<li class="toc-entry toc-h1"><a href="#adopt-good-coding-practices">Adopt good coding practices</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-two?hl=ko">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="qualities-of-a-great-app">Qualities of a great app</h1>
+<h1 id="qualities-of-a-great-app">
+<a class="anchor" href="#qualities-of-a-great-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Qualities of a great app</h1>
 
 <ul>
   <li>Effectivie</li>
@@ -169,7 +177,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>Accessible</li>
 </ul>
 
-<h1 id="about-user-interfaces">About user interfaces</h1>
+<h1 id="about-user-interfaces">
+<a class="anchor" href="#about-user-interfaces" aria-hidden="true"><span class="octicon octicon-link"></span></a>About user interfaces</h1>
 
 <p>앱의 UI라 하면 화면에 보이는 것들을 얘기할 수 있습니다. 텍스트, 이미지, 버튼 등 사용자와 상호작용할 수 있는 다양한 요소들이 있습니다.</p>
 
@@ -179,11 +188,12 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>해당 레이아웃에 텍스트뷰를 위치시키기 위해서는 위치가 고정되도록 다음과 같이 값을 줄 수 있습니다.</p>
 
-<p><img src="/img/posts/android/2021-07-21__11.43.15.png" alt="img/posts/android/_2021-07-21__11.43.15.png" width="50%" /></p>
+<p><img src="/img/posts/android/2021-07-21__11.43.15.png" alt="img/posts/android/_2021-07-21__11.43.15.png" width="50%"></p>
 
-<h1 id="add-an-image-to-your-project">Add an image to your project</h1>
+<h1 id="add-an-image-to-your-project">
+<a class="anchor" href="#add-an-image-to-your-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add an image to your project</h1>
 
-<p><img src="/img/posts/android/2021-07-21__11.55.43.png" alt="img/posts/android/_2021-07-21__11.55.43.png" /></p>
+<p><img src="/img/posts/android/2021-07-21__11.55.43.png" alt="img/posts/android/_2021-07-21__11.55.43.png"></p>
 
 <p>화면 좌측의 Resource Manager를 클릭한 후 + 버튼을 클릭하면 Import Drawables를 통해 이미지를 가져올 수 있습니다.</p>
 
@@ -201,15 +211,16 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>이미지뷰도 TextView처럼 위치를 정하고 android:scaleType 속성을 통해 화면에 가득차도록 할 수 있습니다.</p>
 
-<p><img src="/img/posts/android/Jul-21-2021_12-09-21.gif" alt="img/posts/android/Jul-21-2021_12-09-21.gif" /></p>
+<p><img src="/img/posts/android/Jul-21-2021_12-09-21.gif" alt="img/posts/android/Jul-21-2021_12-09-21.gif"></p>
 
 <p>아마 이미지뷰를 드랍한 후에는 텍스트뷰가 가려질텐데 텍스트뷰를 이미지뷰 뒤로 이동시키면 화면에 보이게 될 것입니다.</p>
 
-<h1 id="adopt-good-coding-practices">Adopt good coding practices</h1>
+<h1 id="adopt-good-coding-practices">
+<a class="anchor" href="#adopt-good-coding-practices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adopt good coding practices</h1>
 
 <p>텍스트뷰에 하드코딩된 글들은 다른 언어로 번역하기 어렵고 재사용하기 어렵습니다. 따라서 문자열을 <em>resource file</em>에 추가해서 사용하는 것이 좋습니다.</p>
 
-<p><img src="/img/posts/android/2021-07-21__12.13.48.png" alt="test" /></p>
+<p><img src="/img/posts/android/2021-07-21__12.13.48.png" alt="test"></p>
 
 <p>전구 아이콘을 클릭하면 편하게 작업 할 수 있습니다.</p>
 

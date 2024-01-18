@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Classes and inheritance in Kotlin | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Classes and inheritance in Kotlin" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Classes and inheritance in Kotlin" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-07-25T10:18:00+00:00","datePublished":"2021-07-25T10:18:00+00:00","description":"개요","headline":"Classes and inheritance in Kotlin","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/classes-and-inheritance-in-kotlin/"},"url":"https://jheun66.github.io/posts/practice/classes-and-inheritance-in-kotlin/"}</script>
+{"description":"개요","headline":"Classes and inheritance in Kotlin","dateModified":"2021-07-25T10:18:00+00:00","datePublished":"2021-07-25T10:18:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/classes-and-inheritance-in-kotlin/"},"url":"https://jheun66.github.io/posts/practice/classes-and-inheritance-in-kotlin/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,21 +156,51 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#classes">Classes</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#keyword">keyword</a></li>
+<li class="toc-entry toc-h2"><a href="#declaration">Declaration</a></li>
+<li class="toc-entry toc-h2"><a href="#constructor">Constructor</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#inheritance">Inheritance</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#open">open</a></li>
+<li class="toc-entry toc-h2"><a href="#override">override</a></li>
+<li class="toc-entry toc-h2"><a href="#overriding-properties">Overriding properties</a></li>
+<li class="toc-entry toc-h2"><a href="#초기화-순서">초기화 순서</a></li>
+<li class="toc-entry toc-h2"><a href="#calling-the-superclass-implementation">Calling the superclass implementation</a></li>
+<li class="toc-entry toc-h2"><a href="#overriding-rules">Overriding rules</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#adopt-good-coding-practices">Adopt good coding practices</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#with">with</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#reference">Reference</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다. 코틀린 관련 자세한 내용은 <a href="https://kotlinlang.org/docs/classes.html">코틀린 사이트</a>를 참고하면 좋을 것 같습니다.</p>
 
-<h1 id="classes">Classes</h1>
+<h1 id="classes">
+<a class="anchor" href="#classes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classes</h1>
 
-<h2 id="keyword">keyword</h2>
+<h2 id="keyword">
+<a class="anchor" href="#keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>keyword</h2>
 
 <p>class</p>
 
-<h2 id="declaration">Declaration</h2>
+<h2 id="declaration">
+<a class="anchor" href="#declaration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Declaration</h2>
 
 <p>name, header, body로 이루어지며 header와 body는 생략이 가능</p>
 
-<h2 id="constructor">Constructor</h2>
+<h2 id="constructor">
+<a class="anchor" href="#constructor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Constructor</h2>
 
 <p>keyword는 constructor로, 하나의 <em>primary constructor</em>와 하나 이상의 <em>secondary constructor</em>를 가질 수 있음</p>
 
@@ -219,15 +249,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>이러한 Delegation(위임)에 의해 secondary constructor 내부 코드가 진행되기 전에 초기화 구문과 property 초기화가 이루어짐, 이는 <em>primary constructor</em>가 없더라도 위임은 암시적으로 일어남</p>
 
-<h1 id="inheritance">Inheritance</h1>
+<h1 id="inheritance">
+<a class="anchor" href="#inheritance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inheritance</h1>
 
 <p>코틀린의 모든 클래스의 부모 클래스는 <strong><em>Any</em></strong> 클래스, Any 클래스는 equals(), hashcode(), toString() 함수를 가짐</p>
 
-<h2 id="open">open</h2>
+<h2 id="open">
+<a class="anchor" href="#open" aria-hidden="true"><span class="octicon octicon-link"></span></a>open</h2>
 
 <p>클래스가 상속가능하다는 의미로 open 키워드 사용, 코틀린 클래스의 자바나 C++과 다른게 제한자의 기본값이 final이며 생략되어 있음, 메소드에도 동일하게 사용</p>
 
-<h2 id="override">override</h2>
+<h2 id="override">
+<a class="anchor" href="#override" aria-hidden="true"><span class="octicon octicon-link"></span></a>override</h2>
 
 <p>자식클래스에서 부모클래스의 메소드를 override할 때 사용, override는 open 제한자처럼 계속 상속받을 수 있으므로 해당 메소드가 더이상 상속되길 원하지 않으면 final을 앞에 붙여줌</p>
 
@@ -245,21 +278,26 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="overriding-properties">Overriding properties</h2>
+<h2 id="overriding-properties">
+<a class="anchor" href="#overriding-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding properties</h2>
 
 <p>부모 클래스의 val property를 var로도 받을 수 있음</p>
 
-<h2 id="초기화-순서">초기화 순서</h2>
+<h2 id="초기화-순서">
+<a class="anchor" href="#%EC%B4%88%EA%B8%B0%ED%99%94-%EC%88%9C%EC%84%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>초기화 순서</h2>
 
 <p>부모 클래스 먼저</p>
 
-<h2 id="calling-the-superclass-implementation">Calling the superclass implementation</h2>
+<h2 id="calling-the-superclass-implementation">
+<a class="anchor" href="#calling-the-superclass-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calling the superclass implementation</h2>
 
 <p><em>super</em> 키워드 사용, inner class에서는 <em>super@Outer</em> 사용</p>
 
-<h2 id="overriding-rules">Overriding rules</h2>
+<h2 id="overriding-rules">
+<a class="anchor" href="#overriding-rules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding rules</h2>
 
-<h3 id="super">super<base /></h3>
+<h3 id="super">super<base>
+</h3>
 
 <p>동일한 메소드명을 상속 받을 경우 다음과 같이 모호함을 없애줌</p>
 
@@ -291,7 +329,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="n">draw</span> <span class="n">polygon</span><span class="p">!</span>
 </code></pre></div></div>
 
-<h1 id="adopt-good-coding-practices">Adopt good coding practices</h1>
+<h1 id="adopt-good-coding-practices">
+<a class="anchor" href="#adopt-good-coding-practices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adopt good coding practices</h1>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">squareCabin</span> <span class="p">=</span> <span class="nc">SquareCabin</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
@@ -319,11 +358,13 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="with">with</h2>
+<h2 id="with">
+<a class="anchor" href="#with" aria-hidden="true"><span class="octicon octicon-link"></span></a>with</h2>
 
 <p>with 키워드를 이용하여 동일한 instance의 멤버에 접근하여 코드를 간단한게 할 수 있음</p>
 
-<h1 id="reference">Reference</h1>
+<h1 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h1>
 
 <p><a href="https://kotlinlang.org/docs/classes.html">https://kotlinlang.org/docs/classes.html</a></p>
 

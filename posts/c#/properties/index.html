@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Properties | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Properties" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Properties" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2022-12-12T03:00:00+00:00","datePublished":"2022-12-12T03:00:00+00:00","description":"저번 포스팅에서는 프로퍼티가 무엇인지에 대해 설명했었습니다. 이번 포스팅에서는 예제를 통해 프로퍼티의 형태가 어떻게 되고 어떻게 써야할지 알아보겠습니다.","headline":"Properties","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/c%23/properties/"},"url":"https://jheun66.github.io/posts/c%23/properties/"}</script>
+{"description":"저번 포스팅에서는 프로퍼티가 무엇인지에 대해 설명했었습니다. 이번 포스팅에서는 예제를 통해 프로퍼티의 형태가 어떻게 되고 어떻게 써야할지 알아보겠습니다.","headline":"Properties","dateModified":"2022-12-12T03:00:00+00:00","datePublished":"2022-12-12T03:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/c%23/properties/"},"url":"https://jheun66.github.io/posts/c%23/properties/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,12 +156,27 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <p>저번 포스팅에서는 프로퍼티가 무엇인지에 대해 설명했었습니다. 이번 포스팅에서는 예제를 통해 프로퍼티의 형태가 어떻게 되고 어떻게 써야할지 알아보겠습니다.</p>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#accessor접근자">Accessor(접근자)</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#get과-set">get과 set</a></li>
+<li class="toc-entry toc-h2"><a href="#restricting-accessor-accessibility">Restricting Accessor Accessibility</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#자동-구현-프로퍼티">자동 구현 프로퍼티</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#변경할-수-없는-프로퍼티">변경할 수 없는 프로퍼티</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#참고">참고</a></li>
+</ol><p>저번 포스팅에서는 프로퍼티가 무엇인지에 대해 설명했었습니다. 이번 포스팅에서는 예제를 통해 프로퍼티의 형태가 어떻게 되고 어떻게 써야할지 알아보겠습니다.</p>
 
 <p>참고로 유니티에서 제공하지 않는 <strong><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0/init">Init Only Setters(C# 9.0)</a>, <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/required">required(C# 11.0)</a></strong>에 대해선 생략하도록 하겠습니다. 또한 프로퍼티 사용법 중 상속과 다형성에 대한 부분들이 있는데 메서드와 유사하므로 나중에 따로 다루도록 하겠습니다.</p>
 
-<h1 id="accessor접근자">Accessor(접근자)</h1>
-<h2 id="get과-set">get과 set</h2>
+<h1 id="accessor접근자">
+<a class="anchor" href="#accessor%EC%A0%91%EA%B7%BC%EC%9E%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessor(접근자)</h1>
+<h2 id="get과-set">
+<a class="anchor" href="#get%EA%B3%BC-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>get과 set</h2>
 <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Person</span>
 <span class="p">{</span>
     <span class="c1">// 백업 필드</span>
@@ -214,7 +229,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="restricting-accessor-accessibility">Restricting Accessor Accessibility</h2>
+<h2 id="restricting-accessor-accessibility">
+<a class="anchor" href="#restricting-accessor-accessibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Restricting Accessor Accessibility</h2>
 <p>get과 set의 액세스 가능성은 디폴트값으로 프로퍼티의 액세스 가능성을 따라가지만 get과 set에 직접 액세스 한정자를 줄 수도 있습니다. 일반적으로 set에 더 제한적인 private이나 protected를 주는 경우가 많습니다.</p>
 
 <h3 id="제한-사항">제한 사항</h3>
@@ -326,7 +342,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="자동-구현-프로퍼티">자동 구현 프로퍼티</h1>
+<h1 id="자동-구현-프로퍼티">
+<a class="anchor" href="#%EC%9E%90%EB%8F%99-%EA%B5%AC%ED%98%84-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>자동 구현 프로퍼티</h1>
 <p>프로퍼티에 별다른 논리가 필요없을 경우 백업 필드를 생략하고 몸통을 생략할 수 있습니다.</p>
 
 <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Person</span>
@@ -352,14 +369,16 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>interface에서의 몸통이 없는 프로퍼티는 <code class="language-plaintext highlighter-rouge">abstract</code> 입니다. 즉 자동 구현 프로퍼티가 아닙니다.</p>
 
-<h2 id="변경할-수-없는-프로퍼티">변경할 수 없는 프로퍼티</h2>
+<h2 id="변경할-수-없는-프로퍼티">
+<a class="anchor" href="#%EB%B3%80%EA%B2%BD%ED%95%A0-%EC%88%98-%EC%97%86%EB%8A%94-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>변경할 수 없는 프로퍼티</h2>
 <p>외부에서 변경할 수 없도록 완전 캡슐화된 프로퍼티를 만드는 방법에 대한 내용입니다.</p>
 <ul>
   <li>get만 선언합니다. 이 경우 프로퍼티는 읽기 전용이 됩니다. 생성자에서만 접근 가능합니다.</li>
   <li>set에 private으로 선언합니다. 이 경우 클래스 내부 함수에서만 변경이 가능합니다.</li>
 </ul>
 
-<h1 id="참고">참고</h1>
+<h1 id="참고">
+<a class="anchor" href="#%EC%B0%B8%EA%B3%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>참고</h1>
 <p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#auto-implemented-properties">Properties 문서</a></p>
 
       

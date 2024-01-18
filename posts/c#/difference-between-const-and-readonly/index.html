@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>const와 readonly의 차이점 | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="const와 readonly의 차이점" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="const와 readonly의 차이점" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2022-10-09T06:37:00+00:00","datePublished":"2022-10-09T06:37:00+00:00","description":"const vs readonly const와 readonly의 경우 한번 값이 세팅되면 바꿀 수 없다는 공통점이 있습니다.","headline":"const와 readonly의 차이점","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/c%23/difference-between-const-and-readonly/"},"url":"https://jheun66.github.io/posts/c%23/difference-between-const-and-readonly/"}</script>
+{"description":"const vs readonly const와 readonly의 경우 한번 값이 세팅되면 바꿀 수 없다는 공통점이 있습니다.","headline":"const와 readonly의 차이점","dateModified":"2022-10-09T06:37:00+00:00","datePublished":"2022-10-09T06:37:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/c%23/difference-between-const-and-readonly/"},"url":"https://jheun66.github.io/posts/c%23/difference-between-const-and-readonly/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,13 +156,25 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="const-vs-readonly">const vs readonly</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#const-vs-readonly">const vs readonly</a></li>
+<li class="toc-entry toc-h1"><a href="#차이점">차이점</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#const">const</a></li>
+<li class="toc-entry toc-h2"><a href="#readonly">readonly</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#reference">Reference</a></li>
+</ol><h1 id="const-vs-readonly">
+<a class="anchor" href="#const-vs-readonly" aria-hidden="true"><span class="octicon octicon-link"></span></a>const vs readonly</h1>
 <p><code class="language-plaintext highlighter-rouge">const</code>와 <code class="language-plaintext highlighter-rouge">readonly</code>의 경우 한번 값이 세팅되면 바꿀 수 없다는 공통점이 있습니다.</p>
 
 <p>그래서 어떤 키워드를 사용해야 하는지 헷갈리는 경우가 있어 정리해둡니다.</p>
 
-<h1 id="차이점">차이점</h1>
-<h2 id="const">const</h2>
+<h1 id="차이점">
+<a class="anchor" href="#%EC%B0%A8%EC%9D%B4%EC%A0%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>차이점</h1>
+<h2 id="const">
+<a class="anchor" href="#const" aria-hidden="true"><span class="octicon octicon-link"></span></a>const</h2>
 <ul>
   <li>컴파일 시점에 값이 세팅됨</li>
   <li>지역 변수로도 사용가능</li>
@@ -170,7 +182,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>사용할 수 있는 자료형이 기본 내장 자료형으로 한정됨(당연한게 컴파일 시점에 세팅되어야 하므로)</li>
 </ul>
 
-<h2 id="readonly">readonly</h2>
+<h2 id="readonly">
+<a class="anchor" href="#readonly" aria-hidden="true"><span class="octicon octicon-link"></span></a>readonly</h2>
 <ul>
   <li>런타임에 초기화, 생성자 시점 이후에는 세팅 불가능</li>
   <li>지역 변수로 사용X</li>
@@ -180,9 +193,10 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>대체로 readonly 사용을 권장합니다. const가 성능면에서는 빠를 수 있지만 큰 차이가 없고 readonly가 편의성이나 유연성 측면에서 훨씬 좋습니다.</p>
 
-<h1 id="reference">Reference</h1>
-<p>자세한 내용은 Reference 참고<br />
-<a href="https://learn.microsoft.com/ko-kr/dotnet/csharp/programming-guide/classes-and-structs/constants">const</a><br />
+<h1 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h1>
+<p>자세한 내용은 Reference 참고<br>
+<a href="https://learn.microsoft.com/ko-kr/dotnet/csharp/programming-guide/classes-and-structs/constants">const</a><br>
 <a href="https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/readonly">readonly</a></p>
 
       

@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>코드 블럭 syntax_highlight 적용 | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="코드 블럭 syntax_highlight 적용" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="코드 블럭 syntax_highlight 적용" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-07-22T02:49:00+00:00","datePublished":"2021-07-22T02:49:00+00:00","description":"rougify help style","headline":"코드 블럭 syntax_highlight 적용","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/"},"url":"https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/"}</script>
+{"description":"rougify help style","headline":"코드 블럭 syntax_highlight 적용","dateModified":"2021-07-22T02:49:00+00:00","datePublished":"2021-07-22T02:49:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/"},"url":"https://jheun66.github.io/posts/blog/codeblock-syntax-highlight/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,7 +156,13 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="rougify-help-style">rougify help style</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#rougify-help-style">rougify help style</a></li>
+<li class="toc-entry toc-h1"><a href="#원하는-테마-적용">원하는 테마 적용</a></li>
+<li class="toc-entry toc-h1"><a href="#headhtml에-추가">head.html에 추가</a></li>
+<li class="toc-entry toc-h1"><a href="#_configyml-수정">_config.yml 수정</a></li>
+</ol><h1 id="rougify-help-style">
+<a class="anchor" href="#rougify-help-style" aria-hidden="true"><span class="octicon octicon-link"></span></a>rougify help style</h1>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rougify <span class="nb">help </span>style
 usage: rougify style <span class="o">[</span>&lt;theme-name&gt;] <span class="o">[</span>&lt;options&gt;]
@@ -176,17 +182,21 @@ available themes:
   base16, base16.dark, base16.light, base16.monokai, base16.monokai.dark, base16.monokai.light, base16.solarized, base16.solarized.dark, base16.solarized.light, bw, colorful, github, gruvbox, gruvbox.dark, gruvbox.light, igorpro, magritte, molokai, monokai, monokai.sublime, pastie, thankful_eyes, tulip
 </code></pre></div></div>
 
-<h1 id="원하는-테마-적용"><strong>원하는 테마 적용</strong></h1>
+<h1 id="원하는-테마-적용">
+<a class="anchor" href="#%EC%9B%90%ED%95%98%EB%8A%94-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>원하는 테마 적용</strong>
+</h1>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rougify style &lt;themes&gt; <span class="o">&gt;</span> ~/&lt;블로그&gt;/assets/highlight.css
 </code></pre></div></div>
 
-<h1 id="headhtml에-추가">head.html에 추가</h1>
+<h1 id="headhtml에-추가">
+<a class="anchor" href="#headhtml%EC%97%90-%EC%B6%94%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>head.html에 추가</h1>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/highlight.css"</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 
-<h1 id="_configyml-수정">_config.yml 수정</h1>
+<h1 id="_configyml-수정">
+<a class="anchor" href="#_configyml-%EC%88%98%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>_config.yml 수정</h1>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>markdown:  kramdown
 kramdown:

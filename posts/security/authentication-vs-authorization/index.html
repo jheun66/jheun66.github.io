@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Authentication VS Authorization | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Authentication VS Authorization" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Authentication VS Authorization" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2020-12-13T06:00:00+00:00","datePublished":"2020-12-13T06:00:00+00:00","description":"OAuth 2.0을 공부하면서 먼저 정리해야할 용어라 생각되어 작성합니다.","headline":"Authentication VS Authorization","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/security/authentication-vs-authorization/"},"url":"https://jheun66.github.io/posts/security/authentication-vs-authorization/"}</script>
+{"description":"OAuth 2.0을 공부하면서 먼저 정리해야할 용어라 생각되어 작성합니다.","headline":"Authentication VS Authorization","dateModified":"2020-12-13T06:00:00+00:00","datePublished":"2020-12-13T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/security/authentication-vs-authorization/"},"url":"https://jheun66.github.io/posts/security/authentication-vs-authorization/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,15 +156,23 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <p>OAuth 2.0을 공부하면서 먼저 정리해야할 용어라 생각되어 작성합니다.</p>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h2"><a href="#authentication">Authentication</a></li>
+<li class="toc-entry toc-h2"><a href="#authorization">Authorization</a></li>
+<li class="toc-entry toc-h2"><a href="#authentication-vs-authorization">Authentication VS Authorization</a></li>
+<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
+</ol><p>OAuth 2.0을 공부하면서 먼저 정리해야할 용어라 생각되어 작성합니다.</p>
 
-<h2 id="authentication">Authentication</h2>
+<h2 id="authentication">
+<a class="anchor" href="#authentication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication</h2>
 <p>인증, 사용자가 자기 자신을 <u>증명</u>하는 것</p>
 
-<h2 id="authorization">Authorization</h2>
+<h2 id="authorization">
+<a class="anchor" href="#authorization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authorization</h2>
 <p>인가, 권한 부여, 사용자가 리소스에 접근할 <u>권한</u>을 주는 것</p>
 
-<h2 id="authentication-vs-authorization">Authentication VS Authorization</h2>
+<h2 id="authentication-vs-authorization">
+<a class="anchor" href="#authentication-vs-authorization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication VS Authorization</h2>
 <p>비슷한 용어처럼 들리지만 다른 과정이라는 것을 알 수 있습니다.</p>
 
 <table>
@@ -194,8 +202,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   </tbody>
 </table>
 
-<h2 id="reference">Reference</h2>
-<p><a href="https://www.okta.com/identity-101/authentication-vs-authorization/">https://www.okta.com/identity-101/authentication-vs-authorization/</a><br />
+<h2 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
+<p><a href="https://www.okta.com/identity-101/authentication-vs-authorization/">https://www.okta.com/identity-101/authentication-vs-authorization/</a><br>
 <a href="https://auth0.com/docs/authorization/authentication-and-authorization">https://auth0.com/docs/authorization/authentication-and-authorization</a></p>
 
       

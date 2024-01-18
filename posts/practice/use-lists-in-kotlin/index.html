@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Use Lists in Kotlin | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Use Lists in Kotlin" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Use Lists in Kotlin" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-07-29T09:30:00+00:00","datePublished":"2021-07-29T09:30:00+00:00","description":"개요","headline":"Use Lists in Kotlin","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-lists-in-kotlin/"},"url":"https://jheun66.github.io/posts/practice/use-lists-in-kotlin/"}</script>
+{"description":"개요","headline":"Use Lists in Kotlin","dateModified":"2021-07-29T09:30:00+00:00","datePublished":"2021-07-29T09:30:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-lists-in-kotlin/"},"url":"https://jheun66.github.io/posts/practice/use-lists-in-kotlin/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,24 +156,50 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#introduction-to-lists">Introduction to Lists</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#생성">생성</a></li>
+<li class="toc-entry toc-h2"><a href="#접근">접근</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#introduction-to-mutable-lists">Introduction to Mutable Lists</a></li>
+<li class="toc-entry toc-h1"><a href="#loop-through-a-list">Loop Through a List</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#while-loops">while loops</a></li>
+<li class="toc-entry toc-h2"><a href="#for-loops">for loops</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#overriding">Overriding</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#tostring-method">toString() method</a></li>
+<li class="toc-entry toc-h2"><a href="#iterators">Iterators</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#builder-pattern">Builder Pattern</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-3">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="introduction-to-lists">Introduction to Lists</h1>
+<h1 id="introduction-to-lists">
+<a class="anchor" href="#introduction-to-lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Lists</h1>
 
 <ul>
   <li>Read Only</li>
   <li>한번 생성하면 수정불가</li>
 </ul>
 
-<h2 id="생성">생성</h2>
+<h2 id="생성">
+<a class="anchor" href="#%EC%83%9D%EC%84%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>생성</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 타입 생략 가능</span>
 <span class="kd">val</span> <span class="py">numbers</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="접근">접근</h2>
+<h2 id="접근">
+<a class="anchor" href="#%EC%A0%91%EA%B7%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>접근</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 배열처럼 접근</span>
 <span class="nf">println</span><span class="p">(</span><span class="s">"Second element: ${numbers[1]}"</span><span class="p">)</span>
@@ -185,7 +211,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="nf">println</span><span class="p">(</span><span class="s">"Contains 4? ${numbers.contains(4)}"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h1 id="introduction-to-mutable-lists">Introduction to Mutable Lists</h1>
+<h1 id="introduction-to-mutable-lists">
+<a class="anchor" href="#introduction-to-mutable-lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Mutable Lists</h1>
 
 <ul>
   <li>변경 가능한 리스트</li>
@@ -222,9 +249,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="n">entrees</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h1 id="loop-through-a-list">Loop Through a List</h1>
+<h1 id="loop-through-a-list">
+<a class="anchor" href="#loop-through-a-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loop Through a List</h1>
 
-<h2 id="while-loops">while loops</h2>
+<h2 id="while-loops">
+<a class="anchor" href="#while-loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>while loops</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 리스트의 인덱스를 추적해야하는 경우 for문을 사용하는게 나음</span>
 <span class="kd">val</span> <span class="py">guestsPerFamily</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -237,7 +266,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="nf">println</span><span class="p">(</span><span class="s">"Total Guest Count: $totalGuests"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="for-loops">for loops</h2>
+<h2 id="for-loops">
+<a class="anchor" href="#for-loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>for loops</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 다양한 방식으로 for문을 사용할 수 있음 </span>
 <span class="k">for</span> <span class="p">(</span><span class="n">item</span> <span class="k">in</span> <span class="n">list</span><span class="p">)</span> <span class="nf">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="c1">// Iterate over items in a list</span>
@@ -251,9 +281,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="k">for</span> <span class="p">(</span><span class="n">item</span> <span class="k">in</span> <span class="mi">3</span><span class="o">..</span><span class="mi">6</span> <span class="n">step</span> <span class="mi">2</span><span class="p">)</span> <span class="nf">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="c1">// Prints: 35</span>
 </code></pre></div></div>
 
-<h1 id="overriding">Overriding</h1>
+<h1 id="overriding">
+<a class="anchor" href="#overriding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding</h1>
 
-<h2 id="tostring-method">toString() method</h2>
+<h2 id="tostring-method">
+<a class="anchor" href="#tostring-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>toString() method</h2>
 
 <p>class를 만들고 print로 해당 객체의 원하는 값을 출력하려면 toString 메소드를 오버로딩 필요</p>
 
@@ -285,7 +317,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="iterators">Iterators</h2>
+<h2 id="iterators">
+<a class="anchor" href="#iterators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iterators</h2>
 
 <p><a href="https://play.kotlinlang.org/byExample/02_control_flow/02_Loops">코틀린 공식 사이트 참고</a></p>
 
@@ -307,7 +340,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="builder-pattern">Builder Pattern</h1>
+<h1 id="builder-pattern">
+<a class="anchor" href="#builder-pattern" aria-hidden="true"><span class="octicon octicon-link"></span></a>Builder Pattern</h1>
 
 <p>Class에 자기 자신(<a href="https://kotlinlang.org/docs/this-expressions.html">this</a>)을 반환하는 함수를 만들어 Builder 패턴을 구현,</p>
 

@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Calculate the tip | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Calculate the tip" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Calculate the tip" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-07-28T07:58:00+00:00","datePublished":"2021-07-28T07:58:00+00:00","description":"개요","headline":"Calculate the tip","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/calculate-the-tip/"},"url":"https://jheun66.github.io/posts/practice/calculate-the-tip/"}</script>
+{"description":"개요","headline":"Calculate the tip","dateModified":"2021-07-28T07:58:00+00:00","datePublished":"2021-07-28T07:58:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/calculate-the-tip/"},"url":"https://jheun66.github.io/posts/practice/calculate-the-tip/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,11 +156,23 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#view-binding">View binding</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#initalize-the-binding-object">Initalize the binding object</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#calculate-the-tip">Calculate the tip</a></li>
+<li class="toc-entry toc-h1"><a href="#test-and-debug">Test and debug</a></li>
+<li class="toc-entry toc-h1"><a href="#adopt-good-coding-practices">Adopt good coding practices</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-xml-layouts">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="view-binding">View binding</h1>
+<h1 id="view-binding">
+<a class="anchor" href="#view-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>View binding</h1>
 
 <p>안드로이드 프레임워크에서는 코드에서 뷰를 찾기위해 <em>findViewById()</em>를 사용하고 있지만 app gradle 파일에viewBinding을 추가하여 해당 기능을 사용 가능</p>
 
@@ -169,7 +181,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 }
 </code></pre></div></div>
 
-<h2 id="initalize-the-binding-object">Initalize the binding object</h2>
+<h2 id="initalize-the-binding-object">
+<a class="anchor" href="#initalize-the-binding-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initalize the binding object</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
 
@@ -190,7 +203,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>바인딩 타입이 ActivityMainBinding인 이유는 activity_main.xml에서 낙타표기법으로 변경 후 Binding이 추가하는 형식이기 때문</li>
 </ul>
 
-<h1 id="calculate-the-tip">Calculate the tip</h1>
+<h1 id="calculate-the-tip">
+<a class="anchor" href="#calculate-the-tip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculate the tip</h1>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">calculateTip</span><span class="p">()</span> <span class="p">{</span>
         <span class="kd">val</span> <span class="py">stringInTextField</span> <span class="p">=</span> <span class="n">binding</span><span class="p">.</span><span class="n">costOfService</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="nf">toString</span><span class="p">()</span>
@@ -238,7 +252,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>String 리소스에 매개변수를 받을 수 있도록 할 수 있음</p>
 
-<h1 id="test-and-debug">Test and debug</h1>
+<h1 id="test-and-debug">
+<a class="anchor" href="#test-and-debug" aria-hidden="true"><span class="octicon octicon-link"></span></a>Test and debug</h1>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//val cost = stringInTextField.toDouble()</span>
 <span class="kd">val</span> <span class="py">cost</span> <span class="p">=</span> <span class="n">stringInTextField</span><span class="p">.</span><span class="nf">toDoubleOrNull</span><span class="p">()</span>
@@ -252,7 +267,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>null일 경우를 체크해 주어야함</p>
 
-<h1 id="adopt-good-coding-practices">Adopt good coding practices</h1>
+<h1 id="adopt-good-coding-practices">
+<a class="anchor" href="#adopt-good-coding-practices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adopt good coding practices</h1>
 
 <ul>
   <li>Analyze &gt; Inspect Code</li>

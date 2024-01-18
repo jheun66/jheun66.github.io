@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Fragments and the Navigation Component | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Fragments and the Navigation Component" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Fragments and the Navigation Component" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-08-26T14:00:00+00:00","datePublished":"2021-08-26T14:00:00+00:00","description":"개요","headline":"Fragments and the Navigation Component","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/"},"url":"https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/"}</script>
+{"description":"개요","headline":"Fragments and the Navigation Component","dateModified":"2021-08-26T14:00:00+00:00","datePublished":"2021-08-26T14:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/"},"url":"https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,15 +156,43 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#fragments-and-the-fragment-lifecycle">Fragments and the fragment lifecycle</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#fragment-lifecycle">Fragment lifecycle</a></li>
+<li class="toc-entry toc-h2"><a href="#액티비티의-라이프사이클과-비교할-때-주의">액티비티의 라이프사이클과 비교할 때 주의</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#implement-letterlistfragment">Implement LetterListFragment</a></li>
+<li class="toc-entry toc-h1"><a href="#implement-letterlistfragment-1">Implement LetterListFragment</a></li>
+<li class="toc-entry toc-h1"><a href="#fragments-and-the-navigation-component">Fragments and the Navigation Component</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#navigation-component">Navigation Component</a></li>
+<li class="toc-entry toc-h2"><a href="#navigation-dependency">Navigation Dependency</a></li>
+<li class="toc-entry toc-h2"><a href="#safe-args-plugin">Safe Args Plugin</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#using-the-navigation-graph">Using the Navigation Graph</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#use-fragmentcontainerview-in-mainactivity">Use FragmentContainerView in MainActivity</a></li>
+<li class="toc-entry toc-h2"><a href="#set-up-the-navigation-graph">Set Up the Navigation Graph</a></li>
+<li class="toc-entry toc-h2"><a href="#perform-the-navigation-action">Perform the Navigation Action</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#reference">Reference</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-2">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="fragments-and-the-fragment-lifecycle">Fragments and the fragment lifecycle</h1>
+<h1 id="fragments-and-the-fragment-lifecycle">
+<a class="anchor" href="#fragments-and-the-fragment-lifecycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fragments and the fragment lifecycle</h1>
 
 <p>fragment 역시 activity처럼 라이프사이클을 가지고 있음</p>
 
-<h2 id="fragment-lifecycle">Fragment lifecycle</h2>
+<h2 id="fragment-lifecycle">
+<a class="anchor" href="#fragment-lifecycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fragment lifecycle</h2>
 
 <p>5가지 <a href="https://developer.android.com/reference/kotlin/androidx/lifecycle/Lifecycle.State">Lifecylce.State</a> 를 가짐</p>
 
@@ -232,11 +260,13 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>프레그먼트가 DESTROTED 상태에 들어갈 때</p>
 
-<h2 id="액티비티의-라이프사이클과-비교할-때-주의">액티비티의 라이프사이클과 비교할 때 주의</h2>
+<h2 id="액티비티의-라이프사이클과-비교할-때-주의">
+<a class="anchor" href="#%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%EC%9D%98-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4%EA%B3%BC-%EB%B9%84%EA%B5%90%ED%95%A0-%EB%95%8C-%EC%A3%BC%EC%9D%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>액티비티의 라이프사이클과 비교할 때 주의</h2>
 
 <p>액티비티에서는 <code class="language-plaintext highlighter-rouge">onCreate()</code> 함수에서 레이아웃을 inflate하고 뷰를 바인딩했지만 프레그먼트에서는 뷰가 생성되기 전에 <code class="language-plaintext highlighter-rouge">onCraete()</code>를 호출함</p>
 
-<h1 id="implement-letterlistfragment">Implement LetterListFragment</h1>
+<h1 id="implement-letterlistfragment">
+<a class="anchor" href="#implement-letterlistfragment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implement LetterListFragment</h1>
 
 <ol>
   <li>바인딩 객체 만들기</li>
@@ -265,7 +295,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </blockquote>
 
 <ol>
-  <li><code class="language-plaintext highlighter-rouge">onCreate()</code> 오버라이드 후 <code class="language-plaintext highlighter-rouge">setHasOptionsMenu()</code> 추가</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">onCreate()</code> 오버라이드 후 <code class="language-plaintext highlighter-rouge">setHasOptionsMenu()</code> 추가</li>
 </ol>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
@@ -275,7 +306,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </code></pre></div></div>
 
 <ol>
-  <li><code class="language-plaintext highlighter-rouge">onCreateView()</code>에서 inflate후 view 반환</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">onCreateView()</code>에서 inflate후 view 반환</li>
 </ol>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreateView</span><span class="p">(</span>
@@ -296,7 +328,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </code></pre></div></div>
 
 <ol>
-  <li><code class="language-plaintext highlighter-rouge">onViewCreated()</code>에서 리사이클러뷰 프로퍼티에 값 세팅, 레이아웃을 선택하는 메소드 추가</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">onViewCreated()</code>에서 리사이클러뷰 프로퍼티에 값 세팅, 레이아웃을 선택하는 메소드 추가</li>
 </ol>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="nc">View</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
@@ -306,7 +339,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </code></pre></div></div>
 
 <ol>
-  <li><code class="language-plaintext highlighter-rouge">onDestroyView()</code>에서 _binding 값을 잊지않고 null로 초기화</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">onDestroyView()</code>에서 _binding 값을 잊지않고 null로 초기화</li>
 </ol>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onDestroyView</span><span class="p">()</span> <span class="p">{</span>
@@ -381,25 +415,32 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="implement-letterlistfragment-1">Implement LetterListFragment</h1>
+<h1 id="implement-letterlistfragment-1">
+<a class="anchor" href="#implement-letterlistfragment-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implement LetterListFragment</h1>
 
 <p>같은 방식으로 적용하기</p>
 
-<h1 id="fragments-and-the-navigation-component">Fragments and the Navigation Component</h1>
+<h1 id="fragments-and-the-navigation-component">
+<a class="anchor" href="#fragments-and-the-navigation-component" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fragments and the Navigation Component</h1>
 
-<h2 id="navigation-component">Navigation Component</h2>
+<h2 id="navigation-component">
+<a class="anchor" href="#navigation-component" aria-hidden="true"><span class="octicon octicon-link"></span></a>Navigation Component</h2>
 
 <p>Navigation Component에 대한 최신 가이드는 <a href="https://developer.android.com/guide/navigation/navigation-getting-started">가이드 문서</a>를 참고하는게 좋을 것 같음</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Navigation Graph</code>: 앱의 Navigation을 시각적으로 확인할 수 있도록 도와주는 XML File. 각각의 Fragment와 Activity에 상응하는 화면으로 목적지를 지정할 수 있음.</li>
-  <li><code class="language-plaintext highlighter-rouge">NavHost</code>: 액티비티의 <code class="language-plaintext highlighter-rouge">Navigation Graph</code>에 목적지를 띄워주는데 사용. 프레그먼트를 결정하면 <code class="language-plaintext highlighter-rouge">Navhost</code>의 목적지가 업데이트</li>
-  <li><code class="language-plaintext highlighter-rouge">NavController</code>: <code class="language-plaintext highlighter-rouge">NavHost</code>에서 보여지는 목적지를 컨트롤하는 객체. <code class="language-plaintext highlighter-rouge">Navigation Component</code>를 사용할 경우, <code class="language-plaintext highlighter-rouge">NavController</code>의 <code class="language-plaintext highlighter-rouge">nagivate()</code>메소드를 호출하여 프레그먼트를 바꿔줌. <code class="language-plaintext highlighter-rouge">NavController</code>는 공통된 동작, 예를들어 시스템 “up” 버튼을 누를 경우 이전 프레그먼트로 가도록 할 수 있음</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Navigation Graph</code>: 앱의 Navigation을 시각적으로 확인할 수 있도록 도와주는 XML File. 각각의 Fragment와 Activity에 상응하는 화면으로 목적지를 지정할 수 있음.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">NavHost</code>: 액티비티의 <code class="language-plaintext highlighter-rouge">Navigation Graph</code>에 목적지를 띄워주는데 사용. 프레그먼트를 결정하면 <code class="language-plaintext highlighter-rouge">Navhost</code>의 목적지가 업데이트</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">NavController</code>: <code class="language-plaintext highlighter-rouge">NavHost</code>에서 보여지는 목적지를 컨트롤하는 객체. <code class="language-plaintext highlighter-rouge">Navigation Component</code>를 사용할 경우, <code class="language-plaintext highlighter-rouge">NavController</code>의 <code class="language-plaintext highlighter-rouge">nagivate()</code>메소드를 호출하여 프레그먼트를 바꿔줌. <code class="language-plaintext highlighter-rouge">NavController</code>는 공통된 동작, 예를들어 시스템 “up” 버튼을 누를 경우 이전 프레그먼트로 가도록 할 수 있음</li>
 </ul>
 
 <p>Navigation Component를 사용하기 위한 작업 필요</p>
 
-<h2 id="navigation-dependency">Navigation Dependency</h2>
+<h2 id="navigation-dependency">
+<a class="anchor" href="#navigation-dependency" aria-hidden="true"><span class="octicon octicon-link"></span></a>Navigation Dependency</h2>
 
 <ol>
   <li>프로젝트 레벨 build.gradle에 nav_version 세팅</li>
@@ -426,7 +467,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="n">implementation</span> <span class="s">"androidx.navigation:navigation-ui-ktx:$nav_version"</span>
 </code></pre></div></div>
 
-<h2 id="safe-args-plugin">Safe Args Plugin</h2>
+<h2 id="safe-args-plugin">
+<a class="anchor" href="#safe-args-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Safe Args Plugin</h2>
 
 <p>액티비티 전환에서 intent에 putExtra()를 통해 정보를 넘겼던 것처럼 Navigation Component에서는 Safe Args을 사용함. 이를 사용하기 위해서는 마찬가지로 build.gradle에 추가 작성 필요.</p>
 
@@ -449,9 +491,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="using-the-navigation-graph">Using the Navigation Graph</h1>
+<h1 id="using-the-navigation-graph">
+<a class="anchor" href="#using-the-navigation-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the Navigation Graph</h1>
 
-<h2 id="use-fragmentcontainerview-in-mainactivity">Use FragmentContainerView in MainActivity</h2>
+<h2 id="use-fragmentcontainerview-in-mainactivity">
+<a class="anchor" href="#use-fragmentcontainerview-in-mainactivity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use FragmentContainerView in MainActivity</h2>
 
 <p>프레그먼트들을 띄워줄 Activity에 FragmentContainerView 추가</p>
 
@@ -495,7 +539,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="set-up-the-navigation-graph">Set Up the Navigation Graph</h2>
+<h2 id="set-up-the-navigation-graph">
+<a class="anchor" href="#set-up-the-navigation-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set Up the Navigation Graph</h2>
 
 <ul>
   <li>File &gt; New &gt; Android Resource File에서 ResourceType을 Navigation으로 하여 생성</li>
@@ -505,7 +550,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>Fragment에서 label도 지정가능</li>
 </ul>
 
-<h2 id="perform-the-navigation-action">Perform the Navigation Action</h2>
+<h2 id="perform-the-navigation-action">
+<a class="anchor" href="#perform-the-navigation-action" aria-hidden="true"><span class="octicon octicon-link"></span></a>Perform the Navigation Action</h2>
 
 <p>button을 클릭할 때 intent를 넘기는 대신 action을 실행, clickListener안에 추가</p>
 
@@ -525,7 +571,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="reference">Reference</h1>
+<h1 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h1>
 
 <p><a href="https://developer.android.com/guide/navigation/navigation-getting-started">https://developer.android.com/guide/navigation/navigation-getting-started</a></p>
 

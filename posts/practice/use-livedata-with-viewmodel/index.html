@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Use LiveData with ViewModel | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Use LiveData with ViewModel" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Use LiveData with ViewModel" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-09-11T10:57:00+00:00","datePublished":"2021-09-11T10:57:00+00:00","description":"개요","headline":"Use LiveData with ViewModel","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/"},"url":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/"}</script>
+{"description":"개요","headline":"Use LiveData with ViewModel","dateModified":"2021-09-11T10:57:00+00:00","datePublished":"2021-09-11T10:57:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/"},"url":"https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,11 +156,29 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="개요">개요</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
+<li class="toc-entry toc-h1"><a href="#what-is-livedata">What is LiveData</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#mutablelivedata">MutableLiveData</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#use-livedata-with-data-binding">Use LiveData with data binding</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#refresher-for-view-binding">Refresher for View binding</a></li>
+<li class="toc-entry toc-h2"><a href="#data-binding">Data Binding</a></li>
+<li class="toc-entry toc-h2"><a href="#add-data-binding-variables">Add data binding variables</a></li>
+<li class="toc-entry toc-h2"><a href="#use-binding-expressions">Use binding expressions</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
+</ol><h1 id="개요">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-3#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-viewmodel">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="what-is-livedata">What is LiveData</h1>
+<h1 id="what-is-livedata">
+<a class="anchor" href="#what-is-livedata" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is LiveData</h1>
 
 <p><code class="language-plaintext highlighter-rouge">LiveData</code>는 lifecycle을 인지하는 관찰가능한 데이터홀더 클래스</p>
 
@@ -172,7 +190,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>lifecycle-aware : active lifecycle 상태(<code class="language-plaintext highlighter-rouge">STARTED</code>, <code class="language-plaintext highlighter-rouge">RESUMED</code>)인 옵저버들을 업데이트</li>
 </ul>
 
-<h2 id="mutablelivedata">MutableLiveData</h2>
+<h2 id="mutablelivedata">
+<a class="anchor" href="#mutablelivedata" aria-hidden="true"><span class="octicon octicon-link"></span></a>MutableLiveData</h2>
 
 <p><code class="language-plaintext highlighter-rouge">LiveData</code>에도 Mutable 버전이 있음</p>
 
@@ -192,15 +211,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">})</span>
 </code></pre></div></div>
 
-<h1 id="use-livedata-with-data-binding">Use LiveData with data binding</h1>
+<h1 id="use-livedata-with-data-binding">
+<a class="anchor" href="#use-livedata-with-data-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use LiveData with data binding</h1>
 
-<h2 id="refresher-for-view-binding">Refresher for View binding</h2>
+<h2 id="refresher-for-view-binding">
+<a class="anchor" href="#refresher-for-view-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Refresher for View binding</h2>
 
 <p>View Binding은 코드에서 쉽게 뷰에 접근할 수 있는게 특징, 각 XML layout file 마다 바인딩 클래스가 생성.</p>
 
 <p>단방향 바인딩이라 layout file에서는 앱 데이터에 접근을 못함.</p>
 
-<h2 id="data-binding">Data Binding</h2>
+<h2 id="data-binding">
+<a class="anchor" href="#data-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Binding</h2>
 
 <p>layout file에서 UI요소와 data를 결합하도록 할 수 있음. 간단하게 양방향 바인딩</p>
 
@@ -259,7 +281,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">binding</span> <span class="p">=</span> <span class="nc">DataBindingUtil</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="n">inflater</span><span class="p">,</span> <span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">game_fragment</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="add-data-binding-variables">Add data binding variables</h2>
+<h2 id="add-data-binding-variables">
+<a class="anchor" href="#add-data-binding-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add data binding variables</h2>
 
 <p>layout에 변수 선언</p>
 
@@ -288,7 +311,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="use-binding-expressions">Use binding expressions</h2>
+<h2 id="use-binding-expressions">
+<a class="anchor" href="#use-binding-expressions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use binding expressions</h2>
 
 <p>view에 바로 값을 할당할 수 있음</p>
 
@@ -316,7 +340,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
    <span class="err">...</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<h1 id="learn-more"><strong>Learn more</strong></h1>
+<h1 id="learn-more">
+<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
+</h1>
 
 <p>추가 공부해야할 링크들</p>
 

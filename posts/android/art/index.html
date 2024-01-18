@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>ART 이해하기 | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="ART 이해하기" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="ART 이해하기" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2020-12-14T08:08:00+00:00","datePublished":"2020-12-14T08:08:00+00:00","description":"안드로이드 서적을 읽던 중 ART에 대한 이해가 필요하다 느껴 정리합니다. 의식의 흐름대로 풀이하였습니다.","headline":"ART 이해하기","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/art/"},"url":"https://jheun66.github.io/posts/android/art/"}</script>
+{"description":"안드로이드 서적을 읽던 중 ART에 대한 이해가 필요하다 느껴 정리합니다. 의식의 흐름대로 풀이하였습니다.","headline":"ART 이해하기","dateModified":"2020-12-14T08:08:00+00:00","datePublished":"2020-12-14T08:08:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/art/"},"url":"https://jheun66.github.io/posts/android/art/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,27 +156,41 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <p>안드로이드 서적을 읽던 중 ART에 대한 이해가 필요하다 느껴 정리합니다. 의식의 흐름대로 풀이하였습니다.</p>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#art">ART</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#런타임">런타임</a></li>
+<li class="toc-entry toc-h2"><a href="#간단-설명">간단 설명</a></li>
+<li class="toc-entry toc-h2"><a href="#dalvik">Dalvik</a></li>
+<li class="toc-entry toc-h2"><a href="#추가사항">추가사항</a></li>
+<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
+</ol>
+</li>
+</ol><p>안드로이드 서적을 읽던 중 ART에 대한 이해가 필요하다 느껴 정리합니다. 의식의 흐름대로 풀이하였습니다.</p>
 
-<h1 id="art">ART</h1>
+<h1 id="art">
+<a class="anchor" href="#art" aria-hidden="true"><span class="octicon octicon-link"></span></a>ART</h1>
 <p>ART는 Android Runtime의 약자입니다.</p>
 
-<h2 id="런타임">런타임</h2>
+<h2 id="런타임">
+<a class="anchor" href="#%EB%9F%B0%ED%83%80%EC%9E%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>런타임</h2>
 <p>런타임을 그냥 변역하면 실행 시간이 됩니다. 하지만 요기서의 의미는 런타임 시스템 또는 런타임 환경이라 생각합니다. 간단하게 말하면 실행 중인 프로그램을 서포트하는 모든 자원들을 말합니다.</p>
 
-<h2 id="간단-설명">간단 설명</h2>
+<h2 id="간단-설명">
+<a class="anchor" href="#%EA%B0%84%EB%8B%A8-%EC%84%A4%EB%AA%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>간단 설명</h2>
 <p>책을 읽던 중 처음 나온 설명은 안드로이드를 모바일 리눅스가 아닌 안드로이드 답게 만들어 준다는 것이였습니다. 리눅스 커널 위에서 휴대폰의 메모리, 프로세스 관리 등을 수행해주는데 흔히 아는 운영체제의 역활을 수행해준다 생각하였습니다. 이전에는 Dalvik이라는 가상 머신이 있었는데 대체되었고 ART는 런타임으로써 <code class="language-plaintext highlighter-rouge">.dex</code> 파일을 실행해 줍니다.</p>
 
-<h2 id="dalvik">Dalvik</h2>
+<h2 id="dalvik">
+<a class="anchor" href="#dalvik" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dalvik</h2>
 <p>달빅이 무엇이지 알기전에 안드로이드는 JVM을 사용하지 않는다는 것을 알아야합니다. 그렇다면 java는 컴파일을 거친후 JVM을 대신하여 다른 것을 통해 동작시킬텐데 안드로이드 초기에 사용했던 것이 바로 달빅입니다. 자바 파일을 자바 클래스 파일로 컴파일 한 뒤 SDK를 통해 <code class="language-plaintext highlighter-rouge">.dex</code> 포맷으로 변경한 후 실행시킵니다.</p>
 
 <p>JVM을 사용하지 않은 이유에 대해서는 라이센스 문제라고 합니다.</p>
 
 <h3 id="aot-컴파일-도입">AOT 컴파일 도입</h3>
-<p>달빅은 JIT 컴파일을 사용되었고 ART에서는 최적화를 위해 둘 다 사용됩니다.<br />
-<a href="https://source.android.com/devices/tech/dalvik/jit-compiler?hl=ko#flow"><strong>링크</strong></a><br />
-다른 자세한 비교는 개발자 사이트를 참고하면 좋을 것 같습니다.<br />
-<a href="https://source.android.com/devices/tech/dalvik"><strong>안드로이드 개발자 사이트</strong></a><br /></p>
+<p>달빅은 JIT 컴파일을 사용되었고 ART에서는 최적화를 위해 둘 다 사용됩니다.<br>
+<a href="https://source.android.com/devices/tech/dalvik/jit-compiler?hl=ko#flow"><strong>링크</strong></a><br>
+다른 자세한 비교는 개발자 사이트를 참고하면 좋을 것 같습니다.<br>
+<a href="https://source.android.com/devices/tech/dalvik"><strong>안드로이드 개발자 사이트</strong></a><br></p>
 
 <blockquote>
   <p>JIT Complie</p>
@@ -192,11 +206,13 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>결과적으로 설치시에는 더 오래 걸리고 용량도 커지지만 실행시간에는 훨씬 나은 성능을 얻을 수 있습니다. 램도 더 적게 차지합니다.</p>
 
-<h2 id="추가사항">추가사항</h2>
+<h2 id="추가사항">
+<a class="anchor" href="#%EC%B6%94%EA%B0%80%EC%82%AC%ED%95%AD" aria-hidden="true"><span class="octicon octicon-link"></span></a>추가사항</h2>
 <p>잘 정리된 블로그도 참고합니다. 플로 차트를 보니 쉽게 이해되네요.</p>
 
-<h2 id="reference">Reference</h2>
-<p><a href="https://source.android.com/devices/tech/dalvik"><strong>안드로이드 개발자 사이트</strong></a><br />
+<h2 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
+<p><a href="https://source.android.com/devices/tech/dalvik"><strong>안드로이드 개발자 사이트</strong></a><br>
 <a href="https://brunch.co.kr/@mystoryg/81"><strong>참고 블로그</strong></a></p>
 
       

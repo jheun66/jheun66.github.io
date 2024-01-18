@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Field와 Property | 생각중</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Field와 Property" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Field와 Property" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2022-12-09T03:00:00+00:00","datePublished":"2022-12-09T03:00:00+00:00","description":"Field와 Property 사실 이 글을 작성하게된 계기는 Field와 Property가 제대로 이해되지도 않은체 혼용되어 사용하는게 불쾌하고 사용할 때마다 고민하는게 골치라 이번 기회에 깔끔하게 정리해보고자 합니다.","headline":"Field와 Property","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/c%23/field-and-property/"},"url":"https://jheun66.github.io/posts/c%23/field-and-property/"}</script>
+{"description":"Field와 Property 사실 이 글을 작성하게된 계기는 Field와 Property가 제대로 이해되지도 않은체 혼용되어 사용하는게 불쾌하고 사용할 때마다 고민하는게 골치라 이번 기회에 깔끔하게 정리해보고자 합니다.","headline":"Field와 Property","dateModified":"2022-12-09T03:00:00+00:00","datePublished":"2022-12-09T03:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/c%23/field-and-property/"},"url":"https://jheun66.github.io/posts/c%23/field-and-property/","author":{"@type":"Person","name":"Eun JongHyeok"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,12 +156,19 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <h1 id="field와-property">Field와 Property</h1>
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#field와-property">Field와 Property</a></li>
+<li class="toc-entry toc-h1"><a href="#필드란">필드란</a></li>
+<li class="toc-entry toc-h1"><a href="#프로퍼티란">프로퍼티란</a></li>
+<li class="toc-entry toc-h1"><a href="#참고">참고</a></li>
+</ol><h1 id="field와-property">
+<a class="anchor" href="#field%EC%99%80-property" aria-hidden="true"><span class="octicon octicon-link"></span></a>Field와 Property</h1>
 <p>사실 이 글을 작성하게된 계기는 <code class="language-plaintext highlighter-rouge">Field</code>와 <code class="language-plaintext highlighter-rouge">Property</code>가 제대로 이해되지도 않은체 혼용되어 사용하는게 불쾌하고 사용할 때마다 고민하는게 골치라 이번 기회에 깔끔하게 정리해보고자 합니다.</p>
 
 <p>우선 Property는 한국어로 속성이라고 번역이되던데 제가 알던 속성이랑 의미가 와닿지 않아 프로퍼티로 칭하겠습니다. 글 자체는 프로퍼티에 초점이 맞춰져 있고 <a href="https://learn.microsoft.com/en-us/dotnet/csharp/">.Net C# 문서</a>와 저의 지식들을 요약한 내용입니다.</p>
 
-<h1 id="필드란">필드란</h1>
+<h1 id="필드란">
+<a class="anchor" href="#%ED%95%84%EB%93%9C%EB%9E%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>필드란</h1>
 <p>필드에 대해 먼저 빠르게 정리해 봅니다. 필드는 클래스나 구조체에서 직접 선언되는 모든 타입의 변수 입니다. 처음 배울때는 멤버 변수, 데이터 멤버라 불렀던거 같습니다.</p>
 
 <p>일반적으로 필드는 private이나 protected와 같은 접근제한이 있는 변수로 사용해야 합니다. 이는 외부(클라이언트 코드)에서 필드를 원하지 않은 입력방식에 의해 바뀌는 것을 막기 위함입니다. 그래서 프로퍼티가 없는 언어의 경우 메서드를 이용하여 getter, setter 함수를 만들어 주었습니다. 그리고 C#의 경우 메소드 뿐만 아니라 프로퍼티와 인덱서를 통해 데이터를 노출시켜줍니다. public 프로퍼티로 노출하는 private 필드를 백업 필드, 백업 스토어라 부릅니다.</p>
@@ -170,7 +177,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>이러한 필드에 다양한 한정자가 붙어 사용될 수 있지만 필드에 대해서는 여기까지 정리하겠습니다.</p>
 
-<h1 id="프로퍼티란">프로퍼티란</h1>
+<h1 id="프로퍼티란">
+<a class="anchor" href="#%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EB%9E%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>프로퍼티란</h1>
 <p>프로퍼티는 private 필드의 값을 읽고 쓰고 계산하는 유연한 메커니즘을 제공하는 멤버입니다. 또한 프로퍼티는 public 데이터 멤버처럼 사용될 수 있지만 이때 <code class="language-plaintext highlighter-rouge">Accessor</code>라 불리는 특별한 메서드(get)를 사용합니다. 이러한 기능은 데이터를 쉽게 접근할 수 있게 하면서 메서드의 안전성과 유연성을 높이는데 도움을 줍니다.</p>
 
 <p>쉽게 말하면 기존 private 필드에 getter, setter 메소드를 따로 만드는 번거로운 작업을 간단하게 바꿔주고 기존 메소드와도 다른 성격의 멤버로 만들어 준 것입니다. 실제 컴파일 단계에서는 메소드로 변환이 됩니다. 즉 언어차원에서 제공하는 캡슐화의 일종입니다.</p>
@@ -194,8 +202,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>필드와 프로퍼티에 대한 정의는 얼추 설명한거 같으니 다음 포스팅에서는 프로퍼티의 사용법으로 넘어가도록 하겠습니다. 용어에 대한 내용이라 두서없이 글로만 적다보니 보는 분들의 입장에서는 오히려 이해가 안갈까 걱정이 되네요.</p>
 
-<h1 id="참고">참고</h1>
-<p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/fields">Field 문서</a><br />
+<h1 id="참고">
+<a class="anchor" href="#%EC%B0%B8%EA%B3%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>참고</h1>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/fields">Field 문서</a><br>
 <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#auto-implemented-properties">Property 문서</a></p>
 
       
