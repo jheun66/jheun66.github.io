@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Create a more polished user experience | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Create a more polished user experience" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Create a more polished user experience" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Create a more polished user experience","dateModified":"2021-07-28T08:05:00+00:00","datePublished":"2021-07-28T08:05:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience/"},"url":"https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-07-28T08:05:00+00:00","datePublished":"2021-07-28T08:05:00+00:00","description":"개요","headline":"Create a more polished user experience","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience/"},"url":"https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,29 +156,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
-<li class="toc-entry toc-h1"><a href="#material-components">Material Components</a></li>
-<li class="toc-entry toc-h1"><a href="#icons">Icons</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#vector-drawables-backward-compatibility-solution">Vector drawables backward compatibility solution</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#styles-and-themes">Styles and Themes</a></li>
-<li class="toc-entry toc-h1"><a href="#add-these-styles-to-your-theme">Add these styles to your theme</a></li>
-<li class="toc-entry toc-h1"><a href="#enhance-the-user-experience">Enhance the user experience</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#가로-회전할-경우-화면을-넘어감">가로 회전할 경우 화면을 넘어감</a></li>
-<li class="toc-entry toc-h2"><a href="#엔터를-누를-경우-키보드-치워주기">엔터를 누를 경우 키보드 치워주기</a></li>
-</ol>
-</li>
-</ol><h1 id="개요">
-<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+      <h1 id="개요">개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-2">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="material-components">
-<a class="anchor" href="#material-components" aria-hidden="true"><span class="octicon octicon-link"></span></a>Material Components</h1>
+<h1 id="material-components">Material Components</h1>
 
 <p>UI/UX 측면에서 <a href="https://material.io/components?platform=android">Material Components</a>를 사용하는게 좋음</p>
 
@@ -190,17 +172,15 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>Material Design Components Library를 사용하기 위해서 필요. 안드로이드 스튜디오 4.1 이상부터는 프로젝트를 생성할 때 자동으로 포함</p>
 
-<h1 id="icons">
-<a class="anchor" href="#icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Icons</h1>
+<h1 id="icons">Icons</h1>
 
 <p>다양한 <a href="https://fonts.google.com/icons">아이콘</a> 제공</p>
 
-<p><img src="/img/posts/android/screenshot_vector.png" alt="screenshot_vector.png" width="50%"></p>
+<p><img src="/img/posts/android/screenshot_vector.png" alt="screenshot_vector.png" width="50%" /></p>
 
 <p>Clip Art를 이용하여 다양한 아이콘을 선택할 수 있음</p>
 
-<h2 id="vector-drawables-backward-compatibility-solution">
-<a class="anchor" href="#vector-drawables-backward-compatibility-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vector drawables backward compatibility solution</h2>
+<h2 id="vector-drawables-backward-compatibility-solution">Vector drawables backward compatibility solution</h2>
 
 <p><em>vectorDrawable</em>은 API 21 이상부터 사용가능하기에 minSDK가 19이상이면 과거 안드로이드 버전에서도 지원가능하도록 해야함</p>
 
@@ -217,12 +197,10 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>아니면 PNG 파일을 직접 만들기</p>
 
-<h1 id="styles-and-themes">
-<a class="anchor" href="#styles-and-themes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Styles and Themes</h1>
+<h1 id="styles-and-themes">Styles and Themes</h1>
 
 <ul>
-  <li>
-<em>res &gt; values</em> 디렉토리에 <em>styles.xml</em> 이름으로 <em>Values Resource File</em> 생성</li>
+  <li><em>res &gt; values</em> 디렉토리에 <em>styles.xml</em> 이름으로 <em>Values Resource File</em> 생성</li>
 </ul>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
@@ -265,8 +243,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="nt">&lt;/resources&gt;</span>
 </code></pre></div></div>
 
-<h1 id="add-these-styles-to-your-theme">
-<a class="anchor" href="#add-these-styles-to-your-theme" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add these styles to your theme</h1>
+<h1 id="add-these-styles-to-your-theme">Add these styles to your theme</h1>
 
 <p>위에처럼 직접 뷰에 넣어주는 방법 말고도 현재 테마에 포함하여 모든 해당 뷰에 적용 가능</p>
 
@@ -277,16 +254,13 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"switchStyle"</span><span class="nt">&gt;</span>@style/Widget.TipTime.CompoundButton.Switch<span class="nt">&lt;/item&gt;</span>
 </code></pre></div></div>
 
-<h1 id="enhance-the-user-experience">
-<a class="anchor" href="#enhance-the-user-experience" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enhance the user experience</h1>
+<h1 id="enhance-the-user-experience">Enhance the user experience</h1>
 
-<h2 id="가로-회전할-경우-화면을-넘어감">
-<a class="anchor" href="#%EA%B0%80%EB%A1%9C-%ED%9A%8C%EC%A0%84%ED%95%A0-%EA%B2%BD%EC%9A%B0-%ED%99%94%EB%A9%B4%EC%9D%84-%EB%84%98%EC%96%B4%EA%B0%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>가로 회전할 경우 화면을 넘어감</h2>
+<h2 id="가로-회전할-경우-화면을-넘어감">가로 회전할 경우 화면을 넘어감</h2>
 
 <p>ScrollView로 ConstraintLayout을 감싸주기</p>
 
-<h2 id="엔터를-누를-경우-키보드-치워주기">
-<a class="anchor" href="#%EC%97%94%ED%84%B0%EB%A5%BC-%EB%88%84%EB%A5%BC-%EA%B2%BD%EC%9A%B0-%ED%82%A4%EB%B3%B4%EB%93%9C-%EC%B9%98%EC%9B%8C%EC%A3%BC%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>엔터를 누를 경우 키보드 치워주기</h2>
+<h2 id="엔터를-누를-경우-키보드-치워주기">엔터를 누를 경우 키보드 치워주기</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
     <span class="o">..</span><span class="p">.</span>
@@ -394,7 +368,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

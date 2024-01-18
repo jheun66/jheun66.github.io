@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Context | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Context" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Context" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.","headline":"Context","dateModified":"2021-02-12T18:30:00+00:00","datePublished":"2021-02-12T18:30:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/context/"},"url":"https://jheun66.github.io/posts/android/context/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-02-12T18:30:00+00:00","datePublished":"2021-02-12T18:30:00+00:00","description":"아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.","headline":"Context","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/context/"},"url":"https://jheun66.github.io/posts/android/context/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,22 +156,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#context란">Context란</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#application-context와-activity-context">Application Context와 Activity Context</a></li>
-<li class="toc-entry toc-h2"><a href="#리소스-정보">리소스 정보</a></li>
-<li class="toc-entry toc-h2"><a href="#acitivity-context를-사용해야-하는-경우">Acitivity Context를 사용해야 하는 경우</a></li>
-<li class="toc-entry toc-h2"><a href="#메모리-누수와-생명-주기">메모리 누수와 생명 주기</a></li>
-<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
-</ol>
-</li>
-</ol><p>아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.</p>
+      <p>아마 대부분의 사람들이 안드로이드를 처음 배우면서 토스트메시지를 생성할 때 매개변수로 컨텍스트를 넘기는 것을 알게되었을 것입니다.</p>
 
 <p>이번에는 이 컨텍스트에 대한 내용들을 정리하고자 합니다.</p>
 
-<h1 id="context란">
-<a class="anchor" href="#context%EB%9E%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>Context란</h1>
+<h1 id="context란">Context란</h1>
 <blockquote>
   <p>Interface to global information about an application environment. This is an abstract class whose implementation is provided by the Android system. It allows access to application-specific resources and classes, as well as up-calls for application-level operations such as launching activities, broadcasting and receiving intents, etc.</p>
 </blockquote>
@@ -180,12 +169,10 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>솔직히 정의만 들어보면 감이 잘 잡히지 않습니다.</p>
 
-<h2 id="application-context와-activity-context">
-<a class="anchor" href="#application-context%EC%99%80-activity-context" aria-hidden="true"><span class="octicon octicon-link"></span></a>Application Context와 Activity Context</h2>
+<h2 id="application-context와-activity-context">Application Context와 Activity Context</h2>
 <p>Application과 Acitivty는 둘 다 Context를 부모 클래스로 두고 있습니다. 추가로 Service도 Context를 부모 클래스로 두고 있지만 Application과 Activity 위주로 설명하겠습니다.</p>
 
-<h2 id="리소스-정보">
-<a class="anchor" href="#%EB%A6%AC%EC%86%8C%EC%8A%A4-%EC%A0%95%EB%B3%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>리소스 정보</h2>
+<h2 id="리소스-정보">리소스 정보</h2>
 <p>이름에서도 알 수 있듯이 각각 Application에 대한 내용과 Activity에 대한 내용을 담고 있습니다. 
 예시로 간단하게 각 컨텍스트가 가지고 있는 리소스들을 비교해보겠습니다.
 Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간색으로 설정합니다.</p>
@@ -248,12 +235,11 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
     <span class="n">layout</span><span class="o">.</span><span class="na">addView</span><span class="o">(</span><span class="n">applicationCtxTV</span><span class="o">)</span>
     <span class="n">layout</span><span class="o">.</span><span class="na">addView</span><span class="o">(</span><span class="n">activityCtxTV</span><span class="o">)</span>
 </code></pre></div></div>
-<p><img src="/img/posts/android/device-2021-02-13-023931.png" alt="a capture" width="400"></p>
+<p><img src="/img/posts/android/device-2021-02-13-023931.png" alt="a capture" width="400" /></p>
 
 <p>각 리소스의 색으로 그려지는 것을 확인 할 수 있습니다.</p>
 
-<h2 id="acitivity-context를-사용해야-하는-경우">
-<a class="anchor" href="#acitivity-context%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EA%B2%BD%EC%9A%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acitivity Context를 사용해야 하는 경우</h2>
+<h2 id="acitivity-context를-사용해야-하는-경우">Acitivity Context를 사용해야 하는 경우</h2>
 <p>Dialog를 띄우거나 액티비티를 실행시키는 경우, Layout을 inflate하는 경우 Application Context를 사용할 수 없습니다.</p>
 
 <p>주로 Dialog를 띄울 때 Application Context를 사용할 경우</p>
@@ -262,7 +248,7 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
 
 <p>다음과 같은 에러가 뜨게 되는데 이는 Application Context에는 WindowManager에 대한 정보가 없기 때문입니다.</p>
 
-<p>추가로 참고하면 좋아보이는 글입니다.<br>
+<p>추가로 참고하면 좋아보이는 글입니다.<br />
 <a href="https://nhancv.medium.com/android-show-dialog-without-activity-context-94661d48400f">https://nhancv.medium.com/android-show-dialog-without-activity-context-94661d48400f</a></p>
 
 <p>액티비티를 실행하거나 Layout을 inflate 시에는 해결책이 존재합니다.</p>
@@ -282,23 +268,21 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">applicationContext</span><span class="o">.</span><span class="na">getSystemService</span><span class="o">(</span><span class="nc">Service</span><span class="o">.</span><span class="na">LAYOUT_INFLATER_SERVICE</span><span class="o">);</span>
 </code></pre></div></div>
 
-<h2 id="메모리-누수와-생명-주기">
-<a class="anchor" href="#%EB%A9%94%EB%AA%A8%EB%A6%AC-%EB%88%84%EC%88%98%EC%99%80-%EC%83%9D%EB%AA%85-%EC%A3%BC%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>메모리 누수와 생명 주기</h2>
+<h2 id="메모리-누수와-생명-주기">메모리 누수와 생명 주기</h2>
 <p>이렇게 보면 항상 Activity Context를 사용하는 것이 좋아보이지만 개발자 사이트에서는 Application Context 사용을 권장하고 있습니다. 이는 생명주기와 관련이 있습니다. Activity는 결국 Context의 자식 클래스이며 자신도 Context이므로 Activity가 종료되면 Context도 사라지게 됩니다. 하지만 Application Context는 앱이 종료될 때까지 사라지지 않으므로 메모리 누수 등을 방지할 수 있습니다.</p>
 
 <p>싱글턴 패턴이나 static 변수를 사용하는 경우가 대표적입니다. 만일 액티비티가 종료되고도 Activity Context가 참조되고 있을 경우 메모리 누수가 일어나게 됩니다. 이 경우에는 반드시 onDestory()에서 해제를 해주어야 합니다.</p>
 
 <p>static 뿐만 아니라 백그라운드 작업, 쓰레드 작업, Event Handling에서도 도중에 종료될시 Activity Context를 참조하고 있을 경우 메모리 누수가 발생할 수 있으므로 액티비티 종료시 해제를 직접 해주어야 합니다.</p>
 
-<h2 id="reference">
-<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
-<p><a href="https://developer.android.com/reference/android/content/Context">https://developer.android.com/reference/android/content/Context</a><br>
-<a href="https://www.youtube.com/watch?v=-e6lyXIkIl0">https://www.youtube.com/watch?v=-e6lyXIkIl0</a><br>
-<a href="https://www.charlezz.com/?p=1080">https://www.charlezz.com/?p=1080</a><br>
-<a href="https://yonoo88.tistory.com/1057">https://yonoo88.tistory.com/1057</a><br>
-<a href="https://aroundck.tistory.com/263">https://aroundck.tistory.com/263</a><br>
-<a href="https://stackoverflow.com/questions/7043240/get-a-layout-inflater-from-the-applicationcontext/7045031">https://stackoverflow.com/questions/7043240/get-a-layout-inflater-from-the-applicationcontext/7045031</a><br>
-<a href="https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002">https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002</a><br></p>
+<h2 id="reference">Reference</h2>
+<p><a href="https://developer.android.com/reference/android/content/Context">https://developer.android.com/reference/android/content/Context</a><br />
+<a href="https://www.youtube.com/watch?v=-e6lyXIkIl0">https://www.youtube.com/watch?v=-e6lyXIkIl0</a><br />
+<a href="https://www.charlezz.com/?p=1080">https://www.charlezz.com/?p=1080</a><br />
+<a href="https://yonoo88.tistory.com/1057">https://yonoo88.tistory.com/1057</a><br />
+<a href="https://aroundck.tistory.com/263">https://aroundck.tistory.com/263</a><br />
+<a href="https://stackoverflow.com/questions/7043240/get-a-layout-inflater-from-the-applicationcontext/7045031">https://stackoverflow.com/questions/7043240/get-a-layout-inflater-from-the-applicationcontext/7045031</a><br />
+<a href="https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002">https://medium.com/swlh/context-and-memory-leaks-in-android-82a39ed33002</a><br /></p>
 
 
       
@@ -390,7 +374,7 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

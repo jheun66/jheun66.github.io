@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Add a button to an app | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Add a button to an app" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Add a button to an app" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Add a button to an app","dateModified":"2021-07-21T08:38:00+00:00","datePublished":"2021-07-21T08:38:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/add-a-button-to-an-app/"},"url":"https://jheun66.github.io/posts/practice/add-a-button-to-an-app/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-07-21T08:38:00+00:00","datePublished":"2021-07-21T08:38:00+00:00","description":"개요","headline":"Add a button to an app","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/add-a-button-to-an-app/"},"url":"https://jheun66.github.io/posts/practice/add-a-button-to-an-app/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,28 +156,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
-<li class="toc-entry toc-h1"><a href="#classes-and-object-instances-in-kotlin">Classes and object instances in Kotlin</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#adopt-good-coding-practices">Adopt good coding practices</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#create-an-interactive-dice-roller-app">Create an interactive Dice Roller app</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#mainactivitykt">MainActivity.kt</a></li>
-<li class="toc-entry toc-h2"><a href="#adopt-good-coding-practices-1">Adopt good coding practices</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#add-conditional-behavior-in-kotlin">Add conditional behavior in Kotlin</a></li>
-<li class="toc-entry toc-h1"><a href="#add-images-to-the-dice-roller-app">Add images to the Dice Roller app</a></li>
-</ol><h1 id="개요">
-<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+      <h1 id="개요">개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-four">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="classes-and-object-instances-in-kotlin">
-<a class="anchor" href="#classes-and-object-instances-in-kotlin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classes and object instances in Kotlin</h1>
+<h1 id="classes-and-object-instances-in-kotlin">Classes and object instances in Kotlin</h1>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">myFirstDice</span> <span class="p">=</span> <span class="nc">Dice</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
@@ -207,8 +190,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>Kotlin에서 함수 이름 옆 “:” 뒤의 자료형이 함수의 반환형이 됩니다.</p>
 
-<h2 id="adopt-good-coding-practices">
-<a class="anchor" href="#adopt-good-coding-practices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adopt good coding practices</h2>
+<h2 id="adopt-good-coding-practices">Adopt good coding practices</h2>
 
 <p>코드를 짧고 읽기 쉽고 이해하기 쉽게 만드는 것을 <em>refactoring</em>이라고 합니다.</p>
 
@@ -227,8 +209,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="create-an-interactive-dice-roller-app">
-<a class="anchor" href="#create-an-interactive-dice-roller-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create an interactive Dice Roller app</h1>
+<h1 id="create-an-interactive-dice-roller-app">Create an interactive Dice Roller app</h1>
 
 <p><strong>tools:text</strong></p>
 
@@ -247,8 +228,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>tools:text는 실제 사용자에게는 보이지 않지만 Design Editor에서 개발자에게 보여주기 위해 사용할 수 있습니다.</p>
 
-<h2 id="mainactivitykt">
-<a class="anchor" href="#mainactivitykt" aria-hidden="true"><span class="octicon octicon-link"></span></a>MainActivity.kt</h2>
+<h2 id="mainactivitykt">MainActivity.kt</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">me.amos.diceroller</span>
 
@@ -297,8 +277,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>resultTextView.text를 보면 Java와 다르게 property로 접근이 가능함을 알 수 있습니다.</p>
 
-<h2 id="adopt-good-coding-practices-1">
-<a class="anchor" href="#adopt-good-coding-practices-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adopt good coding practices</h2>
+<h2 id="adopt-good-coding-practices-1">Adopt good coding practices</h2>
 
 <ol>
   <li>Condense your code</li>
@@ -306,8 +285,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>Comment your code</li>
 </ol>
 
-<h1 id="add-conditional-behavior-in-kotlin">
-<a class="anchor" href="#add-conditional-behavior-in-kotlin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add conditional behavior in Kotlin</h1>
+<h1 id="add-conditional-behavior-in-kotlin">Add conditional behavior in Kotlin</h1>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">myFirstDice</span> <span class="p">=</span> <span class="nc">Dice</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
@@ -335,8 +313,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>다른 언어의 switch case 구문과 유사한 구문</p>
 
-<h1 id="add-images-to-the-dice-roller-app">
-<a class="anchor" href="#add-images-to-the-dice-roller-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add images to the Dice Roller app</h1>
+<h1 id="add-images-to-the-dice-roller-app">Add images to the Dice Roller app</h1>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">me.amos.diceroller</span>
 
@@ -403,7 +380,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><img src="/img/posts/android/Screenshot_1626856424.png" alt="Screenshot_1626856424.png" width="50%"></p>
+<p><img src="/img/posts/android/Screenshot_1626856424.png" alt="Screenshot_1626856424.png" width="50%" /></p>
 
 <p>주사위 이미지 2개 띄우기</p>
 
@@ -496,7 +473,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

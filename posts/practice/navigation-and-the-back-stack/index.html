@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Navigation and the back stack | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Navigation and the back stack" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Navigation and the back stack" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Navigation and the back stack","dateModified":"2021-09-22T04:47:00+00:00","datePublished":"2021-09-22T04:47:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/"},"url":"https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-09-22T04:47:00+00:00","datePublished":"2021-09-22T04:47:00+00:00","description":"개요","headline":"Navigation and the back stack","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/"},"url":"https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,23 +156,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
-<li class="toc-entry toc-h1"><a href="#implement-up-button-behavior">Implement Up button behavior</a></li>
-<li class="toc-entry toc-h1"><a href="#learn-about-tasks-and-back-stack">Learn about tasks and back stack</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#tasks">Tasks</a></li>
-<li class="toc-entry toc-h2"><a href="#pop-additional-destinations-off-the-back-stack">Pop additional destinations off the back stack</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
-</ol><h1 id="개요">
-<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+      <h1 id="개요">개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-4">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="implement-up-button-behavior">
-<a class="anchor" href="#implement-up-button-behavior" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implement Up button behavior</h1>
+<h1 id="implement-up-button-behavior">Implement Up button behavior</h1>
 
 <p>각 프래그먼트 별로 액션바를 만들기위해 <code class="language-plaintext highlighter-rouge">setupActionBarWithNavController()</code>를 사용했었음.</p>
 
@@ -199,11 +187,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="learn-about-tasks-and-back-stack">
-<a class="anchor" href="#learn-about-tasks-and-back-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn about tasks and back stack</h1>
+<h1 id="learn-about-tasks-and-back-stack">Learn about tasks and back stack</h1>
 
-<h2 id="tasks">
-<a class="anchor" href="#tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tasks</h2>
+<h2 id="tasks">Tasks</h2>
 
 <p>안드로이드에서 액티비티들은 task안에 존재.</p>
 
@@ -211,12 +197,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>같은 방식으로 프레그먼트 역시 백스택 내의 액티비티안에 쌓이게됨.</p>
 
-<h2 id="pop-additional-destinations-off-the-back-stack">
-<a class="anchor" href="#pop-additional-destinations-off-the-back-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pop additional destinations off the back stack</h2>
+<h2 id="pop-additional-destinations-off-the-back-stack">Pop additional destinations off the back stack</h2>
 
 <p>nav_graph 파일에서 추가해줌</p>
 
-<p><img src="/img/posts/android/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-09-22_%EC%98%A4%ED%9B%84_12.22.02.png" alt="스크린샷 2021-09-22 오후 12.22.02.png" width="50%"></p>
+<p><img src="/img/posts/android/스크린샷_2021-09-22_오후_12.22.02.png" alt="스크린샷 2021-09-22 오후 12.22.02.png" width="50%" /></p>
 
 <h3 id="navigation-action-popupto-attribute">Navigation action: popUpTo attribute</h3>
 
@@ -226,9 +211,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>true일 경우 이미 존재하면 backstack에 추가하지 않음</p>
 
-<h1 id="learn-more">
-<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
-</h1>
+<h1 id="learn-more"><strong>Learn more</strong></h1>
 
 <p>추가 공부해야할 링크들</p>
 
@@ -332,7 +315,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

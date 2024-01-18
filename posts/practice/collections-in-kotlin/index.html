@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Collections in Kotlin | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Collections in Kotlin" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Collections in Kotlin" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Collections in Kotlin","dateModified":"2021-08-04T07:17:00+00:00","datePublished":"2021-08-04T07:17:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/collections-in-kotlin/"},"url":"https://jheun66.github.io/posts/practice/collections-in-kotlin/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-08-04T07:17:00+00:00","datePublished":"2021-08-04T07:17:00+00:00","description":"개요","headline":"Collections in Kotlin","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/collections-in-kotlin/"},"url":"https://jheun66.github.io/posts/practice/collections-in-kotlin/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,34 +156,13 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
-<li class="toc-entry toc-h1"><a href="#learn-about-collections">Learn about collections</a></li>
-<li class="toc-entry toc-h1"><a href="#working-with-collections">Working with collections</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#toset">toSet</a></li>
-<li class="toc-entry toc-h2"><a href="#foreach">forEach</a></li>
-<li class="toc-entry toc-h2"><a href="#map">map</a></li>
-<li class="toc-entry toc-h2"><a href="#filter">filter</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#learn-about-lambdas-and-higher-order-functions">Learn about lambdas and higher-order functions</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#function-type">Function Type</a></li>
-<li class="toc-entry toc-h2"><a href="#higher-order-functions">Higher-order functions</a></li>
-<li class="toc-entry toc-h2"><a href="#onclicklistener-and-onkeylistener-in-android">OnClickListener and OnKeyListener in Android</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#reference">Reference</a></li>
-</ol><h1 id="개요">
-<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+      <h1 id="개요">개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-1">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
 <p>Collection과 람다함수, 고차함수는 중요하다 판단되어 따로 다시 정리할 것입니다.</p>
 
-<h1 id="learn-about-collections">
-<a class="anchor" href="#learn-about-collections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn about collections</h1>
+<h1 id="learn-about-collections">Learn about collections</h1>
 
 <p>Kotlin Standard Library로 Java의 Collection처럼 자료구조 모음들을 Collection이라 함.</p>
 
@@ -191,38 +170,31 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><a href="https://kotlinlang.org/docs/collections-overview.html">Collections</a> 문서 참고</p>
 
-<h1 id="working-with-collections">
-<a class="anchor" href="#working-with-collections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working with collections</h1>
+<h1 id="working-with-collections">Working with collections</h1>
 
 <p>Collections를 다룰 때 유용한 함수들</p>
 
-<h2 id="toset">
-<a class="anchor" href="#toset" aria-hidden="true"><span class="octicon octicon-link"></span></a>toSet</h2>
+<h2 id="toset">toSet</h2>
 
 <p>리스트를 집합으로 바꿀 수 있음</p>
 
-<h2 id="foreach">
-<a class="anchor" href="#foreach" aria-hidden="true"><span class="octicon octicon-link"></span></a>forEach</h2>
+<h2 id="foreach">forEach</h2>
 
 <p>for 루프에 it이라는 이터레이터로 각 아이템에 접근</p>
 
-<h2 id="map">
-<a class="anchor" href="#map" aria-hidden="true"><span class="octicon octicon-link"></span></a>map</h2>
+<h2 id="map">map</h2>
 
 <p>map() 함수로 forEach처럼 각 아이템에 접근하여 변경(매핑)함</p>
 
-<h2 id="filter">
-<a class="anchor" href="#filter" aria-hidden="true"><span class="octicon octicon-link"></span></a>filter</h2>
+<h2 id="filter">filter</h2>
 
 <p>조건에 맞는 아이템 반환</p>
 
-<h1 id="learn-about-lambdas-and-higher-order-functions">
-<a class="anchor" href="#learn-about-lambdas-and-higher-order-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn about lambdas and higher-order functions</h1>
+<h1 id="learn-about-lambdas-and-higher-order-functions">Learn about lambdas and higher-order functions</h1>
 
 <p>함수의 이름이 없이 중괄호로 함수의 몸통만 있는 표현식을 익명함수, 람다라 부름, 또한 코틀린에서는 함수를 매개변수, 리턴값으로도 사용할 수 있음</p>
 
-<h2 id="function-type">
-<a class="anchor" href="#function-type" aria-hidden="true"><span class="octicon octicon-link"></span></a>Function Type</h2>
+<h2 id="function-type">Function Type</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">triple</span><span class="p">:</span> <span class="p">(</span><span class="nc">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">Int</span> <span class="p">=</span> <span class="p">{</span> <span class="n">a</span><span class="p">:</span> <span class="nc">Int</span> <span class="p">-&gt;</span> <span class="n">a</span> <span class="p">*</span> <span class="mi">3</span> <span class="p">}</span>
@@ -237,8 +209,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>암시적으로 가지고 있는 매개변수 <a href="https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter">it</a>이 있음, 생략가능</p>
 
-<h2 id="higher-order-functions">
-<a class="anchor" href="#higher-order-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Higher-order functions</h2>
+<h2 id="higher-order-functions">Higher-order functions</h2>
 
 <p>Kotlin에서는 함수를 매개변수, 리턴값으로도 사용가능, 이를 고차 함수라 부름</p>
 
@@ -259,8 +230,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="c1">//[Ann, Joe, Fred, Barbara]</span>
 </code></pre></div></div>
 
-<h2 id="onclicklistener-and-onkeylistener-in-android">
-<a class="anchor" href="#onclicklistener-and-onkeylistener-in-android" aria-hidden="true"><span class="octicon octicon-link"></span></a>OnClickListener and OnKeyListener in Android</h2>
+<h2 id="onclicklistener-and-onkeylistener-in-android">OnClickListener and OnKeyListener in Android</h2>
 
 <p>안드로이드에서 고차함수, 람다함수를 제일 자주 보게되는 데는 클릭리스너라 생각됨</p>
 
@@ -277,8 +247,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="n">costOfServiceEditText</span><span class="p">.</span><span class="nf">setOnKeyListener</span> <span class="p">{</span> <span class="n">view</span><span class="p">,</span> <span class="n">keyCode</span><span class="p">,</span> <span class="n">_</span> <span class="p">-&gt;</span> <span class="nf">handleKeyEvent</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">keyCode</span><span class="p">)</span> <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="reference">
-<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h1>
+<h1 id="reference">Reference</h1>
 
 <p><a href="https://kotlinlang.org/docs/collections-overview.html">https://kotlinlang.org/docs/collections-overview.html</a></p>
 
@@ -373,7 +342,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

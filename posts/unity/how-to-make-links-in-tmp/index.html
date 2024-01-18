@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>TextMeshPro에서 링크 만들기 | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="TextMeshPro에서 링크 만들기" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="TextMeshPro에서 링크 만들기" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"TextMeshPro의 태그를 이용하여 링크기능을 만들 수 있습니다.","headline":"TextMeshPro에서 링크 만들기","dateModified":"2022-10-01T07:00:00+00:00","datePublished":"2022-10-01T07:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/unity/how-to-make-links-in-tmp/"},"url":"https://jheun66.github.io/posts/unity/how-to-make-links-in-tmp/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2022-10-01T07:00:00+00:00","datePublished":"2022-10-01T07:00:00+00:00","description":"TextMeshPro의 태그를 이용하여 링크기능을 만들 수 있습니다.","headline":"TextMeshPro에서 링크 만들기","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/unity/how-to-make-links-in-tmp/"},"url":"https://jheun66.github.io/posts/unity/how-to-make-links-in-tmp/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,21 +156,16 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#샘플-만들기">샘플 만들기</a></li>
-<li class="toc-entry toc-h1"><a href="#정규표현식-적용">정규표현식 적용</a></li>
-<li class="toc-entry toc-h1"><a href="#onpointerclick-구현">OnPointerClick 구현</a></li>
-</ol><p>TextMeshPro의 <link> 태그를 이용하여 링크기능을 만들 수 있습니다.</p>
+      <p>TextMeshPro의 <link /> 태그를 이용하여 링크기능을 만들 수 있습니다.</p>
 
 <p>http URL이 넘어올 때 정규표현식으로 URL 체크후 브라우저로 띄울 수 있는 링크를 구현해보도록 하겠습니다.</p>
 
 <p>정규표현식과 링크 URL이 클 경우 줄이는 방식은 해당 <a href="https://immops.medium.com/make-clickable-links-in-unity-textmeshpro-8b72b24a820f">블로그</a>를 참고하였습니다.</p>
 
-<h1 id="샘플-만들기">
-<a class="anchor" href="#%EC%83%98%ED%94%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>샘플 만들기</h1>
+<h1 id="샘플-만들기">샘플 만들기</h1>
 <p>버튼을 눌렀을 때 TMPro에 텍스트를 세팅하도록 샘플 프로젝트를 만들었습니다.</p>
 
-<p><img src="/img/posts/unity/img_005.png" alt="img5" width="100%"></p>
+<p><img src="/img/posts/unity/img_005.png" alt="img5" width="100%" /></p>
 
 <p>버튼을 클릭했을 때는 <code class="language-plaintext highlighter-rouge">SetMessageToTMPro</code>가 호출되도록 하였습니다.</p>
 
@@ -191,8 +186,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>간단하게 테스트할 텍스트를 넣어줍니다.</p>
 
-<h1 id="정규표현식-적용">
-<a class="anchor" href="#%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-%EC%A0%81%EC%9A%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a>정규표현식 적용</h1>
+<h1 id="정규표현식-적용">정규표현식 적용</h1>
 <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">string</span> <span class="nf">CreateLinkFromText</span><span class="p">(</span><span class="kt">string</span> <span class="n">text</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">Regex</span> <span class="n">regx</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Regex</span><span class="p">(</span><span class="s">"((http://|https://|www\\.)([A-Z0-9.-:]{1,})\\.[0-9A-Z?;~&amp;#=\\-_\\./]{2,})"</span><span class="p">,</span> <span class="n">RegexOptions</span><span class="p">.</span><span class="n">IgnoreCase</span> <span class="p">|</span> <span class="n">RegexOptions</span><span class="p">.</span><span class="n">Singleline</span><span class="p">);</span>
@@ -215,11 +209,10 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>이후에는 링크를 클릭했을 때의 동작을 구현해주어야합니다.</p>
 
-<h1 id="onpointerclick-구현">
-<a class="anchor" href="#onpointerclick-%EA%B5%AC%ED%98%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>OnPointerClick 구현</h1>
+<h1 id="onpointerclick-구현">OnPointerClick 구현</h1>
 <p>TextMeshPro가 있는 게임 오브젝트에 아래의 스크립트를 추가합니다.</p>
 
-<p><img src="/img/posts/unity/img_006.png" alt="img6" width="100%"></p>
+<p><img src="/img/posts/unity/img_006.png" alt="img6" width="100%" /></p>
 
 <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">TMPro</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
@@ -251,7 +244,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>링크를 클릭하면 브라우저로 URL을 띄울 수 있습니다.</p>
 
-<p><img src="/img/posts/unity/gif_001.gif" alt="gif1" width="100%"></p>
+<p><img src="/img/posts/unity/gif_001.gif" alt="gif1" width="100%" /></p>
 
       
       
@@ -342,7 +335,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

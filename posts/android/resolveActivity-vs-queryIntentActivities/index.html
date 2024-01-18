@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>resolveActivity VS queryIntentActivities | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="resolveActivity VS queryIntentActivities" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="resolveActivity VS queryIntentActivities" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요 startActivity(intent) 를 실행하기 전 해당 intent를 실행시킬 수 있는지 체크할 필요가 있습니다. 만일 기기에 인텐트를 처리할 수 있는 앱이 존재하지 않으면 비정상 종료되기 때문입니다.","headline":"resolveActivity VS queryIntentActivities","dateModified":"2021-01-13T05:30:00+00:00","datePublished":"2021-01-13T05:30:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/resolveActivity-vs-queryIntentActivities/"},"url":"https://jheun66.github.io/posts/android/resolveActivity-vs-queryIntentActivities/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-01-13T05:30:00+00:00","datePublished":"2021-01-13T05:30:00+00:00","description":"개요 startActivity(intent) 를 실행하기 전 해당 intent를 실행시킬 수 있는지 체크할 필요가 있습니다. 만일 기기에 인텐트를 처리할 수 있는 앱이 존재하지 않으면 비정상 종료되기 때문입니다.","headline":"resolveActivity VS queryIntentActivities","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/resolveActivity-vs-queryIntentActivities/"},"url":"https://jheun66.github.io/posts/android/resolveActivity-vs-queryIntentActivities/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,22 +156,12 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#개요">개요</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#resolveactivity">resolveActivity()</a></li>
-<li class="toc-entry toc-h2"><a href="#queryintentactivities">queryIntentActivities()</a></li>
-<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
-</ol>
-</li>
-</ol><h1 id="개요">
-<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+      <h1 id="개요">개요</h1>
 <p><em>startActivity(intent)</em> 를 실행하기 전 해당 intent를 실행시킬 수 있는지 체크할 필요가 있습니다. 만일 기기에 인텐트를 처리할 수 있는 앱이 존재하지 않으면 비정상 종료되기 때문입니다.</p>
 
 <p>이 때 사용하는 방법에 <em>resolveActivity</em> , <em>queryIntentActivities</em> 가 있습니다.</p>
 
-<h2 id="resolveactivity">
-<a class="anchor" href="#resolveactivity" aria-hidden="true"><span class="octicon octicon-link"></span></a>resolveActivity()</h2>
+<h2 id="resolveactivity">resolveActivity()</h2>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">url</span> <span class="o">=</span> <span class="n">mWebsiteEditText</span><span class="o">.</span><span class="na">getText</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span>
 <span class="nc">Uri</span> <span class="n">webpage</span> <span class="o">=</span> <span class="nc">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
@@ -244,7 +234,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>만일 여러 액티비티가 인텐트 조건을 만족하면 가장 우선순위가 높은 액티비티가 반환됩니다. 만일 우선순위가 같다면 시스템은 사용자가 선호하는 액티비티를 선택할 수 있도록 하고 그 후에 사용자의 선호를 따를 수 있도록 합니다.</p>
 
-<p><img src="/img/posts/android/selectActivity.jpg" alt="select activity"></p>
+<p><img src="/img/posts/android/selectActivity.jpg" alt="select activity" /></p>
 
 <p>이는 저희가 흔히 본 앱 선택창을 말합니다.</p>
 
@@ -275,8 +265,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <p>즉 가장 적당한 intent를 골라주는데 사용할 수 있습니다. startActivity에서도 내부에 resolveActivity가 구현되어 있습니다.
 이러한 로직을 이용하여 널 스트링이 반환되면 적절한 intent가 없다는 것을 알 수 있는 것입니다.</p>
 
-<h2 id="queryintentactivities">
-<a class="anchor" href="#queryintentactivities" aria-hidden="true"><span class="octicon octicon-link"></span></a>queryIntentActivities()</h2>
+<h2 id="queryintentactivities">queryIntentActivities()</h2>
 
 <p>그렇다면 queryIntentActivities는 무엇일까요? 이름에서도 알 수 있듯이 가능한 액티비티를 모두 반환해줍니다.</p>
 
@@ -287,10 +276,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>우선순위가 높은 것부터 낮은 순서대로 리스트 형태로 반환하는 것을 알 수 있습니다. 또한 첫번째 아이템이 resolveActivity의 리턴값임을 확인할 수 있습니다.</p>
 
-<h2 id="reference">
-<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
-<p><a href="https://developer.android.com/reference/android/content/Intent?hl=ko#resolveActivity(android.content.pm.PackageManager)">https://developer.android.com/reference/android/content/Intent?hl=ko#resolveActivity(android.content.pm.PackageManager)</a><br>
-<a href="https://developer.android.com/reference/android/content/pm/PackageManager#resolveActivity(android.content.Intent,%20int)">https://developer.android.com/reference/android/content/pm/PackageManager#resolveActivity(android.content.Intent,%20int)</a><br>
+<h2 id="reference">Reference</h2>
+<p><a href="https://developer.android.com/reference/android/content/Intent?hl=ko#resolveActivity(android.content.pm.PackageManager)">https://developer.android.com/reference/android/content/Intent?hl=ko#resolveActivity(android.content.pm.PackageManager)</a><br />
+<a href="https://developer.android.com/reference/android/content/pm/PackageManager#resolveActivity(android.content.Intent,%20int)">https://developer.android.com/reference/android/content/pm/PackageManager#resolveActivity(android.content.Intent,%20int)</a><br />
 <a href="https://developer.android.com/reference/android/content/pm/PackageManager#queryIntentActivities(android.content.Intent,%20int)">https://developer.android.com/reference/android/content/pm/PackageManager#queryIntentActivities(android.content.Intent,%20int)</a></p>
 
       
@@ -382,7 +370,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

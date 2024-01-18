@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>검색 기능 추가(Add search function to my blog) | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="검색 기능 추가(Add search function to my blog)" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="검색 기능 추가(Add search function to my blog)" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"블로그 꾸미다 검색기능이 있으면 좋을꺼 같다 생각했는데 오픈소스 라이브러리가 있어 사용하기로 했습니다. 일단 깃헙에서 설명문을 보며 필요한 부분만 찾아보도록 합시다.","headline":"검색 기능 추가(Add search function to my blog)","dateModified":"2022-04-17T17:51:00+00:00","datePublished":"2022-04-17T17:51:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/blog/add-search-function-to-my-blog/"},"url":"https://jheun66.github.io/posts/blog/add-search-function-to-my-blog/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2022-04-17T17:51:00+00:00","datePublished":"2022-04-17T17:51:00+00:00","description":"블로그 꾸미다 검색기능이 있으면 좋을꺼 같다 생각했는데 오픈소스 라이브러리가 있어 사용하기로 했습니다. 일단 깃헙에서 설명문을 보며 필요한 부분만 찾아보도록 합시다.","headline":"검색 기능 추가(Add search function to my blog)","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/blog/add-search-function-to-my-blog/"},"url":"https://jheun66.github.io/posts/blog/add-search-function-to-my-blog/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,20 +156,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#create-searchjson">Create search.json</a></li>
-<li class="toc-entry toc-h1"><a href="#preparing-the-plugin">Preparing the plugin</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#usage">Usage</a></li>
-</ol>
-</li>
-</ol><p>블로그 꾸미다 검색기능이 있으면 좋을꺼 같다 생각했는데 <a href="https://github.com/christian-fei/Simple-Jekyll-Search">오픈소스 라이브러리</a>가 있어 사용하기로 했습니다.<br>
+      <p>블로그 꾸미다 검색기능이 있으면 좋을꺼 같다 생각했는데 <a href="https://github.com/christian-fei/Simple-Jekyll-Search">오픈소스 라이브러리</a>가 있어 사용하기로 했습니다.<br />
 일단 깃헙에서 설명문을 보며 필요한 부분만 찾아보도록 합시다.</p>
 
-<h1 id="create-searchjson">
-<a class="anchor" href="#create-searchjson" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create <code class="language-plaintext highlighter-rouge">search.json</code>
-</h1>
-<p>search.json 파일을 만들어 블로그의 루트파일에 넣어주어야 합니다.<br>
+<h1 id="create-searchjson">Create <code class="language-plaintext highlighter-rouge">search.json</code></h1>
+<p>search.json 파일을 만들어 블로그의 루트파일에 넣어주어야 합니다.<br />
 이 파일을 통해 정렬에 사용할 객체를 생성해줍니다.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">---</span><span class="w">
@@ -218,19 +209,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>모든 텍스트에서 찾기위해서 처음에는 두번째처럼 설정했었는데 검색 결과가 만족스럽지 않아 첫번째 코드를 사용하려합니다.<br>
-두번째 코드에서 remove: ‘\‘를 추가한 이유는 content 텍스트에 해당 단어가 포함되어 있으면 json파일이 깨지기 때문입니다.<br>
+<p>모든 텍스트에서 찾기위해서 처음에는 두번째처럼 설정했었는데 검색 결과가 만족스럽지 않아 첫번째 코드를 사용하려합니다.<br />
+두번째 코드에서 remove: ‘\‘를 추가한 이유는 content 텍스트에 해당 단어가 포함되어 있으면 json파일이 깨지기 때문입니다.<br />
 또한 Mac 환경과 Windows 환경을 왔다갔다해서 그런지 일부 텍스트 중 Tab과 스페이스가 혼합되어 json을 제대로 못 만드는 경우가 있어 Tab을 모두 space로 변경해주었습니다.</p>
-<h1 id="preparing-the-plugin">
-<a class="anchor" href="#preparing-the-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Preparing the plugin</h1>
-<p>다음으로 해줄 일은 플러그인에 필요한 DOM(문서 객체 모델)을 만들어주어야 합니다.<br>
+<h1 id="preparing-the-plugin">Preparing the plugin</h1>
+<p>다음으로 해줄 일은 플러그인에 필요한 DOM(문서 객체 모델)을 만들어주어야 합니다.<br />
 필요한 DOM은</p>
 <ul>
   <li>검색 인풋 필드</li>
   <li>검색 결과를 담을 컨테이너</li>
 </ul>
 
-<p>입니다.<br>
+<p>입니다.<br />
 직접 구현해줄 수도 있고 라이브러리에서 제공하는 js파일을 사용할 수 있습니다.</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- HTML elements for search --&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"search-input"</span> <span class="na">placeholder=</span><span class="s">"Search blog posts.."</span><span class="nt">&gt;</span>
@@ -241,8 +231,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </code></pre></div></div>
 <p>저는 기본으로 제공하는 스타일보다 다른 스타일을 적용하도록 하겠습니다.</p>
 <h3 id="검색-인풋-필드에-material-design-적용하기">검색 인풋 필드에 Material Design 적용하기</h3>
-<p><a href="https://material.io/components/text-fields">https://material.io/components/text-fields</a>를 적용해보려 합니다.<br>
-cdn을 이용해서 다음과 같이 빠르게 적용해볼 수 있습니다.<br>
+<p><a href="https://material.io/components/text-fields">https://material.io/components/text-fields</a>를 적용해보려 합니다.<br />
+cdn을 이용해서 다음과 같이 빠르게 적용해볼 수 있습니다.<br />
 <strong>link</strong>를 해주고</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
@@ -256,25 +246,24 @@ cdn을 이용해서 다음과 같이 빠르게 적용해볼 수 있습니다.<br
 <span class="nt">&lt;/label&gt;</span>
 </code></pre></div></div>
 <h3 id="결과를-담을-컨테이너에-material-design-적용하기">결과를 담을 컨테이너에 Material Design 적용하기</h3>
-<p>결과 리스트도 통일성을 위해 material을 적용하도록 하겠습니다.<br>
+<p>결과 리스트도 통일성을 위해 material을 적용하도록 하겠습니다.<br />
 저는 <a href="https://material.io/components/lists">https://material.io/components/lists</a>를 사용하려 합니다.</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"mdc-list mdc-list--two-line"</span> <span class="na">id=</span><span class="s">"results-container"</span><span class="nt">&gt;&lt;/ul&gt;</span>
 </code></pre></div></div>
 <p>리스트를 담을 컨테이너만 선언해주고 템플릿은 이후 과정에서 추가해줍니다.</p>
-<h2 id="usage">
-<a class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
-<p><code class="language-plaintext highlighter-rouge">SimpleJekyllSearch</code> 함수의 옵션들을 살펴보면서 사용해 봅니다.<br>
-<strong>searchInput</strong><br>
+<h2 id="usage">Usage</h2>
+<p><code class="language-plaintext highlighter-rouge">SimpleJekyllSearch</code> 함수의 옵션들을 살펴보면서 사용해 봅니다.<br />
+<strong>searchInput</strong><br />
 위에서 원하는 엘리먼트에 <code class="language-plaintext highlighter-rouge">id="search-input"</code>를 지정하고 <code class="language-plaintext highlighter-rouge">document.getElementById('search-input')</code>와 같이 선언하여 매칭합니다.</p>
 
-<p><strong>resultsContainer</strong><br>
+<p><strong>resultsContainer</strong><br />
 일반적으로 <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>을 사용합니다. searchInput처럼 <code class="language-plaintext highlighter-rouge">document.getElementById('results-container')</code>와 같이 선언하여 매칭합니다.</p>
 
-<p><strong>json</strong><br>
+<p><strong>json</strong><br />
 search.json로 설정해줍니다.</p>
 
-<p><strong>searchResultTemplate</strong><br>
-이 부분이 위에서 설명한 results-container에 담을 리스트 형태를 지정해줍니다.<br>
+<p><strong>searchResultTemplate</strong><br />
+이 부분이 위에서 설명한 results-container에 담을 리스트 형태를 지정해줍니다.<br />
 저는 이런식으로 사용하려합니다.</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`
 <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mdc-list-item"</span><span class="nt">&gt;</span>
@@ -286,28 +275,28 @@ search.json로 설정해줍니다.</p>
 <span class="nt">&lt;/li&gt;&lt;hr&gt;</span>
 `
 </code></pre></div></div>
-<p><strong>templateMiddleware</strong><br>
-템플릿에서 일치하는 항목이 발견될 때 호출하는 함수를 정의할 수 있습니다.<br>
-해당 속성의 이름, 값과 템플릿이 전달됩니다.<br>
-함수가 정의하지 않은 값을 반환하면 해당 값으로 템플릿에서 반환됩니다.<br>
+<p><strong>templateMiddleware</strong><br />
+템플릿에서 일치하는 항목이 발견될 때 호출하는 함수를 정의할 수 있습니다.<br />
+해당 속성의 이름, 값과 템플릿이 전달됩니다.<br />
+함수가 정의하지 않은 값을 반환하면 해당 값으로 템플릿에서 반환됩니다.<br />
 주로 URL 조작등에 사용한다고 합니다.</p>
 
-<p><strong>sortMiddleware</strong><br>
+<p><strong>sortMiddleware</strong><br />
 필터링된 결과를 정렬하는데 사용할 수 있는 함수입니다. 아마 우선순위를 세팅하는 것 같은데 정말 간단하게 날짜로 해봅니다.</p>
 
-<p><strong>noResultsText</strong><br>
+<p><strong>noResultsText</strong><br />
 결과가 없을때 출력할 텍스트입니다. 샘플과 동일하게 ‘No results found’ 를 추가하였습니다.</p>
 
-<p><strong>limit</strong><br>
+<p><strong>limit</strong><br />
 결과 개수 제한입니다. 넉넉하게 30으로 하였습니다.</p>
 
-<p><strong>fuzzy</strong><br>
+<p><strong>fuzzy</strong><br />
 좀더 유연한 검색을 가능하게 해줍니다. 저는 false로 세팅하여 엄격하게 제한하도록 하려합니다.</p>
 
-<p><strong>exclude</strong><br>
+<p><strong>exclude</strong><br />
 제외하고 싶은 문구를 추가할 수 있습니다. 굳이 필요없어 보여 넘어가도록 하겠습니다.</p>
 
-<p><strong>success</strong><br>
+<p><strong>success</strong><br />
 데이터가 로드되었을 때 호출해주고 싶은 함수를 추가할 수 있습니다.</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/js/simple-jekyll-search.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
@@ -336,10 +325,10 @@ search.json로 설정해줍니다.</p>
         <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
-<p>제가 만들고 싶은대로 필요한부분만 채워보았습니다.<br>
-simple-jekyll-search.js는 샘플 프로젝트에서 그대로 가져왔습니다. <br>
-날짜순으로 정렬된 것도 확인하였고 결과가 그럭저럭 괜찮게 나왔습니다.<br>
-<img src="/img/posts/blog/search.png" alt="search.png" width="100%"></p>
+<p>제가 만들고 싶은대로 필요한부분만 채워보았습니다.<br />
+simple-jekyll-search.js는 샘플 프로젝트에서 그대로 가져왔습니다. <br />
+날짜순으로 정렬된 것도 확인하였고 결과가 그럭저럭 괜찮게 나왔습니다.<br />
+<img src="/img/posts/blog/search.png" alt="search.png" width="100%" /></p>
 
       
       
@@ -430,7 +419,7 @@ simple-jekyll-search.js는 샘플 프로젝트에서 그대로 가져왔습니�
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

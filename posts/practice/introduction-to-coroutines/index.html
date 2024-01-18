@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Introduction to coroutines | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Introduction to coroutines" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Introduction to coroutines" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Introduction to coroutines","dateModified":"2021-09-25T07:14:00+00:00","datePublished":"2021-09-25T07:14:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/introduction-to-coroutines/"},"url":"https://jheun66.github.io/posts/practice/introduction-to-coroutines/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-09-25T07:14:00+00:00","datePublished":"2021-09-25T07:14:00+00:00","description":"개요","headline":"Introduction to coroutines","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/introduction-to-coroutines/"},"url":"https://jheun66.github.io/posts/practice/introduction-to-coroutines/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,29 +156,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
-<li class="toc-entry toc-h1"><a href="#multithreading-and-concurrency">Multithreading and concurrency</a></li>
-<li class="toc-entry toc-h1"><a href="#challenges-with-threads">Challenges with threads</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#threads-require-a-lot-of-resources">Threads require a lot of resources</a></li>
-<li class="toc-entry toc-h2"><a href="#race-conditions-and-unpredictable-behavior">Race conditions and unpredictable behavior</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#coroutines-in-kotlin">Coroutines in Kotlin</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#a-word-about-runblocking">A word about runBlocking</a></li>
-<li class="toc-entry toc-h2"><a href="#when-to-mark-functions-as-suspend">When to mark functions as suspend</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
-</ol><h1 id="개요">
-<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+      <h1 id="개요">개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-4-pathway-1#codelab-https://developer.android.com/codelabs/basic-android-kotlin-training-introduction-coroutines">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="multithreading-and-concurrency">
-<a class="anchor" href="#multithreading-and-concurrency" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multithreading and concurrency</h1>
+<h1 id="multithreading-and-concurrency">Multithreading and concurrency</h1>
 
 <p>쓰레드는 프로그램의 경계안에서 스케줄되고 실행되는 가장 작은 단위</p>
 
@@ -194,13 +176,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>람다함수로 간단한 쓰레드, 쓰레드는 start() 함수가 호출되어야 실행되고 currentThread()는 현재 실행되는 Thread instance를 반환, String 표현으로 쓰레드 이름, 우선순위, group을 알려줌</p>
 
-<h1 id="challenges-with-threads">
-<a class="anchor" href="#challenges-with-threads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Challenges with threads</h1>
+<h1 id="challenges-with-threads">Challenges with threads</h1>
 
 <p>쓰레드는 여러 작업을 동시에 실행하는 가장 쉬운 방법이지만 문제가 없는 것은 아님. 몇가지 어려움이 있음.</p>
 
-<h2 id="threads-require-a-lot-of-resources">
-<a class="anchor" href="#threads-require-a-lot-of-resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Threads require a lot of resources</h2>
+<h2 id="threads-require-a-lot-of-resources">Threads require a lot of resources</h2>
 
 <p>쓰레드를 만들고 변경하고 관리하는 것은 동시간에 관리해야하는 쓰레드의 제한에 의해 많은 시스템 리소스와 시간을 소모함. (context switching)</p>
 
@@ -208,8 +188,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>안드로이드 OS에서는 유저의 반응을 받기위해 여러차례 시도를 함. 현재 휴대기기에서는 1초에 60~120회 정도 UI를 업데이트함.</p>
 
-<h2 id="race-conditions-and-unpredictable-behavior">
-<a class="anchor" href="#race-conditions-and-unpredictable-behavior" aria-hidden="true"><span class="octicon octicon-link"></span></a>Race conditions and unpredictable behavior</h2>
+<h2 id="race-conditions-and-unpredictable-behavior">Race conditions and unpredictable behavior</h2>
 
 <p>쓰레드는 하나의 자원을 두고 경쟁할 수 있어서 예측하지 못한 결과를 가져올 수 있음</p>
 
@@ -226,8 +205,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>count라는 변수를 두고 race condition이 발생하는 예</p>
 
-<h1 id="coroutines-in-kotlin">
-<a class="anchor" href="#coroutines-in-kotlin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coroutines in Kotlin</h1>
+<h1 id="coroutines-in-kotlin">Coroutines in Kotlin</h1>
 
 <p>안드로이드에는 백그라운드 작업을 위해 직접 쓰레드를 생성하고 사용할 수 있지만 코틀린에서는 동시성을 관리하는데 더 유연하고 쉬운 방법인 Coroutine을 제공한다.</p>
 
@@ -296,8 +274,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>이 코드 블록을 suspend 키워드로 표현함. Suspend는 코드 블록이나 함수가 정지되거나 재개될 수 있음을 나타냄.</p>
 
-<h2 id="a-word-about-runblocking">
-<a class="anchor" href="#a-word-about-runblocking" aria-hidden="true"><span class="octicon octicon-link"></span></a>A word about runBlocking</h2>
+<h2 id="a-word-about-runblocking">A word about runBlocking</h2>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">kotlinx.coroutines.*</span>
 <span class="k">import</span> <span class="nn">java.time.LocalDateTime</span>
@@ -362,14 +339,11 @@ leaving getValue() at 06:58:53.182
 result of num1 + num2 is 1.3197235861568224
 </code></pre></div></div>
 
-<h2 id="when-to-mark-functions-as-suspend">
-<a class="anchor" href="#when-to-mark-functions-as-suspend" aria-hidden="true"><span class="octicon octicon-link"></span></a>When to mark functions as suspend</h2>
+<h2 id="when-to-mark-functions-as-suspend">When to mark functions as suspend</h2>
 
 <p>getValue()에 <code class="language-plaintext highlighter-rouge">suspend</code> 키워드가 들어있는 것을 확인할 수 있음. 이는 <code class="language-plaintext highlighter-rouge">suspend</code> 함수이기도한 delay()를 호출하기 때문. 함수가 다른 <code class="language-plaintext highlighter-rouge">suspend</code> 함수를 호출할 때 이 함수 역시 <code class="language-plaintext highlighter-rouge">suspend</code> 함수가 된다. 메인 함수에 <code class="language-plaintext highlighter-rouge">suspend</code>가 붙지 않은 것은 getValue()를 직접 호출하는 것이 아닌 <code class="language-plaintext highlighter-rouge">runBlocking()</code>을 통해서 호출되기 때문.</p>
 
-<h1 id="learn-more">
-<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
-</h1>
+<h1 id="learn-more"><strong>Learn more</strong></h1>
 
 <p>추가 공부해야할 링크들</p>
 
@@ -468,7 +442,7 @@ result of num1 + num2 is 1.3197235861568224
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

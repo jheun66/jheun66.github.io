@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Activity Lifecycle | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Activity Lifecycle" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Activity Lifecycle" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"Acitivity Lifecycle 여러 블로그나 서적마다 용어나 표현 스타일이 조금씩 다르지만 큰 플로우는 동일하였습니다. 플로차트는 안드로이드 개발자 문서 및 코드랩에서 가져왔습니다.","headline":"Activity Lifecycle","dateModified":"2020-12-28T03:00:00+00:00","datePublished":"2020-12-28T03:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/activity-lifecycle/"},"url":"https://jheun66.github.io/posts/android/activity-lifecycle/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2020-12-28T03:00:00+00:00","datePublished":"2020-12-28T03:00:00+00:00","description":"Acitivity Lifecycle 여러 블로그나 서적마다 용어나 표현 스타일이 조금씩 다르지만 큰 플로우는 동일하였습니다. 플로차트는 안드로이드 개발자 문서 및 코드랩에서 가져왔습니다.","headline":"Activity Lifecycle","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/activity-lifecycle/"},"url":"https://jheun66.github.io/posts/android/activity-lifecycle/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,25 +156,14 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#acitivity-lifecycle">Acitivity Lifecycle</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#액티비티의-state와-lifecycle-callback">액티비티의 State와 Lifecycle callback</a></li>
-<li class="toc-entry toc-h2"><a href="#onsaveinstancestate와-onrestoreinstancestate">onSaveInstanceState()와 onRestoreInstanceState()</a></li>
-<li class="toc-entry toc-h2"><a href="#액티비티의-수명">액티비티의 수명</a></li>
-<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
-</ol>
-</li>
-</ol><h1 id="acitivity-lifecycle">
-<a class="anchor" href="#acitivity-lifecycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acitivity Lifecycle</h1>
+      <h1 id="acitivity-lifecycle">Acitivity Lifecycle</h1>
 <p>여러 블로그나 서적마다 용어나 표현 스타일이 조금씩 다르지만 큰 플로우는 동일하였습니다. 플로차트는 안드로이드 개발자 문서 및 코드랩에서 가져왔습니다.</p>
 
-<h2 id="액티비티의-state와-lifecycle-callback">
-<a class="anchor" href="#%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%EC%9D%98-state%EC%99%80-lifecycle-callback" aria-hidden="true"><span class="octicon octicon-link"></span></a>액티비티의 State와 Lifecycle callback</h2>
-<p>액티비티 인스턴스는 생명주기동안 몇가지 상태로 전환될 수 있습니다.<br>
-<img src="https://developer.android.com/codelabs/android-training-activity-lifecycle-and-state/img/6196fc9ecbe17d54.png" alt="액티비티 상태변화"></p>
+<h2 id="액티비티의-state와-lifecycle-callback">액티비티의 State와 Lifecycle callback</h2>
+<p>액티비티 인스턴스는 생명주기동안 몇가지 상태로 전환될 수 있습니다.<br />
+<img src="https://developer.android.com/codelabs/android-training-activity-lifecycle-and-state/img/6196fc9ecbe17d54.png" alt="액티비티 상태변화" /></p>
 
-<p><img src="https://developer.android.com/guide/components/images/activity_lifecycle.png" alt="액티비티 생명주기"></p>
+<p><img src="https://developer.android.com/guide/components/images/activity_lifecycle.png" alt="액티비티 생명주기" /></p>
 
 <p>코드는 실습 포스트에 담도록 하겠습니다.</p>
 
@@ -203,8 +192,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>2가지 경우로 나눌 수 있는데 첫번째 경우는 액티비티가 다시 생성되지 않으므로 소멸되기전에 모든 데이터를 정리해야 합니다.</p>
 
-<h2 id="onsaveinstancestate와-onrestoreinstancestate">
-<a class="anchor" href="#onsaveinstancestate%EC%99%80-onrestoreinstancestate" aria-hidden="true"><span class="octicon octicon-link"></span></a>onSaveInstanceState()와 onRestoreInstanceState()</h2>
+<h2 id="onsaveinstancestate와-onrestoreinstancestate">onSaveInstanceState()와 onRestoreInstanceState()</h2>
 <p><em>Instance State</em> 는 시스템이 이전 상태를 복원하기위한 Bundle 인스턴스입니다.</p>
 
 <p>플로차트에는 나오지 않았지만 ART에 의해 프로세스가 종료되었을 때 <em>onSaveInstanceState()</em> 를 호출시켜 UI 상태 변화등을 저장하고 <em>onRestoreInstanceState()</em> 에서 복구할 수 있습니다.</p>
@@ -213,8 +201,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>액티비티가 명시적으로 중단되거나 사용자가 back 버튼을 눌렀을 때는 기본적으로 호출되지 않습니다.</p>
 
-<h2 id="액티비티의-수명">
-<a class="anchor" href="#%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%EC%9D%98-%EC%88%98%EB%AA%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>액티비티의 수명</h2>
+<h2 id="액티비티의-수명">액티비티의 수명</h2>
 <p>수명에 대한 용어 정리 입니다.</p>
 
 <ul>
@@ -235,10 +222,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>onResume부터 onPause 호출까지 활성 수명 상태가 됩니다. 이때 사용자의 입력을 받을 수 있습니다.</p>
 
-<h2 id="reference">
-<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
-<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle"><strong>Android Developer</strong></a><br>
-<a href="https://developer.android.com/codelabs/android-training-activity-lifecycle-and-state?hl=en&amp;continue=https%3A%2F%2Fcodelabs.developers.google.com%2F%3Fcat%3Dandroid#0"><strong>Android Developer CodeLabs</strong></a><br>
+<h2 id="reference">Reference</h2>
+<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle"><strong>Android Developer</strong></a><br />
+<a href="https://developer.android.com/codelabs/android-training-activity-lifecycle-and-state?hl=en&amp;continue=https%3A%2F%2Fcodelabs.developers.google.com%2F%3Fcat%3Dandroid#0"><strong>Android Developer CodeLabs</strong></a><br />
 리토마이어, 이안 레이크, “프로페셔널 안드로이드 4판”, 현호철, Jpub, p82~88</p>
 
       
@@ -330,7 +316,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Change the app icon | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Change the app icon" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Change the app icon" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Change the app icon","dateModified":"2021-07-28T08:02:00+00:00","datePublished":"2021-07-28T08:02:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/change-the-app-icon/"},"url":"https://jheun66.github.io/posts/practice/change-the-app-icon/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-07-28T08:02:00+00:00","datePublished":"2021-07-28T08:02:00+00:00","description":"개요","headline":"Change the app icon","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/change-the-app-icon/"},"url":"https://jheun66.github.io/posts/practice/change-the-app-icon/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,23 +156,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
-<li class="toc-entry toc-h1"><a href="#explore-launcher-icon-files">Explore launcher icon files</a></li>
-<li class="toc-entry toc-h1"><a href="#adaptive-icons">Adaptive Icons</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#a-bitmap-image">a bitmap image</a></li>
-<li class="toc-entry toc-h2"><a href="#a-vector-drawable">a vector drawable</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#design-guidance-on-android-icons">Design guidance on Android icons</a></li>
-</ol><h1 id="개요">
-<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+      <h1 id="개요">개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-2">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="explore-launcher-icon-files">
-<a class="anchor" href="#explore-launcher-icon-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explore launcher icon files</h1>
+<h1 id="explore-launcher-icon-files">Explore launcher icon files</h1>
 
 <p>Project Window에서 app - src - main - res 밑에 있는 디렉토리에서 확인가능</p>
 
@@ -182,27 +170,23 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>device에서 제공하는 기본 density보다 큰 사이즈의 앱 아이콘을 사용하고 싶을 경우 사용할 수 있도록</p>
 
-<h1 id="adaptive-icons">
-<a class="anchor" href="#adaptive-icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adaptive Icons</h1>
+<h1 id="adaptive-icons">Adaptive Icons</h1>
 
 <p>API level 26 이후로 adaptive launcher Icons 지원</p>
 
 <p>Adaptive Icon을 위한 리소스가 들어있는 디렉퇼에는 <em>-v26</em>이 붙음</p>
 
-<h2 id="a-bitmap-image">
-<a class="anchor" href="#a-bitmap-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>a bitmap image</h2>
+<h2 id="a-bitmap-image">a bitmap image</h2>
 
 <p>픽셀당 색상을 가지고 있는 단순한 이미지</p>
 
-<h2 id="a-vector-drawable">
-<a class="anchor" href="#a-vector-drawable" aria-hidden="true"><span class="octicon octicon-link"></span></a>a vector drawable</h2>
+<h2 id="a-vector-drawable">a vector drawable</h2>
 
 <p>이미지를 어떻게 그리는지 점, 선, 곡선등의 조합, 화면 밀도나 크기가 커지더라도 퀄리티가 떨어지지 않음</p>
 
 <p>단순한 아이콘 같은 경우 벡터를 사용하는게 좋을 수 있음</p>
 
-<h1 id="design-guidance-on-android-icons">
-<a class="anchor" href="#design-guidance-on-android-icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Design guidance on Android icons</h1>
+<h1 id="design-guidance-on-android-icons">Design guidance on Android icons</h1>
 
 <p><a href="https://material.io/design/platform-guidance/android-icons.html">참고</a></p>
 
@@ -297,7 +281,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>

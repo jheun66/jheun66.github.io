@@ -44,9 +44,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:hover {text-decoration: underline;}
     a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Shared ViewModel Across Fragment | 생각중</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Shared ViewModel Across Fragment" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -61,7 +61,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <meta property="twitter:title" content="Shared ViewModel Across Fragment" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"description":"개요","headline":"Shared ViewModel Across Fragment","dateModified":"2021-09-21T09:49:00+00:00","datePublished":"2021-09-21T09:49:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/"},"url":"https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/","author":{"@type":"Person","name":"Eun JongHyeok"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2021-09-21T09:49:00+00:00","datePublished":"2021-09-21T09:49:00+00:00","description":"개요","headline":"Shared ViewModel Across Fragment","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/"},"url":"https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,28 +156,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row min-vh-100 flex-column flex-lg-row">
     <div class="col-lg-8 col-md-10 mx-auto">
   
-      <ol id="toc" class="amos-list-class">
-<li class="toc-entry toc-h1"><a href="#개요">개요</a></li>
-<li class="toc-entry toc-h1"><a href="#mainactivity-초기화">MainActivity 초기화</a></li>
-<li class="toc-entry toc-h1"><a href="#complete-the-navigation-graph">Complete the Navigation Graph</a>
-<ol class="amos-sublist-class">
-<li class="toc-entry toc-h2"><a href="#update-title-in-app-bar">Update title in app bar</a></li>
-</ol>
-</li>
-<li class="toc-entry toc-h1"><a href="#create-a-shared-viewmodel">Create a shared ViewModel</a></li>
-<li class="toc-entry toc-h1"><a href="#use-kotlin-property-delegate">Use Kotlin property delegate</a></li>
-<li class="toc-entry toc-h1"><a href="#use-viewmodel-with-data-binding">Use ViewModel with data binding</a></li>
-<li class="toc-entry toc-h1"><a href="#simpledateformat">SimpleDateFormat</a></li>
-<li class="toc-entry toc-h1"><a href="#set-lifecycle-owner-to-observe-livedata">Set Lifecycle owner to observe LiveData</a></li>
-<li class="toc-entry toc-h1"><a href="#format-price-with-livedata-transformation">Format price with LiveData transformation</a></li>
-<li class="toc-entry toc-h1"><a href="#learn-more">Learn more</a></li>
-</ol><h1 id="개요">
-<a class="anchor" href="#%EA%B0%9C%EC%9A%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요</h1>
+      <h1 id="개요">개요</h1>
 
 <p>이 글은 <a href="https://developer.android.com/courses/pathways/android-basics-kotlin-unit-3-pathway-4">안드로이드 개발자 사이트의 내용</a>을 따라해보면서 작성하였습니다.</p>
 
-<h1 id="mainactivity-초기화">
-<a class="anchor" href="#mainactivity-%EC%B4%88%EA%B8%B0%ED%99%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>MainActivity 초기화</h1>
+<h1 id="mainactivity-초기화">MainActivity 초기화</h1>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">activity_main</span><span class="p">)</span>
 </code></pre></div></div>
@@ -193,12 +176,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="complete-the-navigation-graph">
-<a class="anchor" href="#complete-the-navigation-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>Complete the Navigation Graph</h1>
+<h1 id="complete-the-navigation-graph">Complete the Navigation Graph</h1>
 
 <p><a href="https://developer.android.com/guide/navigation/navigation-getting-starte">네비게이션 그래프</a> 만들고</p>
 
-<p><img src="/img/posts/android/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-09-21_%EC%98%A4%ED%9B%84_5.19.26.png" alt="스크린샷 2021-09-21 오후 5.19.26.png" width="50%"></p>
+<p><img src="/img/posts/android/스크린샷_2021-09-21_오후_5.19.26.png" alt="스크린샷 2021-09-21 오후 5.19.26.png" width="50%" /></p>
 
 <p>다음과 같이 이어줌</p>
 
@@ -207,8 +189,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">findNavController</span><span class="p">().</span><span class="nf">navigate</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">action_name</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="update-title-in-app-bar">
-<a class="anchor" href="#update-title-in-app-bar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update title in app bar</h2>
+<h2 id="update-title-in-app-bar">Update title in app bar</h2>
 
 <p><code class="language-plaintext highlighter-rouge">NavHostFragment</code>가 있는 액티비티에서 <code class="language-plaintext highlighter-rouge">setupActionBarWithNavControlle</code> 세팅</p>
 
@@ -251,12 +232,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="nt">&lt;/navigation&gt;</span>
 </code></pre></div></div>
 
-<h1 id="create-a-shared-viewmodel">
-<a class="anchor" href="#create-a-shared-viewmodel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a shared ViewModel</h1>
+<h1 id="create-a-shared-viewmodel">Create a shared ViewModel</h1>
 
 <p>model 같은 경우 다른 code들과 분리시켜 놓는게 좋음. 기능별로 패키징!</p>
 
-<p><img src="/img/posts/android/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2021-09-21_%EC%98%A4%ED%9B%84_5.33.56.png" alt="스크린샷 2021-09-21 오후 5.33.56.png" width="50%"></p>
+<p><img src="/img/posts/android/스크린샷_2021-09-21_오후_5.33.56.png" alt="스크린샷 2021-09-21 오후 5.33.56.png" width="50%" /></p>
 
 <p>ViewModel에서 view model data는 public으로 노출하지 않는게 좋음. 대신 backing property를 구현하여 각 private mutable property 별로 public immutable prorperty를 만들어 노출.</p>
 
@@ -287,8 +267,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="use-kotlin-property-delegate">
-<a class="anchor" href="#use-kotlin-property-delegate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use Kotlin property delegate</h1>
+<h1 id="use-kotlin-property-delegate">Use Kotlin property delegate</h1>
 
 <p>코틀린에서는 각각의 mutable proprerty는 기본 getter와 setter 함수를 자동으로 생성. property에 값을 할당하거나 값을 읽을 때 호출됨. immutable property는 getter만 생성되고 호출됨.</p>
 
@@ -303,8 +282,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kd">val</span> <span class="py">sharedViewModel</span><span class="p">:</span> <span class="nc">OrderViewModel</span> <span class="k">by</span> <span class="nf">activityViewModels</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h1 id="use-viewmodel-with-data-binding">
-<a class="anchor" href="#use-viewmodel-with-data-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use ViewModel with data binding</h1>
+<h1 id="use-viewmodel-with-data-binding">Use ViewModel with data binding</h1>
 
 <p>viewModel을 data binding과 함께 사용하려면 xml 파일에 <code class="language-plaintext highlighter-rouge">data</code> 태그를 추가함.</p>
 
@@ -351,13 +329,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="na">android:text=</span><span class="s">"@string/coffee"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<h1 id="simpledateformat">
-<a class="anchor" href="#simpledateformat" aria-hidden="true"><span class="octicon octicon-link"></span></a>SimpleDateFormat</h1>
+<h1 id="simpledateformat">SimpleDateFormat</h1>
 
 <p><a href="https://developer.android.com/reference/java/text/SimpleDateFormat">SimpleDateFromat</a>은 안드로이드에서 제공하는 Date formatter로 날짜를 Text로 Text를 날짜로 변경해줄 수 있고 관련 메소드를 포함하고 있음.</p>
 
-<h1 id="set-lifecycle-owner-to-observe-livedata">
-<a class="anchor" href="#set-lifecycle-owner-to-observe-livedata" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set Lifecycle owner to observe LiveData</h1>
+<h1 id="set-lifecycle-owner-to-observe-livedata">Set Lifecycle owner to observe LiveData</h1>
 
 <p>Data Binding에서 layout 파일에서 binding expression에 의해 observable 값이 변했을 때 UI 요소를 변화시키기 위해서는 binding.lifecycleOwner를 viewLifecycleOwner로 연결해주어야한다.</p>
 
@@ -367,8 +343,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="format-price-with-livedata-transformation">
-<a class="anchor" href="#format-price-with-livedata-transformation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Format price with LiveData transformation</h1>
+<h1 id="format-price-with-livedata-transformation">Format price with LiveData transformation</h1>
 
 <p>Transformations.map을 통해 포맷이 다른 값을 매핑하여 변경해줄 수 있음</p>
 
@@ -378,9 +353,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1 id="learn-more">
-<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
-</h1>
+<h1 id="learn-more"><strong>Learn more</strong></h1>
 
 <p>추가 공부해야할 링크들</p>
 
@@ -484,7 +457,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           </li>
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2022</p>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
       </div>
     </div>
   </div>
