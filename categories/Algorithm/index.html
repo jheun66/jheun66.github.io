@@ -42,7 +42,6 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:hover {text-decoration: underline;}
-    a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Algorithm | In progress</title>
@@ -147,7 +146,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   전체 보기
 </h4>
 <a class = "tag-link" onclick="showDefault()">
-  <span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>All</span>
+  <div class="tag-button-class"><i class="fa fa-tag"></i>All</div>
 </a>
 <hr>
 <h4>
@@ -155,8 +154,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </h4>
 
 
-<a class = "tag-link" onclick="showTag('.permutation')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>permutation</span>
+<a class = "tag-link" onclick="showTag('.Permutation')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Permutation</div>
 </a>
 
 <hr>
@@ -170,42 +169,26 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >08/21/2021,
         
         
-        <i class="fa fa-tag"></i>permutation
+        <div class="tag-class"><i class="fa fa-tag"></i>Permutation</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/algorithm/next-permutation/">
-    <h2 class="post-title">next_permutation</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        August 21, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/algorithm/next-permutation/#disqus_thread" data-disqus-identifier="/posts/algorithm/next-permutation/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag permutation" style="display:none"><a href="/posts/algorithm/next-permutation/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Permutation" style="display:none"><a href="/posts/algorithm/next-permutation/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">next_permutation</span>
-    <span class="mdc-list-item__secondary-text" >08/21/2021, <i class="fa fa-tag"></i>Permutation</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >08/21/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Permutation</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag permutation" style="display:none">
+<hr class ="hidden_tag Permutation" style="display:none">
 
 
 

@@ -42,7 +42,6 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:hover {text-decoration: underline;}
-    a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Android | In progress</title>
@@ -147,7 +146,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   전체 보기
 </h4>
 <a class = "tag-link" onclick="showDefault()">
-  <span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>All</span>
+  <div class="tag-button-class"><i class="fa fa-tag"></i>All</div>
 </a>
 <hr>
 <h4>
@@ -155,118 +154,118 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </h4>
 
 
-<a class = "tag-link" onclick="showTag('.string')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>string</span>
+<a class = "tag-link" onclick="showTag('.String')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>String</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.html')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>html</span>
+<a class = "tag-link" onclick="showTag('.HTML')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>HTML</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.xml')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>xml</span>
+<a class = "tag-link" onclick="showTag('.XML')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>XML</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.warning')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>warning</span>
+<a class = "tag-link" onclick="showTag('.Warning')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Warning</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.webview')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>webview</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>webview</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.error')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>error</span>
+<a class = "tag-link" onclick="showTag('.Error')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Error</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.screen')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>screen</span>
+<a class = "tag-link" onclick="showTag('.Screen')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Screen</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.dp')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>dp</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>dp</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.context')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>context</span>
+<a class = "tag-link" onclick="showTag('.Context')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Context</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.application')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>application</span>
+<a class = "tag-link" onclick="showTag('.Application')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Application</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.activity')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>activity</span>
+<a class = "tag-link" onclick="showTag('.Activity')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Activity</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.ux')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>ux</span>
+<a class = "tag-link" onclick="showTag('.UX')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>UX</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.ui')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>ui</span>
+<a class = "tag-link" onclick="showTag('.UI')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>UI</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.button')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>button</span>
+<a class = "tag-link" onclick="showTag('.Button')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Button</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.gesture')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>gesture</span>
+<a class = "tag-link" onclick="showTag('.Gesture')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Gesture</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.intent')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>intent</span>
+<a class = "tag-link" onclick="showTag('.Intent')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Intent</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.implict_intent')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>implict_intent</span>
+<a class = "tag-link" onclick="showTag('.Implict_Intent')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Implict_Intent</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.explict_intent')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>explict_intent</span>
+<a class = "tag-link" onclick="showTag('.Explict_Intent')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Explict_Intent</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.android')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>android</span>
+<a class = "tag-link" onclick="showTag('.Android')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Android</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.androidx')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>androidx</span>
+<a class = "tag-link" onclick="showTag('.AndroidX')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>AndroidX</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.asl')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>asl</span>
+<a class = "tag-link" onclick="showTag('.ASL')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>ASL</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.art')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>art</span>
+<a class = "tag-link" onclick="showTag('.ART')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>ART</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.dalvik')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>dalvik</span>
+<a class = "tag-link" onclick="showTag('.Dalvik')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Dalvik</div>
 </a>
 
 <hr>
@@ -280,55 +279,48 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >08/18/2021,
         
         
-        <i class="fa fa-tag"></i>string
+        <div class="tag-class"><i class="fa fa-tag"></i>String</div>
         
         
-        <i class="fa fa-tag"></i>html
+        <div class="tag-class"><i class="fa fa-tag"></i>HTML</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/escape-html/">
-    <h2 class="post-title">Escape HTML</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        August 18, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/escape-html/#disqus_thread" data-disqus-identifier="/posts/android/escape-html/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag string" style="display:none"><a href="/posts/android/escape-html/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag String" style="display:none"><a href="/posts/android/escape-html/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Escape HTML</span>
-    <span class="mdc-list-item__secondary-text" >08/18/2021, <i class="fa fa-tag"></i>String, HTML</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >08/18/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>String</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>HTML</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag string" style="display:none">
+<hr class ="hidden_tag HTML" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag html" style="display:none"><a href="/posts/android/escape-html/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag HTML" style="display:none"><a href="/posts/android/escape-html/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Escape HTML</span>
-    <span class="mdc-list-item__secondary-text" >08/18/2021, <i class="fa fa-tag"></i>String, HTML</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >08/18/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>String</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>HTML</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag html" style="display:none">
+<hr class ="hidden_tag HTML" style="display:none">
 
 
 
@@ -339,55 +331,48 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >07/26/2021,
         
         
-        <i class="fa fa-tag"></i>xml
+        <div class="tag-class"><i class="fa fa-tag"></i>XML</div>
         
         
-        <i class="fa fa-tag"></i>warning
+        <div class="tag-class"><i class="fa fa-tag"></i>Warning</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/">
-    <h2 class="post-title">Use SwitchCompat from AppCompat or SwitchMaterial from Material library</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        July 26, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/#disqus_thread" data-disqus-identifier="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag xml" style="display:none"><a href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag XML" style="display:none"><a href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Use SwitchCompat from AppCompat or SwitchMaterial from Material library</span>
-    <span class="mdc-list-item__secondary-text" >07/26/2021, <i class="fa fa-tag"></i>XML, Warning</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >07/26/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>XML</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Warning</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag xml" style="display:none">
+<hr class ="hidden_tag Warning" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag warning" style="display:none"><a href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Warning" style="display:none"><a href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Use SwitchCompat from AppCompat or SwitchMaterial from Material library</span>
-    <span class="mdc-list-item__secondary-text" >07/26/2021, <i class="fa fa-tag"></i>XML, Warning</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >07/26/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>XML</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Warning</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag warning" style="display:none">
+<hr class ="hidden_tag Warning" style="display:none">
 
 
 
@@ -398,34 +383,15 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >07/22/2021,
         
         
-        <i class="fa fa-tag"></i>webview
+        <div class="tag-class"><i class="fa fa-tag"></i>webview</div>
         
         
-        <i class="fa fa-tag"></i>error
+        <div class="tag-class"><i class="fa fa-tag"></i>Error</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
-
-<!-- <article class="posts-list">
-    <a href="/posts/android/net-err-cleartext-not-permitted/">
-    <h2 class="post-title">net::ERR_CLEARTEXT_NOT_PERMITTED</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        July 22, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/net-err-cleartext-not-permitted/#disqus_thread" data-disqus-identifier="/posts/android/net-err-cleartext-not-permitted/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
 
@@ -433,20 +399,32 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">net::ERR_CLEARTEXT_NOT_PERMITTED</span>
-    <span class="mdc-list-item__secondary-text" >07/22/2021, <i class="fa fa-tag"></i>webview, Error</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >07/22/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>webview</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Error</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag webview" style="display:none">
+<hr class ="hidden_tag Error" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag error" style="display:none"><a href="/posts/android/net-err-cleartext-not-permitted/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Error" style="display:none"><a href="/posts/android/net-err-cleartext-not-permitted/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">net::ERR_CLEARTEXT_NOT_PERMITTED</span>
-    <span class="mdc-list-item__secondary-text" >07/22/2021, <i class="fa fa-tag"></i>webview, Error</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >07/22/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>webview</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Error</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag error" style="display:none">
+<hr class ="hidden_tag Error" style="display:none">
 
 
 
@@ -457,53 +435,46 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >02/13/2021,
         
         
-        <i class="fa fa-tag"></i>screen
+        <div class="tag-class"><i class="fa fa-tag"></i>Screen</div>
         
         
-        <i class="fa fa-tag"></i>dp
+        <div class="tag-class"><i class="fa fa-tag"></i>dp</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/screen-compatibility/">
-    <h2 class="post-title">Screen Compatibility</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        February 13, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/screen-compatibility/#disqus_thread" data-disqus-identifier="/posts/android/screen-compatibility/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag screen" style="display:none"><a href="/posts/android/screen-compatibility/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Screen" style="display:none"><a href="/posts/android/screen-compatibility/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Screen Compatibility</span>
-    <span class="mdc-list-item__secondary-text" >02/13/2021, <i class="fa fa-tag"></i>Screen, dp</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >02/13/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Screen</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>dp</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag screen" style="display:none">
+<hr class ="hidden_tag dp" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag dp" style="display:none"><a href="/posts/android/screen-compatibility/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Screen Compatibility</span>
-    <span class="mdc-list-item__secondary-text" >02/13/2021, <i class="fa fa-tag"></i>Screen, dp</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >02/13/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Screen</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>dp</div>
+        </span>
 </a></li>
 <hr class ="hidden_tag dp" style="display:none">
 
@@ -516,68 +487,76 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >02/12/2021,
         
         
-        <i class="fa fa-tag"></i>context
+        <div class="tag-class"><i class="fa fa-tag"></i>Context</div>
         
         
-        <i class="fa fa-tag"></i>application
+        <div class="tag-class"><i class="fa fa-tag"></i>Application</div>
         
         
-        <i class="fa fa-tag"></i>activity
+        <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/context/">
-    <h2 class="post-title">Context</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        February 12, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/context/#disqus_thread" data-disqus-identifier="/posts/android/context/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag context" style="display:none"><a href="/posts/android/context/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Context" style="display:none"><a href="/posts/android/context/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Context</span>
-    <span class="mdc-list-item__secondary-text" >02/12/2021, <i class="fa fa-tag"></i>Context, Application, Activity</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >02/12/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Context</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Application</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag context" style="display:none">
+<hr class ="hidden_tag Activity" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag application" style="display:none"><a href="/posts/android/context/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Application" style="display:none"><a href="/posts/android/context/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Context</span>
-    <span class="mdc-list-item__secondary-text" >02/12/2021, <i class="fa fa-tag"></i>Context, Application, Activity</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >02/12/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Context</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Application</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag application" style="display:none">
+<hr class ="hidden_tag Activity" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag activity" style="display:none"><a href="/posts/android/context/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/context/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Context</span>
-    <span class="mdc-list-item__secondary-text" >02/12/2021, <i class="fa fa-tag"></i>Context, Application, Activity</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >02/12/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Context</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Application</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag activity" style="display:none">
+<hr class ="hidden_tag Activity" style="display:none">
 
 
 
@@ -588,81 +567,110 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >01/15/2021,
         
         
-        <i class="fa fa-tag"></i>ux
+        <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
         
         
-        <i class="fa fa-tag"></i>ui
+        <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
         
         
-        <i class="fa fa-tag"></i>button
+        <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
         
         
-        <i class="fa fa-tag"></i>gesture
+        <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/buttons/">
-    <h2 class="post-title">Buttons(+background issue) And Gestures</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        January 15, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/buttons/#disqus_thread" data-disqus-identifier="/posts/android/buttons/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag ux" style="display:none"><a href="/posts/android/buttons/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag UX" style="display:none"><a href="/posts/android/buttons/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Buttons(+background issue) And Gestures</span>
-    <span class="mdc-list-item__secondary-text" >01/15/2021, <i class="fa fa-tag"></i>UX, UI, Button, Gesture</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/15/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag ux" style="display:none">
+<hr class ="hidden_tag Gesture" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag ui" style="display:none"><a href="/posts/android/buttons/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag UI" style="display:none"><a href="/posts/android/buttons/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Buttons(+background issue) And Gestures</span>
-    <span class="mdc-list-item__secondary-text" >01/15/2021, <i class="fa fa-tag"></i>UX, UI, Button, Gesture</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/15/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag ui" style="display:none">
+<hr class ="hidden_tag Gesture" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag button" style="display:none"><a href="/posts/android/buttons/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Button" style="display:none"><a href="/posts/android/buttons/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Buttons(+background issue) And Gestures</span>
-    <span class="mdc-list-item__secondary-text" >01/15/2021, <i class="fa fa-tag"></i>UX, UI, Button, Gesture</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/15/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag button" style="display:none">
+<hr class ="hidden_tag Gesture" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag gesture" style="display:none"><a href="/posts/android/buttons/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Gesture" style="display:none"><a href="/posts/android/buttons/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Buttons(+background issue) And Gestures</span>
-    <span class="mdc-list-item__secondary-text" >01/15/2021, <i class="fa fa-tag"></i>UX, UI, Button, Gesture</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/15/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag gesture" style="display:none">
+<hr class ="hidden_tag Gesture" style="display:none">
 
 
 
@@ -673,55 +681,48 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >01/14/2021,
         
         
-        <i class="fa fa-tag"></i>activity
+        <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
         
         
-        <i class="fa fa-tag"></i>intent
+        <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/send-and-sendto/">
-    <h2 class="post-title">ACTION_SEND & ACTION_SENDTO(이메일 인텐트)</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        January 14, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/send-and-sendto/#disqus_thread" data-disqus-identifier="/posts/android/send-and-sendto/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag activity" style="display:none"><a href="/posts/android/send-and-sendto/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/send-and-sendto/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">ACTION_SEND & ACTION_SENDTO(이메일 인텐트)</span>
-    <span class="mdc-list-item__secondary-text" >01/14/2021, <i class="fa fa-tag"></i>Activity, Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/14/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag activity" style="display:none">
+<hr class ="hidden_tag Intent" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag intent" style="display:none"><a href="/posts/android/send-and-sendto/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/send-and-sendto/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">ACTION_SEND & ACTION_SENDTO(이메일 인텐트)</span>
-    <span class="mdc-list-item__secondary-text" >01/14/2021, <i class="fa fa-tag"></i>Activity, Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/14/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag intent" style="display:none">
+<hr class ="hidden_tag Intent" style="display:none">
 
 
 
@@ -732,55 +733,48 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >01/13/2021,
         
         
-        <i class="fa fa-tag"></i>activity
+        <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
         
         
-        <i class="fa fa-tag"></i>intent
+        <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/resolveActivity-vs-queryIntentActivities/">
-    <h2 class="post-title">resolveActivity VS queryIntentActivities</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        January 13, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/resolveActivity-vs-queryIntentActivities/#disqus_thread" data-disqus-identifier="/posts/android/resolveActivity-vs-queryIntentActivities/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag activity" style="display:none"><a href="/posts/android/resolveActivity-vs-queryIntentActivities/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/resolveActivity-vs-queryIntentActivities/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">resolveActivity VS queryIntentActivities</span>
-    <span class="mdc-list-item__secondary-text" >01/13/2021, <i class="fa fa-tag"></i>Activity, Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/13/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag activity" style="display:none">
+<hr class ="hidden_tag Intent" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag intent" style="display:none"><a href="/posts/android/resolveActivity-vs-queryIntentActivities/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/resolveActivity-vs-queryIntentActivities/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">resolveActivity VS queryIntentActivities</span>
-    <span class="mdc-list-item__secondary-text" >01/13/2021, <i class="fa fa-tag"></i>Activity, Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/13/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag intent" style="display:none">
+<hr class ="hidden_tag Intent" style="display:none">
 
 
 
@@ -791,55 +785,48 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >01/09/2021,
         
         
-        <i class="fa fa-tag"></i>intent
+        <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
         
         
-        <i class="fa fa-tag"></i>implict_intent
+        <div class="tag-class"><i class="fa fa-tag"></i>Implict_Intent</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/implict-intent/">
-    <h2 class="post-title">Implict Intent</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        January 09, 2021
-        &bullet; 
-        <a class="comment-link" href="/posts/android/implict-intent/#disqus_thread" data-disqus-identifier="/posts/android/implict-intent/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag intent" style="display:none"><a href="/posts/android/implict-intent/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/implict-intent/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Implict Intent</span>
-    <span class="mdc-list-item__secondary-text" >01/09/2021, <i class="fa fa-tag"></i>Intent, Implict Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/09/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Implict_Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag intent" style="display:none">
+<hr class ="hidden_tag Implict_Intent" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag implict_intent" style="display:none"><a href="/posts/android/implict-intent/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Implict_Intent" style="display:none"><a href="/posts/android/implict-intent/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Implict Intent</span>
-    <span class="mdc-list-item__secondary-text" >01/09/2021, <i class="fa fa-tag"></i>Intent, Implict Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >01/09/2021,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Implict_Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag implict_intent" style="display:none">
+<hr class ="hidden_tag Implict_Intent" style="display:none">
 
 
 
@@ -850,55 +837,48 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/30/2020,
         
         
-        <i class="fa fa-tag"></i>intent
+        <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
         
         
-        <i class="fa fa-tag"></i>explict_intent
+        <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/activities-and-intents-practice/">
-    <h2 class="post-title">Activities And Intents Test</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 30, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/activities-and-intents-practice/#disqus_thread" data-disqus-identifier="/posts/android/activities-and-intents-practice/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag intent" style="display:none"><a href="/posts/android/activities-and-intents-practice/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/activities-and-intents-practice/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Activities And Intents Test</span>
-    <span class="mdc-list-item__secondary-text" >12/30/2020, <i class="fa fa-tag"></i>Intent, Explict Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/30/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag intent" style="display:none">
+<hr class ="hidden_tag Explict_Intent" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag explict_intent" style="display:none"><a href="/posts/android/activities-and-intents-practice/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Explict_Intent" style="display:none"><a href="/posts/android/activities-and-intents-practice/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Activities And Intents Test</span>
-    <span class="mdc-list-item__secondary-text" >12/30/2020, <i class="fa fa-tag"></i>Intent, Explict Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/30/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag explict_intent" style="display:none">
+<hr class ="hidden_tag Explict_Intent" style="display:none">
 
 
 
@@ -909,55 +889,48 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/30/2020,
         
         
-        <i class="fa fa-tag"></i>intent
+        <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
         
         
-        <i class="fa fa-tag"></i>explict_intent
+        <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/intent/">
-    <h2 class="post-title">Intent(Explict Intent)</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 30, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/intent/#disqus_thread" data-disqus-identifier="/posts/android/intent/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag intent" style="display:none"><a href="/posts/android/intent/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/intent/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Intent(Explict Intent)</span>
-    <span class="mdc-list-item__secondary-text" >12/30/2020, <i class="fa fa-tag"></i>Intent, Explict Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/30/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag intent" style="display:none">
+<hr class ="hidden_tag Explict_Intent" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag explict_intent" style="display:none"><a href="/posts/android/intent/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Explict_Intent" style="display:none"><a href="/posts/android/intent/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Intent(Explict Intent)</span>
-    <span class="mdc-list-item__secondary-text" >12/30/2020, <i class="fa fa-tag"></i>Intent, Explict Intent</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/30/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag explict_intent" style="display:none">
+<hr class ="hidden_tag Explict_Intent" style="display:none">
 
 
 
@@ -968,42 +941,26 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/28/2020,
         
         
-        <i class="fa fa-tag"></i>activity
+        <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/activity-lifecycle/">
-    <h2 class="post-title">Activity Lifecycle</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 28, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/activity-lifecycle/#disqus_thread" data-disqus-identifier="/posts/android/activity-lifecycle/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag activity" style="display:none"><a href="/posts/android/activity-lifecycle/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/activity-lifecycle/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Activity Lifecycle</span>
-    <span class="mdc-list-item__secondary-text" >12/28/2020, <i class="fa fa-tag"></i>Activity</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/28/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag activity" style="display:none">
+<hr class ="hidden_tag Activity" style="display:none">
 
 
 
@@ -1014,42 +971,26 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/25/2020,
         
         
-        <i class="fa fa-tag"></i>activity
+        <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/actiivties/">
-    <h2 class="post-title">Activities</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 25, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/actiivties/#disqus_thread" data-disqus-identifier="/posts/android/actiivties/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag activity" style="display:none"><a href="/posts/android/actiivties/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/actiivties/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Activities</span>
-    <span class="mdc-list-item__secondary-text" >12/25/2020, <i class="fa fa-tag"></i>Activity</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/25/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag activity" style="display:none">
+<hr class ="hidden_tag Activity" style="display:none">
 
 
 
@@ -1060,42 +1001,26 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/23/2020,
         
         
-        <i class="fa fa-tag"></i>android
+        <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/application-fundamentals/">
-    <h2 class="post-title">Application Fundamentals</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 23, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/application-fundamentals/#disqus_thread" data-disqus-identifier="/posts/android/application-fundamentals/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag android" style="display:none"><a href="/posts/android/application-fundamentals/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Android" style="display:none"><a href="/posts/android/application-fundamentals/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Application Fundamentals</span>
-    <span class="mdc-list-item__secondary-text" >12/23/2020, <i class="fa fa-tag"></i>Android</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/23/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag android" style="display:none">
+<hr class ="hidden_tag Android" style="display:none">
 
 
 
@@ -1106,68 +1031,76 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/23/2020,
         
         
-        <i class="fa fa-tag"></i>android
+        <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
         
         
-        <i class="fa fa-tag"></i>androidx
+        <div class="tag-class"><i class="fa fa-tag"></i>AndroidX</div>
         
         
-        <i class="fa fa-tag"></i>asl
+        <div class="tag-class"><i class="fa fa-tag"></i>ASL</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/android-support-library/">
-    <h2 class="post-title">ASL과 AndroidX Library</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 23, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/android-support-library/#disqus_thread" data-disqus-identifier="/posts/android/android-support-library/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag android" style="display:none"><a href="/posts/android/android-support-library/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Android" style="display:none"><a href="/posts/android/android-support-library/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">ASL과 AndroidX Library</span>
-    <span class="mdc-list-item__secondary-text" >12/23/2020, <i class="fa fa-tag"></i>Android, AndroidX, ASL</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/23/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>AndroidX</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>ASL</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag android" style="display:none">
+<hr class ="hidden_tag ASL" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag androidx" style="display:none"><a href="/posts/android/android-support-library/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag AndroidX" style="display:none"><a href="/posts/android/android-support-library/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">ASL과 AndroidX Library</span>
-    <span class="mdc-list-item__secondary-text" >12/23/2020, <i class="fa fa-tag"></i>Android, AndroidX, ASL</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/23/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>AndroidX</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>ASL</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag androidx" style="display:none">
+<hr class ="hidden_tag ASL" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag asl" style="display:none"><a href="/posts/android/android-support-library/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag ASL" style="display:none"><a href="/posts/android/android-support-library/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">ASL과 AndroidX Library</span>
-    <span class="mdc-list-item__secondary-text" >12/23/2020, <i class="fa fa-tag"></i>Android, AndroidX, ASL</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/23/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>AndroidX</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>ASL</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag asl" style="display:none">
+<hr class ="hidden_tag ASL" style="display:none">
 
 
 
@@ -1178,68 +1111,76 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/14/2020,
         
         
-        <i class="fa fa-tag"></i>android
+        <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
         
         
-        <i class="fa fa-tag"></i>art
+        <div class="tag-class"><i class="fa fa-tag"></i>ART</div>
         
         
-        <i class="fa fa-tag"></i>dalvik
+        <div class="tag-class"><i class="fa fa-tag"></i>Dalvik</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
 
-<!-- <article class="posts-list">
-    <a href="/posts/android/art/">
-    <h2 class="post-title">ART 이해하기</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 14, 2020
-        &bullet; 
-        <a class="comment-link" href="/posts/android/art/#disqus_thread" data-disqus-identifier="/posts/android/art/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
-
-<li class="mdc-list-item hidden_tag android" style="display:none"><a href="/posts/android/art/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Android" style="display:none"><a href="/posts/android/art/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">ART 이해하기</span>
-    <span class="mdc-list-item__secondary-text" >12/14/2020, <i class="fa fa-tag"></i>Android, ART, Dalvik</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/14/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>ART</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Dalvik</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag android" style="display:none">
+<hr class ="hidden_tag Dalvik" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag art" style="display:none"><a href="/posts/android/art/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag ART" style="display:none"><a href="/posts/android/art/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">ART 이해하기</span>
-    <span class="mdc-list-item__secondary-text" >12/14/2020, <i class="fa fa-tag"></i>Android, ART, Dalvik</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/14/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>ART</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Dalvik</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag art" style="display:none">
+<hr class ="hidden_tag Dalvik" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag dalvik" style="display:none"><a href="/posts/android/art/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Dalvik" style="display:none"><a href="/posts/android/art/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">ART 이해하기</span>
-    <span class="mdc-list-item__secondary-text" >12/14/2020, <i class="fa fa-tag"></i>Android, ART, Dalvik</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/14/2020,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>ART</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Dalvik</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag dalvik" style="display:none">
+<hr class ="hidden_tag Dalvik" style="display:none">
 
 
 

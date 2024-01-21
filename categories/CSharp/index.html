@@ -42,7 +42,6 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
     a.comment-link:hover {text-decoration: underline;}
-    a.tag-link:hover {text-decoration: underline; cursor: pointer;}
   </style>
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>C# | In progress</title>
@@ -147,7 +146,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   전체 보기
 </h4>
 <a class = "tag-link" onclick="showDefault()">
-  <span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>All</span>
+  <div class="tag-button-class"><i class="fa fa-tag"></i>All</div>
 </a>
 <hr>
 <h4>
@@ -156,77 +155,77 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 
 <a class = "tag-link" onclick="showTag('.polymorphism')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>polymorphism</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>polymorphism</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.virtual')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>virtual</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>virtual</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.override')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>override</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>override</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.new')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>new</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>new</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.vtable')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>vtable</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>vtable</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.property')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>property</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>property</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.properties')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>properties</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>properties</div>
 </a>
 
 
-<a class = "tag-link" onclick="showTag('.accessor')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>accessor</span>
+<a class = "tag-link" onclick="showTag('.Accessor')">
+<div class="tag-button-class"><i class="fa fa-tag"></i>Accessor</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.field')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>field</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>field</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.keyword')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>keyword</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>keyword</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.modifier')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>modifier</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>modifier</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.sealed')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>sealed</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>sealed</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.performance')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>performance</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>performance</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.const')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>const</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>const</div>
 </a>
 
 
 <a class = "tag-link" onclick="showTag('.readonly')">
-<span class="mdc-list-item__primary-text"><i class="fa fa-tag"></i>readonly</span>
+<div class="tag-button-class"><i class="fa fa-tag"></i>readonly</div>
 </a>
 
 <hr>
@@ -240,43 +239,24 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/18/2022,
         
         
-        <i class="fa fa-tag"></i>polymorphism
+        <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
         
         
-        <i class="fa fa-tag"></i>virtual
+        <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
         
         
-        <i class="fa fa-tag"></i>override
+        <div class="tag-class"><i class="fa fa-tag"></i>override</div>
         
         
-        <i class="fa fa-tag"></i>new
+        <div class="tag-class"><i class="fa fa-tag"></i>new</div>
         
         
-        <i class="fa fa-tag"></i>vtable
+        <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
-
-<!-- <article class="posts-list">
-    <a href="/posts/c%23/polymorphism/">
-    <h2 class="post-title">다형성 이해하기</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 18, 2022
-        &bullet; 
-        <a class="comment-link" href="/posts/c%23/polymorphism/#disqus_thread" data-disqus-identifier="/posts/c%23/polymorphism/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
 
@@ -284,48 +264,123 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">다형성 이해하기</span>
-    <span class="mdc-list-item__secondary-text" >12/18/2022, <i class="fa fa-tag"></i>polymorphism, virtual, override, new, vtable</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/18/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag polymorphism" style="display:none">
+<hr class ="hidden_tag vtable" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag virtual" style="display:none"><a href="/posts/c%23/polymorphism/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">다형성 이해하기</span>
-    <span class="mdc-list-item__secondary-text" >12/18/2022, <i class="fa fa-tag"></i>polymorphism, virtual, override, new, vtable</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/18/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag virtual" style="display:none">
+<hr class ="hidden_tag vtable" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag override" style="display:none"><a href="/posts/c%23/polymorphism/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">다형성 이해하기</span>
-    <span class="mdc-list-item__secondary-text" >12/18/2022, <i class="fa fa-tag"></i>polymorphism, virtual, override, new, vtable</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/18/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag override" style="display:none">
+<hr class ="hidden_tag vtable" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag new" style="display:none"><a href="/posts/c%23/polymorphism/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">다형성 이해하기</span>
-    <span class="mdc-list-item__secondary-text" >12/18/2022, <i class="fa fa-tag"></i>polymorphism, virtual, override, new, vtable</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/18/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag new" style="display:none">
+<hr class ="hidden_tag vtable" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag vtable" style="display:none"><a href="/posts/c%23/polymorphism/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">다형성 이해하기</span>
-    <span class="mdc-list-item__secondary-text" >12/18/2022, <i class="fa fa-tag"></i>polymorphism, virtual, override, new, vtable</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/18/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+        </span>
 </a></li>
 <hr class ="hidden_tag vtable" style="display:none">
 
@@ -338,37 +393,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/12/2022,
         
         
-        <i class="fa fa-tag"></i>property
+        <div class="tag-class"><i class="fa fa-tag"></i>property</div>
         
         
-        <i class="fa fa-tag"></i>properties
+        <div class="tag-class"><i class="fa fa-tag"></i>properties</div>
         
         
-        <i class="fa fa-tag"></i>accessor
+        <div class="tag-class"><i class="fa fa-tag"></i>Accessor</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
-
-<!-- <article class="posts-list">
-    <a href="/posts/c%23/properties/">
-    <h2 class="post-title">Properties</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 12, 2022
-        &bullet; 
-        <a class="comment-link" href="/posts/c%23/properties/#disqus_thread" data-disqus-identifier="/posts/c%23/properties/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
 
@@ -376,30 +412,57 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Properties</span>
-    <span class="mdc-list-item__secondary-text" >12/12/2022, <i class="fa fa-tag"></i>property, properties, Accessor</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/12/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>properties</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Accessor</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag property" style="display:none">
+<hr class ="hidden_tag Accessor" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag properties" style="display:none"><a href="/posts/c%23/properties/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Properties</span>
-    <span class="mdc-list-item__secondary-text" >12/12/2022, <i class="fa fa-tag"></i>property, properties, Accessor</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/12/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>properties</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Accessor</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag properties" style="display:none">
+<hr class ="hidden_tag Accessor" style="display:none">
 
 
-<li class="mdc-list-item hidden_tag accessor" style="display:none"><a href="/posts/c%23/properties/" style="text-decoration:none">
+<li class="mdc-list-item hidden_tag Accessor" style="display:none"><a href="/posts/c%23/properties/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Properties</span>
-    <span class="mdc-list-item__secondary-text" >12/12/2022, <i class="fa fa-tag"></i>property, properties, Accessor</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/12/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>properties</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>Accessor</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag accessor" style="display:none">
+<hr class ="hidden_tag Accessor" style="display:none">
 
 
 
@@ -410,34 +473,15 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/09/2022,
         
         
-        <i class="fa fa-tag"></i>field
+        <div class="tag-class"><i class="fa fa-tag"></i>field</div>
         
         
-        <i class="fa fa-tag"></i>property
+        <div class="tag-class"><i class="fa fa-tag"></i>property</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
-
-<!-- <article class="posts-list">
-    <a href="/posts/c%23/field-and-property/">
-    <h2 class="post-title">Field와 Property</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 09, 2022
-        &bullet; 
-        <a class="comment-link" href="/posts/c%23/field-and-property/#disqus_thread" data-disqus-identifier="/posts/c%23/field-and-property/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
 
@@ -445,18 +489,30 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Field와 Property</span>
-    <span class="mdc-list-item__secondary-text" >12/09/2022, <i class="fa fa-tag"></i>field, property</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/09/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>field</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag field" style="display:none">
+<hr class ="hidden_tag property" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag property" style="display:none"><a href="/posts/c%23/field-and-property/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">Field와 Property</span>
-    <span class="mdc-list-item__secondary-text" >12/09/2022, <i class="fa fa-tag"></i>field, property</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/09/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>field</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+        </span>
 </a></li>
 <hr class ="hidden_tag property" style="display:none">
 
@@ -469,43 +525,24 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >12/01/2022,
         
         
-        <i class="fa fa-tag"></i>keyword
+        <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
         
         
-        <i class="fa fa-tag"></i>modifier
+        <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
         
         
-        <i class="fa fa-tag"></i>sealed
+        <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
         
         
-        <i class="fa fa-tag"></i>vtable
+        <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
         
         
-        <i class="fa fa-tag"></i>performance
+        <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
-
-<!-- <article class="posts-list">
-    <a href="/posts/c%23/sealed-modifier/">
-    <h2 class="post-title">sealed 한정자</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        December 01, 2022
-        &bullet; 
-        <a class="comment-link" href="/posts/c%23/sealed-modifier/#disqus_thread" data-disqus-identifier="/posts/c%23/sealed-modifier/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
 
@@ -513,48 +550,123 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">sealed 한정자</span>
-    <span class="mdc-list-item__secondary-text" >12/01/2022, <i class="fa fa-tag"></i>keyword, modifier, sealed, vtable, performance</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/01/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag keyword" style="display:none">
+<hr class ="hidden_tag performance" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag modifier" style="display:none"><a href="/posts/c%23/sealed-modifier/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">sealed 한정자</span>
-    <span class="mdc-list-item__secondary-text" >12/01/2022, <i class="fa fa-tag"></i>keyword, modifier, sealed, vtable, performance</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/01/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag modifier" style="display:none">
+<hr class ="hidden_tag performance" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag sealed" style="display:none"><a href="/posts/c%23/sealed-modifier/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">sealed 한정자</span>
-    <span class="mdc-list-item__secondary-text" >12/01/2022, <i class="fa fa-tag"></i>keyword, modifier, sealed, vtable, performance</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/01/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag sealed" style="display:none">
+<hr class ="hidden_tag performance" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag vtable" style="display:none"><a href="/posts/c%23/sealed-modifier/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">sealed 한정자</span>
-    <span class="mdc-list-item__secondary-text" >12/01/2022, <i class="fa fa-tag"></i>keyword, modifier, sealed, vtable, performance</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/01/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag vtable" style="display:none">
+<hr class ="hidden_tag performance" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag performance" style="display:none"><a href="/posts/c%23/sealed-modifier/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">sealed 한정자</span>
-    <span class="mdc-list-item__secondary-text" >12/01/2022, <i class="fa fa-tag"></i>keyword, modifier, sealed, vtable, performance</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >12/01/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+        </span>
 </a></li>
 <hr class ="hidden_tag performance" style="display:none">
 
@@ -567,37 +679,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       <span class="mdc-list-item__secondary-text" >10/09/2022,
         
         
-        <i class="fa fa-tag"></i>keyword
+        <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
         
         
-        <i class="fa fa-tag"></i>const
+        <div class="tag-class"><i class="fa fa-tag"></i>const</div>
         
         
-        <i class="fa fa-tag"></i>readonly
+        <div class="tag-class"><i class="fa fa-tag"></i>readonly</div>
         
       </span>
     </span>
 </a></li>
 <hr class ="default">
-
-<!-- <article class="posts-list">
-    <a href="/posts/c%23/difference-between-const-and-readonly/">
-    <h2 class="post-title">const와 readonly의 차이점</h2>
-    
-    </a>
-    <p class="post-meta">
-        Posted by
-        
-        Eun JongHyeok
-        
-        on
-        October 09, 2022
-        &bullet; 
-        <a class="comment-link" href="/posts/c%23/difference-between-const-and-readonly/#disqus_thread" data-disqus-identifier="/posts/c%23/difference-between-const-and-readonly/">Join the discussion...</a>   
-    </p>
-</article>
-
-<hr> -->
 
 
 
@@ -605,28 +698,55 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">const와 readonly의 차이점</span>
-    <span class="mdc-list-item__secondary-text" >10/09/2022, <i class="fa fa-tag"></i>keyword, const, readonly</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >10/09/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>const</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>readonly</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag keyword" style="display:none">
+<hr class ="hidden_tag readonly" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag const" style="display:none"><a href="/posts/c%23/difference-between-const-and-readonly/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">const와 readonly의 차이점</span>
-    <span class="mdc-list-item__secondary-text" >10/09/2022, <i class="fa fa-tag"></i>keyword, const, readonly</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >10/09/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>const</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>readonly</div>
+        </span>
 </a></li>
-<hr class ="hidden_tag const" style="display:none">
+<hr class ="hidden_tag readonly" style="display:none">
 
 
 <li class="mdc-list-item hidden_tag readonly" style="display:none"><a href="/posts/c%23/difference-between-const-and-readonly/" style="text-decoration:none">
   <span class="mdc-list-item__ripple"></span>
   <span class="mdc-list-item__text">
     <span class="mdc-list-item__primary-text">const와 readonly의 차이점</span>
-    <span class="mdc-list-item__secondary-text" >10/09/2022, <i class="fa fa-tag"></i>keyword, const, readonly</span>
-  </span>
+    <span class="mdc-list-item__secondary-text" >10/09/2022,
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>const</div>
+      
+      
+      <div class="tag-class"><i class="fa fa-tag"></i>readonly</div>
+        </span>
 </a></li>
 <hr class ="hidden_tag readonly" style="display:none">
 
