@@ -1,8 +1,8 @@
-# [생각중](https://jheun66.github.io) 
+# [In progress](https://jheun66.github.io) 
 
 ## Blog
 
-Sharing a mix of my development experiences.
+Welcome to my GitHub blog, where I document and share a mix of my personal development experiences, insights, and lessons learned along the way in my programming career.
 
 ## Copyright and License
 
