@@ -63,6 +63,9 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Eun JongHyeok"},"description":"Navigating Through the Landscape of Modern Development","headline":"Tech Terrain","url":"https://jheun66.github.io/category/"}</script>
 <!-- End Jekyll SEO tag -->
 
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8954355499146518"
+     crossorigin="anonymous"></script>
 </head>
 
 
@@ -119,150 +122,139 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <div class="container">
-<div class="row">
-  <div class="col-lg-8 col-md-10 mx-auto">
-    <label class="mdc-text-field mdc-text-field--filled">
-      <span class="mdc-text-field__ripple"></span>
-      <input class="mdc-text-field__input" type="text" id="search-input" placeholder="Search Keyword" size="120" aria-label="Label"></textarea>
-      <span class="mdc-line-ripple"></span>
-    </label>
+      <h1>Search</h1>
+<label class="mdc-text-field mdc-text-field--filled">
+  <span class="mdc-text-field__ripple"></span>
+  <input class="mdc-text-field__input" type="text" id="search-input" placeholder="Search Keyword" size="120" aria-label="Label"></textarea>
+  <span class="mdc-line-ripple"></span>
+</label>
 
-    <ul class="mdc-list mdc-list--two-line" id="results-container"></ul>
-  
-    <!-- Script pointing to jekyll-search.js -->
-    <script src="/js/simple-jekyll-search.js"></script>
+<ul class="mdc-list mdc-list--two-line" id="results-container"></ul>
 
-    <script type="text/javascript">
-      SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '/search.json',
-        searchResultTemplate: `
-            <li class="mdc-list-item">
-              <a href="{url}" style="text-decoration:none">
-              <span class="mdc-list-item__ripple"></span>
-              <span class="mdc-list-item__text">
-               <span class="mdc-list-item__primary-text">{title}</span>
-                <span class="mdc-list-item__secondary-text">{date}, <i class="fa fa-tag"></i>{tags}</span>
-              </span>
-              </a>
-            </li><hr>
-        `,
-        sortMiddleware: function(a, b) {
-          var adate = String(a.date);
-          var bdate = String(b.date);
-          return adate.localeCompare(bdate)
-        },
-        noResultsText: 'No results found',
-        limit: 30,
-        fuzzy: false
-      })
-    </script>
-    <hr>
-    
-    
-    
-    <article>
-    <h2>
-    <!-- # 변환 필요 -->
-    
-    <a href="/categories/Algorithm" style="text-decoration:none">
-      <strong class="category-title">Algorithm</strong> <span class="category-count">1</span>
+<!-- Script pointing to jekyll-search.js -->
+<script src="/js/simple-jekyll-search.js"></script>
 
-    </a>
-    </h2>
-    </article>
+<script type="text/javascript">
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: `
+        <li class="mdc-list-item">
+          <a href="{url}" style="text-decoration:none">
+          <span class="mdc-list-item__ripple"></span>
+          <span class="mdc-list-item__text">
+           <span class="mdc-list-item__primary-text">{title}</span>
+            <span class="mdc-list-item__secondary-text">{date}, <i class="fa fa-tag"></i>{tags}</span>
+          </span>
+          </a>
+        </li><hr>
+    `,
+    sortMiddleware: function(a, b) {
+      var adate = String(a.date);
+      var bdate = String(b.date);
+      return adate.localeCompare(bdate)
+    },
+    noResultsText: 'No results found',
+    limit: 30,
+    fuzzy: false
+  })
+</script>
+<hr>
 
-    <hr>
-    
-    
-    <article>
-    <h2>
-    <!-- # 변환 필요 -->
-    
-    <a href="/categories/Android" style="text-decoration:none">
-      <strong class="category-title">Android</strong> <span class="category-count">16</span>
 
-    </a>
-    </h2>
-    </article>
 
-    <hr>
-    
-    
-    <article>
-    <h2>
-    <!-- # 변환 필요 -->
-    
-    <a href="/categories/Blog" style="text-decoration:none">
-      <strong class="category-title">Blog</strong> <span class="category-count">6</span>
+<article>
+<h2>
+<!-- # 변환 필요 -->
 
-    </a>
-    </h2>
-    </article>
+<a href="/categories/Algorithm" style="text-decoration:none">
+  <strong class="category-title">Algorithm</strong> <span class="category-count">1</span>
+</a>
+</h2>
+</article>
 
-    <hr>
-    
-    
-    <article>
-    <h2>
-    <!-- # 변환 필요 -->
-    
-    <a href="/categories/CSharp" style="text-decoration:none">
-      <strong class="category-title">C#</strong> <span class="category-count">5</span>
+<hr>
 
-    </a>
-    </h2>
-    </article>
 
-    <hr>
-    
-    
-    <article>
-    <h2>
-    <!-- # 변환 필요 -->
-    
-    <a href="/categories/Practice" style="text-decoration:none">
-      <strong class="category-title">Practice</strong> <span class="category-count">21</span>
+<article>
+<h2>
+<!-- # 변환 필요 -->
 
-    </a>
-    </h2>
-    </article>
+<a href="/categories/Android" style="text-decoration:none">
+  <strong class="category-title">Android</strong> <span class="category-count">16</span>
+</a>
+</h2>
+</article>
 
-    <hr>
-    
-    
-    <article>
-    <h2>
-    <!-- # 변환 필요 -->
-    
-    <a href="/categories/Security" style="text-decoration:none">
-      <strong class="category-title">Security</strong> <span class="category-count">2</span>
+<hr>
 
-    </a>
-    </h2>
-    </article>
 
-    <hr>
-    
-    
-    <article>
-    <h2>
-    <!-- # 변환 필요 -->
-    
-    <a href="/categories/Unity" style="text-decoration:none">
-      <strong class="category-title">Unity</strong> <span class="category-count">2</span>
+<article>
+<h2>
+<!-- # 변환 필요 -->
 
-    </a>
-    </h2>
-    </article>
+<a href="/categories/Blog" style="text-decoration:none">
+  <strong class="category-title">Blog</strong> <span class="category-count">6</span>
+</a>
+</h2>
+</article>
 
-    <hr>
-    
+<hr>
 
-  </div>
-</div>
+
+<article>
+<h2>
+<!-- # 변환 필요 -->
+
+<a href="/categories/CSharp" style="text-decoration:none">
+  <strong class="category-title">C#</strong> <span class="category-count">5</span>
+</a>
+</h2>
+</article>
+
+<hr>
+
+
+<article>
+<h2>
+<!-- # 변환 필요 -->
+
+<a href="/categories/Practice" style="text-decoration:none">
+  <strong class="category-title">Practice</strong> <span class="category-count">21</span>
+</a>
+</h2>
+</article>
+
+<hr>
+
+
+<article>
+<h2>
+<!-- # 변환 필요 -->
+
+<a href="/categories/Security" style="text-decoration:none">
+  <strong class="category-title">Security</strong> <span class="category-count">2</span>
+</a>
+</h2>
+</article>
+
+<hr>
+
+
+<article>
+<h2>
+<!-- # 변환 필요 -->
+
+<a href="/categories/Unity" style="text-decoration:none">
+  <strong class="category-title">Unity</strong> <span class="category-count">2</span>
+</a>
+</h2>
+</article>
+
+<hr>
+
+
 </div>
 
     </div>
