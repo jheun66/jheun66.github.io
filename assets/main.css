@@ -2586,4 +2586,6 @@ blockquote { padding-left: 1em; background-color: #f8f8f8; }
 
 a.tag-link { display: inline-block; }
 
+.game-iframe { width: 100%; aspect-ratio: 960 / 600; border: none; }
+
 /*# sourceMappingURL=main.css.map */
