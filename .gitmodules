@@ -1,0 +1,3 @@
+[submodule "UnityGame"]
+	path = UnityGame
+	url = https://github.com/jheun66/Blog-Game-Module.git
