@@ -414,14 +414,6 @@
       "tags"     : "authentication, authorization, word_meaning",
       "url"      : "/posts/security/authentication-vs-authorization/",
       "date"     : "12/13/2020"
-    } ,
-  
-    {
-      "title"    : "Serenity Prayer",
-      "category" : "",
-      "tags"     : "niebuhr, prayer",
-      "url"      : "/posts/blog/my-first-post/",
-      "date"     : "11/19/2020"
     } 
   
 ]
