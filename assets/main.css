@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /*! Bootstrap v4.6.0 (https://getbootstrap.com/) Copyright 2011-2021 The Bootstrap Authors Copyright 2011-2021 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) */
+@import url("https://fonts.googleapis.com/css?family=Montez");
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
 :root { --blue: #007bff; --indigo: #6610f2; --purple: #6f42c1; --pink: #e83e8c; --red: #dc3545; --orange: #fd7e14; --yellow: #ffc107; --green: #28a745; --teal: #0085A1; --cyan: #17a2b8; --white: #fff; --gray: #6c757d; --gray-dark: #343a40; --primary: #0085A1; --secondary: #6c757d; --success: #28a745; --info: #17a2b8; --warning: #ffc107; --danger: #dc3545; --light: #f8f9fa; --dark: #343a40; --breakpoint-xs: 0; --breakpoint-sm: 576px; --breakpoint-md: 768px; --breakpoint-lg: 992px; --breakpoint-xl: 1200px; --breakpoint-xxl: 1400px; --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -2543,36 +2545,25 @@ header.masthead .post-heading .meta a { color: #fff; }
 
 @media only screen and (min-width: 768px) { .post-preview > a > .post-title { font-size: 36px; } }
 
-html { scroll-behavior: smooth; }
+/*  참고 : https://inpa.tistory.com/entry/CSS-%F0%9F%92%8D-%ED%85%8C%EC%9D%B4%EB%B8%94table-%EB%94%94%EC%9E%90%EC%9D%B8-%F0%9F%96%8C%EF%B8%8F-%EB%AA%A8%EC%9D%8C */
+table { border: 1px #a39485 solid; font-size: .9em; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); width: 100%; border-collapse: collapse; border-radius: 5px; overflow: hidden; }
 
-.table-of-contents { font-family: "Arial", sans-serif; font-size: 1em; font-weight: bold; color: #333333; border-left: 6px solid #ddd; }
+th { text-align: left; white-space: nowrap; }
 
-.table-of-contents li { margin-bottom: 0.5em; }
+thead { font-weight: bold; color: #fff; background: #73685d; }
 
-.table-of-contents a { text-decoration: none; color: #333333; }
+td, th { padding: 1em .5em; vertical-align: middle; }
 
-.table-of-contents a:hover { text-decoration: underline; }
+td { border-bottom: 1px solid rgba(0, 0, 0, 0.1); background: #fff; }
 
-.table-of-contents-sublist-class { list-style-type: lower-alpha; }
+@media all and (max-width: 768px) { table, thead, tbody, th, td, tr { display: block; } th { text-align: right; } table { position: relative; padding-bottom: 0; border: none; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); } thead { float: left; white-space: nowrap; } tbody { overflow-x: auto; overflow-y: hidden; position: relative; white-space: nowrap; } /* 스크롤바 설정*/ tbody::-webkit-scrollbar { height: 7px; } /* 스크롤바 막대 설정*/ tbody::-webkit-scrollbar-thumb { background-color: #73685d; /* 스크롤바 둥글게 설정    */ border-radius: 10px; } /* 스크롤바 뒷 배경 설정*/ tbody::-webkit-scrollbar-track { background-color: #a39485; } tr { display: inline-block; vertical-align: top; } th { border-bottom: 1px solid #a39485; } td { border-bottom: 1px solid #e5e5e5; } }
 
-table { border-collapse: collapse; border-spacing: 0; margin-bottom: 0.8em; }
+/*  참고 : https://inpa.tistory.com/entry/CSS-%F0%9F%8C%9F-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%B0%94Scrollbar-%EA%BE%B8%EB%AF%B8%EA%B8%B0-%EC%86%8D%EC%84%B1-%EC%B4%9D%EC%A0%95%EB%A6%AC#webkit_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%8A%A4%ED%81%AC%EB%A1%A4%EB%B0%94_%EC%86%8D%EC%84%B1  */
+html { -ms-overflow-style: none; /* for Internet Explorer, Edge */ scrollbar-width: none; /* for Firefox */ overflow-y: scroll; }
 
-th { border: 1px solid #000000; background-color: #f2f2f2; }
+html::-webkit-scrollbar { display: none; /* for Chrome, Safari, and Opera */ }
 
-td { border: 1px solid #000000; }
-
-pre.highlight { padding: 1em; }
-
-.highlight { font-size: 0.75em; border-radius: 10px; }
-
-blockquote { padding-left: 1em; background-color: #f8f8f8; }
-
-.sticky { position: sticky; top: 0; }
-
-.category-title { color: black; }
-
-.category-count { float: right; color: #cacdd0; }
-
+/* 코드 블럭 스크롤바 세팅은 highlight.css에 */
 .tag-class { background-color: #f2f2f2; /* 배경색 */ color: #333; /* 글자색 */ padding: 5px 10px; /* 안쪽 여백 */ border-radius: 5px; /* 테두리 둥글게 */ display: inline-block; /* 인라인 블록 요소로 표시 */ margin: 2px; /* 외곽 여백 */ font-size: 12px; /* 글자 크기 */ font-family: Arial, sans-serif; /* 글꼴 */ }
 
 .tag-class .fa-tag { margin-right: 5px; /* 아이콘과 텍스트 사이의 여백 */ }
@@ -2585,6 +2576,35 @@ blockquote { padding-left: 1em; background-color: #f8f8f8; }
 .tag-button-class .fa-tag { margin-right: 5px; /* 아이콘과 텍스트 사이의 여백 */ }
 
 a.tag-link { display: inline-block; }
+
+.table-of-contents { font-family: "Arial", sans-serif; font-size: 1em; font-weight: bold; color: #333333; border-left: 6px solid gray; }
+
+.table-of-contents li { margin-bottom: 0.5em; }
+
+.table-of-contents a { text-decoration: none; color: #333333; }
+
+.table-of-contents a:hover { text-decoration: underline; }
+
+.table-of-contents-sublist-class { list-style-type: lower-alpha; }
+
+/*  참고 : https://inpa.tistory.com/753 */
+blockquote { display: block; background: #fff; padding: 15px 20px 15px 45px; margin: 0 0 20px; position: relative; /*Font*/ font-family: Georgia, serif; font-size: 14px; line-height: 1.2; color: #666; /*Box Shadow - (Optional)*/ -moz-box-shadow: 2px 2px 15px #ccc; -webkit-box-shadow: 2px 2px 15px #ccc; box-shadow: 2px 2px 15px #ccc; /*Borders - (Optional)*/ border-left-style: solid; border-left-width: 15px; border-right-style: solid; border-right-width: 2px; border-left-color: #ffcd69; border-right-color: #f6ba59; }
+
+blockquote a { text-decoration: none; background: #eee; cursor: pointer; padding: 0 3px; color: #c76c0c; }
+
+blockquote a:hover { color: #666; }
+
+blockquote em { font-style: italic; }
+
+.sticky { position: sticky; top: 0; }
+
+.category-title { color: black; }
+
+.category-count { float: right; color: #cacdd0; }
+
+.btn-gray { background-color: gray; border-color: gray; }
+
+.btn-gray:hover, .btn-gray:focus, .btn-gray:active { color: #fff; background-color: #6d6d6d !important; border-color: #6d6d6d !important; }
 
 .game-area { display: flex; justify-content: center; /* 수평 중앙 정렬 */ align-items: center; /* 수직 중앙 정렬 */ height: 660px; /* 컨테이너의 높이, 필요에 따라 조정 */ }
 

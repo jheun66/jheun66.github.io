@@ -151,11 +151,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>UI/UX 측면에서 <a href="https://material.io/components?platform=android">Material Components</a>를 사용하는게 좋음</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">dependencies</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="nf">dependencies</span> <span class="p">{</span>
     <span class="o">..</span><span class="p">.</span>
     <span class="n">implementation</span> <span class="err">'</span><span class="n">com</span><span class="p">.</span><span class="n">google</span><span class="p">.</span><span class="n">android</span><span class="p">.</span><span class="n">material</span><span class="p">:</span><span class="n">material</span><span class="p">:&lt;</span><span class="n">version</span><span class="p">&gt;</span><span class="err">'</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Material Design Components Library를 사용하기 위해서 필요. 안드로이드 스튜디오 4.1 이상부터는 프로젝트를 생성할 때 자동으로 포함</p>
 
@@ -175,14 +182,24 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><em>app/build.gradle</em></p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">android</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre><span class="nf">android</span> <span class="p">{</span>
   <span class="nf">defaultConfig</span> <span class="p">{</span>
     <span class="o">..</span><span class="p">.</span>
     <span class="n">vectorDrawables</span><span class="p">.</span><span class="n">useSupportLibrary</span> <span class="p">=</span> <span class="k">true</span>
    <span class="p">}</span>
    <span class="o">..</span><span class="p">.</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>아니면 PNG 파일을 직접 만들기</p>
 
@@ -194,7 +211,17 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <em>res &gt; values</em> 디렉토리에 <em>styles.xml</em> 이름으로 <em>Values Resource File</em> 생성</li>
 </ul>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;resources&gt;</span>
     <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"Widget.TipTime.TextView"</span> <span class="na">parent=</span><span class="s">"Widget.MaterialComponents.TextView"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"android:minHeight"</span><span class="nt">&gt;</span>48dp<span class="nt">&lt;/item&gt;</span>
@@ -202,7 +229,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"android:textAppearance"</span><span class="nt">&gt;</span>?attr/textAppearanceBody1<span class="nt">&lt;/item&gt;</span>
     <span class="nt">&lt;/style&gt;</span>
 <span class="nt">&lt;/resources&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ul>
   <li>컴포넌트를 스타일링할 때, 일반적으로 사용하고 있는 위젯을 확장</li>
@@ -210,7 +238,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>?attr/textAppearanceBody1(<a href="https://material.io/develop/android/theming/typography">Typography Theming</a> 참고)</li>
 </ul>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;TextView</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;TextView</span>
     <span class="na">android:id=</span><span class="s">"@+id/service_question"</span>
     <span class="na">style=</span><span class="s">"@style/Widget.TipTime.TextView"</span>
     <span class="err">...</span> <span class="nt">/&gt;</span>
@@ -219,7 +258,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="na">android:id=</span><span class="s">"@+id/tip_result"</span>
     <span class="na">style=</span><span class="s">"@style/Widget.TipTime.TextView"</span>
     <span class="err">...</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <blockquote>
   <p>style과 layout에 동일한 속성에 다른 값을 넣어줄 경우 layout file의 값 적용</p>
@@ -229,10 +269,16 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>자주 사용하는 속성값들은 dimens.xml을 만들고 저장</li>
 </ul>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;resources&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;resources&gt;</span>
    <span class="nt">&lt;dimen</span> <span class="na">name=</span><span class="s">"min_text_height"</span><span class="nt">&gt;</span>48dp<span class="nt">&lt;/dimen&gt;</span>
 <span class="nt">&lt;/resources&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="add-these-styles-to-your-theme">
 <a class="anchor" href="#add-these-styles-to-your-theme" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add these styles to your theme</h1>
@@ -241,10 +287,16 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><em>theme.xml</em></p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"textInputStyle"</span><span class="nt">&gt;</span>@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox<span class="nt">&lt;/item&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"textInputStyle"</span><span class="nt">&gt;</span>@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox<span class="nt">&lt;/item&gt;</span>
 <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"radioButtonStyle"</span><span class="nt">&gt;</span>@style/Widget.TipTime.CompoundButton.RadioButton<span class="nt">&lt;/item&gt;</span>
 <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"switchStyle"</span><span class="nt">&gt;</span>@style/Widget.TipTime.CompoundButton.Switch<span class="nt">&lt;/item&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="enhance-the-user-experience">
 <a class="anchor" href="#enhance-the-user-experience" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enhance the user experience</h1>
@@ -257,7 +309,24 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h2 id="엔터를-누를-경우-키보드-치워주기">
 <a class="anchor" href="#%EC%97%94%ED%84%B0%EB%A5%BC-%EB%88%84%EB%A5%BC-%EA%B2%BD%EC%9A%B0-%ED%82%A4%EB%B3%B4%EB%93%9C-%EC%B9%98%EC%9B%8C%EC%A3%BC%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>엔터를 누를 경우 키보드 치워주기</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td>
+<td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
     <span class="o">..</span><span class="p">.</span>
     <span class="n">binding</span><span class="p">.</span><span class="n">costOfServiceEditText</span><span class="p">.</span><span class="nf">setOnKeyListener</span> <span class="p">{</span> <span class="n">view</span><span class="p">,</span> <span class="n">keyCode</span><span class="p">,</span> <span class="n">_</span> <span class="p">-&gt;</span> <span class="nf">handleKeyEvent</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">keyCode</span><span class="p">)</span>
 <span class="p">}</span>
@@ -272,7 +341,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
    <span class="p">}</span>
    <span class="k">return</span> <span class="k">false</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 
       <hr>
@@ -296,11 +366,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/change-the-app-icon/" data-toggle="tooltip" data-placement="top" title="Change the app icon">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/change-the-app-icon/" data-toggle="tooltip" data-placement="top" title="Change the app icon">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/use-lists-in-kotlin/" data-toggle="tooltip" data-placement="top" title="Use Lists in Kotlin">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/use-lists-in-kotlin/" data-toggle="tooltip" data-placement="top" title="Use Lists in Kotlin">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

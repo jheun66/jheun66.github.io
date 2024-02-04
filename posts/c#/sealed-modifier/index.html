@@ -145,15 +145,39 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <p>클래스나 메소드, 프로퍼티에 사용할 수 있는 한정자입니다.<br>
 클래스에 사용할 경우 다른 클래스는 해당 클래스를 상속 받을 수 없습니다.</p>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">A</span> <span class="p">{}</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="k">class</span> <span class="nc">A</span> <span class="p">{}</span>
 <span class="k">sealed</span> <span class="k">class</span> <span class="nc">B</span> <span class="p">:</span> <span class="n">A</span> <span class="p">{}</span>
 <span class="c1">// 다른 클래스는 B 클래스를 상속받지 못함 </span>
 <span class="c1">// class C : B { }</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>메소드의 경우에는 <code class="language-plaintext highlighter-rouge">override</code>라는 한정자가 있는 메소드에만 사용할 수 있고 해당 메소드를 포함하고 있는 클래스를 다른 클래스가 상속받았을 때 해당 메소드는 재정의가 불가능합니다.</p>
 
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">X</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td>
+<td class="rouge-code"><pre><span class="k">class</span> <span class="nc">X</span>
 <span class="p">{</span>
     <span class="k">protected</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">F</span><span class="p">()</span> <span class="p">{</span> <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"X.F"</span><span class="p">);</span> <span class="p">}</span>
 <span class="p">}</span>
@@ -168,7 +192,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="c1">// Attempting to override F causes compiler error CS0239.</span>
     <span class="c1">// protected override void F() { Console.WriteLine("Z.F"); }</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>공식 문서에서는 파생 클래스가 당신의 클래스를 커스텀할 때 얻을 수 있는 잠재적 이득이 있는지 혹은 수정했을 때 기대와 다르게 올바르지 않게 동작할 가능성이 있는지 고려를 하여 <code class="language-plaintext highlighter-rouge">sealed</code> 한정자를 사용하라 합니다.</p>
 
@@ -230,11 +255,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/c%23/difference-between-const-and-readonly/" data-toggle="tooltip" data-placement="top" title="const와 readonly의 차이점">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/c%23/difference-between-const-and-readonly/" data-toggle="tooltip" data-placement="top" title="const와 readonly의 차이점">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/c%23/field-and-property/" data-toggle="tooltip" data-placement="top" title="Field와 Property">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/c%23/field-and-property/" data-toggle="tooltip" data-placement="top" title="Field와 Property">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

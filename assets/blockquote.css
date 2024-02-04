@@ -1,0 +1,48 @@
+/* 
+  참고 : https://inpa.tistory.com/753
+*/
+@import url('https://fonts.googleapis.com/css?family=Montez');
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+
+blockquote{
+    display:block;
+    background: #fff;
+    padding: 15px 20px 15px 45px;
+    margin: 0 0 20px;
+    position: relative;
+   
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666;
+   
+    /*Box Shadow - (Optional)*/
+    -moz-box-shadow: 2px 2px 15px #ccc;
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;
+   
+    /*Borders - (Optional)*/
+    border-left-style: solid;
+    border-left-width: 15px;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-left-color: #ffcd69;
+    border-right-color: #f6ba59;
+  }
+
+  blockquote a{
+    text-decoration: none;
+    background: #eee;
+    cursor: pointer;
+    padding: 0 3px;
+    color: #c76c0c;
+  }
+   
+  blockquote a:hover{
+   color: #666;
+  }
+   
+  blockquote em{
+    font-style: italic;
+  }

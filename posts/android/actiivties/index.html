@@ -151,7 +151,30 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <h2 id="메니페스트-구성하기">
 <a class="anchor" href="#%EB%A9%94%EB%8B%88%ED%8E%98%EC%8A%A4%ED%8A%B8-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>메니페스트 구성하기</h2>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td>
+<td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
     <span class="na">package=</span><span class="s">"com.example.myapplication"</span><span class="nt">&gt;</span>
 
@@ -172,7 +195,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="nt">&lt;/application&gt;</span>
 
 <span class="nt">&lt;/manifest&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>기본 샘플 <em>AndroidManifest.xml</em> 입니다.</p>
 
 <h3 id="activity">&lt;activity&gt;</h3>
@@ -180,29 +204,51 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 &lt;application&gt; 태그의 하위 태그로 &lt;activity&gt;를 추가 할 수 있는데 <em>android:name</em>은 액티비티 이름으로 반드시 필요한 요소입니다. 그 이외의 요소도 매우 많은데 <a href="https://developer.android.com/guide/topics/manifest/activity-element">&lt;activity&gt;</a>를 참고하고 추후 직접 예제로 사용할때 마다 정리하도록 하겠습니다.</p>
 
 <h3 id="intent-filter">&lt;intent-filter&gt;</h3>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;intent-filter&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre>    <span class="nt">&lt;intent-filter&gt;</span>
         <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.intent.action.MAIN"</span> <span class="nt">/&gt;</span>
 
         <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">"android.intent.category.LAUNCHER"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/intent-filter&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p><em>action.Main</em> 은 이 앱의 메인 진입점을 의미합니다. 따라서 앱을 실행하면 가장 먼저 실행되는 액티비티 입니다.
 <em>category.LAUNCHER</em> 는 앱을 실행할 아이콘의 모습이 &lt;activity&gt;에 정의된 것으로 하겠다는 의미입니다. 정의되어 있지 않으면 &lt;application&gt;의 아이콘을 사용합니다.
 인텐트와 인텐트 필터에 관한 내용은 중요하다고 판단되어 따로 정리하겠습니다.</p>
 
 <h3 id="permission">permission</h3>
 <p>액티비티를 다른 앱에서 실행하거나 못하게 컨트롤 할 수 있습니다. 개발자 예제를 살펴보면</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;manifest&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;manifest&gt;</span>
 <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">"...."</span>
    <span class="na">android:permission=</span><span class="s">”com.google.socialapp.permission.SHARE_POST”</span>
 
 <span class="nt">/&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>다음과 같이 정의하면 이 액티비티를 호출하기 위해서는 <code class="language-plaintext highlighter-rouge">com.google.socialapp.permission.SHARE_POST</code>를 사용한다고 선언해야 합니다.</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;manifest&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;manifest&gt;</span>
    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"com.google.socialapp.permission.SHARE_POST"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/manifest&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>이때는 &lt;manifest&gt;에 &lt;uses-permission&gt;으로 같은 권한을 정의합니다.</p>
 
 <p>이와 마찬가지로 안드로이드 기기의 다양한 기능들을 활용하기 위해서는 안드로이드 API에 정의된 권한들을 선언해야합니다.<br>
@@ -232,11 +278,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/android/application-fundamentals/" data-toggle="tooltip" data-placement="top" title="Application Fundamentals">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/android/application-fundamentals/" data-toggle="tooltip" data-placement="top" title="Application Fundamentals">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/android/activity-lifecycle/" data-toggle="tooltip" data-placement="top" title="Activity Lifecycle">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/android/activity-lifecycle/" data-toggle="tooltip" data-placement="top" title="Activity Lifecycle">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

@@ -166,18 +166,31 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>coil 라이브러리는 mavenCentral repository에서 호스트되고 이용가능하므로 프로젝트 레벨의 <code class="language-plaintext highlighter-rouge">build.gradle</code>에 mavenCentral() 추가</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>repositories {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre>repositories {
    google()
    jcenter()
    mavenCentral()
 }
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>앱 레벨의 build.gradle에 라이브러리 추가</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Coil</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// Coil</span>
 <span class="n">implementation</span> <span class="s">"io.coil-kt:coil:1.1.1"</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="use-binding-adapters">
 <a class="anchor" href="#use-binding-adapters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use Binding Adapters</h2>
@@ -188,14 +201,24 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <h3 id="create-a-binding-adapter-and-use-coil">Create a binding adapter and use Coil</h3>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@BindingAdapter</span><span class="p">(</span><span class="s">"imageUrl"</span><span class="p">)</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre><span class="nd">@BindingAdapter</span><span class="p">(</span><span class="s">"imageUrl"</span><span class="p">)</span>
 <span class="k">fun</span> <span class="nf">bindImage</span><span class="p">(</span><span class="n">imgView</span><span class="p">:</span> <span class="nc">ImageView</span><span class="p">,</span> <span class="n">imgUrl</span><span class="p">:</span> <span class="nc">String</span><span class="p">?)</span> <span class="p">{</span>
     <span class="n">imgUrl</span><span class="o">?.</span><span class="nf">let</span> <span class="p">{</span>
         <span class="c1">// Load the image in the background using Coil.</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">@BindingAdapter</code> Annotation의 매개변수가 커스텀 속성의 이름이됨</p>
 
@@ -216,7 +239,22 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h2 id="add-recyclerview">
 <a class="anchor" href="#add-recyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Recyclerview</h2>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;androidx.recyclerview.widget.RecyclerView</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;androidx.recyclerview.widget.RecyclerView</span>
     <span class="na">android:id=</span><span class="s">"@+id/photos_grid"</span>
     <span class="na">android:layout_width=</span><span class="s">"0dp"</span>
     <span class="na">android:layout_height=</span><span class="s">"0dp"</span>
@@ -229,13 +267,25 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="na">android:padding=</span><span class="s">"6dp"</span>
     <span class="na">tools:itemCount=</span><span class="s">"16"</span>
     <span class="na">tools:listitem=</span><span class="s">"@layout/grid_view_item"</span><span class="nt">/&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p><a href="https://material.io/components/image-lists#anatomy">Material 가이드</a>를 참고하면 다음과 같이 밖에는 8dp, 내부는 4dp를 사용하는 것을 권장</p>
 
 <p><img src="/img/posts/android/grid.png" alt="grid"></p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ImageView</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;ImageView</span>
     <span class="na">android:id=</span><span class="s">"@+id/mars_image"</span>
     <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
     <span class="na">android:layout_height=</span><span class="s">"170dp"</span>
@@ -244,7 +294,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="na">android:padding=</span><span class="s">"2dp"</span>
     <span class="na">app:imageUrl=</span><span class="s">"@{photos.imgSrcUrl}"</span>
     <span class="na">tools:src=</span><span class="s">"@tools:sample/backgrounds/scenic"</span><span class="nt">/&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>그리드 내부 이미지에 2dp씩 주었기 때문에 밖에만 6dp padding 추가하면 깔끔해짐</p>
 
@@ -253,7 +304,42 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <h3 id="listadapter">ListAdapter</h3>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PhotoGridAdapter</span> <span class="p">:</span> <span class="nc">ListAdapter</span><span class="p">&lt;</span><span class="nc">MarsPhoto</span><span class="p">,</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">PhotoGridAdapter</span> <span class="p">:</span> <span class="nc">ListAdapter</span><span class="p">&lt;</span><span class="nc">MarsPhoto</span><span class="p">,</span>
         <span class="nc">PhotoGridAdapter</span><span class="p">.</span><span class="nc">MarsPhotoViewHolder</span><span class="p">&gt;(</span><span class="nc">DiffCallback</span><span class="p">){</span>
 
     <span class="k">companion</span> <span class="k">object</span> <span class="nc">DiffCallback</span> <span class="p">:</span> <span class="nc">DiffUtil</span><span class="p">.</span><span class="nc">ItemCallback</span><span class="p">&lt;</span><span class="nc">MarsPhoto</span><span class="p">&gt;()</span> <span class="p">{</span>
@@ -286,7 +372,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>ListAdapter는 RecyclerView.Adapter 클래스의 서브클래스로 RecyclerView내의 리스트 데이터를 표현하고 백그라운드 스레드에서 차이를 계산해줌.</p>
 
@@ -297,13 +384,22 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h2 id="add-the-binding-adapter-and-connect-the-parts">
 <a class="anchor" href="#add-the-binding-adapter-and-connect-the-parts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add the binding adapter and connect the parts</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@BindingAdapter</span><span class="p">(</span><span class="s">"listData"</span><span class="p">)</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="nd">@BindingAdapter</span><span class="p">(</span><span class="s">"listData"</span><span class="p">)</span>
 <span class="k">fun</span> <span class="nf">bindRecyclerView</span><span class="p">(</span><span class="n">recyclerView</span><span class="p">:</span> <span class="nc">RecyclerView</span><span class="p">,</span>
                      <span class="n">data</span><span class="p">:</span> <span class="nc">List</span><span class="p">&lt;</span><span class="nc">MarsPhoto</span><span class="p">&gt;?)</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">adapter</span> <span class="p">=</span> <span class="n">recyclerView</span><span class="p">.</span><span class="n">adapteras</span> <span class="nc">PhotoGridAdapter</span>
     <span class="n">adapter</span><span class="p">.</span><span class="nf">submitList</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>xml의 recyclerView에 <code class="language-plaintext highlighter-rouge">app:listData="@{viewModel.photos}"</code> 추가</p>
 
@@ -357,7 +453,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/get-data-from-the-internet/" data-toggle="tooltip" data-placement="top" title="Get data from the internet">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/get-data-from-the-internet/" data-toggle="tooltip" data-placement="top" title="Get data from the internet">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       

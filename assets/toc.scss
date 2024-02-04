@@ -1,0 +1,29 @@
+$toc-font-family: 'Arial', sans-serif; // 목차에 사용할 폰트 패밀리
+$toc-font-size: 1em; // 기본 폰트 크기
+$toc-font-weight: bold; // 폰트 굵기
+$toc-font-color: #333333; // 폰트 색상
+
+.table-of-contents {
+    font-family: $toc-font-family;
+    font-size: $toc-font-size;
+    font-weight: $toc-font-weight;
+    color: $toc-font-color;
+    border-left: 6px solid gray;
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  
+    a {
+      text-decoration: none;
+      color: $toc-font-color;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+}
+
+.table-of-contents-sublist-class {
+    list-style-type: lower-alpha;
+}

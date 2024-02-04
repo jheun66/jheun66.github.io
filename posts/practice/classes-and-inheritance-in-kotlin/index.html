@@ -175,9 +175,14 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <h3 id="primary-constructor">primary constructor</h3>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MyClass</span> <span class="k">constructor</span><span class="p">(</span><span class="n">className</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">MyClass</span> <span class="k">constructor</span><span class="p">(</span><span class="n">className</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span>
 <span class="kd">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">className</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>클래스 이름과 <em>optional parameters</em> 뒤에 올 수 있으며 <em>annotations</em>나 <em><a href="https://kotlinlang.org/docs/visibility-modifiers.html">visibility modifiers</a>(자바의 접근 제한자와 유사)</em>가 없으면 생략 가능</p>
 
@@ -185,7 +190,22 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><em>primary constructor</em>에는 어떠한 코드도 포함할 수 없기 때문에 초기화 코드는 init 구문안에 작성</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">InitOrderDemo</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">InitOrderDemo</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">firstProperty</span> <span class="p">=</span> <span class="s">"First property: $name"</span><span class="p">.</span><span class="nf">also</span><span class="p">(</span><span class="o">::</span><span class="n">println</span><span class="p">)</span>
     
     <span class="nf">init</span> <span class="p">{</span>
@@ -198,7 +218,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="nf">println</span><span class="p">(</span><span class="s">"Second initializer block that prints ${name.length}"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>property 초기화 사이에서 같은 우선순위로 수행되며 초기화의 매개변수는 property 초기화 단계에서 사용될 수 있음</p>
 
@@ -208,13 +229,22 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>클래스 바디에 constructor를 붙여서 선언, primary constructor가 있다면 this를 이용한 Delegation(위임) 필요</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Person</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="py">children</span><span class="p">:</span> <span class="nc">MutableList</span><span class="p">&lt;</span><span class="nc">Person</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nf">mutableListOf</span><span class="p">()</span>
     <span class="k">constructor</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="nc">Person</span><span class="p">)</span> <span class="p">:</span> <span class="k">this</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">parent</span><span class="p">.</span><span class="n">children</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>이러한 Delegation(위임)에 의해 secondary constructor 내부 코드가 진행되기 전에 초기화 구문과 property 초기화가 이루어짐, 이는 <em>primary constructor</em>가 없더라도 위임은 암시적으로 일어남</p>
 
@@ -233,7 +263,21 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>자식클래스에서 부모클래스의 메소드를 override할 때 사용, override는 open 제한자처럼 계속 상속받을 수 있으므로 해당 메소드가 더이상 상속되길 원하지 않으면 final을 앞에 붙여줌</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">open</span> <span class="kd">class</span> <span class="nc">Shape</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td>
+<td class="rouge-code"><pre><span class="k">open</span> <span class="kd">class</span> <span class="nc">Shape</span> <span class="p">{</span>
     <span class="k">open</span> <span class="k">fun</span> <span class="nf">draw</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/*...*/</span> <span class="p">}</span>
     <span class="k">fun</span> <span class="nf">fill</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/*...*/</span> <span class="p">}</span>
 <span class="p">}</span>
@@ -245,7 +289,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="k">open</span> <span class="kd">class</span> <span class="nc">Rectangle</span><span class="p">()</span> <span class="p">:</span> <span class="nc">Shape</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">final</span> <span class="k">override</span> <span class="k">fun</span> <span class="nf">draw</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/*...*/</span> <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="overriding-properties">
 <a class="anchor" href="#overriding-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding properties</h2>
@@ -270,7 +315,29 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>동일한 메소드명을 상속 받을 경우 다음과 같이 모호함을 없애줌</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">open</span> <span class="kd">class</span> <span class="nc">Rectangle</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td>
+<td class="rouge-code"><pre><span class="k">open</span> <span class="kd">class</span> <span class="nc">Rectangle</span> <span class="p">{</span>
     <span class="k">open</span> <span class="k">fun</span> <span class="nf">draw</span><span class="p">()</span> <span class="p">{</span> <span class="nf">println</span><span class="p">(</span><span class="s">"draw rectangle!"</span><span class="p">)</span> <span class="p">}</span>
 <span class="p">}</span>
 
@@ -290,18 +357,50 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="kd">val</span> <span class="py">square</span> <span class="p">=</span> <span class="nc">Square</span><span class="p">()</span>
     <span class="n">square</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>결과</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">draw</span> <span class="n">rectangle</span><span class="p">!</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="n">draw</span> <span class="n">rectangle</span><span class="p">!</span>
 <span class="n">draw</span> <span class="n">polygon</span><span class="p">!</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="adopt-good-coding-practices">
 <a class="anchor" href="#adopt-good-coding-practices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adopt good coding practices</h1>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td>
+<td class="rouge-code"><pre><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">squareCabin</span> <span class="p">=</span> <span class="nc">SquareCabin</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
        
     <span class="nf">with</span><span class="p">(</span><span class="n">squareCabin</span><span class="p">)</span> <span class="p">{</span>
@@ -325,7 +424,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="k">override</span> <span class="kd">val</span> <span class="py">buildingMaterial</span> <span class="p">=</span> <span class="s">"Wood"</span>
     <span class="k">override</span> <span class="kd">val</span> <span class="py">capacity</span> <span class="p">=</span> <span class="mi">6</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="with">
 <a class="anchor" href="#with" aria-hidden="true"><span class="octicon octicon-link"></span></a>with</h2>
@@ -353,11 +453,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/add-a-button-to-an-app/" data-toggle="tooltip" data-placement="top" title="Add a button to an app">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/add-a-button-to-an-app/" data-toggle="tooltip" data-placement="top" title="Add a button to an app">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/create-xml-layouts-for-android/" data-toggle="tooltip" data-placement="top" title="Create XML layouts for Android">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/create-xml-layouts-for-android/" data-toggle="tooltip" data-placement="top" title="Create XML layouts for Android">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

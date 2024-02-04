@@ -158,7 +158,53 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <p>이름에서도 알 수 있듯이 각각 Application에 대한 내용과 Activity에 대한 내용을 담고 있습니다. 
 예시로 간단하게 각 컨텍스트가 가지고 있는 리소스들을 비교해보겠습니다.
 Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간색으로 설정합니다.</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c">&lt;!-- AndroidMenifest.xml에서 --&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+</pre></td>
+<td class="rouge-code"><pre>    <span class="c">&lt;!-- AndroidMenifest.xml에서 --&gt;</span>
     <span class="nt">&lt;application</span>
         <span class="na">android:allowBackup=</span><span class="s">"true"</span>
         <span class="na">android:icon=</span><span class="s">"@mipmap/ic_launcher"</span>
@@ -202,10 +248,24 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
     <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"Theme.ActivityContext"</span> <span class="na">parent=</span><span class="s">"Theme.KotlinTest"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"android:textColor"</span><span class="nt">&gt;</span>#FF0000<span class="nt">&lt;/item&gt;</span>
     <span class="nt">&lt;/style&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>이를 액티비티에서 호출해주면</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">var</span> <span class="n">applicationCtxTV</span> <span class="o">=</span> <span class="nc">TextView</span><span class="o">(</span><span class="n">applicationContext</span><span class="o">)</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre>    <span class="kt">var</span> <span class="n">applicationCtxTV</span> <span class="o">=</span> <span class="nc">TextView</span><span class="o">(</span><span class="n">applicationContext</span><span class="o">)</span>
     <span class="n">applicationCtxTV</span><span class="o">.</span><span class="na">textSize</span> <span class="o">=</span> <span class="mi">40</span><span class="no">F</span>
     <span class="n">applicationCtxTV</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="s">"Application Context"</span>
 
@@ -216,7 +276,8 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
     <span class="kt">var</span> <span class="n">layout</span> <span class="o">:</span> <span class="nc">LinearLayout</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">layout</span><span class="o">)</span>
     <span class="n">layout</span><span class="o">.</span><span class="na">addView</span><span class="o">(</span><span class="n">applicationCtxTV</span><span class="o">)</span>
     <span class="n">layout</span><span class="o">.</span><span class="na">addView</span><span class="o">(</span><span class="n">activityCtxTV</span><span class="o">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p><img src="/img/posts/android/device-2021-02-13-023931.png" alt="a capture" width="400"></p>
 
 <p>각 리소스의 색으로 그려지는 것을 확인 할 수 있습니다.</p>
@@ -235,21 +296,35 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
 <a href="https://nhancv.medium.com/android-show-dialog-without-activity-context-94661d48400f">https://nhancv.medium.com/android-show-dialog-without-activity-context-94661d48400f</a></p>
 
 <p>액티비티를 실행하거나 Layout을 inflate 시에는 해결책이 존재합니다.</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">var</span> <span class="n">intent</span> <span class="o">=</span> <span class="nc">Intent</span><span class="o">(</span><span class="n">applicationContext</span><span class="o">,</span> <span class="nl">TestActivity:</span><span class="o">:</span><span class="kd">class</span><span class="err">.</span><span class="nc">java</span><span class="o">)</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>    <span class="kt">var</span> <span class="n">intent</span> <span class="o">=</span> <span class="nc">Intent</span><span class="o">(</span><span class="n">applicationContext</span><span class="o">,</span> <span class="nl">TestActivity:</span><span class="o">:</span><span class="kd">class</span><span class="err">.</span><span class="nc">java</span><span class="o">)</span>
     <span class="n">applicationContext</span><span class="o">.</span><span class="na">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>어플리케이션 컨텍스트를 이용하여 액티비티를 실행하는 경우에도 다음과 같은 에러 메시지가 출력됩니다.</p>
 
 <p><span style="color:red">Caused by: android.util.AndroidRuntimeException: Calling startActivity() from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag. Is this really what you want?</span></p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">var</span> <span class="n">intent</span> <span class="o">=</span> <span class="nc">Intent</span><span class="o">(</span><span class="n">applicationContext</span><span class="o">,</span> <span class="nl">TestActivity:</span><span class="o">:</span><span class="kd">class</span><span class="err">.</span><span class="nc">java</span><span class="o">)</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>    <span class="kt">var</span> <span class="n">intent</span> <span class="o">=</span> <span class="nc">Intent</span><span class="o">(</span><span class="n">applicationContext</span><span class="o">,</span> <span class="nl">TestActivity:</span><span class="o">:</span><span class="kd">class</span><span class="err">.</span><span class="nc">java</span><span class="o">)</span>
     <span class="n">applicationContext</span><span class="o">.</span><span class="na">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">.</span><span class="na">addFlags</span><span class="o">(</span><span class="no">FLAG_ACTIVITY_NEW_TASK</span><span class="o">))</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>액티비티 컨텍스트 밖에서 startActivity를 호출할 때는 해당 플래그가 필요하다는 의미이며 이는 서비스에서 액티비티를 실행시킬 때도 동일하게 필요합니다.</p>
 
 <p>Layout을 inflate하는 경우에도 문제가 발생하므로 추가 작업이 필요합니다.</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">applicationContext</span><span class="o">.</span><span class="na">getSystemService</span><span class="o">(</span><span class="nc">Service</span><span class="o">.</span><span class="na">LAYOUT_INFLATER_SERVICE</span><span class="o">);</span>
-</code></pre></div></div>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>    <span class="n">applicationContext</span><span class="o">.</span><span class="na">getSystemService</span><span class="o">(</span><span class="nc">Service</span><span class="o">.</span><span class="na">LAYOUT_INFLATER_SERVICE</span><span class="o">);</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="메모리-누수와-생명-주기">
 <a class="anchor" href="#%EB%A9%94%EB%AA%A8%EB%A6%AC-%EB%88%84%EC%88%98%EC%99%80-%EC%83%9D%EB%AA%85-%EC%A3%BC%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>메모리 누수와 생명 주기</h2>
@@ -292,11 +367,11 @@ Application에서 text의 색은 파란색, Activity에서 text의 색은 빨간
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/android/buttons/" data-toggle="tooltip" data-placement="top" title="Buttons(+background issue) And Gestures">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/android/buttons/" data-toggle="tooltip" data-placement="top" title="Buttons(+background issue) And Gestures">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/android/screen-compatibility/" data-toggle="tooltip" data-placement="top" title="Screen Compatibility">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/android/screen-compatibility/" data-toggle="tooltip" data-placement="top" title="Screen Compatibility">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

@@ -145,15 +145,33 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>안드로이드 프레임워크에서는 코드에서 뷰를 찾기위해 <em>findViewById()</em>를 사용하고 있지만 app gradle 파일에viewBinding을 추가하여 해당 기능을 사용 가능</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>buildFeatures {
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>buildFeatures {
     viewBinding = true
 }
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="initalize-the-binding-object">
 <a class="anchor" href="#initalize-the-binding-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initalize the binding object</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">binding</span><span class="p">:</span> <span class="nc">ActivityMainBinding</span>
 
@@ -163,7 +181,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="nf">setContentView</span><span class="p">(</span><span class="n">binding</span><span class="p">.</span><span class="n">root</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ul>
   <li>MainActivity 모든 부분에서 사용할 수 있기 때문에 멤버 변수로 바인딩 객체를 위해 선언, lateinit은 사용하기전에 반드시 초기화를 해야하는 변수에 사용</li>
@@ -175,7 +194,26 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h1 id="calculate-the-tip">
 <a class="anchor" href="#calculate-the-tip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculate the tip</h1>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">calculateTip</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td>
+<td class="rouge-code"><pre><span class="k">fun</span> <span class="nf">calculateTip</span><span class="p">()</span> <span class="p">{</span>
         <span class="kd">val</span> <span class="py">stringInTextField</span> <span class="p">=</span> <span class="n">binding</span><span class="p">.</span><span class="n">costOfService</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="nf">toString</span><span class="p">()</span>
         <span class="kd">val</span> <span class="py">cost</span> <span class="p">=</span> <span class="n">stringInTextField</span><span class="p">.</span><span class="nf">toDouble</span><span class="p">()</span>
         <span class="kd">val</span> <span class="py">selectedId</span> <span class="p">=</span> <span class="n">binding</span><span class="p">.</span><span class="n">tipOptions</span><span class="p">.</span><span class="n">checkedRadioButtonId</span>
@@ -192,7 +230,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="kd">val</span> <span class="py">formattedTip</span> <span class="p">=</span> <span class="nc">NumberFormat</span><span class="p">.</span><span class="nf">getCurrencyInstance</span><span class="p">().</span><span class="nf">format</span><span class="p">(</span><span class="n">tip</span><span class="p">)</span>
         <span class="n">binding</span><span class="p">.</span><span class="n">tipResult</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="nf">getString</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">tip_amount</span><span class="p">,</span> <span class="n">formattedTip</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ul>
   <li>toDouble()</li>
@@ -216,17 +255,26 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>getString()과 parameter</li>
 </ul>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">"tip_amount"</span><span class="nt">&gt;</span>Tip Amount: %s<span class="nt">&lt;/string&gt;</span>
-</code></pre></div></div>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">"tip_amount"</span><span class="nt">&gt;</span>Tip Amount: %s<span class="nt">&lt;/string&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>String 리소스에 매개변수를 받을 수 있도록 할 수 있음</p>
 
 <h1 id="test-and-debug">
 <a class="anchor" href="#test-and-debug" aria-hidden="true"><span class="octicon octicon-link"></span></a>Test and debug</h1>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//val cost = stringInTextField.toDouble()</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">//val cost = stringInTextField.toDouble()</span>
 <span class="kd">val</span> <span class="py">cost</span> <span class="p">=</span> <span class="n">stringInTextField</span><span class="p">.</span><span class="nf">toDoubleOrNull</span><span class="p">()</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>텍스트 필드가 비어 있으면 예외 발생</p>
 
@@ -264,11 +312,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/create-xml-layouts-for-android/" data-toggle="tooltip" data-placement="top" title="Create XML layouts for Android">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/create-xml-layouts-for-android/" data-toggle="tooltip" data-placement="top" title="Create XML layouts for Android">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/change-the-app-theme/" data-toggle="tooltip" data-placement="top" title="Change the app theme">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/change-the-app-theme/" data-toggle="tooltip" data-placement="top" title="Change the app theme">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

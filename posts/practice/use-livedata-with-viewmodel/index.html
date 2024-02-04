@@ -164,21 +164,35 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><code class="language-plaintext highlighter-rouge">LiveData</code>에도 Mutable 버전이 있음</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kd">val</span> <span class="py">_currentScrambledWord</span> <span class="p">=</span> <span class="nc">MutableLiveData</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;()</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="kd">val</span> <span class="py">_currentScrambledWord</span> <span class="p">=</span> <span class="nc">MutableLiveData</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;()</span>
 <span class="kd">val</span> <span class="py">currentScrambledWord</span><span class="p">:</span> <span class="nc">LiveData</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;</span>
    <span class="k">get</span><span class="p">()</span> <span class="p">=</span> <span class="n">_currentScrambledWord</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Type에는 <code class="language-plaintext highlighter-rouge">_currentScrambledWord.value = String(tempWord)</code>와 같이 <code class="language-plaintext highlighter-rouge">.value</code>로 접근</p>
 
 <p>Activity나 Fragement에서는 onCreate, onCreateView에서 observer를 붙여줌</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Observe the currentScrambledWord LiveData.</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// Observe the currentScrambledWord LiveData.</span>
 <span class="n">viewModel</span><span class="p">.</span><span class="n">currentScrambledWord</span><span class="p">.</span><span class="nf">observe</span><span class="p">(</span><span class="n">viewLifecycleOwner</span><span class="p">,</span> <span class="p">{</span>
     <span class="n">newWord</span> <span class="p">-&gt;</span>
         <span class="n">binding</span><span class="p">.</span><span class="n">textViewUnscrambledWord</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">newWord</span>
 <span class="p">})</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="use-livedata-with-data-binding">
 <a class="anchor" href="#use-livedata-with-data-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use LiveData with data binding</h1>
@@ -195,8 +209,12 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>layout file에서 UI요소와 data를 결합하도록 할 수 있음. 간단하게 양방향 바인딩</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android:text="@{gameViewModel.currentScrambledWord}"
-</code></pre></div></div>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>android:text="@{gameViewModel.currentScrambledWord}"
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">@{}</code> 문법을 사용하여 앱 데이터를 바인딩</p>
 
@@ -206,7 +224,21 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>app 수준의 <code class="language-plaintext highlighter-rouge">build.gradle</code>에서 dataBinding을 위한 작업</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">plugins</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td>
+<td class="rouge-code"><pre><span class="nf">plugins</span> <span class="p">{</span>
     <span class="n">id</span> <span class="err">'</span><span class="n">com</span><span class="p">.</span><span class="n">android</span><span class="p">.</span><span class="n">application</span><span class="err">'</span>
     <span class="n">id</span> <span class="err">'</span><span class="n">kotlin-android</span><span class="err">'</span>
     <span class="n">id</span> <span class="err">'</span><span class="n">kotlin-kapt</span><span class="err">'</span> <span class="c1">// 추가</span>
@@ -218,11 +250,31 @@ for (const list of document.querySelectorAll('.mdc-list')) {
        <span class="n">dataBinding</span> <span class="p">=</span> <span class="k">true</span> <span class="c1">// 추가</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h3 id="convert-layout-file-to-data-binding-layout">Convert layout file to data binding layout</h3>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;layout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;layout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
    <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
    <span class="na">xmlns:tools=</span><span class="s">"http://schemas.android.com/tools"</span><span class="nt">&gt;</span>
 
@@ -239,7 +291,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
    <span class="err">&lt;/androidx.constraintlayout.widget.ConstraintLayout</span><span class="nt">&gt;</span>
    <span class="nt">&lt;/ScrollView&gt;</span>
 <span class="nt">&lt;/layout&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>기존 Layout file을 <code class="language-plaintext highlighter-rouge">&lt;layout&gt;</code> 태그로 한번 감싸기</p>
 
@@ -247,15 +300,29 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>Fragment에서는 <code class="language-plaintext highlighter-rouge">DataBindingUtil</code>을 이용해 inflate</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">binding</span> <span class="p">=</span> <span class="nc">DataBindingUtil</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="n">inflater</span><span class="p">,</span> <span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">game_fragment</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
-</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="n">binding</span> <span class="p">=</span> <span class="nc">DataBindingUtil</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="n">inflater</span><span class="p">,</span> <span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">game_fragment</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="add-data-binding-variables">
 <a class="anchor" href="#add-data-binding-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add data binding variables</h2>
 
 <p>layout에 변수 선언</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;data&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;data&gt;</span>
       <span class="nt">&lt;variable</span>
           <span class="na">name=</span><span class="s">"gameViewModel"</span>
           <span class="na">type=</span><span class="s">"com.example.android.unscramble.ui.game.GameViewModel"</span> <span class="nt">/&gt;</span>
@@ -263,11 +330,25 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           <span class="na">name=</span><span class="s">"maxNoOfWords"</span>
           <span class="na">type=</span><span class="s">"int"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/data&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>onCraeteView에서 layout 변수 초기화</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="nc">View</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="nc">View</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
    <span class="k">super</span><span class="p">.</span><span class="nf">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">)</span>
 
    <span class="n">binding</span><span class="p">.</span><span class="n">gameViewModel</span> <span class="p">=</span> <span class="n">viewModel</span>
@@ -278,36 +359,60 @@ for (const list of document.querySelectorAll('.mdc-list')) {
    <span class="n">binding</span><span class="p">.</span><span class="n">lifecycleOwner</span> <span class="p">=</span> <span class="n">viewLifecycleOwner</span>
 <span class="o">..</span><span class="p">.</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="use-binding-expressions">
 <a class="anchor" href="#use-binding-expressions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use binding expressions</h2>
 
 <p>view에 바로 값을 할당할 수 있음</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;TextView</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;TextView</span>
    <span class="na">android:id=</span><span class="s">"@+id/textView_unscrambled_word"</span>
    <span class="err">...</span>
    <span class="na">android:text=</span><span class="s">"@{gameViewModel.currentScrambledWord}"</span>
    <span class="err">...</span><span class="nt">/&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>밑의 코드는 불필요해짐</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">viewModel</span><span class="p">.</span><span class="n">currentScrambledWord</span><span class="p">.</span><span class="nf">observe</span><span class="p">(</span><span class="n">viewLifecycleOwner</span><span class="p">,</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="n">viewModel</span><span class="p">.</span><span class="n">currentScrambledWord</span><span class="p">.</span><span class="nf">observe</span><span class="p">(</span><span class="n">viewLifecycleOwner</span><span class="p">,</span>
    <span class="p">{</span> <span class="n">newWord</span> <span class="p">-&gt;</span>
        <span class="n">binding</span><span class="p">.</span><span class="n">textViewUnscrambledWord</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">newWord</span>
    <span class="p">})</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>app의 변수뿐만 아니라 resource 매개변수에 값을 넣어서 넘겨줄수있음</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;TextView</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;TextView</span>
    <span class="na">android:id=</span><span class="s">"@+id/score"</span>
    <span class="err">...</span>
    <span class="na">android:text=</span><span class="s">"@{@string/score(gameViewModel.score)}"</span>
    <span class="err">...</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="learn-more">
 <a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
@@ -345,11 +450,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/store-data-in-viewmodel/" data-toggle="tooltip" data-placement="top" title="Store data in ViewModel">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/store-data-in-viewmodel/" data-toggle="tooltip" data-placement="top" title="Store data in ViewModel">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/shared-viewmodel-across-fragment/" data-toggle="tooltip" data-placement="top" title="Shared ViewModel Across Fragment">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/shared-viewmodel-across-fragment/" data-toggle="tooltip" data-placement="top" title="Shared ViewModel Across Fragment">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

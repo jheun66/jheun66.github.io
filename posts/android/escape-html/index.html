@@ -145,7 +145,23 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h2 id="직접-간단한-함수를-만들어-처리">
 <a class="anchor" href="#%EC%A7%81%EC%A0%91-%EA%B0%84%EB%8B%A8%ED%95%9C-%ED%95%A8%EC%88%98%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4-%EC%B2%98%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>직접 간단한 함수를 만들어 처리</h2>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">escapeHTML</span><span class="o">(</span><span class="nc">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">escapeHTML</span><span class="o">(</span><span class="nc">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
     <span class="nc">StringBuilder</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="mi">16</span><span class="o">,</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">()));</span>
     <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
         <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
@@ -159,13 +175,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">out</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="안드로이드에서-제공하는-html-라이브러리를-사용">
 <a class="anchor" href="#%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%EC%97%90%EC%84%9C-%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94-html-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%A5%BC-%EC%82%AC%EC%9A%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a>안드로이드에서 제공하는 Html 라이브러리를 사용</h2>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">str</span> <span class="o">=</span> <span class="nc">Html</span><span class="o">.</span><span class="na">escapeHtml</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
-</code></pre></div></div>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nc">String</span> <span class="n">str</span> <span class="o">=</span> <span class="nc">Html</span><span class="o">.</span><span class="na">escapeHtml</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>두 방법의 결과가 다르게 나오긴 하지만 동작하는데는 아무런 문제가 없음</p>
 
@@ -199,7 +220,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/" data-toggle="tooltip" data-placement="top" title="Use SwitchCompat from AppCompat or SwitchMaterial from Material library">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/" data-toggle="tooltip" data-placement="top" title="Use SwitchCompat from AppCompat or SwitchMaterial from Material library">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       

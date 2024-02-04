@@ -145,7 +145,23 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>각 프래그먼트 별로 액션바를 만들기위해 <code class="language-plaintext highlighter-rouge">setupActionBarWithNavController()</code>를 사용했었음.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">activity_main</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">activity_main</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">navController</span><span class="p">:</span> <span class="nc">NavController</span>
 
@@ -159,14 +175,21 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="nf">setupActionBarWithNavController</span><span class="p">(</span><span class="n">navController</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>이때 액션바에 up 버튼이 생기는데 이 동작을 처리하기 위해선 onSupportNavigateUp() 함수를 사용함</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onSupportNavigateUp</span><span class="p">():</span> <span class="nc">Boolean</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">onSupportNavigateUp</span><span class="p">():</span> <span class="nc">Boolean</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">navController</span><span class="p">.</span><span class="nf">navigateUp</span><span class="p">()</span> <span class="p">||</span> <span class="k">super</span><span class="p">.</span><span class="nf">onSupportNavigateUp</span><span class="p">()</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="learn-about-tasks-and-back-stack">
 <a class="anchor" href="#learn-about-tasks-and-back-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn about tasks and back stack</h1>
@@ -234,11 +257,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/shared-viewmodel-across-fragment/" data-toggle="tooltip" data-placement="top" title="Shared ViewModel Across Fragment">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/shared-viewmodel-across-fragment/" data-toggle="tooltip" data-placement="top" title="Shared ViewModel Across Fragment">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/introduction-to-coroutines/" data-toggle="tooltip" data-placement="top" title="Introduction to coroutines">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/introduction-to-coroutines/" data-toggle="tooltip" data-placement="top" title="Introduction to coroutines">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

@@ -147,7 +147,89 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><img src="/img/posts/android/button_test_capture.png" alt="a capture" width="400"></p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+</pre></td>
+<td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
     <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
     <span class="na">xmlns:tools=</span><span class="s">"http://schemas.android.com/tools"</span>
@@ -227,7 +309,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="na">app:layout_constraintStart_toStartOf=</span><span class="s">"parent"</span>
         <span class="na">app:layout_constraintTop_toBottomOf=</span><span class="s">"@+id/custom_background"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>xml에 style을 통해 outline이나 borderless 등을 적용하고 drawableLeft 또는 drawableTop, Button 등을 이용하여 아이콘 위치시킬 수 있습니다.</p>
 
@@ -245,7 +328,17 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h3 id="button-state">Button State</h3>
 <p>버튼의 상태에는 눌렀을 때, 포커스되어 있을 때, 기본 상태가 있습니다.
 <code class="language-plaintext highlighter-rouge">res/drawable/</code> 디렉토리에 다음과 같은 리소스를 만들어 커스텀할 수 있습니다.</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;selector</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;item</span> <span class="na">android:drawable=</span><span class="s">"@drawable/button_pressed"</span>
           <span class="na">android:state_pressed=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
@@ -253,7 +346,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
           <span class="na">android:state_focused=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;item</span> <span class="na">android:drawable=</span><span class="s">"@drawable/button_default"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/selector&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <blockquote>
   <p>Note: The order of the &lt;item&gt; elements is important. When this drawable is referenced, the &lt;item&gt; elements are traversed in-order to determine which one is appropriate for the current button state. Because the default bitmap is last, it is only applied when the conditions android:state_pressed and android:state_focused have both evaluated as false.</p>
@@ -270,7 +364,19 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>주로 좌측 하단에 남다른 버튼을 보신적이 있을 것입니다. 이 버튼은 <em>Floating Action Button</em> 이라 합니다. 줄여서 fab라고도 합니다.</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;com.google.android.material.floatingactionbutton.FloatingActionButton</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;com.google.android.material.floatingactionbutton.FloatingActionButton</span>
     <span class="na">android:id=</span><span class="s">"@+id/fab"</span>
     <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
     <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
@@ -280,7 +386,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="na">android:src=</span><span class="s">"@drawable/ic_example_button_holo_dark"</span>
     <span class="na">app:layout_constraintBottom_toBottomOf=</span><span class="s">"parent"</span>
     <span class="na">app:layout_constraintEnd_toEndOf=</span><span class="s">"parent"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>자세한 내용은 Reference에 있는 링크를 참고해 주세요.</p>
 
@@ -291,7 +398,28 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>터치이벤트가 발생하였을 때 받은 이벤트를 디텍터에 넘겨주는 방식으로 넘어간 이벤트를 리스너에서 감지합니다.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">AppCompatActivity</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">AppCompatActivity</span> <span class="o">{</span>
 
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">DEBUG_TAG</span> <span class="o">=</span> <span class="s">"ButtonTest"</span><span class="o">;</span>
     <span class="kd">private</span> <span class="nc">GestureDetectorCompat</span> <span class="n">mDetector</span><span class="o">;</span>
@@ -310,11 +438,71 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="n">mDetector</span><span class="o">.</span><span class="na">onTouchEvent</span><span class="o">(</span><span class="n">event</span><span class="o">);</span>
         <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">onTouchEvent</span><span class="o">(</span><span class="n">event</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>직접 리스너를 등록하여 커스텀할 수 있습니다. 리스너는 SimpleOnGestureListener를 사용하는데 더블탭 리스너, 컨텍스트 클릭 리스너가 다 포함된 리스너라 간단하게 사용하라 Simple이라 이름을 붙인 것으로 보입니다.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyGestureListener</span> <span class="kd">extends</span> <span class="nc">GestureDetector</span><span class="o">.</span><span class="na">SimpleOnGestureListener</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyGestureListener</span> <span class="kd">extends</span> <span class="nc">GestureDetector</span><span class="o">.</span><span class="na">SimpleOnGestureListener</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">DEBUG_TAG</span> <span class="o">=</span> <span class="s">"MyGestureListener"</span><span class="o">;</span>
 
     <span class="nd">@Override</span>
@@ -371,13 +559,40 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">onContextClick</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>제스처는 모션 이벤트들을 통해 구현됩니다. 그리고 모션 이벤트에는 액션코드와 좌표 정보등이 들어 있습니다.
 예) MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=1, x[0]=647.97363, y[0]=515.9363, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1625244, downTime=856950, deviceId=9, source=0x1002, displayId=0 }</p>
 
 <p><em>getAction()</em> 을 통해 액션에 따라 핸들링할 수도 있습니다.</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@Override</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td>
+<td class="rouge-code"><pre>    <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onTouchEvent</span><span class="o">(</span><span class="nc">MotionEvent</span> <span class="n">event</span><span class="o">){</span>
         <span class="kt">int</span> <span class="n">action</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">getAction</span><span class="o">();</span>
         <span class="k">switch</span><span class="o">(</span><span class="n">action</span><span class="o">)</span> <span class="o">{</span>
@@ -401,7 +616,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
                 <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">onTouchEvent</span><span class="o">(</span><span class="n">event</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>더 다양한 액션은 <a href="https://developer.android.com/reference/android/view/MotionEvent#constants_1">액션 상수</a>에서 찾을 수 있습니다.</p>
 
@@ -441,11 +657,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/android/send-and-sendto/" data-toggle="tooltip" data-placement="top" title="ACTION_SEND & ACTION_SENDTO(이메일 인텐트)">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/android/send-and-sendto/" data-toggle="tooltip" data-placement="top" title="ACTION_SEND & ACTION_SENDTO(이메일 인텐트)">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/android/context/" data-toggle="tooltip" data-placement="top" title="Context">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/android/context/" data-toggle="tooltip" data-placement="top" title="Context">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

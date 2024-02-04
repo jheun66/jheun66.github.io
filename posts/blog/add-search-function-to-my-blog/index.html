@@ -141,7 +141,23 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <p>search.json 파일을 만들어 블로그의 루트파일에 넣어주어야 합니다.<br>
 이 파일을 통해 정렬에 사용할 객체를 생성해줍니다.</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">---</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td>
+<td class="rouge-code"><pre><span class="err">---</span><span class="w">
 </span><span class="err">layout:</span><span class="w"> </span><span class="err">none</span><span class="w">
 </span><span class="err">---</span><span class="w">
 </span><span class="p">[</span><span class="w">  
@@ -155,9 +171,40 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     </span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">unless</span><span class="w"> </span><span class="err">forloop.last</span><span class="w"> </span><span class="err">%</span><span class="p">},{</span><span class="err">%</span><span class="w"> </span><span class="err">endunless</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
   </span><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endfor</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w"> 
 </span><span class="p">]</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">---</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</pre></td>
+<td class="rouge-code"><pre><span class="err">---</span><span class="w">
 </span><span class="err">layout:</span><span class="w"> </span><span class="err">none</span><span class="w">
 </span><span class="err">---</span><span class="w">
 </span><span class="p">[</span><span class="w">
@@ -185,7 +232,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
    </span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">unless</span><span class="w"> </span><span class="err">forloop.last</span><span class="w"> </span><span class="err">%</span><span class="p">},{</span><span class="err">%</span><span class="w"> </span><span class="err">endunless</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
   </span><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endfor</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>모든 텍스트에서 찾기위해서 처음에는 두번째처럼 설정했었는데 검색 결과가 만족스럽지 않아 첫번째 코드를 사용하려합니다.<br>
 두번째 코드에서 remove: ‘\‘를 추가한 이유는 content 텍스트에 해당 단어가 포함되어 있으면 json파일이 깨지기 때문입니다.<br>
@@ -201,34 +249,61 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>입니다.<br>
 직접 구현해줄 수도 있고 라이브러리에서 제공하는 js파일을 사용할 수 있습니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- HTML elements for search --&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="c">&lt;!-- HTML elements for search --&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"search-input"</span> <span class="na">placeholder=</span><span class="s">"Search blog posts.."</span><span class="nt">&gt;</span>
 <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"results-container"</span><span class="nt">&gt;&lt;/ul&gt;</span>
 
 <span class="c">&lt;!-- or without installing anything --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>저는 기본으로 제공하는 스타일보다 다른 스타일을 적용하도록 하겠습니다.</p>
 <h3 id="검색-인풋-필드에-material-design-적용하기">검색 인풋 필드에 Material Design 적용하기</h3>
 <p><a href="https://material.io/components/text-fields">https://material.io/components/text-fields</a>를 적용해보려 합니다.<br>
 cdn을 이용해서 다음과 같이 빠르게 적용해볼 수 있습니다.<br>
 <strong>link</strong>를 해주고</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/icon?family=Material+Icons"</span><span class="nt">&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>자신이 원하는 모양을 적용해줍니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mdc-text-field mdc-text-field--filled"</span><span class="nt">&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mdc-text-field mdc-text-field--filled"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-text-field__ripple"</span><span class="nt">&gt;&lt;/span&gt;</span>
         <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mdc-text-field__input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"search-input"</span> <span class="na">placeholder=</span><span class="s">"Search Keyword"</span> <span class="na">size=</span><span class="s">"120"</span> <span class="na">aria-label=</span><span class="s">"Label"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-line-ripple"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/label&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <h3 id="결과를-담을-컨테이너에-material-design-적용하기">결과를 담을 컨테이너에 Material Design 적용하기</h3>
 <p>결과 리스트도 통일성을 위해 material을 적용하도록 하겠습니다.<br>
 저는 <a href="https://material.io/components/lists">https://material.io/components/lists</a>를 사용하려 합니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"mdc-list mdc-list--two-line"</span> <span class="na">id=</span><span class="s">"results-container"</span><span class="nt">&gt;&lt;/ul&gt;</span>
-</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"mdc-list mdc-list--two-line"</span> <span class="na">id=</span><span class="s">"results-container"</span><span class="nt">&gt;&lt;/ul&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>리스트를 담을 컨테이너만 선언해주고 템플릿은 이후 과정에서 추가해줍니다.</p>
 <h2 id="usage">
 <a class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
@@ -245,7 +320,18 @@ search.json로 설정해줍니다.</p>
 <p><strong>searchResultTemplate</strong><br>
 이 부분이 위에서 설명한 results-container에 담을 리스트 형태를 지정해줍니다.<br>
 저는 이런식으로 사용하려합니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+<td class="rouge-code"><pre>`
 <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mdc-list-item"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__ripple"</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mdc-list-item__text"</span><span class="nt">&gt;</span>
@@ -254,7 +340,8 @@ search.json로 설정해줍니다.</p>
     <span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/li&gt;&lt;hr&gt;</span>
 `
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p><strong>templateMiddleware</strong><br>
 템플릿에서 일치하는 항목이 발견될 때 호출하는 함수를 정의할 수 있습니다.<br>
 해당 속성의 이름, 값과 템플릿이 전달됩니다.<br>
@@ -278,7 +365,35 @@ search.json로 설정해줍니다.</p>
 
 <p><strong>success</strong><br>
 데이터가 로드되었을 때 호출해주고 싶은 함수를 추가할 수 있습니다.</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/js/simple-jekyll-search.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/js/simple-jekyll-search.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
         <span class="nx">SimpleJekyllSearch</span><span class="p">({</span>
@@ -304,7 +419,8 @@ search.json로 설정해줍니다.</p>
           <span class="na">fuzzy</span><span class="p">:</span> <span class="kc">false</span>
         <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>제가 만들고 싶은대로 필요한부분만 채워보았습니다.<br>
 simple-jekyll-search.js는 샘플 프로젝트에서 그대로 가져왔습니다. <br>
 날짜순으로 정렬된 것도 확인하였고 결과가 그럭저럭 괜찮게 나왔습니다.<br>
@@ -329,11 +445,11 @@ simple-jekyll-search.js는 샘플 프로젝트에서 그대로 가져왔습니�
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/blog/codeblock-syntax-highlight/" data-toggle="tooltip" data-placement="top" title="코드 블럭 syntax_highlight 적용">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/blog/codeblock-syntax-highlight/" data-toggle="tooltip" data-placement="top" title="코드 블럭 syntax_highlight 적용">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/blog/sort-by-tag/" data-toggle="tooltip" data-placement="top" title="태그별로 분류하기(Sort by tag)">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/blog/sort-by-tag/" data-toggle="tooltip" data-placement="top" title="태그별로 분류하기(Sort by tag)">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

@@ -1,5 +1,7 @@
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
+/*
+  rougify style <themes> > ~/<블로그>/assets/highlight.css로 생성후 커스텀
+*/
+
 .highlight .cm {
   color: #999988;
   font-style: italic;
@@ -204,6 +206,80 @@
 .highlight .w {
   color: #bbbbbb;
 }
+
 .highlight {
-  background-color: #f8f8f8;
+  font-size: 0.8em;
+}
+
+/* 
+  참고 : 
+  https://github.com/LazyRen/LazyRen.github.io/commit/c3c9f246e551b5ff46cb7bfd76f875d2a5fed1d7
+  https://inpa.tistory.com/entry/CSS-%F0%9F%8C%9F-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%B0%94Scrollbar-%EA%BE%B8%EB%AF%B8%EA%B8%B0-%EC%86%8D%EC%84%B1-%EC%B4%9D%EC%A0%95%EB%A6%AC#%EC%8A%A4%ED%81%AC%EB%A1%A4_%ED%8A%B8%EB%9E%99_%EA%B0%80%EB%A6%AC%EA%B3%A0_%EB%A7%89%EB%8C%80%EB%A7%8C_%EB%B3%B4%EC%9D%B4%EA%B8%B0
+*/
+.highlight pre {
+  border-color: transparent;
+  transition: border-color 0.5s ease;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+    width: auto;
+  }
+
+  /* 스크롤바 뒷 배경 설정 */
+  &::-webkit-scrollbar-track {
+    background-color: #f8f8f8;
+  }
+
+  &:hover {
+    border-color: var(--gray);
+    transition: border-color 0.2s ease;
+  }
+
+  /* 스크롤바 막대 설정 */
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-color: inherit;
+    border-radius: 10px;
+    border-right-style: inset;
+    border-right-width: calc(100vw + 100vh);
+  }
+}
+
+/* table은 lineno가 있을때 생성 */
+.highlight table {
+  border-radius: 0;
+  border-color: transparent;
+  border-width: 1px;
+
+  &:hover {
+    border-color: var(--gray);
+    transition: border-color 0.2s ease;
+  }
+}
+
+.highlight table td { 
+  padding: 10px; 
+  border-bottom: 0;
+}
+
+.highlight table pre { 
+  margin: 0;
+}
+
+/* 라인 줄 복사 방지 */
+/* 참고 : https://apit.dev/jekyll/minimal-mistakes-hightlight-linenumber */
+.highlight .rouge-gutter { 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 10px;
+  background-color: var(--gray);
+}
+
+.highlight .rouge-gutter .lineno{ 
+  color: #f8f8f8;
+  text-align: right
 }

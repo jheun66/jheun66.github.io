@@ -129,24 +129,40 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
 </ol><h3 id="jekyll-bundler-gems-설치">jekyll, bundler gems 설치</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll bundler
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>gem <span class="nb">install </span>jekyll bundler
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h3 id="jekyll-site-생성">jekyll site 생성</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 폴더로 생성</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="c"># 폴더로 생성</span>
 jekyll new my_blog.github.io
 <span class="c"># 혹은 본인의 git repository에서 실행할 경우</span>
 jekyll new ./
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>테마는 자동으로 기본 테마 <a href="https://github.com/jekyll/minima">minima</a></p>
 
 <h3 id="bundle-설치-및-테스트">bundle 설치 및 테스트</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>bundle <span class="nb">install
 </span>bundle <span class="nb">exec </span>jekyll serve
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p><a href="http://localhost:4000/">http://localhost:4000</a>에서 결과를 확인 가능</p>
 
@@ -156,20 +172,32 @@ jekyll new ./
   <li>`require’: cannot load such file – webrick</li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle add webrick
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>bundle add webrick
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ul>
   <li>`bind’: address already in use - bind(2) for 127.0.0.1:4000 (errno::eaddrinuse)</li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsof <span class="nt">-wni</span> tcp:4000
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>lsof <span class="nt">-wni</span> tcp:4000
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>PID 체크 후 해당 프로세스 킬</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">kill</span> <span class="nt">-9</span> 해당 PID
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nb">kill</span> <span class="nt">-9</span> 해당 PID
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="reference">
 <a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
@@ -202,11 +230,11 @@ jekyll new ./
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/blog/ruby-version-management/" data-toggle="tooltip" data-placement="top" title="Ruby Version Management">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/blog/ruby-version-management/" data-toggle="tooltip" data-placement="top" title="Ruby Version Management">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/blog/codeblock-syntax-highlight/" data-toggle="tooltip" data-placement="top" title="코드 블럭 syntax_highlight 적용">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/blog/codeblock-syntax-highlight/" data-toggle="tooltip" data-placement="top" title="코드 블럭 syntax_highlight 적용">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

@@ -243,8 +243,12 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>액티비티 바인딩 객체처럼 Android Studio가 각 레이아웃 파일마다 해당 클래스를 생성</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kd">var</span> <span class="py">_binding</span><span class="p">:</span> <span class="nc">FragmentLetterListBinding</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
-</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="kd">var</span> <span class="py">_binding</span><span class="p">:</span> <span class="nc">FragmentLetterListBinding</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">FragmentLetterListBinding?</code> 타입이 nullable인 이유는 초기화값이 <code class="language-plaintext highlighter-rouge">null</code> 값을 가지기 때문.</p>
 
@@ -254,8 +258,12 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><code class="language-plaintext highlighter-rouge">onCreateView()</code>이후에는 _binding에 <code class="language-plaintext highlighter-rouge">null</code>값이 들어가지 않을텐데 매번 _binding에 <code class="language-plaintext highlighter-rouge">?</code>를 붙이기 번거롭기 때문에 <code class="language-plaintext highlighter-rouge">!!</code>를 이용해 <code class="language-plaintext highlighter-rouge">?</code>없이 접근 가능하도록 할 수 있음.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kd">val</span> <span class="py">binding</span> <span class="k">get</span><span class="p">()</span> <span class="p">=</span> <span class="n">_binding</span><span class="o">!!</span>
-</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="kd">val</span> <span class="py">binding</span> <span class="k">get</span><span class="p">()</span> <span class="p">=</span> <span class="n">_binding</span><span class="o">!!</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">get()</code> 는 binding이 get-only 프로터티라는 의미</p>
 
@@ -268,18 +276,35 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <code class="language-plaintext highlighter-rouge">onCreate()</code> 오버라이드 후 <code class="language-plaintext highlighter-rouge">setHasOptionsMenu()</code> 추가</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
    <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
    <span class="nf">setHasOptionsMenu</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li>
 <code class="language-plaintext highlighter-rouge">onCreateView()</code>에서 inflate후 view 반환</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreateView</span><span class="p">(</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreateView</span><span class="p">(</span>
    <span class="n">inflater</span><span class="p">:</span> <span class="nc">LayoutInflater</span><span class="p">,</span> <span class="n">container</span><span class="p">:</span> <span class="nc">ViewGroup</span><span class="p">?,</span>
    <span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?</span>
 <span class="p">):</span> <span class="nc">View</span><span class="p">?</span> <span class="p">{</span>
@@ -287,54 +312,120 @@ for (const list of document.querySelectorAll('.mdc-list')) {
    <span class="kd">val</span> <span class="py">view</span> <span class="p">=</span> <span class="n">binding</span><span class="p">.</span><span class="n">root</span>
    <span class="k">return</span> <span class="n">view</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li>리사이클러뷰 프로퍼티 생성</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">recyclerView</span><span class="p">:</span> <span class="nc">RecyclerView</span>
-</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">recyclerView</span><span class="p">:</span> <span class="nc">RecyclerView</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li>
 <code class="language-plaintext highlighter-rouge">onViewCreated()</code>에서 리사이클러뷰 프로퍼티에 값 세팅, 레이아웃을 선택하는 메소드 추가</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="nc">View</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="nc">View</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
    <span class="n">recyclerView</span> <span class="p">=</span> <span class="n">binding</span><span class="p">.</span><span class="n">recyclerView</span>
    <span class="nf">chooseLayout</span><span class="p">()</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li>
 <code class="language-plaintext highlighter-rouge">onDestroyView()</code>에서 _binding 값을 잊지않고 null로 초기화</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onDestroyView</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">onDestroyView</span><span class="p">()</span> <span class="p">{</span>
    <span class="k">super</span><span class="p">.</span><span class="nf">onDestroyView</span><span class="p">()</span>
    <span class="n">_binding</span> <span class="p">=</span> <span class="k">null</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li>프레그먼트의 onCreateOptionsMenu()에는 리턴값이 없고 액티비티처럼 menuInflater라는 글로벌 프로퍼티가 없어 menuInflater를 매개변수로 넘겨주어야함</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreateOptionsMenu</span><span class="p">(</span><span class="n">menu</span><span class="p">:</span> <span class="nc">Menu</span><span class="p">,</span> <span class="n">inflater</span><span class="p">:</span> <span class="nc">MenuInflater</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreateOptionsMenu</span><span class="p">(</span><span class="n">menu</span><span class="p">:</span> <span class="nc">Menu</span><span class="p">,</span> <span class="n">inflater</span><span class="p">:</span> <span class="nc">MenuInflater</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">inflater</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">menu</span><span class="p">.</span><span class="n">layout_menu</span><span class="p">,</span> <span class="n">menu</span><span class="p">)</span>
 
    <span class="kd">val</span> <span class="py">layoutButton</span> <span class="p">=</span> <span class="n">menu</span><span class="p">.</span><span class="nf">findItem</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">action_switch_layout</span><span class="p">)</span>
    <span class="nf">setIcon</span><span class="p">(</span><span class="n">layoutButton</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li>나머지는 액티비티에서 만들었던 함수 그대로 사용, this 대신 context를 넘겨주어야함</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">fun</span> <span class="nf">chooseLayout</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="k">fun</span> <span class="nf">chooseLayout</span><span class="p">()</span> <span class="p">{</span>
    <span class="k">when</span> <span class="p">(</span><span class="n">isLinearLayoutManager</span><span class="p">)</span> <span class="p">{</span>
        <span class="k">true</span> <span class="p">-&gt;</span> <span class="p">{</span>
            <span class="n">recyclerView</span><span class="p">.</span><span class="n">layoutManager</span> <span class="p">=</span> <span class="nc">LinearLayoutManager</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
@@ -370,19 +461,29 @@ for (const list of document.querySelectorAll('.mdc-list')) {
        <span class="k">else</span> <span class="p">-&gt;</span> <span class="k">super</span><span class="p">.</span><span class="nf">onOptionsItemSelected</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
    <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li>MainActivity에서 불필요해진 메소드들 제거</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
    <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
 
    <span class="kd">val</span> <span class="py">binding</span> <span class="p">=</span> <span class="nc">ActivityMainBinding</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="n">layoutInflater</span><span class="p">)</span>
    <span class="nf">setContentView</span><span class="p">(</span><span class="n">binding</span><span class="p">.</span><span class="n">root</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="implement-letterlistfragment-1">
 <a class="anchor" href="#implement-letterlistfragment-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implement LetterListFragment</h1>
@@ -415,7 +516,20 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>프로젝트 레벨 build.gradle에 nav_version 세팅</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">buildscript</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre><span class="nf">buildscript</span> <span class="p">{</span>
     <span class="nf">ext</span> <span class="p">{</span>
         <span class="n">appcompat_version</span> <span class="p">=</span> <span class="s">"1.2.0"</span>
         <span class="n">constraintlayout_version</span> <span class="p">=</span> <span class="s">"2.0.2"</span>
@@ -426,15 +540,21 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="p">}</span>
 
     <span class="o">..</span><span class="p">.</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li>앱 레벨 build.gradle에 dependencies group 추가</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s">"androidx.navigation:navigation-fragment-ktx:$nav_version"</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="n">implementation</span> <span class="s">"androidx.navigation:navigation-fragment-ktx:$nav_version"</span>
 <span class="n">implementation</span> <span class="s">"androidx.navigation:navigation-ui-ktx:$nav_version"</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="safe-args-plugin">
 <a class="anchor" href="#safe-args-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Safe Args Plugin</h2>
@@ -445,20 +565,33 @@ for (const list of document.querySelectorAll('.mdc-list')) {
   <li>프로젝트 레벨 build.gradle에 classpath 추가</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">classpath</span> <span class="s">"androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"</span>
-</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="n">classpath</span> <span class="s">"androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <ol>
   <li>앱 레벨 build.gradle에 plugins 추가</li>
 </ol>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">plugins</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="nf">plugins</span> <span class="p">{</span>
     <span class="n">id</span> <span class="err">'</span><span class="n">com</span><span class="p">.</span><span class="n">android</span><span class="p">.</span><span class="n">application</span><span class="err">'</span>
     <span class="n">id</span> <span class="err">'</span><span class="n">kotlin-android</span><span class="err">'</span>
     <span class="n">id</span> <span class="err">'</span><span class="n">kotlin-kapt</span><span class="err">'</span>
     <span class="n">id</span> <span class="err">'</span><span class="n">androidx</span><span class="p">.</span><span class="n">navigation</span><span class="p">.</span><span class="n">safeargs</span><span class="p">.</span><span class="n">kotlin</span><span class="err">'</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="using-the-navigation-graph">
 <a class="anchor" href="#using-the-navigation-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the Navigation Graph</h1>
@@ -468,7 +601,25 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>프레그먼트들을 띄워줄 Activity에 FragmentContainerView 추가</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;FrameLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;FrameLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
     <span class="na">xmlns:tools=</span><span class="s">"http://schemas.android.com/tools"</span>
     <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
     <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
@@ -484,9 +635,32 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="na">app:navGraph=</span><span class="s">"@navigation/nav_graph"</span>
         <span class="nt">/&gt;</span>
 <span class="nt">&lt;/FrameLayout&gt;</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="nc">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">navController</span><span class="p">:</span> <span class="nc">NavController</span>
 
     <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
@@ -506,7 +680,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="k">return</span> <span class="n">navController</span><span class="p">.</span><span class="nf">navigateUp</span><span class="p">()</span> <span class="p">||</span> <span class="k">super</span><span class="p">.</span><span class="nf">onSupportNavigateUp</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="set-up-the-navigation-graph">
 <a class="anchor" href="#set-up-the-navigation-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set Up the Navigation Graph</h2>
@@ -524,13 +699,28 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>button을 클릭할 때 intent를 넘기는 대신 action을 실행, clickListener안에 추가</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">action</span> <span class="p">=</span> <span class="nc">LetterListFragmentDirections</span><span class="p">.</span><span class="nf">actionLetterListFragmentToWordListFragment</span><span class="p">(</span><span class="n">letter</span> <span class="p">=</span> <span class="n">holder</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="nf">toString</span><span class="p">())</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">val</span> <span class="py">action</span> <span class="p">=</span> <span class="nc">LetterListFragmentDirections</span><span class="p">.</span><span class="nf">actionLetterListFragmentToWordListFragment</span><span class="p">(</span><span class="n">letter</span> <span class="p">=</span> <span class="n">holder</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="nf">toString</span><span class="p">())</span>
 <span class="n">holder</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="nf">findNavController</span><span class="p">().</span><span class="nf">navigate</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>agrument를 받을 때는 onCreate()에서 받고 onViewCreated()에서 adapter에 세팅</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">letterId</span><span class="p">:</span> <span class="nc">String</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">letterId</span><span class="p">:</span> <span class="nc">String</span>
 <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
     <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
 
@@ -538,7 +728,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="n">letterId</span> <span class="p">=</span> <span class="n">it</span><span class="p">.</span><span class="nf">getString</span><span class="p">(</span><span class="nc">LETTER</span><span class="p">).</span><span class="nf">toString</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="reference">
 <a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h1>
@@ -567,11 +758,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/collections-in-kotlin/" data-toggle="tooltip" data-placement="top" title="Collections in Kotlin">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/collections-in-kotlin/" data-toggle="tooltip" data-placement="top" title="Collections in Kotlin">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/store-data-in-viewmodel/" data-toggle="tooltip" data-placement="top" title="Store data in ViewModel">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/store-data-in-viewmodel/" data-toggle="tooltip" data-placement="top" title="Store data in ViewModel">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

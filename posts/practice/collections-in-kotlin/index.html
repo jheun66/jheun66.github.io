@@ -193,12 +193,20 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h2 id="function-type">
 <a class="anchor" href="#function-type" aria-hidden="true"><span class="octicon octicon-link"></span></a>Function Type</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">triple</span><span class="p">:</span> <span class="p">(</span><span class="nc">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">Int</span> <span class="p">=</span> <span class="p">{</span> <span class="n">a</span><span class="p">:</span> <span class="nc">Int</span> <span class="p">-&gt;</span> <span class="n">a</span> <span class="p">*</span> <span class="mi">3</span> <span class="p">}</span>
     <span class="nf">println</span><span class="p">(</span><span class="nf">triple</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="p">}</span>
 <span class="c1">// 결과 15</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Kotlin에서는 함수를 변수처럼 다룰 수 있는데 마찬가지로 타입을 가지게됨</p>
 
@@ -215,7 +223,20 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>마찬가지로 sorteedWith에서도 람다함수를 넘겨줄 수 있음</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">peopleNames</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="s">"Fred"</span><span class="p">,</span> <span class="s">"Ann"</span><span class="p">,</span> <span class="s">"Barbara"</span><span class="p">,</span> <span class="s">"Joe"</span><span class="p">)</span>
 
     <span class="nf">println</span><span class="p">(</span><span class="n">peopleNames</span><span class="p">.</span><span class="nf">sorted</span><span class="p">())</span>
@@ -226,14 +247,28 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="c1">// 결과</span>
 <span class="c1">//[Ann, Barbara, Fred, Joe]</span>
 <span class="c1">//[Ann, Joe, Fred, Barbara]</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="onclicklistener-and-onkeylistener-in-android">
 <a class="anchor" href="#onclicklistener-and-onkeylistener-in-android" aria-hidden="true"><span class="octicon octicon-link"></span></a>OnClickListener and OnKeyListener in Android</h2>
 
 <p>안드로이드에서 고차함수, 람다함수를 제일 자주 보게되는 데는 클릭리스너라 생각됨</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">calculateButton</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="nc">View</span><span class="p">.</span><span class="nc">OnClickListener</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre><span class="n">calculateButton</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="nc">View</span><span class="p">.</span><span class="nc">OnClickListener</span> <span class="p">{</span>
             <span class="k">override</span> <span class="k">fun</span> <span class="nf">onClick</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="nc">View</span><span class="p">?)</span> <span class="p">{</span>
                     <span class="nf">handleClick</span><span class="p">()</span>
             <span class="p">}</span>
@@ -244,7 +279,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <span class="c1">// 생략 가능한 매개변수는 _로 표현 가능</span>
 <span class="n">costOfServiceEditText</span><span class="p">.</span><span class="nf">setOnKeyListener</span> <span class="p">{</span> <span class="n">view</span><span class="p">,</span> <span class="n">keyCode</span><span class="p">,</span> <span class="n">_</span> <span class="p">-&gt;</span> <span class="nf">handleKeyEvent</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">keyCode</span><span class="p">)</span> <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="reference">
 <a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h1>
@@ -272,11 +308,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/display-a-list-of-images-using-cards/" data-toggle="tooltip" data-placement="top" title="Display a list of images using cards">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/display-a-list-of-images-using-cards/" data-toggle="tooltip" data-placement="top" title="Display a list of images using cards">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/fragments-and-the-navigation-component/" data-toggle="tooltip" data-placement="top" title="Fragments and the Navigation Component">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/fragments-and-the-navigation-component/" data-toggle="tooltip" data-placement="top" title="Fragments and the Navigation Component">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

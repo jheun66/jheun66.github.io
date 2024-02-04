@@ -192,28 +192,58 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>프로젝트 레벨의 <code class="language-plaintext highlighter-rouge">build.gradle</code>에서는</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allprojects{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre>allprojects{
     repositories{
         google()
         jcenter()
     }
 }
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>앱 레벨 <code class="language-plaintext highlighter-rouge">build.gradle</code>에서는</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Retrofit</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// Retrofit</span>
 <span class="n">implementation</span> <span class="s">"com.squareup.retrofit2:retrofit:2.9.0"</span>
 <span class="c1">// Retrofit with Moshi Converter</span>
 <span class="n">implementation</span> <span class="s">"com.squareup.retrofit2:converter-scalars:2.9.0"</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>을 추가해주고 Sync Now.</p>
 
 <h2 id="add-support-for-java-8-language-features">
 <a class="anchor" href="#add-support-for-java-8-language-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add support for Java 8 language features</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">android</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td>
+<td class="rouge-code"><pre><span class="nf">android</span> <span class="p">{</span>
     <span class="o">..</span><span class="p">.</span>
 
     <span class="nf">compileOptions</span> <span class="p">{</span>
@@ -225,7 +255,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="n">jvmTarget</span> <span class="p">=</span> <span class="err">'</span><span class="mf">1.8</span><span class="err">'</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>많은 외부 라이브러리들이 Java 8을 사용하므로 추가가 필요함.</p>
 
@@ -234,11 +265,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>Retrofit은 웹 서비스로 받은 내용을 기반으로 앱의 네트위트 API를 만들어줌. 웹서버를 통해 데이터를 받아오고 별도의 분리된 Converter 라이브러리를 통해 데이터를 String과 같은 객체 형태로 변환해서 반환함. XML과 JSON과 같은 유명한 데이터 형태를 지원함.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kd">val</span> <span class="py">retrofit</span> <span class="p">=</span> <span class="nc">Retrofit</span><span class="p">.</span><span class="nc">Builder</span><span class="p">()</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="kd">val</span> <span class="py">retrofit</span> <span class="p">=</span> <span class="nc">Retrofit</span><span class="p">.</span><span class="nc">Builder</span><span class="p">()</span>
     <span class="p">.</span><span class="nf">addConverterFactory</span><span class="p">(</span><span class="nc">ScalarsConverterFactory</span><span class="p">.</span><span class="nf">create</span><span class="p">())</span>
     <span class="p">.</span><span class="nf">baseUrl</span><span class="p">(</span><span class="nc">BASE_URL</span><span class="p">)</span>
     <span class="p">.</span><span class="nf">build</span><span class="p">()</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Retrofit 객체 선언.</p>
 
@@ -247,11 +285,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>object 키워드 선언은 싱글턴 객체를 선언하기 위해 사용됨. Object 선언의 초기화는 thread-safe하고 처음 접근할 때 수행됨.  <a href="https://kotlinlang.org/docs/object-declarations.html">object 표현식과 선언</a> 참고하기.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">object</span> <span class="nc">MarsApi</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">object</span> <span class="nc">MarsApi</span> <span class="p">{</span>
     <span class="kd">val</span> <span class="py">retrofitService</span> <span class="p">:</span> <span class="nc">MarsApiService</span> <span class="k">by</span> <span class="nf">lazy</span> <span class="p">{</span> 
        <span class="n">retrofit</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="nc">MarsApiService</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)</span> <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>by lazy를 통해 객체 생성을 미룬 것을 확인 할 수 있음.</p>
 
@@ -260,19 +305,35 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><a href="https://developer.android.com/topic/libraries/architecture/coroutines#viewmodelscope">ViewModelScope</a>는 앱에서 각각의 ViewModel을 위해 정의된 코루틴 스코프. 이 스코프에 있는 Coroutine은 ViewModel이 지워지면 자동으로 취소됨.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">MarsApiService</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">interface</span> <span class="nc">MarsApiService</span> <span class="p">{</span>
     <span class="nd">@GET</span><span class="p">(</span><span class="s">"photos"</span><span class="p">)</span>
     <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">getPhotos</span><span class="p">()</span> <span class="p">:</span> <span class="nc">String</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">fun</span> <span class="nf">getMarsPhotos</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="k">fun</span> <span class="nf">getMarsPhotos</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">viewModelScope</span><span class="p">.</span><span class="nf">launch</span> <span class="p">{</span>
         <span class="kd">val</span> <span class="py">listResult</span> <span class="p">=</span> <span class="nc">MarsApi</span><span class="p">.</span><span class="n">retrofitService</span><span class="p">.</span><span class="nf">getPhotos</span><span class="p">()</span>
         <span class="n">_status</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">listResult</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>getPhotos()는 코루틴 내에서 동작하는 함수이므로 <code class="language-plaintext highlighter-rouge">suspend</code> 키워드를 붙여줌.</p>
 
@@ -286,8 +347,12 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>인터넷 사용 permission은 다음과 같이 선언하여 얻을 수 있음</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span> <span class="nt">/&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="exception-handling">
 <a class="anchor" href="#exception-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exception Handling</h2>
@@ -313,17 +378,29 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h2 id="add-moshi-library-dependencies">
 <a class="anchor" href="#add-moshi-library-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Moshi library dependencies</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Moshi</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// Moshi</span>
 <span class="n">implementation</span> <span class="err">'</span><span class="n">com</span><span class="p">.</span><span class="n">squareup</span><span class="p">.</span><span class="n">moshi</span><span class="p">:</span><span class="n">moshi-kotlin</span><span class="p">:</span><span class="mf">1.9.3</span><span class="err">'</span>
 <span class="c1">// Retrofit with Moshi Converter</span>
 <span class="n">implementation</span> <span class="err">'</span><span class="n">com</span><span class="p">.</span><span class="n">squareup</span><span class="p">.</span><span class="n">retrofit2</span><span class="p">:</span><span class="n">converter-moshi</span><span class="p">:</span><span class="mf">2.9.0</span><span class="err">'</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>추가하기</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Retrofit</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// Retrofit</span>
 <span class="n">implementation</span> <span class="s">"com.squareup.retrofit2:retrofit:2.9.0"</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>converter-moshi 내부에 포함되어 있으므로 제거</p>
 
@@ -332,24 +409,52 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>Moshi를 통해 JSON 응답 형태를 코틀린 객체로 만들기 위한 클래스 추가</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">data class</span> <span class="nc">MarsPhoto</span><span class="p">(</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">data class</span> <span class="nc">MarsPhoto</span><span class="p">(</span>
     <span class="kd">val</span> <span class="py">id</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="kd">val</span> <span class="py">img_src</span><span class="p">:</span> <span class="nc">String</span>
 <span class="p">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>data 키워드를 사용하여 클래스를 만들고 JSON 응답에 있는 이름으로 프로퍼티를 선언해줌</p>
 
 <h3 id="json-annotation">@Json Annotation</h3>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">data class</span> <span class="nc">MarsPhoto</span> <span class="p">(</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">data class</span> <span class="nc">MarsPhoto</span> <span class="p">(</span>
     <span class="kd">val</span> <span class="py">id</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span>
     <span class="nd">@Json</span><span class="p">(</span><span class="n">name</span> <span class="p">=</span> <span class="s">"img_src"</span><span class="p">)</span> <span class="kd">val</span> <span class="py">imgSrcUrl</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">""</span>
 <span class="p">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>img_src는 코틀린 프로퍼티에 사용하는 코딩스타일이 아니므로 Json annotation을 사용하여 낙타표기법으로 바꿔줌.</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="n">valmoshi</span><span class="p">=</span> <span class="nc">Moshi</span><span class="p">.</span><span class="nc">Builder</span><span class="p">()</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="n">valmoshi</span><span class="p">=</span> <span class="nc">Moshi</span><span class="p">.</span><span class="nc">Builder</span><span class="p">()</span>
     <span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">KotlinJsonAdapterFactory</span><span class="p">())</span>
     <span class="p">.</span><span class="nf">build</span><span class="p">()</span>
 
@@ -362,7 +467,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="nd">@GET</span><span class="p">(</span><span class="s">"photos"</span><span class="p">)</span>
     <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">getPhotos</span><span class="p">():</span> <span class="nc">List</span><span class="p">&lt;</span><span class="nc">MarsPhoto</span><span class="p">&gt;</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>MoshiConverter를 통해 JSON이 코틀린 객체로 변환되는 것을 확인할 수 있음.</p>
 
@@ -429,11 +535,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/introduction-to-coroutines/" data-toggle="tooltip" data-placement="top" title="Introduction to coroutines">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/introduction-to-coroutines/" data-toggle="tooltip" data-placement="top" title="Introduction to coroutines">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/load-and-display-images-from-the-internet/" data-toggle="tooltip" data-placement="top" title="Load and display images from the Internet">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/load-and-display-images-from-the-internet/" data-toggle="tooltip" data-placement="top" title="Load and display images from the Internet">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

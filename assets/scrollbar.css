@@ -1,0 +1,16 @@
+
+/* 
+  참고 : https://inpa.tistory.com/entry/CSS-%F0%9F%8C%9F-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%B0%94Scrollbar-%EA%BE%B8%EB%AF%B8%EA%B8%B0-%EC%86%8D%EC%84%B1-%EC%B4%9D%EC%A0%95%EB%A6%AC#webkit_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%8A%A4%ED%81%AC%EB%A1%A4%EB%B0%94_%EC%86%8D%EC%84%B1 
+*/
+
+html {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
+  
+html::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* 코드 블럭 스크롤바 세팅은 highlight.css에 */

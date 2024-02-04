@@ -198,9 +198,14 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>build.gradle에 <code class="language-plaintext highlighter-rouge">dependencies</code> 추가</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ViewModel</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// ViewModel</span>
 <span class="n">implementation</span> <span class="err">'</span><span class="n">androidx</span><span class="p">.</span><span class="n">lifecycle</span><span class="p">:</span><span class="n">lifecycle-viewmodel-ktx</span><span class="p">:</span><span class="mf">2.3.1</span><span class="err">'</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>최신 버전으로 맞춰주기</p>
 
@@ -209,16 +214,25 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h2 id="fragment에-viewmodel-추가">
 <a class="anchor" href="#fragment%EC%97%90-viewmodel-%EC%B6%94%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fragment에 ViewModel 추가</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kd">val</span> <span class="py">viewModel</span><span class="p">:</span> <span class="nc">GameViewModel</span> <span class="k">by</span> <span class="nf">viewModels</span><span class="p">()</span>
-</code></pre></div></div>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="k">private</span> <span class="kd">val</span> <span class="py">viewModel</span><span class="p">:</span> <span class="nc">GameViewModel</span> <span class="k">by</span> <span class="nf">viewModels</span><span class="p">()</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>초기화 할때 <code class="language-plaintext highlighter-rouge">by viewModels()</code>을 사용하여 초기화를 하는데 이는 코틀린의 프로퍼티 대리자라는 기능</p>
 
 <h3 id="kotlin-property-delegate">Kotlin property delegate</h3>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Syntax for property delegation</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// Syntax for property delegation</span>
 <span class="kd">var</span> <span class="p">&lt;</span><span class="err">property-name</span><span class="p">&gt;</span> <span class="err">:</span> <span class="p">&lt;</span><span class="err">property-type</span><span class="p">&gt;</span> <span class="py">by</span> <span class="p">&lt;</span><span class="n">delegate-class</span><span class="p">&gt;()</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>코틀린에서 <code class="language-plaintext highlighter-rouge">var</code> 프로퍼티는 기본적으로 getter와 setter 함수가 자동으로 생성되고 값을 할당하거나 값을 읽을 때 자동으로 호출</p>
 
@@ -278,7 +292,20 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><a href="https://material.io/components/dialogs/android#using-dialogs">마테리얼다이럴로그</a>를 사용하면 깔끔하고 쉽게 적용가능</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">MaterialAlertDialogBuilder</span><span class="p">(</span><span class="nf">requireContext</span><span class="p">())</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre><span class="nc">MaterialAlertDialogBuilder</span><span class="p">(</span><span class="nf">requireContext</span><span class="p">())</span>
             <span class="p">.</span><span class="nf">setTitle</span><span class="p">(</span><span class="nf">getString</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">congratulations</span><span class="p">))</span>
             <span class="p">.</span><span class="nf">setMessage</span><span class="p">(</span><span class="nf">getString</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">you_scored</span><span class="p">,</span> <span class="n">viewModel</span><span class="p">.</span><span class="n">score</span><span class="p">))</span>
             <span class="p">.</span><span class="nf">setCancelable</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
@@ -289,7 +316,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
                 <span class="nf">restartGame</span><span class="p">()</span>
             <span class="p">}</span>
             <span class="p">.</span><span class="nf">show</span><span class="p">()</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="learn-more">
 <a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Learn more</strong>
@@ -332,11 +360,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/fragments-and-the-navigation-component/" data-toggle="tooltip" data-placement="top" title="Fragments and the Navigation Component">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/fragments-and-the-navigation-component/" data-toggle="tooltip" data-placement="top" title="Fragments and the Navigation Component">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/use-livedata-with-viewmodel/" data-toggle="tooltip" data-placement="top" title="Use LiveData with ViewModel">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/use-livedata-with-viewmodel/" data-toggle="tooltip" data-placement="top" title="Use LiveData with ViewModel">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

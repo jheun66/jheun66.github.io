@@ -133,7 +133,25 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 </ol><h1 id="rougify-help-style">
 <a class="anchor" href="#rougify-help-style" aria-hidden="true"><span class="octicon octicon-link"></span></a>rougify help style</h1>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rougify <span class="nb">help </span>style
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre>% rougify <span class="nb">help </span>style
 usage: rougify style <span class="o">[</span>&lt;theme-name&gt;] <span class="o">[</span>&lt;options&gt;]
 
 Print CSS styles <span class="k">for </span>the given theme.  Extra options are
@@ -149,30 +167,47 @@ options:
 
 available themes:
   base16, base16.dark, base16.light, base16.monokai, base16.monokai.dark, base16.monokai.light, base16.solarized, base16.solarized.dark, base16.solarized.light, bw, colorful, github, gruvbox, gruvbox.dark, gruvbox.light, igorpro, magritte, molokai, monokai, monokai.sublime, pastie, thankful_eyes, tulip
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="원하는-테마-적용">
 <a class="anchor" href="#%EC%9B%90%ED%95%98%EB%8A%94-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>원하는 테마 적용</strong>
 </h1>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rougify style &lt;themes&gt; <span class="o">&gt;</span> ~/&lt;블로그&gt;/assets/highlight.css
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>% rougify style &lt;themes&gt; <span class="o">&gt;</span> ~/&lt;블로그&gt;/assets/highlight.css
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="headhtml에-추가">
 <a class="anchor" href="#headhtml%EC%97%90-%EC%B6%94%EA%B0%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>head.html에 추가</h1>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/highlight.css"</span><span class="nt">&gt;</span>
-</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/highlight.css"</span><span class="nt">&gt;</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="_configyml-수정">
 <a class="anchor" href="#_configyml-%EC%88%98%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>_config.yml 수정</h1>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>markdown:  kramdown
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre>markdown:  kramdown
 kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
   css_class: highlight
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 
       <hr>
@@ -193,11 +228,11 @@ kramdown:
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/blog/install-jekyll/" data-toggle="tooltip" data-placement="top" title="Jekyll 설치 및 테스트">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/blog/install-jekyll/" data-toggle="tooltip" data-placement="top" title="Jekyll 설치 및 테스트">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/blog/add-search-function-to-my-blog/" data-toggle="tooltip" data-placement="top" title="검색 기능 추가(Add search function to my blog)">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/blog/add-search-function-to-my-blog/" data-toggle="tooltip" data-placement="top" title="검색 기능 추가(Add search function to my blog)">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

@@ -131,59 +131,99 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <h3 id="이전에-설치한-루비-버전-삭제">이전에 설치한 루비 버전 삭제</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew uninstall ruby
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>brew uninstall ruby
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h3 id="rbenv-설치">rbenv 설치</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>rbenv ruby-build
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>brew <span class="nb">install </span>rbenv ruby-build
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h3 id="bash_profile-수정">bash_profile 수정</h3>
 
 <p><code class="language-plaintext highlighter-rouge">~/.bash_profile</code>에 <code class="language-plaintext highlighter-rouge">eval "$(rbenv init -)"</code> 추가한 후</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bash_profile
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nb">source</span> ~/.bash_profile
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h3 id="루비-버전-설치">루비 버전 설치</h3>
 
 <p>설치할 수 있는 루비 버전 확인 후</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nb">install</span> <span class="nt">-l</span>
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>rbenv <span class="nb">install</span> <span class="nt">-l</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>설치할 수 있는 버전 설치</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nb">install </span>3.0.1
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>rbenv <span class="nb">install </span>3.0.1
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h3 id="버전-적용">버전 적용</h3>
 
 <p>설치 되어있는 버전 확인</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv versions
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>rbenv versions
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>글로벌 버전 세팅</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv global 3.0.1
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>rbenv global 3.0.1
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>로컬 버전 세팅</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nb">local </span>3.0.1
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>rbenv <span class="nb">local </span>3.0.1
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>적용된 버전 확인</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv version
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>rbenv version
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>적용된 루비 버전 확인</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>ruby <span class="nt">-v</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="reference">
 <a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
@@ -212,7 +252,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
       
       
-      <a class="btn btn-primary float-right" href="/posts/blog/install-jekyll/" data-toggle="tooltip" data-placement="top" title="Jekyll 설치 및 테스트">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/blog/install-jekyll/" data-toggle="tooltip" data-placement="top" title="Jekyll 설치 및 테스트">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

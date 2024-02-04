@@ -134,7 +134,19 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <h2 id="action_send">
 <a class="anchor" href="#action_send" aria-hidden="true"><span class="octicon octicon-link"></span></a>ACTION_SEND</h2>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sendEmailwithSend</span><span class="o">()</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sendEmailwithSend</span><span class="o">()</span> <span class="o">{</span>
     <span class="nc">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_SEND</span><span class="o">);</span>
     <span class="n">intent</span><span class="o">.</span><span class="na">setType</span><span class="o">(</span><span class="s">"plain/text"</span><span class="o">);</span>
     <span class="n">intent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">EXTRA_EMAIL</span><span class="o">,</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[]</span> <span class="o">{</span> <span class="s">"jheun5@naver.com"</span> <span class="o">,</span> <span class="s">"someone.example.com"</span><span class="o">});</span>
@@ -144,7 +156,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>EXTRA를 통해 내요을 추가할 수 있습니다. EXTRA_CC, EXTRA_BCC 도 물론 추가할 수 있습니다.
 EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
 좀더 자세한 사용법은 참고의 개발자 문서를 확인하면 되겠습니다.</p>
@@ -155,7 +168,25 @@ EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
 
 <h2 id="action_sendto">
 <a class="anchor" href="#action_sendto" aria-hidden="true"><span class="octicon octicon-link"></span></a>ACTION_SENDTO</h2>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sendEmailwithSendTo</span><span class="o">()</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sendEmailwithSendTo</span><span class="o">()</span> <span class="o">{</span>
     <span class="nc">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_SENDTO</span><span class="o">);</span>
     <span class="nc">String</span> <span class="n">emailTitle</span> <span class="o">=</span> <span class="s">"이메일 테스트 제목"</span><span class="o">;</span>
     <span class="nc">String</span> <span class="n">emailContent</span> <span class="o">=</span> <span class="s">"이메일 테스트 내용1:\n이메일 테스트 내용2:"</span><span class="o">;</span>
@@ -171,7 +202,8 @@ EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
         <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>ACTION_SENDTO의 경우에는 DATA URI만 받습니다. 이때 mailto Scheme을 사용하여 내용을 채워서 보낼 수 있습니다.
 그래서 이 인텐트는 EXTRA_STREAM을 받지 못합니다. 
 <a href="https://css-tricks.com/snippets/html/mailto-links/">mailto 관련</a></p>
@@ -182,7 +214,29 @@ EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
 
 <h2 id="좀-더-좋은-방법">
 <a class="anchor" href="#%EC%A2%80-%EB%8D%94-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>좀 더 좋은 방법</h2>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sendEmail</span><span class="o">()</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">private</span> <span class="kt">void</span> <span class="nf">sendEmail</span><span class="o">()</span> <span class="o">{</span>
     <span class="nc">Intent</span> <span class="n">emailSelectorIntent</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Intent</span><span class="o">(</span><span class="nc">Intent</span><span class="o">.</span><span class="na">ACTION_SENDTO</span><span class="o">);</span>
     <span class="n">emailSelectorIntent</span><span class="o">.</span><span class="na">setData</span><span class="o">(</span><span class="nc">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"mailto:"</span><span class="o">));</span>
 
@@ -202,7 +256,8 @@ EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
     <span class="k">if</span><span class="o">(</span> <span class="n">intent</span><span class="o">.</span><span class="na">resolveActivity</span><span class="o">(</span><span class="n">getPackageManager</span><span class="o">())</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">)</span>
         <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>따라서 첨부 파일을 포함할 수 있게하고 이메일 앱만 실행시키고 싶을 때는 다음과 같이 셀렉터는 ACTION_SENDTO를 사용하고 ACTION_SEND로 보내면 됩니다.</p>
 
@@ -234,11 +289,11 @@ EXTRA_STREAM을 사용할 때는 타입을 <em>/</em> 로 합니다.
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/android/resolveActivity-vs-queryIntentActivities/" data-toggle="tooltip" data-placement="top" title="resolveActivity VS queryIntentActivities">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/android/resolveActivity-vs-queryIntentActivities/" data-toggle="tooltip" data-placement="top" title="resolveActivity VS queryIntentActivities">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/android/buttons/" data-toggle="tooltip" data-placement="top" title="Buttons(+background issue) And Gestures">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/android/buttons/" data-toggle="tooltip" data-placement="top" title="Buttons(+background issue) And Gestures">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

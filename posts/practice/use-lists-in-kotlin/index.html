@@ -163,14 +163,29 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h2 id="생성">
 <a class="anchor" href="#%EC%83%9D%EC%84%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>생성</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 타입 생략 가능</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// 타입 생략 가능</span>
 <span class="kd">val</span> <span class="py">numbers</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="접근">
 <a class="anchor" href="#%EC%A0%91%EA%B7%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>접근</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 배열처럼 접근</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// 배열처럼 접근</span>
 <span class="nf">println</span><span class="p">(</span><span class="s">"Second element: ${numbers[1]}"</span><span class="p">)</span>
 
 <span class="c1">// 메소드로 접근</span>
@@ -178,7 +193,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <span class="c1">// 포함여부 확인 가능</span>
 <span class="nf">println</span><span class="p">(</span><span class="s">"Contains 4? ${numbers.contains(4)}"</span><span class="p">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="introduction-to-mutable-lists">
 <a class="anchor" href="#introduction-to-mutable-lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Mutable Lists</h1>
@@ -189,26 +205,53 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>생성</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// mutableListOf에 Type을 지정하거나</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// mutableListOf에 Type을 지정하거나</span>
 <span class="kd">val</span> <span class="py">entrees</span> <span class="p">=</span> <span class="n">mutableListOf</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;()</span>
 
 <span class="c1">// Data Type을 지정</span>
 <span class="kd">val</span> <span class="py">entrees</span><span class="p">:</span> <span class="nc">MutableList</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nf">mutableListOf</span><span class="p">()</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>추가</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// add</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// add</span>
 <span class="n">entrees</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="s">"noodles"</span><span class="p">)</span>
 
 <span class="c1">// addAll</span>
 <span class="kd">val</span> <span class="py">moreItems</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="s">"ravioli"</span><span class="p">,</span> <span class="s">"lasagna"</span><span class="p">,</span> <span class="s">"fettuccine"</span><span class="p">)</span>
 <span class="n">entrees</span><span class="p">.</span><span class="nf">addAll</span><span class="p">(</span><span class="n">moreItems</span><span class="p">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>제거</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// remove, 없으면 false 리턴, 있으면 제거하고 true 리턴</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// remove, 없으면 false 리턴, 있으면 제거하고 true 리턴</span>
 <span class="nf">println</span><span class="p">(</span><span class="s">"Remove item that doesn't exist: ${entrees.remove("</span><span class="n">spaghetti</span><span class="s">")}"</span><span class="p">)</span>
 
 <span class="c1">// removeAt</span>
@@ -216,7 +259,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <span class="c1">// clear</span>
 <span class="n">entrees</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="loop-through-a-list">
 <a class="anchor" href="#loop-through-a-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loop Through a List</h1>
@@ -224,7 +268,18 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h2 id="while-loops">
 <a class="anchor" href="#while-loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>while loops</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 리스트의 인덱스를 추적해야하는 경우 for문을 사용하는게 나음</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// 리스트의 인덱스를 추적해야하는 경우 for문을 사용하는게 나음</span>
 <span class="kd">val</span> <span class="py">guestsPerFamily</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="kd">var</span> <span class="py">totalGuests</span> <span class="p">=</span> <span class="mi">0</span>
 <span class="kd">var</span> <span class="py">index</span> <span class="p">=</span> <span class="mi">0</span>
@@ -233,12 +288,25 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="n">index</span><span class="p">++</span>
 <span class="p">}</span>
 <span class="nf">println</span><span class="p">(</span><span class="s">"Total Guest Count: $totalGuests"</span><span class="p">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="for-loops">
 <a class="anchor" href="#for-loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>for loops</h2>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 다양한 방식으로 for문을 사용할 수 있음 </span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+<td class="rouge-code"><pre><span class="c1">// 다양한 방식으로 for문을 사용할 수 있음 </span>
 <span class="k">for</span> <span class="p">(</span><span class="n">item</span> <span class="k">in</span> <span class="n">list</span><span class="p">)</span> <span class="nf">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="c1">// Iterate over items in a list</span>
 
 <span class="k">for</span> <span class="p">(</span><span class="n">item</span> <span class="k">in</span> <span class="sc">'b'</span><span class="o">..</span><span class="sc">'g'</span><span class="p">)</span> <span class="nf">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="c1">// Range of characters in an alphabet</span>
@@ -248,7 +316,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <span class="k">for</span> <span class="p">(</span><span class="n">item</span> <span class="k">in</span> <span class="mi">5</span> <span class="n">downTo</span> <span class="mi">1</span><span class="p">)</span> <span class="nf">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="c1">// Going backward</span>
 
 <span class="k">for</span> <span class="p">(</span><span class="n">item</span> <span class="k">in</span> <span class="mi">3</span><span class="o">..</span><span class="mi">6</span> <span class="n">step</span> <span class="mi">2</span><span class="p">)</span> <span class="nf">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="c1">// Prints: 35</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="overriding">
 <a class="anchor" href="#overriding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding</h1>
@@ -260,7 +329,33 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html">joinToString</a> 참고</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">open</span> <span class="kd">class</span> <span class="nc">Item</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="kd">val</span> <span class="py">price</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td>
+<td class="rouge-code"><pre><span class="k">open</span> <span class="kd">class</span> <span class="nc">Item</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span> <span class="kd">val</span> <span class="py">price</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span>
 
 <span class="kd">class</span> <span class="nc">Noodles</span> <span class="p">:</span> <span class="nc">Item</span><span class="p">(</span><span class="s">"Noodles"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
    <span class="k">override</span> <span class="k">fun</span> <span class="nf">toString</span><span class="p">():</span> <span class="nc">String</span> <span class="p">{</span>
@@ -284,14 +379,33 @@ for (const list of document.querySelectorAll('.mdc-list')) {
     <span class="nf">println</span><span class="p">(</span><span class="n">vegetables</span><span class="p">)</span>
     <span class="nf">println</span><span class="p">(</span><span class="n">vegetables2</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="iterators">
 <a class="anchor" href="#iterators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iterators</h2>
 
 <p><a href="https://play.kotlinlang.org/byExample/02_control_flow/02_Loops">코틀린 공식 사이트 참고</a></p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="kd">val</span> <span class="py">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span>
 
 <span class="kd">class</span> <span class="nc">Zoo</span><span class="p">(</span><span class="kd">val</span> <span class="py">animals</span><span class="p">:</span> <span class="nc">List</span><span class="p">&lt;</span><span class="nc">Animal</span><span class="p">&gt;)</span> <span class="p">{</span>
     <span class="c1">// 반환 타입과 연산자 오버로딩</span>
@@ -307,7 +421,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="nf">println</span><span class="p">(</span><span class="s">"Watch out, it's a ${animal.name}"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="builder-pattern">
 <a class="anchor" href="#builder-pattern" aria-hidden="true"><span class="octicon octicon-link"></span></a>Builder Pattern</h1>
@@ -316,7 +431,73 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p><em>4, 5</em>번 주문과 다른 주문을 비교해보면 더욱 간결함을 알 수 있음</p>
 
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Order</span><span class="p">(</span><span class="kd">val</span> <span class="py">orderNumber</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Order</span><span class="p">(</span><span class="kd">val</span> <span class="py">orderNumber</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">private</span> <span class="kd">val</span> <span class="py">itemList</span> <span class="p">=</span> <span class="n">mutableListOf</span><span class="p">&lt;</span><span class="nc">Item</span><span class="p">&gt;()</span>
 
     <span class="k">fun</span> <span class="nf">addItem</span><span class="p">(</span><span class="n">newItem</span><span class="p">:</span> <span class="nc">Item</span><span class="p">):</span> <span class="nc">Order</span> <span class="p">{</span>
@@ -380,7 +561,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
         <span class="nf">println</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 
       <hr>
@@ -401,11 +583,11 @@ for (const list of document.querySelectorAll('.mdc-list')) {
       
 
       
-      <a class="btn btn-primary float-left" href="/posts/practice/create-a-more-polished-user-experience/" data-toggle="tooltip" data-placement="top" title="Create a more polished user experience">&larr; Previous<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-left" href="/posts/practice/create-a-more-polished-user-experience/" data-toggle="tooltip" data-placement="top" title="Create a more polished user experience">&larr; Previous<span class="d-none d-md-inline">
           Post</span></a>
       
       
-      <a class="btn btn-primary float-right" href="/posts/practice/use-recyclerview-to-display-a-scrollable-list/" data-toggle="tooltip" data-placement="top" title="Use RecyclerView to display a scrollable list">Next<span class="d-none d-md-inline">
+      <a class="btn btn-gray float-right" href="/posts/practice/use-recyclerview-to-display-a-scrollable-list/" data-toggle="tooltip" data-placement="top" title="Use RecyclerView to display a scrollable list">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 

@@ -1,0 +1,95 @@
+/* 
+  참고 : https://inpa.tistory.com/entry/CSS-%F0%9F%92%8D-%ED%85%8C%EC%9D%B4%EB%B8%94table-%EB%94%94%EC%9E%90%EC%9D%B8-%F0%9F%96%8C%EF%B8%8F-%EB%AA%A8%EC%9D%8C
+*/
+
+table {
+  border: 1px #a39485 solid;
+  font-size: .9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th {
+  text-align: left;
+  white-space: nowrap;
+}
+    
+thead {
+  font-weight: bold;
+  color: #fff;
+  background: #73685d;
+}
+    
+td, th {
+  padding: 1em .5em;
+  vertical-align: middle;
+}
+    
+td {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  background: #fff;
+}
+
+@media all and (max-width: 768px) {
+    
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    text-align: right;
+  }
+  
+  table {
+    position: relative; 
+    padding-bottom: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+  
+  thead {
+    float: left;
+    white-space: nowrap;
+  }
+  
+  tbody {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  /* 스크롤바 설정*/
+  tbody::-webkit-scrollbar{
+    height: 7px;
+  }
+
+  /* 스크롤바 막대 설정*/
+  tbody::-webkit-scrollbar-thumb{
+    background-color: #73685d;
+    /* 스크롤바 둥글게 설정    */
+    border-radius: 10px;
+  }
+
+  /* 스크롤바 뒷 배경 설정*/
+  tbody::-webkit-scrollbar-track{
+    background-color: #a39485;
+  }
+  
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  th {
+    border-bottom: 1px solid #a39485;
+  }
+  
+  td {
+    border-bottom: 1px solid #e5e5e5;
+  }
+    
+}
