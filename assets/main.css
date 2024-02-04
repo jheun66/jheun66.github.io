@@ -2596,6 +2596,8 @@ blockquote a:hover { color: #666; }
 
 blockquote em { font-style: italic; }
 
+code.highlighter-rouge { border: 1px solid #f6ba59; background-color: #ffcd69; border-radius: 3px; color: black; font-size: 0.9rem; margin: 0 5px; padding: 0.25rem; }
+
 .sticky { position: sticky; top: 0; }
 
 .category-title { color: black; }

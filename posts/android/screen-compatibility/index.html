@@ -173,9 +173,7 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 <h3 id="dp-계산법">dp 계산법</h3>
 <p>1dp는 160dpi라는 기준 밀도에서 1픽셀과 동일한 가상의 픽셀 단위입니다.</p>
 
-<blockquote>
-  <p>px = dp * (dpi / 160)</p>
-</blockquote>
+<p><code class="language-plaintext highlighter-rouge">px = dp * (dpi / 160)</code></p>
 
 <p>다른 dpi에서의 계산은 다음과 같이 할 수 있습니다.</p>
 
@@ -183,10 +181,8 @@ for (const list of document.querySelectorAll('.mdc-list')) {
 
 <p>역으로 Pixel2라는 기기에서 가로 dp를 계산은 다음과 같이 작성할 수 있습니다.</p>
 
-<blockquote>
-  <p>dp = px * (160 / dpi)
-411.428… = 1080 * (160 / 420)</p>
-</blockquote>
+<p><code class="language-plaintext highlighter-rouge">dp = px * (160 / dpi)</code><br>
+<code class="language-plaintext highlighter-rouge">411.428... = 1080 * (160 / 420)</code></p>
 
 <p>밀도한정자를 통해서 밀도가 다른 레이아웃에 다른 dp 값을 적용시킬 수 있습니다.</p>
 

@@ -5,8 +5,8 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 04 Feb 2024 14:52:00 +0000</pubDate>
-    <lastBuildDate>Sun, 04 Feb 2024 14:52:00 +0000</lastBuildDate>
+    <pubDate>Sun, 04 Feb 2024 15:33:09 +0000</pubDate>
+    <lastBuildDate>Sun, 04 Feb 2024 15:33:09 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -1297,7 +1297,7 @@ virtual table에 대해서는 해당 블로그가 그림으로 표현을 잘되�
         <description>&lt;p&gt;블로그 꾸미다 검색기능이 있으면 좋을꺼 같다 생각했는데 &lt;a href=&quot;https://github.com/christian-fei/Simple-Jekyll-Search&quot;&gt;오픈소스 라이브러리&lt;/a&gt;가 있어 사용하기로 했습니다.&lt;br /&gt;
 일단 깃헙에서 설명문을 보며 필요한 부분만 찾아보도록 합시다.&lt;/p&gt;
 
-&lt;h1 id=&quot;create-searchjson&quot;&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;search.json&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&quot;create-searchjson&quot;&gt;Create search.json&lt;/h1&gt;
 &lt;p&gt;search.json 파일을 만들어 블로그의 루트파일에 넣어주어야 합니다.&lt;br /&gt;
 이 파일을 통해 정렬에 사용할 객체를 생성해줍니다.&lt;/p&gt;
 
