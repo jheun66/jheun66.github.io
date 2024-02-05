@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    OAuth 2.0 - In progress
+    
+  </title>
+
+  <meta name="description" content="생활 코딩의 OAuth 영상과 관련 자료를 찾아보고 정리하는 글입니다. 간단하게 알고 싶으면 영상을 보고 좀 더 자세하게 알고 싶으면 rfc 문서를 읽어보면 좋을 것 같습니다.">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/assets/highlight.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://jheun66.github.io/posts/unclassified/ouath/">
+  <link rel="alternate" type="application/rss+xml" title="In progress" href="/feed.xml">
+
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style type="text/css">
+    a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:hover {text-decoration: underline;}
+  </style>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>OAuth 2.0 | In progress</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="OAuth 2.0" />
+<meta name="author" content="Eun JongHyeok" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="생활 코딩의 OAuth 영상과 관련 자료를 찾아보고 정리하는 글입니다. 간단하게 알고 싶으면 영상을 보고 좀 더 자세하게 알고 싶으면 rfc 문서를 읽어보면 좋을 것 같습니다." />
+<meta property="og:description" content="생활 코딩의 OAuth 영상과 관련 자료를 찾아보고 정리하는 글입니다. 간단하게 알고 싶으면 영상을 보고 좀 더 자세하게 알고 싶으면 rfc 문서를 읽어보면 좋을 것 같습니다." />
+<link rel="canonical" href="https://jheun66.github.io/posts/unclassified/ouath/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/unclassified/ouath/" />
+<meta property="og:site_name" content="In progress" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-13T20:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="OAuth 2.0" />
+<meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2020-12-13T20:00:00+00:00","datePublished":"2020-12-13T20:00:00+00:00","description":"생활 코딩의 OAuth 영상과 관련 자료를 찾아보고 정리하는 글입니다. 간단하게 알고 싶으면 영상을 보고 좀 더 자세하게 알고 싶으면 rfc 문서를 읽어보면 좋을 것 같습니다.","headline":"OAuth 2.0","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/unclassified/ouath/"},"url":"https://jheun66.github.io/posts/unclassified/ouath/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8954355499146518"
+     crossorigin="anonymous"></script>
+  <script async src="https://fundingchoicesmessages.google.com/i/pub-8954355499146518?ers=1" nonce="vIYNAgythFLTbocmvIWE6A"></script><script nonce="vIYNAgythFLTbocmvIWE6A">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">In progress</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/category">Category</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+
+
+<header class="masthead" style="background-color: #3A0CA3;">
+
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>OAuth 2.0</h1>
+          
+          <span class="meta">Posted by Eun JongHyeok on December 13, 2020
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row min-vh-100 flex-column flex-lg-row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h2"><a href="#oauth">OAuth</a></li>
+<li class="toc-entry toc-h2"><a href="#용어">용어</a></li>
+<li class="toc-entry toc-h2"><a href="#클라이언트-등록">클라이언트 등록</a></li>
+<li class="toc-entry toc-h2"><a href="#authorization-획득">Authorization 획득</a></li>
+<li class="toc-entry toc-h2"><a href="#추가사항">추가사항</a></li>
+<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
+</ol><p>생활 코딩의 OAuth 영상과 관련 자료를 찾아보고 정리하는 글입니다. 간단하게 알고 싶으면 영상을 보고 좀 더 자세하게 알고 싶으면 rfc 문서를 읽어보면 좋을 것 같습니다.</p>
+
+<h2 id="oauth">
+<a class="anchor" href="#oauth" aria-hidden="true"><span class="octicon octicon-link"></span></a>OAuth</h2>
+<p>예를 들어, 당신이 달력 앱을 만들고 있습니다. 당신의 앱은 구글 로그인을 지원하고 사용자의 생일을 달력에 표시하고자 합니다.<br>
+사용자의 생일을 집적 입력시킬 수 있지만 구글에 사용자의 정보를 요청해서 받아 오고 싶습니다. 만일 당신이 사용자의 아이디와 비밀번호를 받아와 사용한다면 이는 보안상 취약할 것입니다.<br>
+이러한 상황에서 제 3자 어플리케이션에게 특정인에게 한정된 리스소에 접근할 권한을 부여하기 위해 고안된 <code class="language-plaintext highlighter-rouge">Open Standard</code>가 OAuth입니다.</p>
+
+<h2 id="용어">
+<a class="anchor" href="#%EC%9A%A9%EC%96%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>용어</h2>
+<p>용어가 좀 많습니다. 먼저 가볍게 알아두어야 과정을 이해하기 편합니다.</p>
+
+<h3 id="역활">역활</h3>
+<blockquote>
+  <p>Resource Owner</p>
+</blockquote>
+
+<p>리소스에 접근할 권한을 가진 개체를 말합니다. 앱을 이용하는 사용자라 생각합시다.</p>
+
+<blockquote>
+  <p>Resource Server</p>
+</blockquote>
+
+<p>보호된 리스소를 호스팅하고 있는 서버를 말합니다. <strong>Access Token</strong>을 사용하여 요청하면 응답을 해줍니다. 사용자의 정보를 가지고 있는 서버라 생각합시다.</p>
+
+<blockquote>
+  <p>Client</p>
+</blockquote>
+
+<p>Resource Owner를 대신하여 접근 권한을 위임 받을 어플리케이션을 말합니다.</p>
+
+<blockquote>
+  <p>Authorization server</p>
+</blockquote>
+
+<p>인증(Authenication)이 되었고 접근 권한(Authorization)을 가지고 Resource Owner에게 <strong>Access Token</strong>을 발급 해줄 서버를 말합니다.</p>
+
+<h3 id="관련-용어">관련 용어</h3>
+<blockquote>
+  <p>Client ID</p>
+</blockquote>
+
+<p>Client Identifier(클라이언트 식별자) 입니다. Authorization Server가 클라이언트 등록 과정에서 발급해 줍니다. 공개되어도 상관 없고 Authorization 과정에서 절대 혼자 사용되지 않습니다.</p>
+
+<blockquote>
+  <p>Client Secret</p>
+</blockquote>
+
+<p>Client와 Authorization Server만 알고 있어야 하는 패스워드입니다. App에서는 Client ID와 Client Secret을  App ID, App Secret이라고도 합니다.</p>
+
+<blockquote>
+  <p>Redirect URI</p>
+</blockquote>
+
+<p>Authorization과 Resource Owner와의 인증 및 권한 승인후 Client에게 Authorization Code를 전달하기 위한 Callback URL입니다.</p>
+
+<blockquote>
+  <p>Authorization Code</p>
+</blockquote>
+
+<p>Access Token을 발급 받기 위해 임시로 사용되는 키입니다.</p>
+
+<blockquote>
+  <p>Access Token</p>
+</blockquote>
+
+<p>Client가 Resource Owner를 대신하여 Resource Server에 접근할 수 있는 키입니다.</p>
+
+<blockquote>
+  <p>Refresh Token</p>
+</blockquote>
+
+<p>Access Token에는 수명이 있습니다. 일정 시간이 지난 뒤에는 재발급이 필요하며 이때 사용되는 토큰입니다.</p>
+
+<h2 id="클라이언트-등록">
+<a class="anchor" href="#%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EB%93%B1%EB%A1%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>클라이언트 등록</h2>
+<p>프로토콜을 진행하기 전에 먼저 클라이언트 등록을 해야합니다.<br>
+구글, 페이스북, 카카오와 같은 IDP에 앱을 등록합니다. 각 회사의 개발 플랫폼에 접속하여 등록 폼에 맞추어 등록해 줍시다.<br>
+만일 앱에서 카카오 로그인을 진행하고 싶다면 <a href="https://developers.kakao.com/">https://developers.kakao.com/</a> 에서 등록하면 됩니다.
+Redirect URI를 여러개 등록할 수 도 있습니다.</p>
+
+<h2 id="authorization-획득">
+<a class="anchor" href="#authorization-%ED%9A%8D%EB%93%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authorization 획득</h2>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gICAgcGFydGljaXBhbnQgQ2xpZW50XG4gICAgcGFydGljaXBhbnQgUmVzb3VyY2VPd25lclxuICAgIHBhcnRpY2lwYW50IEF1dGhvcml6YXRpb25TZXJ2ZXJcbiAgICBwYXJ0aWNpcGFudCBSZXNvdXJjZVNlcnZlclxuXG4gICAgQ2xpZW50LT4-UmVzb3VyY2VPd25lcjogUmVzb3VyY2UgT3duZXLsmYAgQXV0aG9yaXphdGlvbiBTZXJ2ZXLsmYAg7Jew6rKwXG4gICAgUmVzb3VyY2VPd25lci0-PkF1dGhvcml6YXRpb25TZXJ2ZXI6IOyduOymnSDsiJjtlolcbiAgICBBdXRob3JpemF0aW9uU2VydmVyLT4-UmVzb3VyY2VPd25lcjog7ISx6rO17IucLCDsoJHqt7wg6raM7ZWcIOyKueyduCDsmpTssq1cbiAgICBSZXNvdXJjZU93bmVyLT4-QXV0aG9yaXphdGlvblNlcnZlcjog6raM7ZWcIOyKueyduFxuICAgIEF1dGhvcml6YXRpb25TZXJ2ZXItPj5SZXNvdXJjZU93bmVyOiBBdXRob3JpemF0aW9uIENvZGXsmYAg7ZWo6ruYIOumrOuLpOydtOugieyFmCDrqoXroLlcbiAgICBSZXNvdXJjZU93bmVyLT4-Q2xpZW50OiBBdXRob3JpemF0aW9uIENvZGUg7KCE64usXG4gICAgQ2xpZW50LT4-QXV0aG9yaXphdGlvblNlcnZlcjogQ2xpZW50IElELCBDbGllbnQgU2VjcmV0LCBSZWRpcmVjdCBVUkksIEF1dGhvcml6YXRpb24gQ29kZVxuICAgIEF1dGhvcml6YXRpb25TZXJ2ZXItPj5DbGllbnQ6IOyEseqzteyLnCwgQWNjZXNzIFRva2VuIOyghOuLrFxuICAgIENsaWVudC0-PlJlc291cmNlU2VydmVyOiBBY2Nlc3MgVG9rZW7qs7wg7ZWo6ruYIOumrOyGjOyKpCDsmpTssq1cbiAgICBSZXNvdXJjZVNlcnZlci0-PkNsaWVudDog66as7IaM7IqkIOyghOuLrCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9"><img src="https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gICAgcGFydGljaXBhbnQgQ2xpZW50XG4gICAgcGFydGljaXBhbnQgUmVzb3VyY2VPd25lclxuICAgIHBhcnRpY2lwYW50IEF1dGhvcml6YXRpb25TZXJ2ZXJcbiAgICBwYXJ0aWNpcGFudCBSZXNvdXJjZVNlcnZlclxuXG4gICAgQ2xpZW50LT4-UmVzb3VyY2VPd25lcjogUmVzb3VyY2UgT3duZXLsmYAgQXV0aG9yaXphdGlvbiBTZXJ2ZXLsmYAg7Jew6rKwXG4gICAgUmVzb3VyY2VPd25lci0-PkF1dGhvcml6YXRpb25TZXJ2ZXI6IOyduOymnSDsiJjtlolcbiAgICBBdXRob3JpemF0aW9uU2VydmVyLT4-UmVzb3VyY2VPd25lcjog7ISx6rO17IucLCDsoJHqt7wg6raM7ZWcIOyKueyduCDsmpTssq1cbiAgICBSZXNvdXJjZU93bmVyLT4-QXV0aG9yaXphdGlvblNlcnZlcjog6raM7ZWcIOyKueyduFxuICAgIEF1dGhvcml6YXRpb25TZXJ2ZXItPj5SZXNvdXJjZU93bmVyOiBBdXRob3JpemF0aW9uIENvZGXsmYAg7ZWo6ruYIOumrOuLpOydtOugieyFmCDrqoXroLlcbiAgICBSZXNvdXJjZU93bmVyLT4-Q2xpZW50OiBBdXRob3JpemF0aW9uIENvZGUg7KCE64usXG4gICAgQ2xpZW50LT4-QXV0aG9yaXphdGlvblNlcnZlcjogQ2xpZW50IElELCBDbGllbnQgU2VjcmV0LCBSZWRpcmVjdCBVUkksIEF1dGhvcml6YXRpb24gQ29kZVxuICAgIEF1dGhvcml6YXRpb25TZXJ2ZXItPj5DbGllbnQ6IOyEseqzteyLnCwgQWNjZXNzIFRva2VuIOyghOuLrFxuICAgIENsaWVudC0-PlJlc291cmNlU2VydmVyOiBBY2Nlc3MgVG9rZW7qs7wg7ZWo6ruYIOumrOyGjOyKpCDsmpTssq1cbiAgICBSZXNvdXJjZVNlcnZlci0-PkNsaWVudDog66as7IaM7IqkIOyghOuLrCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9" alt=""></a>
+클라이언트는 IDP 로그인 버튼을 구현해 놓습니다. 각 버튼에는 로그인 API와 연결된 링크에 Client ID, Redirection URI, 권한 Scope를 parameter로 추가합니다.</p>
+
+<p>그리고 우리가 알고 있는 로그인 과정과 권한 승인 과정을 진행합니다.</p>
+
+<p>승인을 하면 Aurhorization Server에서 Authorization Code를 전달해줍니다. 이후 리다이렉션을 통해 클라이언트에 전달이 되고 Authorization Server에 Access Token을 요청합니다. 올바른 요청이면 Access Token을 발급해 줍니다.</p>
+
+<p>이제 클라이언트는 Access Token을 이용하여 Resource Server에 Resource를 요청할 수 있습니다.</p>
+
+<h2 id="추가사항">
+<a class="anchor" href="#%EC%B6%94%EA%B0%80%EC%82%AC%ED%95%AD" aria-hidden="true"><span class="octicon octicon-link"></span></a>추가사항</h2>
+<p>API 사용과 관련된 실제 사용 등은 따로 정리하도록 하겠습니다.<br>
+OpenID Connect, ID token 등 Authentication과 관련된 부분은 따로 정리하도록 하겠습니다.</p>
+
+<h2 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
+<p><a href="https://opentutorials.org/module/3668"><strong>생활 코딩</strong></a><br>
+<a href="https://tools.ietf.org/html/rfc6749#section-1.1">https://tools.ietf.org/html/rfc6749#section-1.1</a><br>
+<a href="https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc">https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc</a></p>
+
+
+      <hr>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>OAuth</div>
+      
+
+      <hr>
+
+      <!-- 다음 포스트, 이전 포스트 카테고리별로 정리 -->
+      
+
+      
+      
+
+      
+      <a class="btn btn-gray float-left" href="/posts/unclassified/authentication-vs-authorization/" data-toggle="tooltip" data-placement="top" title="Authentication VS Authorization">&larr; Previous<span class="d-none d-md-inline">
+          Post</span></a>
+      
+      
+
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/unclassified/ouath/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/unclassified/ouath/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:jheun5@naver.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/amos55606241">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/amos.eun.73">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1H0RYSGS7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T1H0RYSGS7');
+</script>
+
+
+
+  <style>
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.333%;
+    height: 0;
+    background: black;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}    
+</style>
+
+<script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+        url: 'https://vimeo.com/api/oembed.json?url='+url,
+        async: true,
+        success: function(response) {
+        if(response.video_id) {
+            id = response.video_id;
+            if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+            if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+            var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+            if(autoplay==1) theInnerHTML += '&autoplay=1';
+            if(loop==1) theInnerHTML += '&loop=1';
+            theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
+            el.innerHTML = theInnerHTML;
+        }
+        }
+    });
+}
+function video_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        //check if this is an external url (that starts with https:// or http://
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                if(p[i].innerHTML.indexOf('start=') !== -1) theInnerHTML += '&start='+p[i].innerHTML.substring(p[i].innerHTML.indexOf('start=')+6);
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                vimeo_embed(p[i].innerHTML,p[i]);
+            }
+        }
+    }
+}
+video_embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
+        }
+    }
+}
+mp3_embed();
+</script>
+  
+  <script id="dsq-count-scr" src="//jheun66.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>

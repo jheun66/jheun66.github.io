@@ -1,6 +1,22 @@
 [
   
     {
+      "title"    : "포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)",
+      "category" : "",
+      "tags"     : "linux, 리눅스, virtualbox, ubuntu, guestos, putty, ssh, port_forwarding",
+      "url"      : "/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/",
+      "date"     : "02/05/2024"
+    } ,
+  
+    {
+      "title"    : "Virtual Box - Ubuntu 22.04.3 환경 설치",
+      "category" : "",
+      "tags"     : "개발환경, linux, 리눅스, virtualbox, ubuntu",
+      "url"      : "/posts/linux/virtual-box-ubuntu-environment/",
+      "date"     : "02/05/2024"
+    } ,
+  
+    {
       "title"    : "다형성 이해하기",
       "category" : "",
       "tags"     : "polymorphism, virtual, override, new, vtable",
@@ -73,70 +89,6 @@
     } ,
   
     {
-      "title"    : "Load and display images from the Internet",
-      "category" : "",
-      "tags"     : "tutorial, coil, recyclerview, building_adapter",
-      "url"      : "/posts/practice/load-and-display-images-from-the-internet/",
-      "date"     : "09/30/2021"
-    } ,
-  
-    {
-      "title"    : "Get data from the internet",
-      "category" : "",
-      "tags"     : "tutorial, retrofit, json, moshi, internet, permissions",
-      "url"      : "/posts/practice/get-data-from-the-internet/",
-      "date"     : "09/26/2021"
-    } ,
-  
-    {
-      "title"    : "Introduction to coroutines",
-      "category" : "",
-      "tags"     : "tutorial, coroutine",
-      "url"      : "/posts/practice/introduction-to-coroutines/",
-      "date"     : "09/25/2021"
-    } ,
-  
-    {
-      "title"    : "Navigation and the back stack",
-      "category" : "",
-      "tags"     : "tutorial, tasks, backstack",
-      "url"      : "/posts/practice/navigation-and-the-back-stack/",
-      "date"     : "09/22/2021"
-    } ,
-  
-    {
-      "title"    : "Shared ViewModel Across Fragment",
-      "category" : "",
-      "tags"     : "tutorial, livedata, databinding",
-      "url"      : "/posts/practice/shared-viewmodel-across-fragment/",
-      "date"     : "09/21/2021"
-    } ,
-  
-    {
-      "title"    : "Use LiveData with ViewModel",
-      "category" : "",
-      "tags"     : "tutorial, livedata, databinding",
-      "url"      : "/posts/practice/use-livedata-with-viewmodel/",
-      "date"     : "09/11/2021"
-    } ,
-  
-    {
-      "title"    : "Store data in ViewModel",
-      "category" : "",
-      "tags"     : "tutorial, viewmodel, viewbinding",
-      "url"      : "/posts/practice/store-data-in-viewmodel/",
-      "date"     : "09/11/2021"
-    } ,
-  
-    {
-      "title"    : "Fragments and the Navigation Component",
-      "category" : "",
-      "tags"     : "tutorial, fragment, navigation_component",
-      "url"      : "/posts/practice/fragments-and-the-navigation-component/",
-      "date"     : "08/26/2021"
-    } ,
-  
-    {
       "title"    : "next_permutation",
       "category" : "",
       "tags"     : "permutation",
@@ -153,91 +105,11 @@
     } ,
   
     {
-      "title"    : "Collections in Kotlin",
-      "category" : "",
-      "tags"     : "kotlin, tutorial",
-      "url"      : "/posts/practice/collections-in-kotlin/",
-      "date"     : "08/04/2021"
-    } ,
-  
-    {
-      "title"    : "Display a list of images using cards",
-      "category" : "",
-      "tags"     : "kotlin, tutorial",
-      "url"      : "/posts/practice/display-a-list-of-images-using-cards/",
-      "date"     : "08/03/2021"
-    } ,
-  
-    {
-      "title"    : "Use RecyclerView to display a scrollable list",
-      "category" : "",
-      "tags"     : "kotlin, tutorial",
-      "url"      : "/posts/practice/use-recyclerview-to-display-a-scrollable-list/",
-      "date"     : "07/29/2021"
-    } ,
-  
-    {
-      "title"    : "Use Lists in Kotlin",
-      "category" : "",
-      "tags"     : "kotlin, tutorial",
-      "url"      : "/posts/practice/use-lists-in-kotlin/",
-      "date"     : "07/29/2021"
-    } ,
-  
-    {
-      "title"    : "Create a more polished user experience",
-      "category" : "",
-      "tags"     : "kotlin, layouts, tutorial",
-      "url"      : "/posts/practice/create-a-more-polished-user-experience/",
-      "date"     : "07/28/2021"
-    } ,
-  
-    {
-      "title"    : "Change the app icon",
-      "category" : "",
-      "tags"     : "kotlin, layouts, tutorial",
-      "url"      : "/posts/practice/change-the-app-icon/",
-      "date"     : "07/28/2021"
-    } ,
-  
-    {
-      "title"    : "Change the app theme",
-      "category" : "",
-      "tags"     : "kotlin, layouts, tutorial",
-      "url"      : "/posts/practice/change-the-app-theme/",
-      "date"     : "07/28/2021"
-    } ,
-  
-    {
-      "title"    : "Calculate the tip",
-      "category" : "",
-      "tags"     : "kotlin, tutorial",
-      "url"      : "/posts/practice/calculate-the-tip/",
-      "date"     : "07/28/2021"
-    } ,
-  
-    {
       "title"    : "Use SwitchCompat from AppCompat or SwitchMaterial from Material library",
       "category" : "",
       "tags"     : "xml, warning",
       "url"      : "/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/",
       "date"     : "07/26/2021"
-    } ,
-  
-    {
-      "title"    : "Create XML layouts for Android",
-      "category" : "",
-      "tags"     : "kotlin, tutorial",
-      "url"      : "/posts/practice/create-xml-layouts-for-android/",
-      "date"     : "07/26/2021"
-    } ,
-  
-    {
-      "title"    : "Classes and inheritance in Kotlin",
-      "category" : "",
-      "tags"     : "kotlin",
-      "url"      : "/posts/practice/classes-and-inheritance-in-kotlin/",
-      "date"     : "07/25/2021"
     } ,
   
     {
@@ -254,30 +126,6 @@
       "tags"     : "webview, error",
       "url"      : "/posts/android/net-err-cleartext-not-permitted/",
       "date"     : "07/22/2021"
-    } ,
-  
-    {
-      "title"    : "Add a button to an app",
-      "category" : "",
-      "tags"     : "kotlin, tutorial",
-      "url"      : "/posts/practice/add-a-button-to-an-app/",
-      "date"     : "07/21/2021"
-    } ,
-  
-    {
-      "title"    : "Create your first app",
-      "category" : "",
-      "tags"     : "kotlin, tutorial",
-      "url"      : "/posts/practice/create-your-first-app/",
-      "date"     : "07/21/2021"
-    } ,
-  
-    {
-      "title"    : "Introduction to Kotlin",
-      "category" : "",
-      "tags"     : "kotlin, tutorial",
-      "url"      : "/posts/practice/introduction-to-kotlin/",
-      "date"     : "07/20/2021"
     } ,
   
     {
@@ -404,7 +252,7 @@
       "title"    : "OAuth 2.0",
       "category" : "",
       "tags"     : "authentication, authorization, oauth",
-      "url"      : "/posts/security/ouath/",
+      "url"      : "/posts/unclassified/ouath/",
       "date"     : "12/13/2020"
     } ,
   
@@ -412,7 +260,7 @@
       "title"    : "Authentication VS Authorization",
       "category" : "",
       "tags"     : "authentication, authorization, word_meaning",
-      "url"      : "/posts/security/authentication-vs-authorization/",
+      "url"      : "/posts/unclassified/authentication-vs-authorization/",
       "date"     : "12/13/2020"
     } 
   

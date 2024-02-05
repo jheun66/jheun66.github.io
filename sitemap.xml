@@ -2,6 +2,38 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    
     <url>
+      <loc>https://jheun66.github.io/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/</loc>
+      
+        <lastmod>2024-02-05T15:01:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
+      <loc>https://jheun66.github.io/posts/linux/virtual-box-ubuntu-environment/</loc>
+      
+        <lastmod>2024-02-05T15:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
       <loc>https://jheun66.github.io/posts/c%23/polymorphism/</loc>
       
         <lastmod>2022-12-18T03:00:00+00:00</lastmod>
@@ -146,134 +178,6 @@
     </url>
    
     <url>
-      <loc>https://jheun66.github.io/posts/practice/load-and-display-images-from-the-internet/</loc>
-      
-        <lastmod>2021-09-30T11:45:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/get-data-from-the-internet/</loc>
-      
-        <lastmod>2021-09-26T13:45:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/introduction-to-coroutines/</loc>
-      
-        <lastmod>2021-09-25T07:14:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/navigation-and-the-back-stack/</loc>
-      
-        <lastmod>2021-09-22T04:47:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/shared-viewmodel-across-fragment/</loc>
-      
-        <lastmod>2021-09-21T09:49:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/use-livedata-with-viewmodel/</loc>
-      
-        <lastmod>2021-09-11T10:57:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/store-data-in-viewmodel/</loc>
-      
-        <lastmod>2021-09-11T06:00:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/fragments-and-the-navigation-component/</loc>
-      
-        <lastmod>2021-08-26T14:00:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
       <loc>https://jheun66.github.io/posts/algorithm/next-permutation/</loc>
       
         <lastmod>2021-08-21T21:28:00+00:00</lastmod>
@@ -306,169 +210,9 @@
     </url>
    
     <url>
-      <loc>https://jheun66.github.io/posts/practice/collections-in-kotlin/</loc>
-      
-        <lastmod>2021-08-04T07:17:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/display-a-list-of-images-using-cards/</loc>
-      
-        <lastmod>2021-08-03T06:36:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/use-recyclerview-to-display-a-scrollable-list/</loc>
-      
-        <lastmod>2021-07-29T17:17:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/use-lists-in-kotlin/</loc>
-      
-        <lastmod>2021-07-29T09:30:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/create-a-more-polished-user-experience/</loc>
-      
-        <lastmod>2021-07-28T08:05:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/change-the-app-icon/</loc>
-      
-        <lastmod>2021-07-28T08:02:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/change-the-app-theme/</loc>
-      
-        <lastmod>2021-07-28T08:00:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/calculate-the-tip/</loc>
-      
-        <lastmod>2021-07-28T07:58:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
       <loc>https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/</loc>
       
         <lastmod>2021-07-26T06:43:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/create-xml-layouts-for-android/</loc>
-      
-        <lastmod>2021-07-26T06:41:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/classes-and-inheritance-in-kotlin/</loc>
-      
-        <lastmod>2021-07-25T10:18:00+00:00</lastmod>
       
 
       
@@ -501,54 +245,6 @@
       <loc>https://jheun66.github.io/posts/android/net-err-cleartext-not-permitted/</loc>
       
         <lastmod>2021-07-22T02:25:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/add-a-button-to-an-app/</loc>
-      
-        <lastmod>2021-07-21T08:38:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/create-your-first-app/</loc>
-      
-        <lastmod>2021-07-21T03:55:00+00:00</lastmod>
-      
-
-      
-        <changefreq>daily</changefreq>
-      
-
-      
-        <priority>1.0</priority>
-      
-
-    </url>
-   
-    <url>
-      <loc>https://jheun66.github.io/posts/practice/introduction-to-kotlin/</loc>
-      
-        <lastmod>2021-07-20T00:57:00+00:00</lastmod>
       
 
       
@@ -802,7 +498,7 @@
     </url>
    
     <url>
-      <loc>https://jheun66.github.io/posts/security/ouath/</loc>
+      <loc>https://jheun66.github.io/posts/unclassified/ouath/</loc>
       
         <lastmod>2020-12-13T20:00:00+00:00</lastmod>
       
@@ -818,7 +514,7 @@
     </url>
    
     <url>
-      <loc>https://jheun66.github.io/posts/security/authentication-vs-authorization/</loc>
+      <loc>https://jheun66.github.io/posts/unclassified/authentication-vs-authorization/</loc>
       
         <lastmod>2020-12-13T06:00:00+00:00</lastmod>
       
