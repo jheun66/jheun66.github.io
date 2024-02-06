@@ -1,5 +1,5 @@
 $toc-font-family: 'Arial', sans-serif; // 목차에 사용할 폰트 패밀리
-$toc-font-size: 0.9em; // 기본 폰트 크기
+$toc-font-size: 0.9em; // 폰트 크기
 $toc-font-weight: bold; // 폰트 굵기
 $toc-font-color: #333333; // 폰트 색상
 
@@ -8,7 +8,7 @@ $toc-font-color: #333333; // 폰트 색상
     font-size: $toc-font-size;
     font-weight: $toc-font-weight;
     color: $toc-font-color;
-    border-left: 6px solid gray;
+    border-left: 6px solid #333333;
 
     li {
       margin-bottom: 0.5em;
