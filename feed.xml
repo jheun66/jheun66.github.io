@@ -5,8 +5,8 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Mar 2024 11:44:44 +0000</pubDate>
-    <lastBuildDate>Tue, 05 Mar 2024 11:44:44 +0000</lastBuildDate>
+    <pubDate>Tue, 05 Mar 2024 18:00:33 +0000</pubDate>
+    <lastBuildDate>Tue, 05 Mar 2024 18:00:33 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -1153,7 +1153,7 @@ virtual table에 대해서는 해당 블로그가 그림으로 표현을 잘되�
 &lt;h1 id=&quot;샘플-만들기&quot;&gt;샘플 만들기&lt;/h1&gt;
 &lt;p&gt;버튼을 눌렀을 때 TMPro에 텍스트를 세팅하도록 샘플 프로젝트를 만들었습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_005.png&quot; alt=&quot;img5&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/005.png&quot; alt=&quot;img5&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;버튼을 클릭했을 때는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SetMessageToTMPro&lt;/code&gt;가 호출되도록 하였습니다.&lt;/p&gt;
 
@@ -1229,7 +1229,7 @@ virtual table에 대해서는 해당 블로그가 그림으로 표현을 잘되�
 &lt;h1 id=&quot;onpointerclick-구현&quot;&gt;OnPointerClick 구현&lt;/h1&gt;
 &lt;p&gt;TextMeshPro가 있는 게임 오브젝트에 아래의 스크립트를 추가합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_006.png&quot; alt=&quot;img6&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/006.png&quot; alt=&quot;img6&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -1285,7 +1285,7 @@ virtual table에 대해서는 해당 블로그가 그림으로 표현을 잘되�
 
 &lt;p&gt;링크를 클릭하면 브라우저로 URL을 띄울 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/unity/gif_001.gif&quot; alt=&quot;gif1&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/007.gif&quot; alt=&quot;gif1&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 01 Oct 2022 07:00:00 +0000</pubDate>
         <link>https://jheun66.github.io/posts/unity/how-to-make-links-in-tmp/</link>
@@ -1302,7 +1302,7 @@ virtual table에 대해서는 해당 블로그가 그림으로 표현을 잘되�
         <title>TextMeshPro에서 한글 사용하기</title>
         <description>&lt;p&gt;유니티에서 TextMeshPro를 다운받고 바로 사용하면 한글을 쓸 때 네모로 나오게 됩니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_001.png&quot; alt=&quot;img1&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/001.png&quot; alt=&quot;img1&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;빠르게 해결해 봅시다.&lt;/p&gt;
 
@@ -1314,15 +1314,15 @@ virtual table에 대해서는 해당 블로그가 그림으로 표현을 잘되�
 &lt;h1 id=&quot;fontassetcreater-세팅&quot;&gt;FontAssetCreater 세팅&lt;/h1&gt;
 &lt;p&gt;Window-TextMeshPro-FontAssetCreator를 열고 다음과 같이 세팅합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_002.png&quot; alt=&quot;img2&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/002.png&quot; alt=&quot;img2&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;완료후 세이브를 해주고 TextMeshPro에 세팅을 해줍니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_003.png&quot; alt=&quot;img3&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/003.png&quot; alt=&quot;img3&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;정상적으로 한글이 출력되었습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/unity/img_004.png&quot; alt=&quot;img4&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/004.png&quot; alt=&quot;img4&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;다음 포스트에는 TextMeshPro를 사용하여 링크 만들기에 대해 작성해보겠습니다.&lt;/p&gt;
 </description>

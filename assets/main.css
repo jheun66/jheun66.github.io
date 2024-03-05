@@ -2620,8 +2620,14 @@ code.highlighter-rouge { border: 1px solid #f6ba59; background-color: #ffcd69; b
 
 .btn-gray:hover, .btn-gray:focus, .btn-gray:active { color: #fff; background-color: #6d6d6d !important; border-color: #6d6d6d !important; }
 
-.game-area { display: flex; justify-content: center; /* 수평 중앙 정렬 */ align-items: center; /* 수직 중앙 정렬 */ height: 660px; /* 컨테이너의 높이, 필요에 따라 조정 */ }
+.game-area { display: block; max-width: calc(960px + 20px); /* 너비를 Unity 캔버스의 너비와 동일하게 설정 */ height: 720px; /* 높이를 Unity 캔버스의 높이와 동일하게 설정 */ padding: 36px 10px 10px 10px; margin: 20px auto; background: #1e1e1e; /* 다크 모드에 가까운 배경색 */ border-radius: 8px; /* Mac UI의 모서리 둥근 정도 */ position: relative; /* 포지셔닝 컨텍스트 설정 */ }
 
-.game-iframe { width: 100%; height: 100%; border: none; }
+.red-button { width: 16px; height: 16px; background-color: #FF5F56; border-radius: 50%; position: absolute; top: 10px; left: 20px; cursor: pointer; }
+
+.orange-button { width: 16px; height: 16px; background-color: #FFBD2E; border-radius: 50%; position: absolute; top: 10px; left: 44px; cursor: pointer; }
+
+.green-button { width: 16px; height: 16px; background-color: #27C93F; border-radius: 50%; position: absolute; top: 10px; left: 68px; cursor: pointer; }
+
+#game-iframe { width: 100%; /* iframe의 너비를 부모 요소의 너비와 동일하게 설정 */ height: 100%; /* iframe의 높이를 부모 요소의 높이와 동일하게 설정 */ border: none; /* iframe의 테두리 제거 */ background-color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
