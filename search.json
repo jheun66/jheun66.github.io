@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Challenging projects every programmer should try - Text Editor(1)",
+      "category" : "",
+      "tags"     : "unity, text_editor, challenge, font_asset, tmp, text_mesh_pro, mesh, vertex, uv, bearingx, bearingy",
+      "url"      : "/posts/unity/challenging-projects-every-programmer-should-try-text-editor-1/",
+      "date"     : "04/01/2024"
+    } ,
+  
+    {
       "title"    : "포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)",
       "category" : "",
       "tags"     : "linux, 리눅스, virtualbox, ubuntu, guestos, putty, ssh, port_forwarding",
@@ -113,10 +121,10 @@
     } ,
   
     {
-      "title"    : "코드 블럭 syntax_highlight 적용",
+      "title"    : "markdown 코드 블럭 꾸미기",
       "category" : "",
-      "tags"     : "github_pages, rougify",
-      "url"      : "/posts/blog/codeblock-syntax-highlight/",
+      "tags"     : "github_pages, rougify, css, scrollbar",
+      "url"      : "/posts/blog/style-markdown-code-blocks/",
       "date"     : "07/22/2021"
     } ,
   

@@ -2570,14 +2570,14 @@ html { -ms-overflow-style: none; /* for Internet Explorer, Edge */ scrollbar-wid
 html::-webkit-scrollbar { display: none; /* for Chrome, Safari, and Opera */ }
 
 /* 코드 블럭 스크롤바 세팅은 highlight.css에 */
-.tag-class { background-color: #f2f2f2; /* 배경색 */ color: #333; /* 글자색 */ padding: 5px 10px; /* 안쪽 여백 */ border-radius: 5px; /* 테두리 둥글게 */ display: inline-block; /* 인라인 블록 요소로 표시 */ margin: 2px; /* 외곽 여백 */ font-size: 12px; /* 글자 크기 */ font-family: Arial, sans-serif; /* 글꼴 */ }
+.tag-class { background-color: #f2f2f2; /* 배경색 */ color: #333333; /* 글자색 */ padding: 5px 10px; /* 안쪽 여백 */ border-radius: 5px; /* 테두리 둥글게 */ display: inline-block; /* 인라인 블록 요소로 표시 */ margin: 2px; /* 외곽 여백 */ font-size: 12px; /* 글자 크기 */ font-family: Arial, sans-serif; /* 글꼴 */ }
 
 .tag-class .fa-tag { margin-right: 5px; /* 아이콘과 텍스트 사이의 여백 */ }
 
-.tag-button-class { background-color: #f2f2f2; /* 배경색 */ color: #333; /* 글자색 */ padding: 5px 10px; /* 안쪽 여백 */ box-sizing: border-box; /* 테두리와 패딩을 너비와 높이에 포함 */ border: 2px solid #e0e0e0; border-radius: 5px; /* 테두리 둥글게 */ display: inline-block; /* 인라인 블록 요소로 표시 */ margin: 2px; /* 외곽 여백 */ font-size: 12px; /* 글자 크기 */ font-family: Arial, sans-serif; /* 글꼴 */ }
+.tag-button-class { background-color: #f2f2f2; /* 배경색 */ color: #333333; /* 글자색 */ padding: 5px 10px; /* 안쪽 여백 */ box-sizing: border-box; /* 테두리와 패딩을 너비와 높이에 포함 */ border: 2px solid #e0e0e0; /* 테두리 */ border-radius: 5px; /* 테두리 둥글게 */ display: inline-block; /* 인라인 블록 요소로 표시 */ margin: 2px; /* 외곽 여백 */ font-size: 12px; /* 글자 크기 */ font-family: Arial, sans-serif; /* 글꼴 */ }
 
 /* 마우스 오버 시 스타일 변경 */
-.tag-button-class:hover { background-color: #e0e0e0; /* 배경색 변경 */ box-sizing: border-box; /* 테두리와 패딩을 너비와 높이에 포함 */ border: 2px solid #000000; cursor: pointer; }
+.tag-button-class:hover { background-color: #e0e0e0; /* 배경색 변경 */ box-sizing: border-box; /* 테두리와 패딩을 너비와 높이에 포함 */ border: 2px solid #000000; /* 테두리 */ cursor: pointer; }
 
 .tag-button-class .fa-tag { margin-right: 5px; /* 아이콘과 텍스트 사이의 여백 */ }
 
@@ -2629,5 +2629,7 @@ code.highlighter-rouge { border: 1px solid #f6ba59; background-color: #ffcd69; b
 .green-button { width: 16px; height: 16px; background-color: #27C93F; border-radius: 50%; position: absolute; top: 10px; left: 68px; cursor: pointer; }
 
 #game-iframe { width: 100%; /* iframe의 너비를 부모 요소의 너비와 동일하게 설정 */ height: 100%; /* iframe의 높이를 부모 요소의 높이와 동일하게 설정 */ border: none; /* iframe의 테두리 제거 */ background-color: #fff; }
+
+.center { display: block; margin: auto; }
 
 /*# sourceMappingURL=main.css.map */
