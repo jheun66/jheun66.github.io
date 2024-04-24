@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Challenging projects every programmer should try - Text Editor(2)",
+      "category" : "",
+      "tags"     : "unity, text_editor, challenge, font_asset, tmp, text_mesh_pro, mesh, bearingx, bearingy, ad, ax",
+      "url"      : "/posts/unity/challenging-projects-every-programmer-should-try-text-editor-2/",
+      "date"     : "04/22/2024"
+    } ,
+  
+    {
       "title"    : "Challenging projects every programmer should try - Text Editor(1)",
       "category" : "",
       "tags"     : "unity, text_editor, challenge, font_asset, tmp, text_mesh_pro, mesh, vertex, uv, bearingx, bearingy",

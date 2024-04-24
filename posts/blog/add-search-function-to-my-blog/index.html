@@ -35,7 +35,7 @@
   </style>
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>검색 기능 추가(Add search function to my blog) | In progress</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="검색 기능 추가(Add search function to my blog)" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
@@ -385,9 +385,9 @@ search.json로 설정해줍니다.</p>
 <td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/js/simple-jekyll-search.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-        <span class="nx">SimpleJekyllSearch</span><span class="p">({</span>
-          <span class="na">searchInput</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search-input</span><span class="dl">'</span><span class="p">),</span>
-          <span class="na">resultsContainer</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">results-container</span><span class="dl">'</span><span class="p">),</span>
+        <span class="nc">SimpleJekyllSearch</span><span class="p">({</span>
+          <span class="na">searchInput</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search-input</span><span class="dl">'</span><span class="p">),</span>
+          <span class="na">resultsContainer</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">results-container</span><span class="dl">'</span><span class="p">),</span>
           <span class="na">json</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/search.json</span><span class="dl">'</span><span class="p">,</span>
           <span class="na">searchResultTemplate</span><span class="p">:</span> <span class="s2">`
               &lt;li class="mdc-list-item"&gt;
@@ -399,9 +399,9 @@ search.json로 설정해줍니다.</p>
               &lt;/li&gt;&lt;hr&gt;
           `</span><span class="p">,</span>
           <span class="na">sortMiddleware</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">adate</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span>
-            <span class="kd">var</span> <span class="nx">bdate</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span>
-            <span class="k">return</span> <span class="nx">adate</span><span class="p">.</span><span class="nx">localeCompare</span><span class="p">(</span><span class="nx">bdate</span><span class="p">)</span>
+            <span class="kd">var</span> <span class="nx">adate</span> <span class="o">=</span> <span class="nc">String</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">bdate</span> <span class="o">=</span> <span class="nc">String</span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span>
+            <span class="k">return</span> <span class="nx">adate</span><span class="p">.</span><span class="nf">localeCompare</span><span class="p">(</span><span class="nx">bdate</span><span class="p">)</span>
           <span class="p">},</span>
           <span class="na">noResultsText</span><span class="p">:</span> <span class="dl">'</span><span class="s1">No results found</span><span class="dl">'</span><span class="p">,</span>
           <span class="na">limit</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
