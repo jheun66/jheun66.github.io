@@ -1,6 +1,22 @@
 [
   
     {
+      "title"    : "Scripting Backend - Mono vs IL2CPP",
+      "category" : "",
+      "tags"     : "mono, il2cpp, _net, roslyn, clr, jit, aot, cil",
+      "url"      : "/posts/unity/mono-vs-il2cpp/",
+      "date"     : "05/10/2024"
+    } ,
+  
+    {
+      "title"    : "Challenging projects every programmer should try - Text Editor(2)",
+      "category" : "",
+      "tags"     : "unity, text_editor, challenge, font_asset, tmp, text_mesh_pro, mesh, bearingx, bearingy, ad, ax",
+      "url"      : "/posts/unity/challenging-projects-every-programmer-should-try-text-editor-2/",
+      "date"     : "04/22/2024"
+    } ,
+  
+    {
       "title"    : "Challenging projects every programmer should try - Text Editor(2)",
       "category" : "",
       "tags"     : "unity, text_editor, challenge, font_asset, tmp, text_mesh_pro, mesh, bearingx, bearingy, ad, ax",
@@ -105,9 +121,9 @@
     } ,
   
     {
-      "title"    : "next_permutation",
+      "title"    : "next_permutation - Java 구현",
       "category" : "",
-      "tags"     : "permutation",
+      "tags"     : "permutation, java",
       "url"      : "/posts/algorithm/next-permutation/",
       "date"     : "08/21/2021"
     } ,
