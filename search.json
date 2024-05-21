@@ -17,6 +17,14 @@
     } ,
   
     {
+      "title"    : "Red-Black Tree - C# 구현",
+      "category" : "",
+      "tags"     : "red-black_tree, bst, c#",
+      "url"      : "/posts/algorithm/red-black-tree/",
+      "date"     : "04/28/2024"
+    } ,
+  
+    {
       "title"    : "Challenging projects every programmer should try - Text Editor(2)",
       "category" : "",
       "tags"     : "unity, text_editor, challenge, font_asset, tmp, text_mesh_pro, mesh, bearingx, bearingy, ad, ax",
