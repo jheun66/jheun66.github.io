@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Piece Table - C# 구현",
+      "category" : "",
+      "tags"     : "piece_table, c#",
+      "url"      : "/posts/algorithm/piece-table/",
+      "date"     : "05/26/2024"
+    } ,
+  
+    {
       "title"    : "도메인 리로딩 비활성화 옵션과 주의 사항",
       "category" : "",
       "tags"     : "domain_reloading, runtimeinitializeonloadmethod, initializeonenterplaymode",
@@ -22,22 +30,6 @@
       "tags"     : "red-black_tree, bst, c#",
       "url"      : "/posts/algorithm/red-black-tree/",
       "date"     : "04/28/2024"
-    } ,
-  
-    {
-      "title"    : "Challenging projects every programmer should try - Text Editor(2)",
-      "category" : "",
-      "tags"     : "unity, text_editor, challenge, font_asset, tmp, text_mesh_pro, mesh, bearingx, bearingy, ad, ax",
-      "url"      : "/posts/unity/challenging-projects-every-programmer-should-try-text-editor-2/",
-      "date"     : "04/22/2024"
-    } ,
-  
-    {
-      "title"    : "Challenging projects every programmer should try - Text Editor(1)",
-      "category" : "",
-      "tags"     : "unity, text_editor, challenge, font_asset, tmp, text_mesh_pro, mesh, vertex, uv, bearingx, bearingy",
-      "url"      : "/posts/unity/challenging-projects-every-programmer-should-try-text-editor-1/",
-      "date"     : "04/01/2024"
     } ,
   
     {
