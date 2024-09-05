@@ -80,9 +80,6 @@
         <li class="nav-item">
           <a class="nav-link" href="/category">Category</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
       </ul>
     </div>
   </div>
@@ -110,140 +107,3832 @@
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
 
-      <h1>Search</h1>
-<label class="mdc-text-field mdc-text-field--filled">
-  <span class="mdc-text-field__ripple"></span>
-  <input class="mdc-text-field__input" type="text" id="search-input" placeholder="Search Keyword" size="120" aria-label="Label"></textarea>
-  <span class="mdc-line-ripple"></span>
-</label>
-
-<ul class="mdc-list mdc-list--two-line" id="results-container"></ul>
-
-<!-- Script pointing to jekyll-search.js -->
-<script src="/js/simple-jekyll-search.js"></script>
-
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script type="text/javascript">
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    searchResultTemplate: `
-        <li class="mdc-list-item">
-          <a href="{url}" style="text-decoration:none">
-          <span class="mdc-list-item__ripple"></span>
-          <span class="mdc-list-item__text">
-           <span class="mdc-list-item__primary-text">{title}</span>
-            <span class="mdc-list-item__secondary-text">{date}, <i class="fa fa-tag"></i>{tags}</span>
-          </span>
-          </a>
-        </li><hr>
-    `,
-    sortMiddleware: function(a, b) {
-      var adate = String(a.date);
-      var bdate = String(b.date);
-      return adate.localeCompare(bdate)
-    },
-    noResultsText: 'No results found',
-    limit: 30,
-    fuzzy: false
-  })
+  function showTag(selector) {
+    $('.default').hide();
+    $('.hidden_tag').hide();
+    $(selector).show();
+    updateCategoryCounts();
+  }
+
+  function showDefault() {
+    $('.default').show();
+    $('.hidden_tag').hide();
+    updateCategoryCounts();
+  }
+
+  function updateCategoryCounts() {
+    $('article').show();
+    $('article').each(function () {
+      var article = $(this);
+      var categoryTitle = article.find('.category-title');
+      var categoryName = categoryTitle.text().trim();
+      var categoryCount = article.find('li:visible').length;
+
+      article.find('.category-count').text(categoryCount);
+
+      if (categoryCount === 0) {
+        article.hide();
+      }
+    });
+  }
+  
+  // Initial count update when the page loads
+  $(document).ready(function () {
+    showDefault();
+  });
 </script>
-<hr>
+
+<!-- Category Post List -->
 
 
 
-<article>
-<h2>
-<!-- # 변환 필요 -->
+<!-- 모든 블로그 태그를 모은 뒤 중복 제거 -->
 
-<a href="/categories/Algorithm" style="text-decoration:none">
-  <strong class="category-title">Algorithm</strong> <span class="category-count">3</span>
+<h4>
+  전체 보기
+</h4>
+<a class="tag-link" onclick="showDefault()">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>All</div>
 </a>
-</h2>
-</article>
-
 <hr>
+<details>
+<summary>TAGS</summary>
 
 
-<article>
-<h2>
-<!-- # 변환 필요 -->
 
-<a href="/categories/Android" style="text-decoration:none">
-  <strong class="category-title">Android</strong> <span class="category-count">16</span>
+<a class="tag-link" onclick="showTag('._NET')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>_NET</div>
 </a>
-</h2>
-</article>
-
-<hr>
 
 
-<article>
-<h2>
-<!-- # 변환 필요 -->
-
-<a href="/categories/Blog" style="text-decoration:none">
-  <strong class="category-title">Blog</strong> <span class="category-count">5</span>
+<a class="tag-link" onclick="showTag('.AOT')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>AOT</div>
 </a>
-</h2>
-</article>
-
-<hr>
 
 
-<article>
-<h2>
-<!-- # 변환 필요 -->
-
-<a href="/categories/CSharp" style="text-decoration:none">
-  <strong class="category-title">C#</strong> <span class="category-count">5</span>
+<a class="tag-link" onclick="showTag('.ART')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>ART</div>
 </a>
-</h2>
-</article>
-
-<hr>
 
 
-<article>
-<h2>
-<!-- # 변환 필요 -->
-
-<a href="/categories/Linux" style="text-decoration:none">
-  <strong class="category-title">Linux</strong> <span class="category-count">2</span>
+<a class="tag-link" onclick="showTag('.ASL')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>ASL</div>
 </a>
-</h2>
-</article>
-
-<hr>
 
 
-<article>
-<h2>
-<!-- # 변환 필요 -->
-
-<a href="/categories/Unclassified" style="text-decoration:none">
-  <strong class="category-title">Unclassified</strong> <span class="category-count">2</span>
+<a class="tag-link" onclick="showTag('.Accessor')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Accessor</div>
 </a>
-</h2>
-</article>
-
-<hr>
 
 
-<article>
-<h2>
-<!-- # 변환 필요 -->
-
-<a href="/categories/Unity" style="text-decoration:none">
-  <strong class="category-title">Unity</strong> <span class="category-count">4</span>
+<a class="tag-link" onclick="showTag('.Activity')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Activity</div>
 </a>
-</h2>
-</article>
 
+
+<a class="tag-link" onclick="showTag('.Android')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Android</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.AndroidX')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>AndroidX</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Application')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Application</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Authentication')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Authentication</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Authorization')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Authorization</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.BST')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>BST</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Button')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Button</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.CIL')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>CIL</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.CLR')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>CLR</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Context')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Context</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Dalvik')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Dalvik</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Domain_Reloading')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Domain_Reloading</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Error')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Error</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Explict_Intent')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Gesture')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Gesture</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.GuestOS')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>GuestOS</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.HTML')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>HTML</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.IL2CPP')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>IL2CPP</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Implict_Intent')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Implict_Intent</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.InitializeOnEnterPlayMode')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>InitializeOnEnterPlayMode</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Intent')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Intent</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.JIT')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>JIT</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Java')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Java</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Linux')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Linux</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Mono')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Mono</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.OAuth')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>OAuth</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Permutation')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Permutation</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Piece_Table')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Piece_Table</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Port_Forwarding')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.PuTTY')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>PuTTY</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Red-Black_Tree')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Red-Black_Tree</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Roslyn')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Roslyn</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.RuntimeInitializeOnLoadMethod')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>RuntimeInitializeOnLoadMethod</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.SSH')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>SSH</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Screen')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Screen</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.SimpleJekyllSearch')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>SimpleJekyllSearch</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.String')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>String</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.TextMeshPro')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>TextMeshPro</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.UI')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>UI</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.UX')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>UX</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Ubuntu')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Ubuntu</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.VirtualBox')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>VirtualBox</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Warning')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Warning</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.Word_Meaning')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>Word_Meaning</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.XML')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>XML</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.bundler')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>bundler</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.const')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>const</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.css')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>css</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.dp')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>dp</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.field')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>field</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.github_pages')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>github_pages</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.jekyll')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>jekyll</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.jquery')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>jquery</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.keyword')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>keyword</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.material_io')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>material_io</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.modifier')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>modifier</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.new')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>new</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.override')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>override</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.performance')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>performance</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.polymorphism')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>polymorphism</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.properties')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>properties</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.property')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>property</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.rbenv')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>rbenv</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.readonly')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>readonly</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.rougify')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>rougify</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.ruby')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>ruby</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.scrollbar')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>scrollbar</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.sealed')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>sealed</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.sort')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>sort</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.tag')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>tag</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.virtual')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>virtual</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.vtable')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>vtable</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.webview')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>webview</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.개발환경')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>개발환경</div>
+</a>
+
+
+<a class="tag-link" onclick="showTag('.리눅스')">
+  <div class="tag-button-class"><i class="fa fa-tag"></i>리눅스</div>
+</a>
+
+</details>
 <hr>
 
 
-</div>
+
+  
+  <article>
+    <h2>
+      <strong class="category-title">Algorithm</strong> <span class="category-count">3</span>
+      <hr>
+      <ul class="mdc-list mdc-list--two-line">
+      
+        <li class="mdc-list-item default"><a href="/posts/algorithm/piece-table/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Piece Table - C# 구현</span>
+              <span class="mdc-list-item__secondary-text">05/26/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Piece_Table</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Piece_Table" style="display:none"><a href="/posts/algorithm/piece-table/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Piece Table - C# 구현</span>
+              <span class="mdc-list-item__secondary-text">05/26/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Piece_Table</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Piece_Table" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/algorithm/red-black-tree/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Red-Black Tree - C# 구현</span>
+              <span class="mdc-list-item__secondary-text">04/28/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Red-Black_Tree</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>BST</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Red-Black_Tree" style="display:none"><a href="/posts/algorithm/red-black-tree/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Red-Black Tree - C# 구현</span>
+              <span class="mdc-list-item__secondary-text">04/28/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Red-Black_Tree</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>BST</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Red-Black_Tree" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag BST" style="display:none"><a href="/posts/algorithm/red-black-tree/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Red-Black Tree - C# 구현</span>
+              <span class="mdc-list-item__secondary-text">04/28/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Red-Black_Tree</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>BST</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag BST" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/algorithm/next-permutation/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">next_permutation - Java 구현</span>
+              <span class="mdc-list-item__secondary-text">08/21/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Permutation</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Java</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Permutation" style="display:none"><a href="/posts/algorithm/next-permutation/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">next_permutation - Java 구현</span>
+              <span class="mdc-list-item__secondary-text">08/21/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Permutation</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Java</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Permutation" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Java" style="display:none"><a href="/posts/algorithm/next-permutation/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">next_permutation - Java 구현</span>
+              <span class="mdc-list-item__secondary-text">08/21/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Permutation</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Java</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Java" style="display:none">
+        
+      
+      </ul>
+    </h2>
+  </article>
+
+  
+  <article>
+    <h2>
+      <strong class="category-title">Android</strong> <span class="category-count">16</span>
+      <hr>
+      <ul class="mdc-list mdc-list--two-line">
+      
+        <li class="mdc-list-item default"><a href="/posts/android/escape-html/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Escape HTML</span>
+              <span class="mdc-list-item__secondary-text">08/18/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>String</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>HTML</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag String" style="display:none"><a href="/posts/android/escape-html/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Escape HTML</span>
+              <span class="mdc-list-item__secondary-text">08/18/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>String</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>HTML</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag String" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag HTML" style="display:none"><a href="/posts/android/escape-html/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Escape HTML</span>
+              <span class="mdc-list-item__secondary-text">08/18/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>String</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>HTML</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag HTML" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Use SwitchCompat from AppCompat or SwitchMaterial from Material library</span>
+              <span class="mdc-list-item__secondary-text">07/26/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>XML</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Warning</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag XML" style="display:none"><a href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Use SwitchCompat from AppCompat or SwitchMaterial from Material library</span>
+              <span class="mdc-list-item__secondary-text">07/26/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>XML</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Warning</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag XML" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Warning" style="display:none"><a href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Use SwitchCompat from AppCompat or SwitchMaterial from Material library</span>
+              <span class="mdc-list-item__secondary-text">07/26/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>XML</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Warning</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Warning" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/net-err-cleartext-not-permitted/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">net::ERR_CLEARTEXT_NOT_PERMITTED</span>
+              <span class="mdc-list-item__secondary-text">07/22/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>webview</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Error</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag webview" style="display:none"><a href="/posts/android/net-err-cleartext-not-permitted/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">net::ERR_CLEARTEXT_NOT_PERMITTED</span>
+              <span class="mdc-list-item__secondary-text">07/22/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>webview</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Error</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag webview" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Error" style="display:none"><a href="/posts/android/net-err-cleartext-not-permitted/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">net::ERR_CLEARTEXT_NOT_PERMITTED</span>
+              <span class="mdc-list-item__secondary-text">07/22/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>webview</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Error</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Error" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/screen-compatibility/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Screen Compatibility</span>
+              <span class="mdc-list-item__secondary-text">02/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Screen</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>dp</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Screen" style="display:none"><a href="/posts/android/screen-compatibility/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Screen Compatibility</span>
+              <span class="mdc-list-item__secondary-text">02/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Screen</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>dp</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Screen" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag dp" style="display:none"><a href="/posts/android/screen-compatibility/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Screen Compatibility</span>
+              <span class="mdc-list-item__secondary-text">02/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Screen</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>dp</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag dp" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/context/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Context</span>
+              <span class="mdc-list-item__secondary-text">02/12/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Context</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Application</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Context" style="display:none"><a href="/posts/android/context/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Context</span>
+              <span class="mdc-list-item__secondary-text">02/12/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Context</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Application</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Context" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Application" style="display:none"><a href="/posts/android/context/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Context</span>
+              <span class="mdc-list-item__secondary-text">02/12/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Context</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Application</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Application" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/context/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Context</span>
+              <span class="mdc-list-item__secondary-text">02/12/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Context</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Application</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Activity" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/buttons/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Buttons(+background issue) And Gestures</span>
+              <span class="mdc-list-item__secondary-text">01/15/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag UX" style="display:none"><a href="/posts/android/buttons/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Buttons(+background issue) And Gestures</span>
+              <span class="mdc-list-item__secondary-text">01/15/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag UX" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag UI" style="display:none"><a href="/posts/android/buttons/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Buttons(+background issue) And Gestures</span>
+              <span class="mdc-list-item__secondary-text">01/15/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag UI" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Button" style="display:none"><a href="/posts/android/buttons/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Buttons(+background issue) And Gestures</span>
+              <span class="mdc-list-item__secondary-text">01/15/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Button" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Gesture" style="display:none"><a href="/posts/android/buttons/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Buttons(+background issue) And Gestures</span>
+              <span class="mdc-list-item__secondary-text">01/15/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UX</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>UI</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Button</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Gesture</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Gesture" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/send-and-sendto/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ACTION_SEND & ACTION_SENDTO(이메일 인텐트)</span>
+              <span class="mdc-list-item__secondary-text">01/14/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/send-and-sendto/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ACTION_SEND & ACTION_SENDTO(이메일 인텐트)</span>
+              <span class="mdc-list-item__secondary-text">01/14/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Activity" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/send-and-sendto/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ACTION_SEND & ACTION_SENDTO(이메일 인텐트)</span>
+              <span class="mdc-list-item__secondary-text">01/14/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Intent" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/resolveActivity-vs-queryIntentActivities/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">resolveActivity VS queryIntentActivities</span>
+              <span class="mdc-list-item__secondary-text">01/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/resolveActivity-vs-queryIntentActivities/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">resolveActivity VS queryIntentActivities</span>
+              <span class="mdc-list-item__secondary-text">01/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Activity" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/resolveActivity-vs-queryIntentActivities/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">resolveActivity VS queryIntentActivities</span>
+              <span class="mdc-list-item__secondary-text">01/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Intent" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/implict-intent/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Implict Intent</span>
+              <span class="mdc-list-item__secondary-text">01/09/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Implict_Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/implict-intent/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Implict Intent</span>
+              <span class="mdc-list-item__secondary-text">01/09/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Implict_Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Intent" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Implict_Intent" style="display:none"><a href="/posts/android/implict-intent/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Implict Intent</span>
+              <span class="mdc-list-item__secondary-text">01/09/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Implict_Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Implict_Intent" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/activities-and-intents-practice/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Activities And Intents Test</span>
+              <span class="mdc-list-item__secondary-text">12/30/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/activities-and-intents-practice/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Activities And Intents Test</span>
+              <span class="mdc-list-item__secondary-text">12/30/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Intent" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Explict_Intent" style="display:none"><a href="/posts/android/activities-and-intents-practice/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Activities And Intents Test</span>
+              <span class="mdc-list-item__secondary-text">12/30/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Explict_Intent" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/intent/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Intent(Explict Intent)</span>
+              <span class="mdc-list-item__secondary-text">12/30/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Intent" style="display:none"><a href="/posts/android/intent/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Intent(Explict Intent)</span>
+              <span class="mdc-list-item__secondary-text">12/30/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Intent" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Explict_Intent" style="display:none"><a href="/posts/android/intent/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Intent(Explict Intent)</span>
+              <span class="mdc-list-item__secondary-text">12/30/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Intent</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Explict_Intent</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Explict_Intent" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/activity-lifecycle/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Activity Lifecycle</span>
+              <span class="mdc-list-item__secondary-text">12/28/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/activity-lifecycle/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Activity Lifecycle</span>
+              <span class="mdc-list-item__secondary-text">12/28/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Activity" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/actiivties/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Activities</span>
+              <span class="mdc-list-item__secondary-text">12/25/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Activity" style="display:none"><a href="/posts/android/actiivties/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Activities</span>
+              <span class="mdc-list-item__secondary-text">12/25/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Activity</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Activity" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/application-fundamentals/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Application Fundamentals</span>
+              <span class="mdc-list-item__secondary-text">12/23/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Android" style="display:none"><a href="/posts/android/application-fundamentals/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Application Fundamentals</span>
+              <span class="mdc-list-item__secondary-text">12/23/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Android" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/android-support-library/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ASL과 AndroidX Library</span>
+              <span class="mdc-list-item__secondary-text">12/23/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AndroidX</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ASL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Android" style="display:none"><a href="/posts/android/android-support-library/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ASL과 AndroidX Library</span>
+              <span class="mdc-list-item__secondary-text">12/23/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AndroidX</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ASL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Android" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag AndroidX" style="display:none"><a href="/posts/android/android-support-library/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ASL과 AndroidX Library</span>
+              <span class="mdc-list-item__secondary-text">12/23/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AndroidX</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ASL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag AndroidX" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag ASL" style="display:none"><a href="/posts/android/android-support-library/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ASL과 AndroidX Library</span>
+              <span class="mdc-list-item__secondary-text">12/23/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AndroidX</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ASL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag ASL" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/android/art/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ART 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/14/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ART</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Dalvik</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Android" style="display:none"><a href="/posts/android/art/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ART 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/14/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ART</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Dalvik</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Android" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag ART" style="display:none"><a href="/posts/android/art/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ART 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/14/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ART</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Dalvik</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag ART" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Dalvik" style="display:none"><a href="/posts/android/art/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">ART 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/14/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ART</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Dalvik</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Dalvik" style="display:none">
+        
+      
+      </ul>
+    </h2>
+  </article>
+
+  
+  <article>
+    <h2>
+      <strong class="category-title">Blog</strong> <span class="category-count">5</span>
+      <hr>
+      <ul class="mdc-list mdc-list--two-line">
+      
+        <li class="mdc-list-item default"><a href="/posts/blog/sort-by-tag/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">태그별로 분류하기(Sort by tag)</span>
+              <span class="mdc-list-item__secondary-text">06/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>tag</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>jquery</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sort</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag tag" style="display:none"><a href="/posts/blog/sort-by-tag/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">태그별로 분류하기(Sort by tag)</span>
+              <span class="mdc-list-item__secondary-text">06/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>tag</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>jquery</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sort</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag tag" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag jquery" style="display:none"><a href="/posts/blog/sort-by-tag/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">태그별로 분류하기(Sort by tag)</span>
+              <span class="mdc-list-item__secondary-text">06/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>tag</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>jquery</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sort</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag jquery" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag sort" style="display:none"><a href="/posts/blog/sort-by-tag/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">태그별로 분류하기(Sort by tag)</span>
+              <span class="mdc-list-item__secondary-text">06/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>tag</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>jquery</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sort</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag sort" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/blog/add-search-function-to-my-blog/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">검색 기능 추가(Add search function to my blog)</span>
+              <span class="mdc-list-item__secondary-text">04/17/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SimpleJekyllSearch</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>material_io</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag SimpleJekyllSearch" style="display:none"><a href="/posts/blog/add-search-function-to-my-blog/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">검색 기능 추가(Add search function to my blog)</span>
+              <span class="mdc-list-item__secondary-text">04/17/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SimpleJekyllSearch</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>material_io</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag SimpleJekyllSearch" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag material_io" style="display:none"><a href="/posts/blog/add-search-function-to-my-blog/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">검색 기능 추가(Add search function to my blog)</span>
+              <span class="mdc-list-item__secondary-text">04/17/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SimpleJekyllSearch</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>material_io</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag material_io" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/blog/style-markdown-code-blocks/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">markdown 코드 블럭 꾸미기</span>
+              <span class="mdc-list-item__secondary-text">07/22/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>rougify</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>css</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>scrollbar</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag github_pages" style="display:none"><a href="/posts/blog/style-markdown-code-blocks/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">markdown 코드 블럭 꾸미기</span>
+              <span class="mdc-list-item__secondary-text">07/22/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>rougify</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>css</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>scrollbar</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag github_pages" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag rougify" style="display:none"><a href="/posts/blog/style-markdown-code-blocks/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">markdown 코드 블럭 꾸미기</span>
+              <span class="mdc-list-item__secondary-text">07/22/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>rougify</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>css</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>scrollbar</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag rougify" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag css" style="display:none"><a href="/posts/blog/style-markdown-code-blocks/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">markdown 코드 블럭 꾸미기</span>
+              <span class="mdc-list-item__secondary-text">07/22/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>rougify</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>css</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>scrollbar</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag css" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag scrollbar" style="display:none"><a href="/posts/blog/style-markdown-code-blocks/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">markdown 코드 블럭 꾸미기</span>
+              <span class="mdc-list-item__secondary-text">07/22/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>rougify</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>css</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>scrollbar</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag scrollbar" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/blog/install-jekyll/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span>
+              <span class="mdc-list-item__secondary-text">06/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>jekyll</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>bundler</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag jekyll" style="display:none"><a href="/posts/blog/install-jekyll/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span>
+              <span class="mdc-list-item__secondary-text">06/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>jekyll</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>bundler</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag jekyll" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag bundler" style="display:none"><a href="/posts/blog/install-jekyll/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span>
+              <span class="mdc-list-item__secondary-text">06/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>jekyll</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>bundler</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag bundler" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag github_pages" style="display:none"><a href="/posts/blog/install-jekyll/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Jekyll 설치 및 테스트</span>
+              <span class="mdc-list-item__secondary-text">06/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>jekyll</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>bundler</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag github_pages" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/blog/ruby-version-management/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Ruby Version Management</span>
+              <span class="mdc-list-item__secondary-text">06/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ruby</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>rbenv</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag ruby" style="display:none"><a href="/posts/blog/ruby-version-management/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Ruby Version Management</span>
+              <span class="mdc-list-item__secondary-text">06/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ruby</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>rbenv</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag ruby" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag rbenv" style="display:none"><a href="/posts/blog/ruby-version-management/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Ruby Version Management</span>
+              <span class="mdc-list-item__secondary-text">06/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ruby</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>rbenv</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag rbenv" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag github_pages" style="display:none"><a href="/posts/blog/ruby-version-management/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Ruby Version Management</span>
+              <span class="mdc-list-item__secondary-text">06/13/2021,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>ruby</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>rbenv</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>github_pages</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag github_pages" style="display:none">
+        
+      
+      </ul>
+    </h2>
+  </article>
+
+  
+  <article>
+    <h2>
+      <strong class="category-title">C#</strong> <span class="category-count">5</span>
+      <hr>
+      <ul class="mdc-list mdc-list--two-line">
+      
+        <li class="mdc-list-item default"><a href="/posts/c%23/polymorphism/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">다형성 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/18/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag polymorphism" style="display:none"><a href="/posts/c%23/polymorphism/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">다형성 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/18/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag polymorphism" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag virtual" style="display:none"><a href="/posts/c%23/polymorphism/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">다형성 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/18/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag virtual" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag override" style="display:none"><a href="/posts/c%23/polymorphism/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">다형성 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/18/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag override" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag new" style="display:none"><a href="/posts/c%23/polymorphism/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">다형성 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/18/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag new" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag vtable" style="display:none"><a href="/posts/c%23/polymorphism/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">다형성 이해하기</span>
+              <span class="mdc-list-item__secondary-text">12/18/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>polymorphism</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>virtual</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>override</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>new</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag vtable" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/c%23/properties/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Properties</span>
+              <span class="mdc-list-item__secondary-text">12/12/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>properties</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Accessor</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag property" style="display:none"><a href="/posts/c%23/properties/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Properties</span>
+              <span class="mdc-list-item__secondary-text">12/12/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>properties</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Accessor</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag property" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag properties" style="display:none"><a href="/posts/c%23/properties/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Properties</span>
+              <span class="mdc-list-item__secondary-text">12/12/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>properties</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Accessor</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag properties" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Accessor" style="display:none"><a href="/posts/c%23/properties/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Properties</span>
+              <span class="mdc-list-item__secondary-text">12/12/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>properties</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Accessor</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Accessor" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/c%23/field-and-property/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Field와 Property</span>
+              <span class="mdc-list-item__secondary-text">12/09/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>field</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag field" style="display:none"><a href="/posts/c%23/field-and-property/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Field와 Property</span>
+              <span class="mdc-list-item__secondary-text">12/09/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>field</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag field" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag property" style="display:none"><a href="/posts/c%23/field-and-property/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Field와 Property</span>
+              <span class="mdc-list-item__secondary-text">12/09/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>field</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>property</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag property" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/c%23/sealed-modifier/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">sealed 한정자</span>
+              <span class="mdc-list-item__secondary-text">12/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag keyword" style="display:none"><a href="/posts/c%23/sealed-modifier/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">sealed 한정자</span>
+              <span class="mdc-list-item__secondary-text">12/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag keyword" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag modifier" style="display:none"><a href="/posts/c%23/sealed-modifier/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">sealed 한정자</span>
+              <span class="mdc-list-item__secondary-text">12/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag modifier" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag sealed" style="display:none"><a href="/posts/c%23/sealed-modifier/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">sealed 한정자</span>
+              <span class="mdc-list-item__secondary-text">12/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag sealed" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag vtable" style="display:none"><a href="/posts/c%23/sealed-modifier/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">sealed 한정자</span>
+              <span class="mdc-list-item__secondary-text">12/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag vtable" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag performance" style="display:none"><a href="/posts/c%23/sealed-modifier/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">sealed 한정자</span>
+              <span class="mdc-list-item__secondary-text">12/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>modifier</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>sealed</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>vtable</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>performance</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag performance" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/c%23/difference-between-const-and-readonly/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">const와 readonly의 차이점</span>
+              <span class="mdc-list-item__secondary-text">10/09/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>const</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>readonly</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag keyword" style="display:none"><a href="/posts/c%23/difference-between-const-and-readonly/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">const와 readonly의 차이점</span>
+              <span class="mdc-list-item__secondary-text">10/09/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>const</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>readonly</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag keyword" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag const" style="display:none"><a href="/posts/c%23/difference-between-const-and-readonly/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">const와 readonly의 차이점</span>
+              <span class="mdc-list-item__secondary-text">10/09/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>const</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>readonly</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag const" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag readonly" style="display:none"><a href="/posts/c%23/difference-between-const-and-readonly/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">const와 readonly의 차이점</span>
+              <span class="mdc-list-item__secondary-text">10/09/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>keyword</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>const</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>readonly</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag readonly" style="display:none">
+        
+      
+      </ul>
+    </h2>
+  </article>
+
+  
+  <article>
+    <h2>
+      <strong class="category-title">Linux</strong> <span class="category-count">2</span>
+      <hr>
+      <ul class="mdc-list mdc-list--two-line">
+      
+        <li class="mdc-list-item default"><a href="/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>GuestOS</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>PuTTY</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SSH</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Linux" style="display:none"><a href="/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>GuestOS</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>PuTTY</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SSH</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Linux" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag 리눅스" style="display:none"><a href="/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>GuestOS</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>PuTTY</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SSH</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag 리눅스" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag VirtualBox" style="display:none"><a href="/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>GuestOS</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>PuTTY</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SSH</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag VirtualBox" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Ubuntu" style="display:none"><a href="/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>GuestOS</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>PuTTY</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SSH</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Ubuntu" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag GuestOS" style="display:none"><a href="/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>GuestOS</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>PuTTY</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SSH</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag GuestOS" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag PuTTY" style="display:none"><a href="/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>GuestOS</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>PuTTY</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SSH</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag PuTTY" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag SSH" style="display:none"><a href="/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>GuestOS</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>PuTTY</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SSH</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag SSH" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Port_Forwarding" style="display:none"><a href="/posts/linux/setting-up-port-forwarding-to-access-ubuntu-guest-os/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">포트 포워딩을 사용하여 Guest OS Ubuntu에 SSH 접속하기 (with putty)</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>GuestOS</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>PuTTY</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>SSH</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Port_Forwarding</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Port_Forwarding" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/linux/virtual-box-ubuntu-environment/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Virtual Box - Ubuntu 22.04.3 환경 설치</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>개발환경</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag 개발환경" style="display:none"><a href="/posts/linux/virtual-box-ubuntu-environment/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Virtual Box - Ubuntu 22.04.3 환경 설치</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>개발환경</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag 개발환경" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Linux" style="display:none"><a href="/posts/linux/virtual-box-ubuntu-environment/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Virtual Box - Ubuntu 22.04.3 환경 설치</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>개발환경</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Linux" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag 리눅스" style="display:none"><a href="/posts/linux/virtual-box-ubuntu-environment/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Virtual Box - Ubuntu 22.04.3 환경 설치</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>개발환경</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag 리눅스" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag VirtualBox" style="display:none"><a href="/posts/linux/virtual-box-ubuntu-environment/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Virtual Box - Ubuntu 22.04.3 환경 설치</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>개발환경</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag VirtualBox" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Ubuntu" style="display:none"><a href="/posts/linux/virtual-box-ubuntu-environment/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Virtual Box - Ubuntu 22.04.3 환경 설치</span>
+              <span class="mdc-list-item__secondary-text">02/05/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>개발환경</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Linux</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>리눅스</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>VirtualBox</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Ubuntu</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Ubuntu" style="display:none">
+        
+      
+      </ul>
+    </h2>
+  </article>
+
+  
+  <article>
+    <h2>
+      <strong class="category-title">Unclassified</strong> <span class="category-count">2</span>
+      <hr>
+      <ul class="mdc-list mdc-list--two-line">
+      
+        <li class="mdc-list-item default"><a href="/posts/unclassified/ouath/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">OAuth 2.0</span>
+              <span class="mdc-list-item__secondary-text">12/13/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>OAuth</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Authentication" style="display:none"><a href="/posts/unclassified/ouath/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">OAuth 2.0</span>
+              <span class="mdc-list-item__secondary-text">12/13/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>OAuth</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Authentication" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Authorization" style="display:none"><a href="/posts/unclassified/ouath/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">OAuth 2.0</span>
+              <span class="mdc-list-item__secondary-text">12/13/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>OAuth</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Authorization" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag OAuth" style="display:none"><a href="/posts/unclassified/ouath/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">OAuth 2.0</span>
+              <span class="mdc-list-item__secondary-text">12/13/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>OAuth</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag OAuth" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/unclassified/authentication-vs-authorization/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Authentication VS Authorization</span>
+              <span class="mdc-list-item__secondary-text">12/13/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Word_Meaning</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Authentication" style="display:none"><a href="/posts/unclassified/authentication-vs-authorization/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Authentication VS Authorization</span>
+              <span class="mdc-list-item__secondary-text">12/13/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Word_Meaning</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Authentication" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Authorization" style="display:none"><a href="/posts/unclassified/authentication-vs-authorization/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Authentication VS Authorization</span>
+              <span class="mdc-list-item__secondary-text">12/13/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Word_Meaning</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Authorization" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Word_Meaning" style="display:none"><a href="/posts/unclassified/authentication-vs-authorization/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Authentication VS Authorization</span>
+              <span class="mdc-list-item__secondary-text">12/13/2020,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Word_Meaning</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Word_Meaning" style="display:none">
+        
+      
+      </ul>
+    </h2>
+  </article>
+
+  
+  <article>
+    <h2>
+      <strong class="category-title">Unity</strong> <span class="category-count">4</span>
+      <hr>
+      <ul class="mdc-list mdc-list--two-line">
+      
+        <li class="mdc-list-item default"><a href="/posts/unity/option-to-disable-domain-reloading-and-including-warnings/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">도메인 리로딩 비활성화 옵션과 주의 사항</span>
+              <span class="mdc-list-item__secondary-text">05/12/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Domain_Reloading</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>RuntimeInitializeOnLoadMethod</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>InitializeOnEnterPlayMode</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Domain_Reloading" style="display:none"><a href="/posts/unity/option-to-disable-domain-reloading-and-including-warnings/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">도메인 리로딩 비활성화 옵션과 주의 사항</span>
+              <span class="mdc-list-item__secondary-text">05/12/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Domain_Reloading</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>RuntimeInitializeOnLoadMethod</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>InitializeOnEnterPlayMode</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Domain_Reloading" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag RuntimeInitializeOnLoadMethod" style="display:none"><a href="/posts/unity/option-to-disable-domain-reloading-and-including-warnings/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">도메인 리로딩 비활성화 옵션과 주의 사항</span>
+              <span class="mdc-list-item__secondary-text">05/12/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Domain_Reloading</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>RuntimeInitializeOnLoadMethod</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>InitializeOnEnterPlayMode</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag RuntimeInitializeOnLoadMethod" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag InitializeOnEnterPlayMode" style="display:none"><a href="/posts/unity/option-to-disable-domain-reloading-and-including-warnings/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">도메인 리로딩 비활성화 옵션과 주의 사항</span>
+              <span class="mdc-list-item__secondary-text">05/12/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Domain_Reloading</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>RuntimeInitializeOnLoadMethod</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>InitializeOnEnterPlayMode</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag InitializeOnEnterPlayMode" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/unity/mono-vs-il2cpp/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Scripting Backend - Mono vs IL2CPP</span>
+              <span class="mdc-list-item__secondary-text">05/10/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Mono</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>IL2CPP</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>_NET</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Roslyn</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CLR</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>JIT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AOT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CIL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag Mono" style="display:none"><a href="/posts/unity/mono-vs-il2cpp/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Scripting Backend - Mono vs IL2CPP</span>
+              <span class="mdc-list-item__secondary-text">05/10/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Mono</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>IL2CPP</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>_NET</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Roslyn</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CLR</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>JIT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AOT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CIL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Mono" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag IL2CPP" style="display:none"><a href="/posts/unity/mono-vs-il2cpp/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Scripting Backend - Mono vs IL2CPP</span>
+              <span class="mdc-list-item__secondary-text">05/10/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Mono</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>IL2CPP</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>_NET</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Roslyn</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CLR</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>JIT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AOT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CIL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag IL2CPP" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag _NET" style="display:none"><a href="/posts/unity/mono-vs-il2cpp/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Scripting Backend - Mono vs IL2CPP</span>
+              <span class="mdc-list-item__secondary-text">05/10/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Mono</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>IL2CPP</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>_NET</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Roslyn</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CLR</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>JIT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AOT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CIL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag _NET" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag Roslyn" style="display:none"><a href="/posts/unity/mono-vs-il2cpp/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Scripting Backend - Mono vs IL2CPP</span>
+              <span class="mdc-list-item__secondary-text">05/10/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Mono</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>IL2CPP</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>_NET</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Roslyn</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CLR</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>JIT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AOT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CIL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag Roslyn" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag CLR" style="display:none"><a href="/posts/unity/mono-vs-il2cpp/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Scripting Backend - Mono vs IL2CPP</span>
+              <span class="mdc-list-item__secondary-text">05/10/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Mono</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>IL2CPP</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>_NET</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Roslyn</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CLR</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>JIT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AOT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CIL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag CLR" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag JIT" style="display:none"><a href="/posts/unity/mono-vs-il2cpp/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Scripting Backend - Mono vs IL2CPP</span>
+              <span class="mdc-list-item__secondary-text">05/10/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Mono</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>IL2CPP</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>_NET</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Roslyn</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CLR</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>JIT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AOT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CIL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag JIT" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag AOT" style="display:none"><a href="/posts/unity/mono-vs-il2cpp/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Scripting Backend - Mono vs IL2CPP</span>
+              <span class="mdc-list-item__secondary-text">05/10/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Mono</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>IL2CPP</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>_NET</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Roslyn</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CLR</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>JIT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AOT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CIL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag AOT" style="display:none">
+        
+        
+        <li class="mdc-list-item hidden_tag CIL" style="display:none"><a href="/posts/unity/mono-vs-il2cpp/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">Scripting Backend - Mono vs IL2CPP</span>
+              <span class="mdc-list-item__secondary-text">05/10/2024,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Mono</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>IL2CPP</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>_NET</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>Roslyn</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CLR</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>JIT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>AOT</div>
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>CIL</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag CIL" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/unity/how-to-make-links-in-tmp/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">TextMeshPro에서 링크 만들기</span>
+              <span class="mdc-list-item__secondary-text">10/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>TextMeshPro</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag TextMeshPro" style="display:none"><a href="/posts/unity/how-to-make-links-in-tmp/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">TextMeshPro에서 링크 만들기</span>
+              <span class="mdc-list-item__secondary-text">10/01/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>TextMeshPro</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag TextMeshPro" style="display:none">
+        
+      
+        <li class="mdc-list-item default"><a href="/posts/unity/using-korean-in-textmeshpro/" style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">TextMeshPro에서 한글 사용하기</span>
+              <span class="mdc-list-item__secondary-text">09/30/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>TextMeshPro</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="default">
+        
+        
+        <li class="mdc-list-item hidden_tag TextMeshPro" style="display:none"><a href="/posts/unity/using-korean-in-textmeshpro/"
+            style="text-decoration:none">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">
+              <span class="mdc-list-item__primary-text">TextMeshPro에서 한글 사용하기</span>
+              <span class="mdc-list-item__secondary-text">09/30/2022,
+                
+                
+                <div class="tag-class"><i class="fa fa-tag"></i>TextMeshPro</div>
+                
+              </span>
+            </span>
+          </a></li>
+        <hr class="hidden_tag TextMeshPro" style="display:none">
+        
+      
+      </ul>
+    </h2>
+  </article>
+
+
 
     </div>
   </div>

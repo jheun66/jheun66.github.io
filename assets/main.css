@@ -10535,6 +10535,71 @@ code.highlighter-rouge {
   top: 0;
 }
 
+/* 여기서부터는 details 화살표(marker) 커스텀으로 꾸미기  */
+summary {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+/* Fixed Menu Styling */
+.fixed-menu {
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  width: 225px;
+  height: auto;
+  padding: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 992px) {
+  .fixed-menu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .fixed-menu {
+    display: none;
+  }
+}
+.fixed-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List Items Styling */
+.fixed-menu ul li {
+  margin: 7.5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+.fixed-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  display: block;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  font-size: 10px;
+}
+
+.fixed-menu ul li a:hover {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+.fixed-menu-title {
+  color: black;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
 .category-title {
   color: black;
 }
@@ -10568,7 +10633,7 @@ code.highlighter-rouge {
 .red-button {
   width: 16px;
   height: 16px;
-  background-color: #FF5F56;
+  background-color: #ff5f56;
   border-radius: 50%;
   position: absolute;
   top: 10px;
@@ -10579,7 +10644,7 @@ code.highlighter-rouge {
 .orange-button {
   width: 16px;
   height: 16px;
-  background-color: #FFBD2E;
+  background-color: #ffbd2e;
   border-radius: 50%;
   position: absolute;
   top: 10px;
@@ -10590,7 +10655,7 @@ code.highlighter-rouge {
 .green-button {
   width: 16px;
   height: 16px;
-  background-color: #27C93F;
+  background-color: #27c93f;
   border-radius: 50%;
   position: absolute;
   top: 10px;

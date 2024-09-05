@@ -3,7 +3,7 @@
     {
       "title"    : "Piece Table - C# 구현",
       "category" : "",
-      "tags"     : "piece_table, c#",
+      "tags"     : "piece_table",
       "url"      : "/posts/algorithm/piece-table/",
       "date"     : "05/26/2024"
     } ,
@@ -27,7 +27,7 @@
     {
       "title"    : "Red-Black Tree - C# 구현",
       "category" : "",
-      "tags"     : "red-black_tree, bst, c#",
+      "tags"     : "red-black_tree, bst",
       "url"      : "/posts/algorithm/red-black-tree/",
       "date"     : "04/28/2024"
     } ,

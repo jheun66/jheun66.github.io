@@ -79,9 +79,6 @@
         <li class="nav-item">
           <a class="nav-link" href="/category">Category</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
       </ul>
     </div>
   </div>
@@ -110,7 +107,51 @@
 <div class="container">
     <div class="row">
       <div class="col-12 mx-auto">
-        <div class="game-area">
+        <div class="row min-vh-100 flex-column flex-lg-row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <h1>Search</h1>
+        <label class="mdc-text-field mdc-text-field--filled">
+            <span class="mdc-text-field__ripple"></span>
+            <input class="mdc-text-field__input" type="text" id="search-input" placeholder="Search Keyword" size="120"
+                aria-label="Label"></textarea>
+            <span class="mdc-line-ripple"></span>
+        </label>
+
+        <ul class="mdc-list" id="results-container"></ul>
+
+        <!-- Script pointing to jekyll-search.js -->
+        <script src="/js/simple-jekyll-search.js"></script>
+
+        <script type="text/javascript">
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                json: '/search.json',
+                searchResultTemplate: `
+                <li class="mdc-list-item">
+                <a href="{url}" style="text-decoration:none">
+                <span class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">{title}</span>
+                </span>
+                </a>
+                </li><hr>
+            `,
+                sortMiddleware: function (a, b) {
+                    var adate = String(a.date);
+                    var bdate = String(b.date);
+                    return adate.localeCompare(bdate)
+                },
+                noResultsText: 'No results found',
+                limit: 30,
+                fuzzy: false
+            })
+        </script>
+        <hr>
+    </div>
+</div>
+
+
+<!-- <div class="game-area">
     <div class="red-button"></div>
     <div class="orange-button"></div>
     <div class="green-button"></div>
@@ -122,7 +163,7 @@
         var iframe = document.getElementById('game-iframe');
         iframe.src = iframe.src;
     });
-</script>
+</script> -->
       </div>
   </div>
 </div>
