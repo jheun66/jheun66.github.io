@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Attributes - MenuItem - In progress
+    
+  </title>
+
+  <meta name="description" content="이번 포스트에서는 MenuItem 속성을 사용하여 Unity Editor에서 새로운 메뉴 항목을 추가하는 방법과 이를 활용한 예제를 소개하겠습니다.😊">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/assets/highlight.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://jheun66.github.io/posts/unity/introduction-to-menuitem-attribute/">
+  <link rel="alternate" type="application/rss+xml" title="In progress" href="/feed.xml">
+
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style type="text/css">
+    a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:hover {text-decoration: underline;}
+  </style>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Attributes - MenuItem | In progress</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Attributes - MenuItem" />
+<meta name="author" content="Eun JongHyeok" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="이번 포스트에서는 MenuItem 속성을 사용하여 Unity Editor에서 새로운 메뉴 항목을 추가하는 방법과 이를 활용한 예제를 소개하겠습니다.😊" />
+<meta property="og:description" content="이번 포스트에서는 MenuItem 속성을 사용하여 Unity Editor에서 새로운 메뉴 항목을 추가하는 방법과 이를 활용한 예제를 소개하겠습니다.😊" />
+<link rel="canonical" href="https://jheun66.github.io/posts/unity/introduction-to-menuitem-attribute/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/unity/introduction-to-menuitem-attribute/" />
+<meta property="og:site_name" content="In progress" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-16T15:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Attributes - MenuItem" />
+<meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2024-09-16T15:00:00+00:00","datePublished":"2024-09-16T15:00:00+00:00","description":"이번 포스트에서는 MenuItem 속성을 사용하여 Unity Editor에서 새로운 메뉴 항목을 추가하는 방법과 이를 활용한 예제를 소개하겠습니다.😊","headline":"Attributes - MenuItem","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/unity/introduction-to-menuitem-attribute/"},"url":"https://jheun66.github.io/posts/unity/introduction-to-menuitem-attribute/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8954355499146518"
+     crossorigin="anonymous"></script>
+  <script async src="https://fundingchoicesmessages.google.com/i/pub-8954355499146518?ers=1" nonce="vIYNAgythFLTbocmvIWE6A"></script><script nonce="vIYNAgythFLTbocmvIWE6A">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">In progress</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/category">Category</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+
+
+<header class="masthead" style="background-color: #3F37C9;">
+
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>Attributes - MenuItem</h1>
+          
+          <span class="meta">Posted by Eun JongHyeok on September 16, 2024
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row min-vh-100 flex-column flex-lg-row">
+    <div class="fixed-menu">
+      <div class="fixed-menu-title">Unity 다른 글 보기</div>
+      <ul>
+        
+        <li>
+          <a href="/posts/unity/introduction-to-menuitem-attribute/">Attributes - MenuItem</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity/ui-toolkit-how-to-apply-fonts-and-fix-issues-when-it-doesn't-work/">UI Toolkit - 폰트 적용시 이슈 해결 방법</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity/option-to-disable-domain-reloading-and-including-warnings/">도메인 리로딩 비활성화 옵션과 주의 사항</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity/mono-vs-il2cpp/">Scripting Backend - Mono vs IL2CPP</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity/how-to-make-links-in-tmp/">TextMeshPro - 링크 만들기</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unity/using-korean-in-textmeshpro/">TextMeshPro - 한글 사용하기</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#menuitem">MenuItem</a></li>
+<li class="toc-entry toc-h1"><a href="#기본-사용법">기본 사용법</a></li>
+<li class="toc-entry toc-h1"><a href="#메뉴-항목-활성화-및-비활성화-제어하기">메뉴 항목 활성화 및 비활성화 제어하기</a></li>
+<li class="toc-entry toc-h1"><a href="#️키보드-단축키-추가하기">⌨️키보드 단축키 추가하기</a></li>
+<li class="toc-entry toc-h1"><a href="#custom-gameobject-생성하기">Custom GameObject 생성하기</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#부모-객체-설정을-위한-gameobjectutilitysetparentandalign">부모 객체 설정을 위한 GameObjectUtility.SetParentAndAlign</a></li>
+<li class="toc-entry toc-h2"><a href="#undoregistercreatedobjectundo로-undo-기능-지원하기">Undo.RegisterCreatedObjectUndo로 Undo 기능 지원하기</a></li>
+<li class="toc-entry toc-h2"><a href="#selectionactiveobject으로-새-객체-선택">Selection.activeObject으로 새 객체 선택</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#reference">Reference</a></li>
+</ol><p>이번 포스트에서는 MenuItem 속성을 사용하여 Unity Editor에서 새로운 메뉴 항목을 추가하는 방법과 이를 활용한 예제를 소개하겠습니다.😊</p>
+
+<h1 id="menuitem">
+<a class="anchor" href="#menuitem" aria-hidden="true"><span class="octicon octicon-link"></span></a>MenuItem</h1>
+<p>MenuItem은 UnityEditor 네임스페이스에서 제공하는 속성으로 오직 static 함수에만 사용할 수 있습니다.<br>
+이를 통해 Unity 에디터에서 새로운 메뉴 항목을 쉽게 만들 수 있으며, 사용자에게 특정 기능을 빠르게 실행할 수 있는 버튼을 제공할 수 있습니다.</p>
+
+<h1 id="기본-사용법">
+<a class="anchor" href="#%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>기본 사용법</h1>
+<p>아래의 코드는 Unity 에디터의 Test 메뉴에 Do CustomFunction이라는 항목을 추가하고, 이를 클릭하면 간단한 콘솔 메시지를 출력하는 예제입니다.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="p">[</span><span class="nf">MenuItem</span><span class="p">(</span><span class="s">"Test/Do CustomFunction"</span><span class="p">)]</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">CustomFunction</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 실행할 코드</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">"CustomFunction is running!"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>위 코드처럼 MenuItem 속성은 함수에 붙여서 사용하며, 메뉴 경로와 항목 이름을 지정해 주면 해당 메뉴 항목이 에디터에 나타납니다.</p>
+
+<p><img src="/img/posts/unity/015.png" alt="015" width="500px" class="center"></p>
+
+<h1 id="메뉴-항목-활성화-및-비활성화-제어하기">
+<a class="anchor" href="#%EB%A9%94%EB%89%B4-%ED%95%AD%EB%AA%A9-%ED%99%9C%EC%84%B1%ED%99%94-%EB%B0%8F-%EB%B9%84%ED%99%9C%EC%84%B1%ED%99%94-%EC%A0%9C%EC%96%B4%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>메뉴 항목 활성화 및 비활성화 제어하기</h1>
+<p>메뉴 항목은 때때로 활성화 또는 비활성화 상태가 필요할 수 있습니다. 예를 들어, 특정 상황에서만 메뉴 항목을 클릭할 수 있게 하려면 validate 함수와 MenuItem 속성의 validate 인자를 사용할 수 있습니다.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre><span class="p">[</span><span class="nf">MenuItem</span><span class="p">(</span><span class="s">"Test/Add RigidBody"</span><span class="p">,</span> <span class="k">true</span><span class="p">)]</span>
+<span class="k">static</span> <span class="kt">bool</span> <span class="nf">CanAddRigidbody</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// 선택된 오브젝트가 있고, 그 오브젝트에 Rigidbody가 없을 때만 활성화</span>
+    <span class="k">return</span> <span class="n">Selection</span><span class="p">.</span><span class="n">activeGameObject</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">Selection</span><span class="p">.</span><span class="n">activeGameObject</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">Rigidbody</span><span class="p">&gt;()</span> <span class="p">==</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">[</span><span class="nf">MenuItem</span><span class="p">(</span><span class="s">"Test/Add RigidBody"</span><span class="p">)]</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">AddRigidbodyToGameObject</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">Selection</span><span class="p">.</span><span class="n">activeGameObject</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Selection</span><span class="p">.</span><span class="n">activeGameObject</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">Rigidbody</span><span class="p">&gt;();</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">"Rigidbody added to "</span> <span class="p">+</span> <span class="n">Selection</span><span class="p">.</span><span class="n">activeGameObject</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p><img src="/img/posts/unity/016.png" alt="016" width="400px" class="center"></p>
+
+<p><img src="/img/posts/unity/017.png" alt="017" width="400px" class="center"></p>
+
+<h1 id="️키보드-단축키-추가하기">
+<a class="anchor" href="#%EF%B8%8F%ED%82%A4%EB%B3%B4%EB%93%9C-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>⌨️키보드 단축키 추가하기</h1>
+<p>Unity 메뉴 항목에 키보드 단축키를 추가하여 더욱 편리하게 사용할 수 있습니다. 단축키는 메뉴 이름 뒤에 #, %, &amp;와 같은 기호를 붙여서 지정합니다.</p>
+
+<ul>
+  <li>%: Ctrl을 의미합니다. (Windows와 Linux에서는 Ctrl, macOS에서는 Cmd로 동작)</li>
+  <li>^: Ctrl을 의미합니다. (Windows, Linux, macOS 모두 동일하게 Ctrl로 동작)</li>
+  <li>#: Shift를 의미합니다.</li>
+  <li>&amp;: Alt를 의미합니다.</li>
+</ul>
+
+<p>예를 들어, Shift와 Alt를 누른 상태에서 G 키를 눌러 메뉴 항목을 실행하려면 다음과 같이 설정할 수 있습니다:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="p">[</span><span class="nf">MenuItem</span><span class="p">(</span><span class="s">"Test/Do Something1 #&amp;g"</span><span class="p">)]</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">DoSomething1</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">"Shift + Alt + G is pressed!"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>특수 키 조합 없이 사용할 때는 _를 사용합니다. 이때 반드시 <code class="language-plaintext highlighter-rouge">space character</code>가 있어야 합니다.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="p">[</span><span class="nf">MenuItem</span><span class="p">(</span><span class="s">"Test/Do Something2 _g"</span><span class="p">)]</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">DoSomething2</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">"G is pressed!"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p><img src="/img/posts/unity/018.png" alt="018" width="300px" class="center"></p>
+
+<h1 id="custom-gameobject-생성하기">
+<a class="anchor" href="#custom-gameobject-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom GameObject 생성하기</h1>
+<p>Unity에서 사용자 정의 GameObject를 생성하는 기능을 GameObject/ 메뉴에 추가할 때는 몇 가지 중요한 사항을 지켜야 합니다.<br>
+먼저엔 먼저 코드를 살펴보겠습니다.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="p">[</span><span class="nf">MenuItem</span><span class="p">(</span><span class="s">"GameObject/Create Custom GameObject"</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="m">10</span><span class="p">)]</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">CreateCustomGameObject</span><span class="p">(</span><span class="n">MenuCommand</span> <span class="n">menuCommand</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">GameObject</span> <span class="n">go</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">GameObject</span><span class="p">(</span><span class="s">"Custom GameObject"</span><span class="p">);</span>
+    <span class="n">GameObjectUtility</span><span class="p">.</span><span class="nf">SetParentAndAlign</span><span class="p">(</span><span class="n">go</span><span class="p">,</span> <span class="n">menuCommand</span><span class="p">.</span><span class="n">context</span> <span class="k">as</span> <span class="n">GameObject</span><span class="p">);</span>
+    <span class="n">Undo</span><span class="p">.</span><span class="nf">RegisterCreatedObjectUndo</span><span class="p">(</span><span class="n">go</span><span class="p">,</span> <span class="s">"Create "</span> <span class="p">+</span> <span class="n">go</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+    <span class="n">Selection</span><span class="p">.</span><span class="n">activeObject</span> <span class="p">=</span> <span class="n">go</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p><img src="/img/posts/unity/019.png" alt="019" width="400px" class="center"></p>
+
+<h2 id="부모-객체-설정을-위한-gameobjectutilitysetparentandalign">
+<a class="anchor" href="#%EB%B6%80%EB%AA%A8-%EA%B0%9D%EC%B2%B4-%EC%84%A4%EC%A0%95%EC%9D%84-%EC%9C%84%ED%95%9C-gameobjectutilitysetparentandalign" aria-hidden="true"><span class="octicon octicon-link"></span></a>부모 객체 설정을 위한 GameObjectUtility.SetParentAndAlign</h2>
+<p>GameObject를 생성할 때, 특히 컨텍스트 메뉴에서 새 객체를 생성할 경우, 해당 객체를 올바른 부모로 설정하는 것이 중요합니다.<br>
+이를 위해 <code class="language-plaintext highlighter-rouge">GameObjectUtility.SetParentAndAlign</code>을 호출하여, 새로 생성된 객체가 적절한 부모로 설정되도록 해야 합니다.<br>
+선택한 부모 객체가 있는 경우 그 아래에 새로 생성된 객체를 배치하고, 없는 경우 기본 위치에 객체를 생성합니다.</p>
+
+<p><img src="/img/posts/unity/020.png" alt="020" width="400px" class="center"></p>
+
+<h2 id="undoregistercreatedobjectundo로-undo-기능-지원하기">
+<a class="anchor" href="#undoregistercreatedobjectundo%EB%A1%9C-undo-%EA%B8%B0%EB%8A%A5-%EC%A7%80%EC%9B%90%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Undo.RegisterCreatedObjectUndo로 Undo 기능 지원하기</h2>
+<p>Unity의 편리한 기능 중 하나인 Undo 시스템을 사용하면, 사용자가 실수로 만든 객체를 쉽게 제거할 수 있습니다. GameObject를 생성할 때 <code class="language-plaintext highlighter-rouge">Undo.RegisterCreatedObjectUndo</code>를 사용해 해당 작업을 등록하면, 사용자는 Ctrl+Z를 눌러 생성 작업을 취소할 수 있습니다.</p>
+
+<h2 id="selectionactiveobject으로-새-객체-선택">
+<a class="anchor" href="#selectionactiveobject%EC%9C%BC%EB%A1%9C-%EC%83%88-%EA%B0%9D%EC%B2%B4-%EC%84%A0%ED%83%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selection.activeObject으로 새 객체 선택</h2>
+<p>객체가 생성된 후 바로 해당 객체가 선택되도록 하려면, <code class="language-plaintext highlighter-rouge">Selection.activeObject</code>를 사용해 새로 생성된 객체를 선택 상태로 설정할 수 있습니다.</p>
+
+<h1 id="reference">
+<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h1>
+<p><a href="https://docs.unity3d.com/ScriptReference/MenuItem.html">Unity - Scripting API:MenuItem</a></p>
+
+
+      <hr>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>Unity</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>Attributes</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>MenuItem</div>
+      
+
+      <hr>
+
+      <!-- 다음 포스트, 이전 포스트 카테고리별로 정리 -->
+      
+
+      
+      
+
+      
+      <a class="btn btn-gray float-left" href="/posts/unity/ui-toolkit-how-to-apply-fonts-and-fix-issues-when-it-doesn't-work/" data-toggle="tooltip" data-placement="top" title="UI Toolkit - 폰트 적용시 이슈 해결 방법">&larr; Previous<span class="d-none d-md-inline">
+          Post</span></a>
+      
+      
+
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/unity/introduction-to-menuitem-attribute/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/unity/introduction-to-menuitem-attribute/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:jheun5@naver.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/amos55606241">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/amos.eun.73">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2024</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1H0RYSGS7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T1H0RYSGS7');
+</script>
+
+
+
+  <style>
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.333%;
+    height: 0;
+    background: black;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}    
+</style>
+
+<script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+        url: 'https://vimeo.com/api/oembed.json?url='+url,
+        async: true,
+        success: function(response) {
+        if(response.video_id) {
+            id = response.video_id;
+            if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+            if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+            var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+            if(autoplay==1) theInnerHTML += '&autoplay=1';
+            if(loop==1) theInnerHTML += '&loop=1';
+            theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
+            el.innerHTML = theInnerHTML;
+        }
+        }
+    });
+}
+function video_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        //check if this is an external url (that starts with https:// or http://
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                if(p[i].innerHTML.indexOf('start=') !== -1) theInnerHTML += '&start='+p[i].innerHTML.substring(p[i].innerHTML.indexOf('start=')+6);
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                vimeo_embed(p[i].innerHTML,p[i]);
+            }
+        }
+    }
+}
+video_embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
+        }
+    }
+}
+mp3_embed();
+</script>
+  
+  <script id="dsq-count-scr" src="//jheun66.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>

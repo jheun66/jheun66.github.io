@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Attributes - MenuItem",
+      "category" : "",
+      "tags"     : "unity, attributes, menuitem",
+      "url"      : "/posts/unity/introduction-to-menuitem-attribute/",
+      "date"     : "09/16/2024"
+    } ,
+  
+    {
       "title"    : "UI Toolkit - 폰트 적용시 이슈 해결 방법",
       "category" : "",
       "tags"     : "unity, ui_toolkit, font, font_asset",
