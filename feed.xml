@@ -5,9 +5,42 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 12 Sep 2024 09:29:47 +0000</pubDate>
-    <lastBuildDate>Thu, 12 Sep 2024 09:29:47 +0000</lastBuildDate>
+    <pubDate>Mon, 16 Sep 2024 08:50:58 +0000</pubDate>
+    <lastBuildDate>Mon, 16 Sep 2024 08:50:58 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>UI Toolkit - 폰트 적용시 이슈 해결 방법</title>
+        <description>&lt;h1 id=&quot;폰트-적용-방법&quot;&gt;폰트 적용 방법&lt;/h1&gt;
+&lt;p&gt;Unity UI Toolkit을 사용하여 UI를 구성할 때, 폰트를 적용하는 방식에는 두 가지 방법이 있습니다. 하나는 폰트 파일을 직접 적용하는 방법이고, 다른 하나는 Unity에서 제공하는 폰트 애셋(Font Asset)을 사용하는 방법입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/012.png&quot; alt=&quot;012&quot; class=&quot;center&quot; /&gt;&lt;br /&gt;
+처음 UI Builder 화면을 띄워서 기본 설정을 보면 Font Asset이 적요되어 있는 것을 볼 수 있습니다.&lt;/p&gt;
+&lt;h1 id=&quot;폰트-파일-적용시-주의&quot;&gt;폰트 파일 적용시 주의&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/013.png&quot; alt=&quot;013&quot; class=&quot;center&quot; /&gt;&lt;br /&gt;
+이런식으로 폰트 파일만 수정하게 되면 제대로 폰트가 적용되지 않습니다.&lt;br /&gt;
+폰트가 제대로 적용되려면 위 두 가지 방법 중 하나만 선택하여 사용해야 하며, 혼용하게 되면 폰트 적용이 예상대로 이루어지지 않을 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/014.png&quot; alt=&quot;014&quot; class=&quot;center&quot; /&gt;&lt;br /&gt;
+폰트 파일을 적용하려면 기존에 설정된 폰트 애셋을 None으로 처리해야 충돌이 발생하지 않습니다.&lt;br /&gt;
+폰트 파일을 나중에 적용한 경우, 폰트 애셋은 더 이상 필요하지 않기 때문에 다음과 같이 None으로 설정해야 합니다.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Sep 2024 15:00:00 +0000</pubDate>
+        <link>https://jheun66.github.io/posts/unity/ui-toolkit-how-to-apply-fonts-and-fix-issues-when-it-doesn't-work/</link>
+        <guid isPermaLink="true">https://jheun66.github.io/posts/unity/ui-toolkit-how-to-apply-fonts-and-fix-issues-when-it-doesn't-work/</guid>
+        
+        <category>Unity</category>
+        
+        <category>UI Toolkit</category>
+        
+        <category>Font</category>
+        
+        <category>Font Asset</category>
+        
+        
+        <category>Unity</category>
+        
+      </item>
     
       <item>
         <title>Piece Table - C# 구현</title>
@@ -372,7 +405,7 @@
 개발하는 입장에서 이 시간이 얼마나 답답한지 다들 공감하실 겁니다.😢&lt;/p&gt;
 
 &lt;p&gt;그래서 유니티에서는 이런 리로딩을 비활성화할 수 있는 옵션을 제공해주고 있습니다.&lt;br /&gt;
-&lt;img src=&quot;/img/posts/unity/030.png&quot; alt=&quot;030&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/img/posts/unity/010.png&quot; alt=&quot;010&quot; /&gt;&lt;br /&gt;
 Project Settings - Editor - Enter Play Mode Settings에서 Enter Play Mode Options을 체크해주면 됩니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;disabling-domain-reloading&quot;&gt;Disabling Domain Reloading&lt;/h1&gt;
@@ -403,7 +436,7 @@ RuntimeInitializeOnLoadMethod에서는 &lt;a href=&quot;https://docs.unity3d.com
 &lt;p&gt;이 타입들을 이용하면 더 자세하게 타이밍을 지정해 줄 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;실제 호출을 해보면 다음과 같은 순서로 실행되는 것을 확인하실 수 있습니다. 
-&lt;img src=&quot;/img/posts/unity/031.png&quot; alt=&quot;031&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/img/posts/unity/011.png&quot; alt=&quot;011&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;정적-클래스-생성자&quot;&gt;정적 클래스 생성자&lt;/h2&gt;
 &lt;p&gt;정적 클래스 생성자가 있을 때는 여러번 호출하더라도 도메인 리로드가 안되면 한번만 호출됩니다.&lt;br /&gt;
@@ -428,7 +461,7 @@ RuntimeInitializeOnLoadMethod에서는 &lt;a href=&quot;https://docs.unity3d.com
       <item>
         <title>Scripting Backend - Mono vs IL2CPP</title>
         <description>&lt;h1 id=&quot;c-compilation&quot;&gt;C# compilation&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/img/posts/unity/028.svg&quot; alt=&quot;028&quot; class=&quot;center&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/008.svg&quot; alt=&quot;008&quot; class=&quot;center&quot; /&gt;&lt;br /&gt;
 &lt;a href=&quot;https://en.m.wikipedia.org/wiki/.NET_Framework&quot;&gt;출처&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;유니티는 다양한 멀티 플랫폼을 지원하고 있습니다.&lt;br /&gt;
@@ -442,7 +475,7 @@ Mono vs IL2CPP에 대해 설명하기에 앞서 일반적인 C# 스크립트가 
 &lt;p&gt;이후 Runtime에는 일반적으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Common Language Runtime(CLR)&lt;/code&gt; 안에 있는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;just-in-time compiler(JIT)&lt;/code&gt;가 각 플랫폼에 맞는 기계어로 변환해 줍니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;스크립트-백엔드&quot;&gt;스크립트 백엔드&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/img/posts/unity/029.png&quot; alt=&quot;029&quot; width=&quot;450&quot; class=&quot;center&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/unity/009.png&quot; alt=&quot;009&quot; width=&quot;450&quot; class=&quot;center&quot; /&gt;
 다시 원점으로 돌아와서 그럼 유니티에서 설정하는 스크립팅 벡엔드는 무엇이냐 하면
 Intermediate Language(IL)까지 생성한 뒤 이 IL을 무엇을 통해 기계어로 바꿀지 결정하는 것입니다.&lt;br /&gt;
 그럼 각 설정별 특징을 간단히 알아보겠습니다.&lt;/p&gt;
@@ -2635,7 +2668,7 @@ virtual table에 대해서는 해당 블로그가 그림으로 표현을 잘되�
       </item>
     
       <item>
-        <title>TextMeshPro에서 링크 만들기</title>
+        <title>TextMeshPro - 링크 만들기</title>
         <description>&lt;p&gt;TextMeshPro의 &lt;link /&gt; 태그를 이용하여 링크기능을 만들 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;http URL이 넘어올 때 정규표현식으로 URL 체크후 브라우저로 띄울 수 있는 링크를 구현해보도록 하겠습니다.&lt;/p&gt;
@@ -2785,13 +2818,17 @@ virtual table에 대해서는 해당 블로그가 그림으로 표현을 잘되�
         
         <category>TextMeshPro</category>
         
+        <category>Link</category>
+        
+        <category>IPointerClickHandler</category>
+        
         
         <category>Unity</category>
         
       </item>
     
       <item>
-        <title>TextMeshPro에서 한글 사용하기</title>
+        <title>TextMeshPro - 한글 사용하기</title>
         <description>&lt;p&gt;유니티에서 TextMeshPro를 다운받고 바로 사용하면 한글을 쓸 때 네모로 나오게 됩니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/posts/unity/001.png&quot; alt=&quot;img1&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
@@ -5295,93 +5332,6 @@ host를 설정하지 않으면 모든 http 스킴에 대해서 처리해줄 수 
         <pubDate>Wed, 30 Dec 2020 15:00:00 +0000</pubDate>
         <link>https://jheun66.github.io/posts/android/activities-and-intents-practice/</link>
         <guid isPermaLink="true">https://jheun66.github.io/posts/android/activities-and-intents-practice/</guid>
-        
-        <category>Intent</category>
-        
-        <category>Explict Intent</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>Intent(Explict Intent)</title>
-        <description>&lt;p&gt;먼저 Explict Intent 위주로 정리합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;intent&quot;&gt;Intent&lt;/h2&gt;
-&lt;p&gt;App Component 사이에서 통신하는데 사용되는 메시지 객체입니다. ART에 요청하여 액티비티를 시작하거나 다른 app component(서비스, 브로드캐스트)등을 자기 앱에서 또는 다른 앱에서 실행 시킬 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;앱을 처음 실행시킬때 ART에서 앱으로 Intent를 보내 메인 액티비티를 실행시킵니다. 다른 액티비티를 실행시킬때는 startActivity() 또는 startActivityResult()를 호출합니다. 실행 뿐만 아니라 액티비티간 데이터를 전송하는데 사용할 수도 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;intent-types&quot;&gt;Intent types&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Explict Intent&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;주로 자신의 앱에서는 패키지 이름과 클래스 이름을 알고 있으므로 자격을 갖춘 액티비티 클래스 이름을 사용하여 명시적으로 인텐트를 호출 할 수 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Implict Intent&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;명시적으로 지정하지 않고 수행할 액션을 통해 시스템이 부합하는 액티비티 또는 컴포넌트를 실행시킬 수 있습니다.
-&lt;a href=&quot;/posts/android/implict-intent&quot;&gt;&lt;strong&gt;Implict Intent&lt;/strong&gt;&lt;/a&gt;에 따로 정리합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;intent-filter&quot;&gt;Intent Filter&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;AndroidMainfest.xml&lt;/em&gt; 에서 인텐트 필터를 확인한 적이 있습니다. 해당 구성 요소가 수신하고자 하는 인텐트 유형을 작성하면 됩니다.&lt;/p&gt;
-
-&lt;p&gt;보안상 Service를 시작할 때는 명시적 인텐트를 사용하고 서비스에 대한 인텐트 필터는 선언하지 말라고 합니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Caution: To ensure that your app is secure, always use an explicit intent when starting a Service and do not declare intent filters for your services. Using an implicit intent to start a service is a security hazard because you can’t be certain what service will respond to the intent, and the user can’t see which service starts. Beginning with Android 5.0 (API level 21), the system throws an exception if you call bindService() with an implicit intent.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;intent-information&quot;&gt;Intent Information&lt;/h2&gt;
-
-&lt;p&gt;Intent 내부에는 어떤 컴포넌트를 실행할지 등 정보들이 담겨있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Component name&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Explict Intent에서는 필수로 작성해야합니다. 컴포넌트 이름이 없으면 시스템은 Implict Intent로 판단하고 다른 정보들을 통해 매칭해줍니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;작업을 수행할 데이터의 URI와 MIME 유형을 전달할 수 있습니다. URI를 설정하기 위해서는 setData()를 MIME 유형을 설정하기 위해서는 setType()을 호출하면 됩니다.&lt;/p&gt;
-
-&lt;p&gt;단, 주의 사항으로 URI와 MIME 유형을 둘다 설정할 경우 setData()와 setType()를 호출하는게 아니라 setDataAndType()을 호출합니다. 그렇지 않을 경우 서로 무효화한다고 합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Extras&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;작업에 필요한 데이터를 키-값 쌍으로 보낼 수 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Flags&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Intent 클래스에 정의되어 있는 메타데이터입니다. 액티비티를 어떻게 실행할지 실행되고 어떻게 처리될지 등을 지시히라 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/reference/android/content/Intent#setFlags(int)&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Implict Intent는 다음 정보가 추가할 수 있습니다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Action&lt;/li&gt;
-  &lt;li&gt;Category&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutintents&quot;&gt;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutintents&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://developer.android.com/guide/components/intents-filters&quot;&gt;https://developer.android.com/guide/components/intents-filters&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Dec 2020 03:00:00 +0000</pubDate>
-        <link>https://jheun66.github.io/posts/android/intent/</link>
-        <guid isPermaLink="true">https://jheun66.github.io/posts/android/intent/</guid>
         
         <category>Intent</category>
         

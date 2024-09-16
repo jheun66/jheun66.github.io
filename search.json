@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "UI Toolkit - 폰트 적용시 이슈 해결 방법",
+      "category" : "",
+      "tags"     : "unity, ui_toolkit, font, font_asset",
+      "url"      : "/posts/unity/ui-toolkit-how-to-apply-fonts-and-fix-issues-when-it-doesn't-work/",
+      "date"     : "09/15/2024"
+    } ,
+  
+    {
       "title"    : "Piece Table - C# 구현",
       "category" : "",
       "tags"     : "piece_table",
@@ -89,15 +97,15 @@
     } ,
   
     {
-      "title"    : "TextMeshPro에서 링크 만들기",
+      "title"    : "TextMeshPro - 링크 만들기",
       "category" : "",
-      "tags"     : "textmeshpro",
+      "tags"     : "textmeshpro, link, ipointerclickhandler",
       "url"      : "/posts/unity/how-to-make-links-in-tmp/",
       "date"     : "10/01/2022"
     } ,
   
     {
-      "title"    : "TextMeshPro에서 한글 사용하기",
+      "title"    : "TextMeshPro - 한글 사용하기",
       "category" : "",
       "tags"     : "textmeshpro",
       "url"      : "/posts/unity/using-korean-in-textmeshpro/",
