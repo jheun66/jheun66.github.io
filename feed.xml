@@ -5,9 +5,68 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Sep 2024 17:12:53 +0000</pubDate>
-    <lastBuildDate>Mon, 16 Sep 2024 17:12:53 +0000</lastBuildDate>
+    <pubDate>Thu, 09 Jan 2025 14:04:05 +0000</pubDate>
+    <lastBuildDate>Thu, 09 Jan 2025 14:04:05 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>(주간 회고) 노마드 코더 플러터 스터디 1주차</title>
+        <description>&lt;h2 id=&quot;핵심-3줄-요약&quot;&gt;💖핵심 3줄 요약&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;플러터 공부 시작!&lt;/li&gt;
+  &lt;li&gt;올해는 포기하지말고 끝가지 가보자!&lt;/li&gt;
+  &lt;li&gt;공부 기록을 남기자!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;이번-주-목표&quot;&gt;🎯 이번 주 목표&lt;/h2&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Dart 완강&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Flutter 예습 들어가기&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;블로그 다시 시작하기(적어도 회고를 쓰게 되어..)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;칭찬하고-싶은-점&quot;&gt;👏 칭찬하고 싶은 점&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;시작한 것만으로도 칭찬받아 마땅하다.(자화자찬)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;고치거나-버려야-할-점&quot;&gt;😭 고치거나 버려야 할 점&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;강의만 듣고 끝내기 반드시 따라서 타이핑까지 쳐야겠다.&lt;/li&gt;
+  &lt;li&gt;아는 내용도 정리하는 습관을 기르자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;이번-주-배운-내용&quot;&gt;📚 이번 주 배운 내용&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;🤩 새롭게 알게 된 것 :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Dart를 처음 접하면서 오랫만에 새로운 언어와 프레임워크를 만났다.&lt;/li&gt;
+  &lt;li&gt;내가 생각했던 것보다 쉬운 문법(?)을 가지고 있는거 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;🤔 질문 :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;아직까지는 없다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;주간-회의와-조별-활동&quot;&gt;📑 주간 회의와 조별 활동&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;앞으로 참여할 예정이다.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 09 Jan 2025 14:00:00 +0000</pubDate>
+        <link>https://jheun66.github.io/posts/flutter/flutter-study-week-01/</link>
+        <guid isPermaLink="true">https://jheun66.github.io/posts/flutter/flutter-study-week-01/</guid>
+        
+        <category>nomadcoder</category>
+        
+        <category>study</category>
+        
+        <category>review</category>
+        
+        
+        <category>Flutter</category>
+        
+      </item>
     
       <item>
         <title>Attributes - MenuItem</title>
@@ -5399,79 +5458,6 @@ EXTRA_STREAM을 사용할 때는 타입을 &lt;em&gt;/&lt;/em&gt; 로 합니다.
         <category>Activity</category>
         
         <category>Intent</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>Implict Intent</title>
-        <description>&lt;p&gt;&lt;a href=&quot;/posts/android/intent&quot;&gt;&lt;strong&gt;Intent&lt;/strong&gt;&lt;/a&gt;에 이어서 작성하겠습니다.&lt;/p&gt;
-
-&lt;p&gt;Explict Intent에서는 클래스명으로 호출하여 다른 액티비티를 호출했습니다. 하지만 Implict Intent를 이용한 호출 방법은 조금 다릅니다.
-특정 클래스 명을 지정하지 않더라도 원하는 액션과 특정 데이터들을 이용하여 실행할 수 있는 액티비티, 다른 컴포넌트들을 호출할 수 있습니다. 매칭된 액티비티가 여러 개일 경우 사용자가 선택할 수 있습니다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Intent가 무엇을 실행시킬지 &lt;em&gt;결정&lt;/em&gt; 하는 것을 Intent Resolution이라 합니다. 만일 기기에 인텐트를 처리할 수 있는 앱이 존재하지 않으면 비정상 종료됩니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;intent-infomation&quot;&gt;Intent Infomation&lt;/h1&gt;
-&lt;h2 id=&quot;action&quot;&gt;Action&lt;/h2&gt;
-&lt;p&gt;다른 액티비티가 받을 일반적인 액션을 정합니다. ACTION_VIEW, ACTION_SEND 등 ACTION_ 가 붙습니다. 
-&lt;a href=&quot;https://developer.android.com/reference/android/content/Intent#standard-activity-actions&quot;&gt;Standard Activity Action&lt;/a&gt;를 확인해보면 알 수 있듯이 Intent클래스에 상수로 포함되어 있습니다. 브로드 캐스트와 관련된 Action도 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;data&quot;&gt;Data&lt;/h2&gt;
-&lt;p&gt;Explict Intent에서와 마찬가지로 데이터를 보낼 수 있습니다. 주로 브라우저에 URI를 넣어 특정 사이트를 호출하거나 할 수 있습니다.
-type도 마찬가지로 setType()으로 세팅 가능합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;category&quot;&gt;Category&lt;/h2&gt;
-&lt;p&gt;카테고리 항목은 옵션입니다. 액션만을 이용하서 고르는 것보다 더 세세하게 고를 수 있습니다. 카테고리는 여러 개가 들어갈 수 있습니다. 
-&lt;a href=&quot;https://developer.android.com/reference/android/content/Intent.html#standard-categories&quot;&gt;Standard Category&lt;/a&gt;에서 주로 사용되는 카테고리를 확인 할 수 있습니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;send--receive&quot;&gt;Send &amp;amp; Receive&lt;/h1&gt;
-&lt;h2 id=&quot;startactivity-or-startactivityforresult&quot;&gt;startActivity or startActivityforResult&lt;/h2&gt;
-&lt;p&gt;Explict Intent에서도 사용했던 방법으로 해당 방법으로 액티비티를 호출하기전에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;intent.resolveActivity(getPackageManager())&lt;/code&gt;를 이용하여 해당 액티비티를 실행할 수 있는지 확인할 수 있습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;만일 기기에 인텐트를 처리할 수 있는 앱이 존재하지 않으면 비정상 종료됩니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;sharecompatintentbuilder&quot;&gt;ShareCompat.IntentBuilder&lt;/h2&gt;
-&lt;p&gt;공유하기에 관련된 &lt;a href=&quot;https://developer.android.com/reference/androidx/core/app/ShareCompat.IntentBuilder&quot;&gt;헬퍼&lt;/a&gt;입니다. 해당 클래스의 메소드를 이용하여 추가적으로 세팅할 수 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;receive-implict-intent&quot;&gt;Receive Implict Intent&lt;/h2&gt;
-&lt;p&gt;액티비티에서 Implict Intent를 받기위해서는 Intent Filter가 필요합니다. &lt;em&gt;AndroidMenifest.xml&lt;/em&gt; 에 정의를 해줄 수 있습니다. 만일 &amp;lt;intent-filter&amp;gt;항목이 없다면 Explict Intent로만 호출이 가능합니다. 여기서도 마찬가지로 액티비티가 받을 action, catagory, data들을 정의해 줄 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.intent.action.VIEW&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.intent.category.DEFAULT&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.intent.category.BROWSABLE&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;data&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:scheme=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:host=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;developer.android.com&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;예시로 해당 파트의 실습에서 사용한 코드입니다. 이 액티비티는 ACTION_VIEW 액션에 default(기본)나 browsable 카테고리, http Scheme에 “developer.android.com”에 대해서만 처리를 해줍니다.
-host를 설정하지 않으면 모든 http 스킴에 대해서 처리해줄 수 있습니다. 만일 https에 대해서도 받아주고 싶다면 https Scheme을 추가해 주면 됩니다. 그리고 default는 startActivity(), startActivityForResult()에 포함이 되어 있어 Implict Intent를 수신하는 경우 반드시 포함되어야 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-3-c-implicit-intents/2-3-c-implicit-intents.html&quot;&gt;https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-3-c-implicit-intents/2-3-c-implicit-intents.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://developer.android.com/codelabs/android-training-activity-with-implicit-intent#0&quot;&gt;https://developer.android.com/codelabs/android-training-activity-with-implicit-intent#0&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://developer.android.com/reference/android/content/Intent.html&quot;&gt;https://developer.android.com/reference/android/content/Intent.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://developer.android.com/reference/androidx/core/app/ShareCompat.IntentBuilder&quot;&gt;https://developer.android.com/reference/androidx/core/app/ShareCompat.IntentBuilder&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 09 Jan 2021 18:00:00 +0000</pubDate>
-        <link>https://jheun66.github.io/posts/android/implict-intent/</link>
-        <guid isPermaLink="true">https://jheun66.github.io/posts/android/implict-intent/</guid>
-        
-        <category>Intent</category>
-        
-        <category>Implict Intent</category>
         
         
         <category>Android</category>
