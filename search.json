@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "(클린코드) 책 구매 인증",
+      "category" : "",
+      "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
+      "url"      : "/posts/unclassified/clean-code-assignment-01/",
+      "date"     : "01/17/2025"
+    } ,
+  
+    {
       "title"    : "(주간 회고) 노마드 코더 플러터 스터디 2주차",
       "category" : "",
       "tags"     : "nomadcoder, study, review",

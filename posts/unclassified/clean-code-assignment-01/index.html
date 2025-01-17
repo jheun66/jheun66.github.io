@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    (클린코드) 책 구매 인증 - In progress
+    
+  </title>
+
+  <meta name="description" content="책 인증 무려 20년도에 구매했던 책인데 아직도 완독을 못했네요😭.. 이번 기회에 완독 도전합니다.">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/assets/highlight.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://jheun66.github.io/posts/unclassified/clean-code-assignment-01/">
+  <link rel="alternate" type="application/rss+xml" title="In progress" href="/feed.xml">
+
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style type="text/css">
+    a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:hover {text-decoration: underline;}
+  </style>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>(클린코드) 책 구매 인증 | In progress</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="(클린코드) 책 구매 인증" />
+<meta name="author" content="Eun JongHyeok" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="책 인증 무려 20년도에 구매했던 책인데 아직도 완독을 못했네요😭.. 이번 기회에 완독 도전합니다." />
+<meta property="og:description" content="책 인증 무려 20년도에 구매했던 책인데 아직도 완독을 못했네요😭.. 이번 기회에 완독 도전합니다." />
+<link rel="canonical" href="https://jheun66.github.io/posts/unclassified/clean-code-assignment-01/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/unclassified/clean-code-assignment-01/" />
+<meta property="og:site_name" content="In progress" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-17T13:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="(클린코드) 책 구매 인증" />
+<meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2025-01-17T13:00:00+00:00","datePublished":"2025-01-17T13:00:00+00:00","description":"책 인증 무려 20년도에 구매했던 책인데 아직도 완독을 못했네요😭.. 이번 기회에 완독 도전합니다.","headline":"(클린코드) 책 구매 인증","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/unclassified/clean-code-assignment-01/"},"url":"https://jheun66.github.io/posts/unclassified/clean-code-assignment-01/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8954355499146518"
+     crossorigin="anonymous"></script>
+  <script async src="https://fundingchoicesmessages.google.com/i/pub-8954355499146518?ers=1" nonce="vIYNAgythFLTbocmvIWE6A"></script><script nonce="vIYNAgythFLTbocmvIWE6A">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">In progress</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/category">Category</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+
+
+<header class="masthead" style="background-color: #3A0CA3;">
+
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>(클린코드) 책 구매 인증</h1>
+          
+          <span class="meta">Posted by Eun JongHyeok on January 17, 2025
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row min-vh-100 flex-column flex-lg-row">
+    <div class="fixed-menu">
+      <div class="fixed-menu-title">Unclassified 다른 글 보기</div>
+      <ul>
+        
+        <li>
+          <a href="/posts/unclassified/clean-code-assignment-01/">(클린코드) 책 구매 인증</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unclassified/ouath/">OAuth 2.0</a>
+        </li>
+        
+        <li>
+          <a href="/posts/unclassified/authentication-vs-authorization/">Authentication VS Authorization</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#책-인증">책 인증</a></li>
+</ol><h1 id="책-인증">
+<a class="anchor" href="#%EC%B1%85-%EC%9D%B8%EC%A6%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>책 인증</h1>
+<p><img src="/img/posts/cleancode/001.jpg" alt="image1" width="100%">
+무려 20년도에 구매했던 책인데 아직도 완독을 못했네요😭..<br>
+이번 기회에 완독 도전합니다.</p>
+
+
+      <hr>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>nomadcoder</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>study</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>노마드코더</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>노개북</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>개발자북클럽</div>
+      
+
+      <hr>
+
+      <!-- 다음 포스트, 이전 포스트 카테고리별로 정리 -->
+      
+
+      
+      
+
+      
+      <a class="btn btn-gray float-left" href="/posts/unclassified/ouath/" data-toggle="tooltip" data-placement="top" title="OAuth 2.0">&larr; Previous<span class="d-none d-md-inline">
+          Post</span></a>
+      
+      
+
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/unclassified/clean-code-assignment-01/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/unclassified/clean-code-assignment-01/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:jheun5@naver.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/amos55606241">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/amos.eun.73">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2025</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1H0RYSGS7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T1H0RYSGS7');
+</script>
+
+
+
+  <style>
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.333%;
+    height: 0;
+    background: black;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}    
+</style>
+
+<script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+        url: 'https://vimeo.com/api/oembed.json?url='+url,
+        async: true,
+        success: function(response) {
+        if(response.video_id) {
+            id = response.video_id;
+            if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+            if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+            var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+            if(autoplay==1) theInnerHTML += '&autoplay=1';
+            if(loop==1) theInnerHTML += '&loop=1';
+            theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
+            el.innerHTML = theInnerHTML;
+        }
+        }
+    });
+}
+function video_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        //check if this is an external url (that starts with https:// or http://
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                if(p[i].innerHTML.indexOf('start=') !== -1) theInnerHTML += '&start='+p[i].innerHTML.substring(p[i].innerHTML.indexOf('start=')+6);
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                vimeo_embed(p[i].innerHTML,p[i]);
+            }
+        }
+    }
+}
+video_embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
+        }
+    }
+}
+mp3_embed();
+</script>
+  
+  <script id="dsq-count-scr" src="//jheun66.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>
