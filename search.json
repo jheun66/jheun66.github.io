@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "(클린코드) 1장. 깨끗한 코드",
+      "category" : "",
+      "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
+      "url"      : "/posts/unclassified/clean-code-assignment-02/",
+      "date"     : "01/17/2025"
+    } ,
+  
+    {
       "title"    : "(클린코드) 책 구매 인증",
       "category" : "",
       "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",

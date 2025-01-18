@@ -2,6 +2,22 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    
     <url>
+      <loc>https://jheun66.github.io/posts/unclassified/clean-code-assignment-02/</loc>
+      
+        <lastmod>2025-01-17T15:00:00+00:00</lastmod>
+      
+
+      
+        <changefreq>daily</changefreq>
+      
+
+      
+        <priority>1.0</priority>
+      
+
+    </url>
+   
+    <url>
       <loc>https://jheun66.github.io/posts/unclassified/clean-code-assignment-01/</loc>
       
         <lastmod>2025-01-17T13:00:00+00:00</lastmod>
