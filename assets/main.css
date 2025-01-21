@@ -10609,6 +10609,12 @@ summary {
   color: black;
 }
 
+.category-title__inline {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .category-count {
   float: right;
   color: #cacdd0;
