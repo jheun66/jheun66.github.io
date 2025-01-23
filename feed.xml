@@ -5,9 +5,117 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Jan 2025 20:11:12 +0000</pubDate>
-    <lastBuildDate>Tue, 21 Jan 2025 20:11:12 +0000</lastBuildDate>
+    <pubDate>Thu, 23 Jan 2025 18:03:35 +0000</pubDate>
+    <lastBuildDate>Thu, 23 Jan 2025 18:03:35 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>(클린코드) 4장. 주석</title>
+        <description>&lt;h3 id=&quot;오늘-til-3줄-요약&quot;&gt;오늘 TIL 3줄 요약&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;주석을 달 필요하게 없게 하는게 가장 중요하다.&lt;/li&gt;
+  &lt;li&gt;좋은 주석은 올바르고 &lt;strong&gt;의미 있는&lt;/strong&gt; 정보를 전달한다.&lt;/li&gt;
+  &lt;li&gt;나쁜 주석은 있어봤자 도움을 안준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;til-today-i-learned-날짜&quot;&gt;TIL (Today I Learned) 날짜&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2025.01.23 - 2025.01.24&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;오늘-읽은-범위&quot;&gt;오늘 읽은 범위&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;4장. 주석&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;책에서-기억하고-싶은-내용을-써보세요&quot;&gt;책에서 기억하고 싶은 내용을 써보세요.&lt;/h3&gt;
+
+&lt;h4 id=&quot;좋은-주석&quot;&gt;좋은 주석&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;주석은 ‘순수하게 선하지’ 못하다.
+정말로 좋은 주석은, 주석을 달지 않을 방법을 찾아낸 주석&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;법적인 주석&lt;/li&gt;
+  &lt;li&gt;정보를 제공하는 주석&lt;/li&gt;
+  &lt;li&gt;의도를 설망하는 주석&lt;/li&gt;
+  &lt;li&gt;의미를 명료하게 밝히는 주석&lt;/li&gt;
+  &lt;li&gt;결과를 경고하는 주석&lt;/li&gt;
+  &lt;li&gt;TODO 주석&lt;/li&gt;
+  &lt;li&gt;중요성을 강조하는 주석&lt;/li&gt;
+  &lt;li&gt;공개 API에서 Javadocs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;나쁜-주석&quot;&gt;나쁜 주석&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;일반적으로 대다수의 주석은 허술한 코드를 지탱하거나, 
+엉성한 코드를 변명하거나, 미숙한 결정을 합리화하는 등
+프로그래머가 주절거리는 독백에서 크게 벗어나지 못한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;주절거리는 주석&lt;/li&gt;
+  &lt;li&gt;같은 이야기를 중복하는 주석&lt;/li&gt;
+  &lt;li&gt;오해할 여지가 있는 주석&lt;/li&gt;
+  &lt;li&gt;의무적으로 다는 주석&lt;/li&gt;
+  &lt;li&gt;있으나 마나 한 주석&lt;/li&gt;
+  &lt;li&gt;무서운 잡음&lt;/li&gt;
+  &lt;li&gt;함수나 변수로 표현할 수 있다면 주석을 달지 마라&lt;/li&gt;
+  &lt;li&gt;위치를 표시하는 주석&lt;/li&gt;
+  &lt;li&gt;닫는 괄호에 다는 주석&lt;/li&gt;
+  &lt;li&gt;공로를 돌리거나 저자를 표시하는 주석&lt;/li&gt;
+  &lt;li&gt;주석으로 처리한 코드&lt;/li&gt;
+  &lt;li&gt;HTML 주석&lt;/li&gt;
+  &lt;li&gt;전역 정보&lt;/li&gt;
+  &lt;li&gt;너무 많은 정보&lt;/li&gt;
+  &lt;li&gt;모호한 관계&lt;/li&gt;
+  &lt;li&gt;함수 헤더&lt;/li&gt;
+  &lt;li&gt;비공개 코드에서 Javadocs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;오늘-읽은-소감은-떠오르는-생각을-가볍게-적어보세요&quot;&gt;오늘 읽은 소감은? 떠오르는 생각을 가볍게 적어보세요&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드에서 방치된 TODO 리스트를 떠올렸습니다.😭&lt;/li&gt;
+  &lt;li&gt;주석을 작성할 때 이게 도움이 될지 다시 한번 생각해 봐야겠습니다.&lt;/li&gt;
+  &lt;li&gt;의무적으로 단 주석 말고 의도나 의미가 있는 주석 같은 경우&lt;br /&gt;
+결국 프로그래머가 “이게 도움이 될까?” 한번 더 판단하는게 필요하다 느꼈습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;나의-최애-북틸&quot;&gt;나의 최애 북틸&lt;/h3&gt;
+&lt;p&gt;내가 작성한 TIL을 보면 결국 책에서 부제목을 그대로 옮겨적은거에 불과한거 같은데&lt;br /&gt;
+세상에는 정리를 잘하는 사람이 많은거 같습니다..&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://velog.io/@chillihc/Clean-Code-%ED%81%B4%EB%A6%B0-%EC%BD%94%EB%93%9C-Day-5&quot;&gt;ChilihC님의 TIL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nomadcoders.co/community/thread/2930&quot;&gt;wpvspv님의 TIL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://min88.tistory.com/entry/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-7-8-%EC%A3%BC%EC%84%9D-%EC%93%B0%EB%8A%94-%EB%B0%A9%EB%B2%95&quot;&gt;vividmin님의 TIL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 23 Jan 2025 15:00:00 +0000</pubDate>
+        <link>https://jheun66.github.io/posts/unclassified/clean-code-assignment-05/</link>
+        <guid isPermaLink="true">https://jheun66.github.io/posts/unclassified/clean-code-assignment-05/</guid>
+        
+        <category>nomadcoder</category>
+        
+        <category>study</category>
+        
+        <category>노마드코더</category>
+        
+        <category>노개북</category>
+        
+        <category>개발자북클럽</category>
+        
+        
+        <category>Unclassified</category>
+        
+      </item>
     
       <item>
         <title>(클린코드) 3장. 함수</title>
@@ -4792,94 +4900,6 @@ jekyll new ./
         <category>jekyll</category>
         
         <category>bundler</category>
-        
-        <category>github pages</category>
-        
-        
-        <category>Blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Ruby Version Management</title>
-        <description>&lt;p&gt;github pages를 만드는 과정에서 다른 루비 버전을 설치하고 관리하다 꼬인거 같아서 rbenv를 사용해서 관리하기로 했습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;이전에-설치한-루비-버전-삭제&quot;&gt;이전에 설치한 루비 버전 삭제&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;brew uninstall ruby
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;rbenv-설치&quot;&gt;rbenv 설치&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;rbenv ruby-build
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;bash_profile-수정&quot;&gt;bash_profile 수정&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.bash_profile&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eval &quot;$(rbenv init -)&quot;&lt;/code&gt; 추가한 후&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bash_profile
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;루비-버전-설치&quot;&gt;루비 버전 설치&lt;/h3&gt;
-
-&lt;p&gt;설치할 수 있는 루비 버전 확인 후&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;설치할 수 있는 버전 설치&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;rbenv &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;3.0.1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;버전-적용&quot;&gt;버전 적용&lt;/h3&gt;
-
-&lt;p&gt;설치 되어있는 버전 확인&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;rbenv versions
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;글로벌 버전 세팅&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;rbenv global 3.0.1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;로컬 버전 세팅&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;rbenv &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;3.0.1
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;적용된 버전 확인&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;rbenv version
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;적용된 루비 버전 확인&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;ruby &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/61196279/how-to-remove-all-old-ruby-versions-and-version-managers-and-reinstall-a-singl&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 13 Jun 2021 12:01:11 +0000</pubDate>
-        <link>https://jheun66.github.io/posts/blog/ruby-version-management/</link>
-        <guid isPermaLink="true">https://jheun66.github.io/posts/blog/ruby-version-management/</guid>
-        
-        <category>ruby</category>
-        
-        <category>rbenv</category>
         
         <category>github pages</category>
         
