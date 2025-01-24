@@ -5,8 +5,8 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Jan 2025 18:03:35 +0000</pubDate>
-    <lastBuildDate>Thu, 23 Jan 2025 18:03:35 +0000</lastBuildDate>
+    <pubDate>Fri, 24 Jan 2025 11:20:55 +0000</pubDate>
+    <lastBuildDate>Fri, 24 Jan 2025 11:20:55 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
     
       <item>
@@ -114,6 +114,64 @@
         
         
         <category>Unclassified</category>
+        
+      </item>
+    
+      <item>
+        <title>(주간 회고) 노마드 코더 플러터 스터디 3주차</title>
+        <description>&lt;h2 id=&quot;핵심-3줄-요약&quot;&gt;💖핵심 3줄 요약&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;점점 난이도가 올라가는 느낌&lt;/li&gt;
+  &lt;li&gt;끝날려면 멀었다.&lt;/li&gt;
+  &lt;li&gt;아직은 알쏭달쏭&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-이번-주-목표&quot;&gt;🎯 이번 주 목표&lt;/h2&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;챌린지 과제 빠지지 않기&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;주간 회의 참석&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-칭찬하고-싶은-점&quot;&gt;👏 칭찬하고 싶은 점&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;3주 동안 포기하지 않은 점&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-고치거나-버려야-할-점&quot;&gt;😭 고치거나 버려야 할 점&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;챌린지를 끝까지 못한 점.&lt;/li&gt;
+  &lt;li&gt;약간 벽을 느낀거 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-이번-주-배운-내용&quot;&gt;📚 이번 주 배운 내용&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;🤩 새롭게 알게 된 것 :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;기능을 나누고 클래스를 왜 나눠야하는지 알게된거 같다.&lt;/li&gt;
+  &lt;li&gt;Constants 미리 정의하니 참 편하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;🤔 질문 :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;챌린지할 때 해당 UI가 앱바로 구현한건지 아니면 body에 구현한건지 참 헷갈린다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-주간-회의와-조별-활동&quot;&gt;📑 주간 회의와 조별 활동&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;이번 주간 회의 때 우수자들 리뷰했는데 똑같은 강의를 듣고 어떻게 저렇게 창의적으로 만들었는지 참 신기했다.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 23 Jan 2025 15:00:00 +0000</pubDate>
+        <link>https://jheun66.github.io/posts/flutter/flutter-study-week-03/</link>
+        <guid isPermaLink="true">https://jheun66.github.io/posts/flutter/flutter-study-week-03/</guid>
+        
+        <category>nomadcoder</category>
+        
+        <category>study</category>
+        
+        <category>review</category>
+        
+        
+        <category>Flutter</category>
         
       </item>
     
@@ -4826,85 +4884,6 @@ kramdown:
         
         
         <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>Jekyll 설치 및 테스트</title>
-        <description>&lt;h3 id=&quot;jekyll-bundler-gems-설치&quot;&gt;jekyll, bundler gems 설치&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;jekyll-site-생성&quot;&gt;jekyll site 생성&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# 폴더로 생성&lt;/span&gt;
-jekyll new my_blog.github.io
-&lt;span class=&quot;c&quot;&gt;# 혹은 본인의 git repository에서 실행할 경우&lt;/span&gt;
-jekyll new ./
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;테마는 자동으로 기본 테마 &lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;minima&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;bundle-설치-및-테스트&quot;&gt;bundle 설치 및 테스트&lt;/h3&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;bundle &lt;span class=&quot;nb&quot;&gt;install
-&lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://localhost:4000/&quot;&gt;http://localhost:4000&lt;/a&gt;에서 결과를 확인 가능&lt;/p&gt;
-
-&lt;h3 id=&quot;오류-상황일-경우&quot;&gt;오류 상황일 경우&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;`require’: cannot load such file – webrick&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;bundle add webrick
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;`bind’: address already in use - bind(2) for 127.0.0.1:4000 (errno::eaddrinuse)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;lsof &lt;span class=&quot;nt&quot;&gt;-wni&lt;/span&gt; tcp:4000
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;PID 체크 후 해당 프로세스 킬&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-9&lt;/span&gt; 해당 PID
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/docs/step-by-step/01-setup/&quot;&gt;jekyll tutorial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://junho85.pe.kr/1850&quot;&gt;webrick 오류&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/31039998/rails-address-already-in-use-bind2-errnoeaddrinuse&quot;&gt;로컬 호스트를 이미 사용하고 있는 경우&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 13 Jun 2021 12:46:00 +0000</pubDate>
-        <link>https://jheun66.github.io/posts/blog/install-jekyll/</link>
-        <guid isPermaLink="true">https://jheun66.github.io/posts/blog/install-jekyll/</guid>
-        
-        <category>jekyll</category>
-        
-        <category>bundler</category>
-        
-        <category>github pages</category>
-        
-        
-        <category>Blog</category>
         
       </item>
     

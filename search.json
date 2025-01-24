@@ -9,6 +9,14 @@
     } ,
   
     {
+      "title"    : "(주간 회고) 노마드 코더 플러터 스터디 3주차",
+      "category" : "",
+      "tags"     : "nomadcoder, study, review",
+      "url"      : "/posts/flutter/flutter-study-week-03/",
+      "date"     : "01/23/2025"
+    } ,
+  
+    {
       "title"    : "(클린코드) 3장. 함수",
       "category" : "",
       "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
