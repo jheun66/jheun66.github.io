@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "(클린코드) 6장. 객체와 자료 구조",
+      "category" : "",
+      "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
+      "url"      : "/posts/unclassified/clean-code-assignment-08/",
+      "date"     : "01/26/2025"
+    } ,
+  
+    {
       "title"    : "(클린코드) 더러운 코드를 고쳐라!",
       "category" : "",
       "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
