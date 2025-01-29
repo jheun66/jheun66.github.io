@@ -5,9 +5,105 @@
     <description>What interests do i have.</description>
     <link>https://jheun66.github.io/</link>
     <atom:link href="https://jheun66.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Jan 2025 16:58:51 +0000</pubDate>
-    <lastBuildDate>Sun, 26 Jan 2025 16:58:51 +0000</lastBuildDate>
+    <pubDate>Wed, 29 Jan 2025 11:28:03 +0000</pubDate>
+    <lastBuildDate>Wed, 29 Jan 2025 11:28:03 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>(클린코드) 7장. 오류 처리</title>
+        <description>&lt;h3 id=&quot;오늘-til-3줄-요약&quot;&gt;오늘 TIL 3줄 요약&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;오류 코드보다 예외로 사용해야 한다.&lt;/li&gt;
+  &lt;li&gt;외부 API에서 오는 예외는 Wrapper로 감싸서 처리한다.&lt;/li&gt;
+  &lt;li&gt;null은 최대한 전달하지도 반환하지 않도록 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;til-today-i-learned-날짜&quot;&gt;TIL (Today I Learned) 날짜&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2025.01.29&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;오늘-읽은-범위&quot;&gt;오늘 읽은 범위&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;7장. 오류 처리&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;책에서-기억하고-싶은-내용을-써보세요&quot;&gt;책에서 기억하고 싶은 내용을 써보세요.&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;오류 코드를 사용하면 함수를 호출하고 바로 오류를 확인해야 합니다.&lt;br /&gt;
+이렇게 될 경우 메인 로직(정상 케이스)과 오류 처리 코드가 뒤섞이게 됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;예외에 오류 메시지를 같이 던져 실패한 연산, 유형 등을 알 수 있도록 해야합니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;호출자를 고려하여 필요한 예외 클래스를 따로 정의해서 넘겨주는게 좋습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;외부 API를 사용할 때는 Wrapper 클래스로 감싸주는게 좋습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;클래스나 객체가 예외적인 상황을 캡슐화해서 처리하게 하면 클라이언트 코드에서 예외 처리를 할 필요가 없게됩니다.&lt;br /&gt;
+이를 &lt;strong&gt;특수 사례 패턴&lt;/strong&gt;이라 부릅니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;null을 반환하는 것을 지양해야 합니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;사용하는 외부 API가 null을 반환할 경우 메서드로 감싸서 예외를 던지거나 &lt;strong&gt;특수 사례 객체&lt;/strong&gt;를 반환하도록 합니다.&lt;br /&gt;
+예시로 리스트를 반환하는 경우 null 대신 빈 리스트를 반환하도록 할 수 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;null을 전달하는 것을 지양해야 합니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;오늘-읽은-소감은-떠오르는-생각을-가볍게-적어보세요&quot;&gt;오늘 읽은 소감은? 떠오르는 생각을 가볍게 적어보세요&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;주로 사용하는 언어(C#, kotlin)에서는 확인된 예외(Checked Execption)를 지원하지 않기 때문에 확인된 예외가 무슨 말인지 따로 찾아보기 전까지 이해하기 힘들었던게 아쉬웠네요.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;kotlin 같은 경우 null 처리를 언어차원에서 지원해주기 때문에 관련된 패턴을 따로 정리하는게 좋아보입니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;궁금한-내용이-있거나-잘-이해되지-않는-내용이-있다면-적어보세요&quot;&gt;궁금한 내용이 있거나, 잘 이해되지 않는 내용이 있다면 적어보세요.&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;오류 코드보다 예외를 사용하라고 하지만 API 개발에서 오류 코드를 사용하는 경우에는 어떻게 처리해야 할지 어느 레벨까지 예외를 사용하고 어느 레벨 부터는 오류 코드를 전달해야할지 고민이 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;오늘-읽은-다른사람의-til&quot;&gt;오늘 읽은 다른사람의 TIL&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://velog.io/@chillihc/Clean-Code-%ED%81%B4%EB%A6%B0-%EC%BD%94%EB%93%9C-Day-9-%EC%98%A4%EB%A5%98-%EC%B2%98%EB%A6%AC-zltoorf2&quot;&gt;ChilihC님의 TIL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 28 Jan 2025 15:00:00 +0000</pubDate>
+        <link>https://jheun66.github.io/posts/unclassified/clean-code-assignment-09/</link>
+        <guid isPermaLink="true">https://jheun66.github.io/posts/unclassified/clean-code-assignment-09/</guid>
+        
+        <category>nomadcoder</category>
+        
+        <category>study</category>
+        
+        <category>노마드코더</category>
+        
+        <category>노개북</category>
+        
+        <category>개발자북클럽</category>
+        
+        
+        <category>Unclassified</category>
+        
+      </item>
     
       <item>
         <title>(클린코드) 6장. 객체와 자료 구조</title>
@@ -4831,53 +4927,6 @@ simple-jekyll-search.js는 샘플 프로젝트에서 그대로 가져왔습니�
         <category>String</category>
         
         <category>HTML</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>Use SwitchCompat from AppCompat or SwitchMaterial from Material library</title>
-        <description>&lt;p&gt;Switch를 사용할 경우 다음과 같은 경고메시지가 뜨는 것을 확인할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/posts/android/screenshot_switch.png&quot; alt=&quot;screenshot_switch.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이는 안드로이드에서 제공하는 스위치가 버전에 따라 디자인이 다르기 때문에 이를 알려주는 경고창이 뜨는 것이며&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.stack.imgur.com/hr6nk.png&quot; alt=&quot;https://i.stack.imgur.com/hr6nk.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/41239028/switch-vs-switchcompat&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.appcompat.widget.SwitchCompat&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/round_up_switch&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0dp&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:checked=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@string/round_up_tip&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;app:layout_constraintEnd_toEndOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;app:layout_constraintStart_toStartOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;app:layout_constraintTop_toBottomOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@id/tip_options&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;SwitchCompat을 사용하면 모든 안드로이드 버전에서 같은 디자인을 사용할 수 있다.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 26 Jul 2021 06:43:00 +0000</pubDate>
-        <link>https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/</link>
-        <guid isPermaLink="true">https://jheun66.github.io/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/</guid>
-        
-        <category>XML</category>
-        
-        <category>Warning</category>
         
         
         <category>Android</category>
