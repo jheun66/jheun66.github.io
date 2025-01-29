@@ -17,6 +17,14 @@
     } ,
   
     {
+      "title"    : "(클린코드) 5장. 형식 맞추기",
+      "category" : "",
+      "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
+      "url"      : "/posts/unclassified/clean-code-assignment-07/",
+      "date"     : "01/24/2025"
+    } ,
+  
+    {
       "title"    : "(클린코드) 더러운 코드를 고쳐라!",
       "category" : "",
       "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",

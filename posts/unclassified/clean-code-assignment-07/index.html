@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Authentication VS Authorization - In progress
+    (클린코드) 5장. 형식 맞추기 - In progress
     
   </title>
 
-  <meta name="description" content="OAuth 2.0을 공부하면서 먼저 정리해야할 용어라 생각되어 작성합니다.">
+  <meta name="description" content="오늘 TIL 3줄 요약">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -21,7 +21,7 @@
   
   <link rel="stylesheet" href="/assets/highlight.css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://jheun66.github.io/posts/unclassified/authentication-vs-authorization/">
+  <link rel="canonical" href="https://jheun66.github.io/posts/unclassified/clean-code-assignment-07/">
   <link rel="alternate" type="application/rss+xml" title="In progress" href="/feed.xml">
 
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
@@ -34,23 +34,23 @@
     a.comment-link:hover {text-decoration: underline;}
   </style>
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Authentication VS Authorization | In progress</title>
+<title>(클린코드) 5장. 형식 맞추기 | In progress</title>
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Authentication VS Authorization" />
+<meta property="og:title" content="(클린코드) 5장. 형식 맞추기" />
 <meta name="author" content="Eun JongHyeok" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="OAuth 2.0을 공부하면서 먼저 정리해야할 용어라 생각되어 작성합니다." />
-<meta property="og:description" content="OAuth 2.0을 공부하면서 먼저 정리해야할 용어라 생각되어 작성합니다." />
-<link rel="canonical" href="https://jheun66.github.io/posts/unclassified/authentication-vs-authorization/" />
-<meta property="og:url" content="https://jheun66.github.io/posts/unclassified/authentication-vs-authorization/" />
+<meta name="description" content="오늘 TIL 3줄 요약" />
+<meta property="og:description" content="오늘 TIL 3줄 요약" />
+<link rel="canonical" href="https://jheun66.github.io/posts/unclassified/clean-code-assignment-07/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/unclassified/clean-code-assignment-07/" />
 <meta property="og:site_name" content="In progress" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-12-13T06:00:00+00:00" />
+<meta property="article:published_time" content="2025-01-24T15:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Authentication VS Authorization" />
+<meta property="twitter:title" content="(클린코드) 5장. 형식 맞추기" />
 <meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2020-12-13T06:00:00+00:00","datePublished":"2020-12-13T06:00:00+00:00","description":"OAuth 2.0을 공부하면서 먼저 정리해야할 용어라 생각되어 작성합니다.","headline":"Authentication VS Authorization","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/unclassified/authentication-vs-authorization/"},"url":"https://jheun66.github.io/posts/unclassified/authentication-vs-authorization/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2025-01-24T15:00:00+00:00","datePublished":"2025-01-24T15:00:00+00:00","description":"오늘 TIL 3줄 요약","headline":"(클린코드) 5장. 형식 맞추기","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/unclassified/clean-code-assignment-07/"},"url":"https://jheun66.github.io/posts/unclassified/clean-code-assignment-07/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -98,9 +98,9 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-heading">
-          <h1>Authentication VS Authorization</h1>
+          <h1>(클린코드) 5장. 형식 맞추기</h1>
           
-          <span class="meta">Posted by Eun JongHyeok on December 13, 2020
+          <span class="meta">Posted by Eun JongHyeok on January 24, 2025
           </span>
         </div>
       </div>
@@ -163,67 +163,103 @@
     <div class="col-lg-8 col-md-10 mx-auto">
   
       <ol id="toc" class="table-of-contents">
-<li class="toc-entry toc-h2"><a href="#authentication">Authentication</a></li>
-<li class="toc-entry toc-h2"><a href="#authorization">Authorization</a></li>
-<li class="toc-entry toc-h2"><a href="#authentication-vs-authorization">Authentication VS Authorization</a></li>
-<li class="toc-entry toc-h2"><a href="#reference">Reference</a></li>
-</ol><p>OAuth 2.0을 공부하면서 먼저 정리해야할 용어라 생각되어 작성합니다.</p>
+</ol><h3 id="오늘-til-3줄-요약">오늘 TIL 3줄 요약</h3>
 
-<h2 id="authentication">
-<a class="anchor" href="#authentication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication</h2>
-<p>인증, 사용자가 자기 자신을 <u>증명</u>하는 것</p>
+<ul>
+  <li>코드 형식은 정말 중요하다.</li>
+  <li>개념적으로 유사할 수록 관계가 깊을 수록 가깝게 배치한다.</li>
+  <li>일관적인 코드를 작성해야 한다.</li>
+</ul>
 
-<h2 id="authorization">
-<a class="anchor" href="#authorization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authorization</h2>
-<p>인가, 권한 부여, 사용자가 리소스에 접근할 <u>권한</u>을 주는 것</p>
+<h3 id="til-today-i-learned-날짜">TIL (Today I Learned) 날짜</h3>
 
-<h2 id="authentication-vs-authorization">
-<a class="anchor" href="#authentication-vs-authorization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication VS Authorization</h2>
-<p>비슷한 용어처럼 들리지만 다른 과정이라는 것을 알 수 있습니다.</p>
+<ul>
+  <li>2025.01.25</li>
+</ul>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Authentication</th>
-      <th style="text-align: left">Authorization</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">신원 증명</td>
-      <td style="text-align: left">권한 승인 혹은 거절</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">비밀 번호나 생체 인식 등 유효한 자격을 가지고 있는지 확인</td>
-      <td style="text-align: left">정책과 규칙을 통해 접근 가능 여부 결정</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">사용자에게 보임</td>
-      <td style="text-align: left">사용자에게 보이지 않음</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OpenID Connect protocol</td>
-      <td style="text-align: left">OAuth 2.0 framework</td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="오늘-읽은-범위">오늘 읽은 범위</h3>
 
-<h2 id="reference">
-<a class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
-<p><a href="https://www.okta.com/identity-101/authentication-vs-authorization/">https://www.okta.com/identity-101/authentication-vs-authorization/</a><br>
-<a href="https://auth0.com/docs/authorization/authentication-and-authorization">https://auth0.com/docs/authorization/authentication-and-authorization</a></p>
+<ul>
+  <li>5장. 형식 맞추기</li>
+</ul>
+
+<h3 id="책에서-기억하고-싶은-내용을-써보세요">책에서 기억하고 싶은 내용을 써보세요.</h3>
+
+<h4 id="세로-형식">세로 형식</h4>
+
+<ul>
+  <li>
+    <p>개념은 빈 행으로 분리합니다.</p>
+  </li>
+  <li>
+    <p>줄바꿈으로 개념을 분리한다면 세로 밀집도는 연관성을 의미합니다.</p>
+  </li>
+  <li>
+    <p>변수는 사용하는 위치에 최대한 가까이 선언해야 합니다. 함수는 짧게 작성하므로 각 함수 맨 앞에 선언합니다.</p>
+  </li>
+  <li>
+    <p>인스턴스 변수는 클래스 맨 처음에 선언합니다. 모아두는거 자체가 중요합니다.</p>
+  </li>
+  <li>
+    <p>종속 함수의 경우 세로로 가깝게 배치합니다.</p>
+  </li>
+  <li>
+    <p>개념적인 친화도가 높을 수록 (명명법이 똑같고 기본 기능이 유사할 수록) 가깝게 배치합니다. 종속적인 관계보다 중요도가 높습니다.</p>
+  </li>
+  <li>
+    <p>호출하는 함수를 호출되는 함수보다 먼저 배치합니다.</p>
+  </li>
+</ul>
+
+<h4 id="가로-형식">가로 형식</h4>
+
+<ul>
+  <li>
+    <p>가로로는 공백을 사용해 밀접한 개념, 느슨한 개념을 표현합니다.</p>
+  </li>
+  <li>
+    <p>들여쓰기로 scope로 이루어진 계층을 표현합니다.</p>
+  </li>
+</ul>
+
+<h3 id="팀-규칙">팀 규칙</h3>
+
+<ul>
+  <li>팀은 한 가지 규칙에 합의해야 합니다.</li>
+</ul>
+
+<h3 id="오늘-읽은-소감은-떠오르는-생각을-가볍게-적어보세요">오늘 읽은 소감은? 떠오르는 생각을 가볍게 적어보세요</h3>
+
+<ul>
+  <li>
+    <p>저같은 경우 기존 코드를 인수 받았을 때 기존 코드와 최대한 유사하도록 작성하려 노력했던거 같습니다.</p>
+  </li>
+  <li>
+    <p>언어마다 권장하는 형태가 조금씩 달라 힘들었던 경험이 떠올랐습니다.</p>
+  </li>
+  <li>
+    <p>요즘에는 Prettier를 사용해서 최대한 깔끔하게 유지하고 있습니다.</p>
+  </li>
+</ul>
+
 
 
       <hr>
       
       
-        <div class="tag-class"><i class="fa fa-tag"></i>Authentication</div>
+        <div class="tag-class"><i class="fa fa-tag"></i>nomadcoder</div>
       
       
-        <div class="tag-class"><i class="fa fa-tag"></i>Authorization</div>
+        <div class="tag-class"><i class="fa fa-tag"></i>study</div>
       
       
-        <div class="tag-class"><i class="fa fa-tag"></i>Word_Meaning</div>
+        <div class="tag-class"><i class="fa fa-tag"></i>노마드코더</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>노개북</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>개발자북클럽</div>
       
 
       <hr>
@@ -235,8 +271,11 @@
       
 
       
+      <a class="btn btn-gray float-left" href="/posts/unclassified/clean-code-assignment-06/" data-toggle="tooltip" data-placement="top" title="(클린코드) 더러운 코드를 고쳐라!">&larr; Previous<span class="d-none d-md-inline">
+          Post</span></a>
       
-      <a class="btn btn-gray float-right" href="/posts/unclassified/ouath/" data-toggle="tooltip" data-placement="top" title="OAuth 2.0">Next<span class="d-none d-md-inline">
+      
+      <a class="btn btn-gray float-right" href="/posts/unclassified/clean-code-assignment-08/" data-toggle="tooltip" data-placement="top" title="(클린코드) 6장. 객체와 자료 구조">Next<span class="d-none d-md-inline">
           Post</span> &rarr;</a>
       
 
@@ -248,8 +287,8 @@
           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
           
           var disqus_config = function () {
-          this.page.url = 'https://jheun66.github.io/posts/unclassified/authentication-vs-authorization/';  // Replace PAGE_URL with your page's canonical URL variable
-          this.page.identifier = '/posts/unclassified/authentication-vs-authorization/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          this.page.url = 'https://jheun66.github.io/posts/unclassified/clean-code-assignment-07/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/unclassified/clean-code-assignment-07/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
           };
           
           (function() { // DON'T EDIT BELOW THIS LINE
