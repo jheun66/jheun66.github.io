@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "(클린코드) 9장. 단위 테스트",
+      "category" : "",
+      "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
+      "url"      : "/posts/unclassified/clean-code-assignment-11/",
+      "date"     : "01/30/2025"
+    } ,
+  
+    {
       "title"    : "(클린코드) 8장. 경계",
       "category" : "",
       "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
