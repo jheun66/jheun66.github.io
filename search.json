@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "(클린코드) C# 예제로 적용하기",
+      "category" : "",
+      "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
+      "url"      : "/posts/unclassified/clean-code-assignment-13/",
+      "date"     : "02/04/2025"
+    } ,
+  
+    {
       "title"    : "(클린코드) 10장. 클래스",
       "category" : "",
       "tags"     : "nomadcoder, study, 노마드코더, 노개북, 개발자북클럽",
