@@ -10607,6 +10607,10 @@ summary {
 
 .category-title {
   color: black;
+  font-size: 1.5em; /* Standard h2 size */
+  font-weight: bold; /* Make it bold like a heading */
+  margin: 0.53em 0;
+  display: inline-block; /* Keep it on the same line as the toggle */
 }
 
 .category-title__inline {
@@ -10618,6 +10622,8 @@ summary {
 .category-count {
   float: right;
   color: #cacdd0;
+  font-size: 1.5em; /* Standard h2 size */
+  font-weight: bold; /* Make it bold like a heading */
 }
 
 .btn-gray {
