@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    (TIL) Kotlin - Delegated Property - In progress
+    
+  </title>
+
+  <meta name="description" content="TIL은 가벼운 개념정리 목적으로 작성되어 있습니다.">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/assets/highlight.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://jheun66.github.io/posts/android/kotlin-delegated-property/">
+  <link rel="alternate" type="application/rss+xml" title="In progress" href="/feed.xml">
+
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style type="text/css">
+    a.comment-link:link {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:visited {text-decoration: none; color:rgb(170, 170, 170)} 
+    a.comment-link:hover {text-decoration: underline;}
+  </style>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>(TIL) Kotlin - Delegated Property | In progress</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="(TIL) Kotlin - Delegated Property" />
+<meta name="author" content="Eun JongHyeok" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="TIL은 가벼운 개념정리 목적으로 작성되어 있습니다." />
+<meta property="og:description" content="TIL은 가벼운 개념정리 목적으로 작성되어 있습니다." />
+<link rel="canonical" href="https://jheun66.github.io/posts/android/kotlin-delegated-property/" />
+<meta property="og:url" content="https://jheun66.github.io/posts/android/kotlin-delegated-property/" />
+<meta property="og:site_name" content="In progress" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="(TIL) Kotlin - Delegated Property" />
+<meta name="google-site-verification" content="tbEwkoz_olC5QjXqaH3xRQX19VegCM80JTKhBa3iSx8" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Eun JongHyeok"},"dateModified":"2025-03-16T00:00:00+00:00","datePublished":"2025-03-16T00:00:00+00:00","description":"TIL은 가벼운 개념정리 목적으로 작성되어 있습니다.","headline":"(TIL) Kotlin - Delegated Property","mainEntityOfPage":{"@type":"WebPage","@id":"https://jheun66.github.io/posts/android/kotlin-delegated-property/"},"url":"https://jheun66.github.io/posts/android/kotlin-delegated-property/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8954355499146518"
+     crossorigin="anonymous"></script>
+  <script async src="https://fundingchoicesmessages.google.com/i/pub-8954355499146518?ers=1" nonce="vIYNAgythFLTbocmvIWE6A"></script><script nonce="vIYNAgythFLTbocmvIWE6A">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">In progress</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/category">Category</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+
+
+<header class="masthead" style="background-color: #B5179E;">
+
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>(TIL) Kotlin - Delegated Property</h1>
+          
+          <span class="meta">Posted by Eun JongHyeok on March 16, 2025
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row min-vh-100 flex-column flex-lg-row">
+    <div class="fixed-menu">
+      <div class="fixed-menu-title">Android 다른 글 보기</div>
+      <ul>
+        
+        <li>
+          <a href="/posts/android/kotlin-delegated-property/">(TIL) Kotlin - Delegated Property</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/jetpack-compose-state-management/">(TIL) Jetpack Compose에서의 상태 관리</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/escape-html/">Escape HTML</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/use-switchcompat-from-appcompat-or-switchmaterial/">Use SwitchCompat from AppCompat or SwitchMaterial from Material library</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/net-err-cleartext-not-permitted/">net::ERR_CLEARTEXT_NOT_PERMITTED</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/screen-compatibility/">Screen Compatibility</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/context/">Context</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/buttons/">Buttons(+background issue) And Gestures</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/send-and-sendto/">ACTION_SEND & ACTION_SENDTO(이메일 인텐트)</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/resolveActivity-vs-queryIntentActivities/">resolveActivity VS queryIntentActivities</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/implict-intent/">Implict Intent</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/activities-and-intents-practice/">Activities And Intents Test</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/intent/">Intent(Explict Intent)</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/activity-lifecycle/">Activity Lifecycle</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/actiivties/">Activities</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/application-fundamentals/">Application Fundamentals</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/android-support-library/">ASL과 AndroidX Library</a>
+        </li>
+        
+        <li>
+          <a href="/posts/android/art/">ART 이해하기</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="col-lg-8 col-md-10 mx-auto">
+  
+      <ol id="toc" class="table-of-contents">
+<li class="toc-entry toc-h1"><a href="#기본-개념">기본 개념</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#위임delegation이란">위임(Delegation)이란?</a></li>
+<li class="toc-entry toc-h2"><a href="#왜-delegated-property를-사용할까">왜 Delegated Property를 사용할까?</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#delegated-property의-구현-원리">Delegated Property의 구현 원리</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#operator-fun-getvalue">operator fun getValue</a></li>
+<li class="toc-entry toc-h2"><a href="#operator-fun-setvalue">operator fun setValue</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#간단한-delegated-property-예제">간단한 Delegated Property 예제</a></li>
+<li class="toc-entry toc-h1"><a href="#표준-라이브러리의-delegated-property">표준 라이브러리의 Delegated Property</a>
+<ol class="table-of-contents-sublist-class">
+<li class="toc-entry toc-h2"><a href="#by-lazy">by lazy</a></li>
+<li class="toc-entry toc-h2"><a href="#by-observable">by observable</a></li>
+<li class="toc-entry toc-h2"><a href="#by-vetoable">by vetoable</a></li>
+</ol>
+</li>
+<li class="toc-entry toc-h1"><a href="#언제-delegated-property를-사용해야-할까">언제 Delegated Property를 사용해야 할까?</a></li>
+<li class="toc-entry toc-h1"><a href="#결론">결론</a></li>
+</ol><p>TIL은 가벼운 개념정리 목적으로 작성되어 있습니다.</p>
+
+<hr>
+
+<p>Kotlin의 Delegated Property는 프로퍼티의 <strong>getter</strong>와 <strong>setter</strong> 동작을 다른 객체에 위임(delegate)하는 기능입니다.<br>
+이 기능을 통해 코드의 재사용성과 간결성을 높이고, 여러 상황(예: lazy 초기화, 변경 감지, 캐싱 등)에서 부가적인 로직을 손쉽게 추가할 수 있습니다.</p>
+
+<hr>
+
+<h1 id="기본-개념">
+<a class="anchor" href="#%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>기본 개념</h1>
+
+<h2 id="위임delegation이란">
+<a class="anchor" href="#%EC%9C%84%EC%9E%84delegation%EC%9D%B4%EB%9E%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>위임(Delegation)이란?</h2>
+<ul>
+  <li>
+<strong>위임</strong>은 객체의 일부 작업을 다른 객체에 맡기는 디자인 패턴입니다.</li>
+  <li>Kotlin에서는 <strong><code class="language-plaintext highlighter-rouge">by</code> 키워드</strong>를 사용하여 프로퍼티의 접근(읽기/쓰기) 동작을 다른 객체에 위임할 수 있습니다.</li>
+  <li>결과적으로, 프로퍼티는 직접 값을 저장하지 않고 대신 위임 객체가 값을 관리합니다.</li>
+</ul>
+
+<h2 id="왜-delegated-property를-사용할까">
+<a class="anchor" href="#%EC%99%9C-delegated-property%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>왜 Delegated Property를 사용할까?</h2>
+<ul>
+  <li>
+<strong>코드 재사용 및 간결성:</strong><br>
+공통 로직(예: lazy 초기화, 변경 감지, 동기화 등)을 여러 곳에서 사용할 때, 해당 기능을 별도 클래스에 구현해 두면 중복 코드를 줄일 수 있습니다.</li>
+  <li>
+<strong>부가 기능 추가:</strong><br>
+값 읽기, 쓰기 시 로깅, 검증, 캐싱 등의 부가 작업을 쉽게 추가할 수 있습니다.</li>
+  <li>
+<strong>표준 라이브러리 지원:</strong><br>
+Kotlin은 <code class="language-plaintext highlighter-rouge">by lazy</code>, <code class="language-plaintext highlighter-rouge">by observable</code>, <code class="language-plaintext highlighter-rouge">by vetoable</code> 등의 내장 delegated property를 제공하여 반복되는 작업을 줄이고 생산성을 높입니다.</li>
+</ul>
+
+<hr>
+
+<h1 id="delegated-property의-구현-원리">
+<a class="anchor" href="#delegated-property%EC%9D%98-%EA%B5%AC%ED%98%84-%EC%9B%90%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delegated Property의 구현 원리</h1>
+
+<p>Delegated Property를 사용하려면, 위임 객체가 다음 두 operator 함수를 구현해야 합니다.</p>
+
+<h2 id="operator-fun-getvalue">
+<a class="anchor" href="#operator-fun-getvalue" aria-hidden="true"><span class="octicon octicon-link"></span></a><code class="language-plaintext highlighter-rouge">operator fun getValue</code>
+</h2>
+<ul>
+  <li>
+<strong>역할:</strong> 프로퍼티가 읽힐 때 호출됩니다.</li>
+  <li>
+<strong>매개변수:</strong>
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">thisRef</code>: 위임받은 프로퍼티가 속한 객체(또는 null).</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">property</code>: 프로퍼티의 메타정보(KProperty&lt;*&gt;) 제공.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="k">operator</span> <span class="k">fun</span> <span class="nf">getValue</span><span class="p">(</span><span class="n">thisRef</span><span class="p">:</span> <span class="nc">Any</span><span class="p">?,</span> <span class="n">property</span><span class="p">:</span> <span class="nc">KProperty</span><span class="p">&lt;</span><span class="err">*</span><span class="p">&gt;):</span> <span class="nc">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">42</span> <span class="c1">// 항상 42를 반환하는 단순 예제</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<h2 id="operator-fun-setvalue">
+<a class="anchor" href="#operator-fun-setvalue" aria-hidden="true"><span class="octicon octicon-link"></span></a><code class="language-plaintext highlighter-rouge">operator fun setValue</code>
+</h2>
+<ul>
+  <li>
+<strong>역할:</strong> 프로퍼티에 값을 할당할 때 호출됩니다.</li>
+  <li>
+<strong>매개변수:</strong>
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">thisRef</code>: 위임받은 프로퍼티가 속한 객체.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">property</code>: 프로퍼티의 메타정보.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">value</code>: 새롭게 할당될 값.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="k">operator</span> <span class="k">fun</span> <span class="nf">setValue</span><span class="p">(</span><span class="n">thisRef</span><span class="p">:</span> <span class="nc">Any</span><span class="p">?,</span> <span class="n">property</span><span class="p">:</span> <span class="nc">KProperty</span><span class="p">&lt;</span><span class="err">*</span><span class="p">&gt;,</span> <span class="n">value</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"New value is $value"</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>이 두 함수를 구현하면, 프로퍼티의 접근과 수정 작업이 모두 위임 객체에 의해 제어되므로 추가적인 로직(예: 로그 기록, 값 검증 등)을 쉽게 삽입할 수 있습니다.</p>
+
+<hr>
+
+<h1 id="간단한-delegated-property-예제">
+<a class="anchor" href="#%EA%B0%84%EB%8B%A8%ED%95%9C-delegated-property-%EC%98%88%EC%A0%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>간단한 Delegated Property 예제</h1>
+
+<p>다음은 기본적인 예제입니다.<br>
+<code class="language-plaintext highlighter-rouge">Example</code> 클래스의 <code class="language-plaintext highlighter-rouge">number</code> 프로퍼티는 내부적으로 <code class="language-plaintext highlighter-rouge">Delegate</code> 객체에 의해 관리됩니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Delegate</span> <span class="p">{</span>
+    <span class="k">operator</span> <span class="k">fun</span> <span class="nf">getValue</span><span class="p">(</span><span class="n">thisRef</span><span class="p">:</span> <span class="nc">Any</span><span class="p">?,</span> <span class="n">property</span><span class="p">:</span> <span class="nc">KProperty</span><span class="p">&lt;</span><span class="err">*</span><span class="p">&gt;):</span> <span class="nc">Int</span> <span class="p">{</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"${property.name} is accessed"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">42</span>
+    <span class="p">}</span>
+    
+    <span class="k">operator</span> <span class="k">fun</span> <span class="nf">setValue</span><span class="p">(</span><span class="n">thisRef</span><span class="p">:</span> <span class="nc">Any</span><span class="p">?,</span> <span class="n">property</span><span class="p">:</span> <span class="nc">KProperty</span><span class="p">&lt;</span><span class="err">*</span><span class="p">&gt;,</span> <span class="n">value</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"Setting ${property.name} to $value"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Example</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">number</span><span class="p">:</span> <span class="nc">Int</span> <span class="k">by</span> <span class="nc">Delegate</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">example</span> <span class="p">=</span> <span class="nc">Example</span><span class="p">()</span>
+    <span class="nf">println</span><span class="p">(</span><span class="n">example</span><span class="p">.</span><span class="n">number</span><span class="p">)</span> <span class="c1">// "number is accessed" 출력 후 42 반환</span>
+    <span class="n">example</span><span class="p">.</span><span class="n">number</span> <span class="p">=</span> <span class="mi">100</span>    <span class="c1">// "Setting number to 100" 출력</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<p>이 예제를 통해 프로퍼티 접근 시마다 위임 객체의 <code class="language-plaintext highlighter-rouge">getValue</code>와 <code class="language-plaintext highlighter-rouge">setValue</code>가 호출됨을 확인할 수 있습니다.</p>
+
+<hr>
+
+<h1 id="표준-라이브러리의-delegated-property">
+<a class="anchor" href="#%ED%91%9C%EC%A4%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-delegated-property" aria-hidden="true"><span class="octicon octicon-link"></span></a>표준 라이브러리의 Delegated Property</h1>
+
+<p>Kotlin 표준 라이브러리는 이미 다양한 Delegated Property를 제공합니다.</p>
+
+<h2 id="by-lazy">
+<a class="anchor" href="#by-lazy" aria-hidden="true"><span class="octicon octicon-link"></span></a>by lazy</h2>
+<ul>
+  <li>지연 초기화(lazy initialization)를 지원합니다.</li>
+  <li>프로퍼티에 처음 접근할 때 초기화되며, 이후에는 초기화된 값을 재사용합니다.</li>
+  <li>주로 <code class="language-plaintext highlighter-rouge">val</code>과 함께 사용됩니다.</li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">val</span> <span class="py">lazyValue</span><span class="p">:</span> <span class="nc">String</span> <span class="k">by</span> <span class="nf">lazy</span> <span class="p">{</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"Computing value..."</span><span class="p">)</span>
+    <span class="s">"Hello, World!"</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<h2 id="by-observable">
+<a class="anchor" href="#by-observable" aria-hidden="true"><span class="octicon octicon-link"></span></a>by observable</h2>
+<ul>
+  <li>값이 변경될 때마다 콜백을 통해 변경 사항을 감지합니다.</li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">var</span> <span class="py">observedValue</span><span class="p">:</span> <span class="nc">Int</span> <span class="k">by</span> <span class="nc">Delegates</span><span class="p">.</span><span class="nf">observable</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">property</span><span class="p">,</span> <span class="n">oldValue</span><span class="p">,</span> <span class="n">newValue</span> <span class="p">-&gt;</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"${property.name} changed from $oldValue to $newValue"</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<h2 id="by-vetoable">
+<a class="anchor" href="#by-vetoable" aria-hidden="true"><span class="octicon octicon-link"></span></a>by vetoable</h2>
+<ul>
+  <li>값 변경 전에 조건을 검사하여, 변경을 허용할지 결정합니다.</li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">var</span> <span class="py">vetoableValue</span><span class="p">:</span> <span class="nc">Int</span> <span class="k">by</span> <span class="nc">Delegates</span><span class="p">.</span><span class="nf">vetoable</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">_</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="n">new</span> <span class="p">-&gt;</span>
+    <span class="n">new</span> <span class="p">&gt;=</span> <span class="n">old</span>  <span class="c1">// 새로운 값이 이전 값보다 크거나 같을 때만 변경 허용</span>
+<span class="p">}</span>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
+
+<hr>
+
+<h1 id="언제-delegated-property를-사용해야-할까">
+<a class="anchor" href="#%EC%96%B8%EC%A0%9C-delegated-property%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>언제 Delegated Property를 사용해야 할까?</h1>
+
+<p>Delegated Property는 여러 상황에서 매우 유용합니다. 아래는 몇 가지 사용 사례와 권장 상황입니다.</p>
+
+<ul>
+  <li>공통 로직의 재사용이 필요한 경우
+    <ul>
+      <li>여러 프로퍼티에서 동일한 변경 감지, 검증, 혹은 캐싱 로직이 필요한 경우 공통 로직을 한 곳에 모아 중복 코드를 줄이고, 유지보수를 쉽게 할 수 있습니다.</li>
+    </ul>
+  </li>
+  <li>Lazy Initialization이 필요한 경우
+    <ul>
+      <li>리소스가 많이 드는 객체나, 초기화 비용이 큰 값을 프로퍼티로 관리할 때 <code class="language-plaintext highlighter-rouge">by lazy</code>를 사용하면 처음 접근할 때만 초기화되므로 불필요한 초기화를 방지할 수 있습니다.</li>
+    </ul>
+  </li>
+  <li>값 변경 시 부가 작업이 필요한 경우
+    <ul>
+      <li>값이 변경될 때마다 로깅, 데이터 동기화, UI 업데이트 등의 추가 작업을 수행해야 할 때 delegated property를 사용하면, getter/setter 내부에 부가 로직을 쉽게 추가할 수 있습니다.</li>
+    </ul>
+  </li>
+  <li>외부 라이브러리와 연동할 때
+    <ul>
+      <li>상태 관리 라이브러리(예: Jetpack Compose의 mutableStateOf)와 연계하여, UI 갱신이나 기타 동작을 자동으로 처리할 때 외부 라이브러리에서 이미 제공하는 delegated property 기능을 활용하면, 코드가 훨씬 간결해집니다.</li>
+    </ul>
+  </li>
+  <li>커스텀 Delegate를 구현해야 할 때
+    <ul>
+      <li>특정 도메인 로직이나 특별한 비즈니스 규칙이 필요한 경우, 자신만의 delegate를 구현해 재사용할 수 있습니다. 특정 기능을 캡슐화하여 다른 클래스에서도 쉽게 사용할 수 있도록 함으로써, 코드의 모듈화와 가독성을 높입니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h1 id="결론">
+<a class="anchor" href="#%EA%B2%B0%EB%A1%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>결론</h1>
+
+<p>Kotlin Delegated Property는 프로퍼티의 get과 set 동작을 다른 객체에 위임하여,</p>
+<ul>
+  <li><strong>코드 재사용성을 높이고</strong></li>
+  <li>
+<strong>부가 기능(예: lazy 초기화, 변경 감지, 검증 등)을 간편하게 추가</strong>할 수 있게 해줍니다.</li>
+</ul>
+
+<p>또한,</p>
+<ul>
+  <li>공통 로직의 재사용이나 복잡한 값 변경 처리, 또는 리소스 최적화가 필요할 때는 Delegated Property를 적극 활용하는 것이 좋습니다.</li>
+  <li>Kotlin의 표준 delegate(<code class="language-plaintext highlighter-rouge">by lazy</code>, <code class="language-plaintext highlighter-rouge">by observable</code>, <code class="language-plaintext highlighter-rouge">by vetoable</code>)를 사용하면 이미 검증된 패턴을 쉽게 적용할 수 있으며, 필요한 경우 커스텀 delegate로 확장하여 사용하면 됩니다.</li>
+</ul>
+
+
+      <hr>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>Android</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>kotlin</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>delegated_property</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>by_lazy</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>by_observable</div>
+      
+      
+        <div class="tag-class"><i class="fa fa-tag"></i>by_vetoable</div>
+      
+
+      <hr>
+
+      <!-- 다음 포스트, 이전 포스트 카테고리별로 정리 -->
+      
+
+      
+      
+
+      
+      <a class="btn btn-gray float-left" href="/posts/android/jetpack-compose-state-management/" data-toggle="tooltip" data-placement="top" title="(TIL) Jetpack Compose에서의 상태 관리">&larr; Previous<span class="d-none d-md-inline">
+          Post</span></a>
+      
+      
+
+      
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          
+          var disqus_config = function () {
+          this.page.url = 'https://jheun66.github.io/posts/android/kotlin-delegated-property/';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/posts/android/kotlin-delegated-property/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://jheun66.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:jheun5@naver.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/amos55606241">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/amos.eun.73">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/jheun66">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Eun JongHyeok 2025</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1H0RYSGS7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T1H0RYSGS7');
+</script>
+
+
+
+  <style>
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.333%;
+    height: 0;
+    background: black;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}    
+</style>
+
+<script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+        url: 'https://vimeo.com/api/oembed.json?url='+url,
+        async: true,
+        success: function(response) {
+        if(response.video_id) {
+            id = response.video_id;
+            if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+            if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+            var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+            if(autoplay==1) theInnerHTML += '&autoplay=1';
+            if(loop==1) theInnerHTML += '&loop=1';
+            theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
+            el.innerHTML = theInnerHTML;
+        }
+        }
+    });
+}
+function video_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        //check if this is an external url (that starts with https:// or http://
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                if(p[i].innerHTML.indexOf('start=') !== -1) theInnerHTML += '&start='+p[i].innerHTML.substring(p[i].innerHTML.indexOf('start=')+6);
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                vimeo_embed(p[i].innerHTML,p[i]);
+            }
+        }
+    }
+}
+video_embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
+        }
+    }
+}
+mp3_embed();
+</script>
+  
+  <script id="dsq-count-scr" src="//jheun66.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>

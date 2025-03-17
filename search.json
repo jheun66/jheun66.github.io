@@ -1,6 +1,22 @@
 [
   
     {
+      "title"    : "(TIL) Kotlin - Delegated Property",
+      "category" : "",
+      "tags"     : "android, kotlin, delegated_property, by_lazy, by_observable, by_vetoable",
+      "url"      : "/posts/android/kotlin-delegated-property/",
+      "date"     : "03/16/2025"
+    } ,
+  
+    {
+      "title"    : "(TIL) Jetpack Compose에서의 상태 관리",
+      "category" : "",
+      "tags"     : "android, jetpack_compose, remember, remembersaveable, mutablestateof, delegated_property",
+      "url"      : "/posts/android/jetpack-compose-state-management/",
+      "date"     : "03/15/2025"
+    } ,
+  
+    {
       "title"    : "(주간 회고) 노마드 코더 플러터 스터디 4주차",
       "category" : "",
       "tags"     : "nomadcoder, study, review",
